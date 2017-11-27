@@ -1,0 +1,23 @@
+- switch Use Profile Details
+- save this as Profile Details (checkbox)
+- switch Use Profile Shipping Details
+- save this as Profile Details (checkbox)
+- switch Use Default MOP
+- save this as Profile Details (checkbox)
+- switch Use Default Courrier
+- save this as Profile Details (checkbox)
+ 
+Controller For Order Add Edit Delete View Index
+
+Controller For username Subdomain
+
+
+This is for uploading profile image?
+https://github.com/waynecz/vue-img-inputer
+
+head tag
+https://github.com/ktquez/vue-head
+
+meta tag 
+https://github.com/declandewet/vue-meta
+

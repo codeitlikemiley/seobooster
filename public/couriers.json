@@ -1,0 +1,44 @@
+[
+    { "name": "SM Olongapo", "group": "Pick Up Location", "avatar": "/img/courier/sm.png", "slug": "sm-olongapo",
+        "details": {
+            "address": "Olongapo",
+            "working_days": "Mon-Fri",
+            "open_hrs": "10am-6pm",
+            "rate": 0
+        },
+        "model": "App\\Shipment\\PickUp"
+    },
+    { "name": "Meet Up", "group": "Meet Up", "avatar": "/img/courier/meetup.png", "slug": "meet-up",
+        "details": {
+            "contact_person": "Uriah Galang",
+            "contact_no": "90121212",
+            "messenger": "@uriahg17",
+            "viber": "123466789"
+        },
+        "model": "App\\Shipment\\MeetUp"
+    },
+    { "name": "LBC", "group": "Door To Door", "avatar": "/img/gateway/lbc-logo.png", "slug": "lbc",
+        "details": {
+            "rate": 450
+        },
+        "model": "App\\Shipment\\DoorToDoor"
+    },
+    { "name": "DHL", "group": "Door To Door", "avatar": "/img/courier/dhl.png", "slug": "dhl",
+        "details": {
+            "rate": 1000
+        },
+        "model": "App\\Shipment\\DoorToDoor"
+    },
+    { "name": "Xend", "group": "Door To Door", "avatar": "/img/courier/xend.png", "slug": "xend",
+        "details": {
+            "rate": 250
+        },
+        "model": "App\\Shipment\\DoorToDoor"
+    },
+    { "name": "PHLPOST ", "group": "Postal Mail", "avatar": "/img/courier/phlpost.png", "slug": "phlpost",
+        "details": {
+            "rate": 500
+        },
+        "model": "App\\Shipment\\PostalMail"
+    }
+]
