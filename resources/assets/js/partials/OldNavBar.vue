@@ -12,28 +12,65 @@
         </v-toolbar-title>
         <v-spacer></v-spacer>
         <!-- center logo -->
-        <img v-if="showLogo" class="hidden-md-and-up"   :src="logo" :style="[logoStyle]"  alt="App.site.title">
+        <img v-if="showLogo"   :src="logo" :style="[logoStyle]"  alt="vuejs">
         <v-spacer></v-spacer>
+        <!-- Add Here All Your Nav Icons -->
+        <v-tooltip left>
+        <v-btn flat icon color="primary" slot="activator" @click="openCart()">
+        <v-badge left>
+        <span slot="badge">{{ count }}</span>
+        <v-icon>shopping_cart</v-icon>
+        </v-badge>
+        </v-btn>
+        <span>View | Cart</span>
+        </v-tooltip>
 </v-toolbar>
 </template>
 
 <script>
 import Theme from '../mixins/theme'
+import { createNamespacedHelpers } from 'vuex'
+const { mapState } = createNamespacedHelpers('cart')
 
 export default {
     mixins: [Theme],
     data: () => ({
-        extension: false
+        extension: false,
+        count: 0
     }),
+    computed: {
+        ...mapState({
+            getCount: 'count'
+        })
+    },
     created () {
         /* Emit On a Child Component If You Want This To Be Visible */
         Bus.$on('header-extension-visible', (visibility) => {
             this.extension = visibility
         })
     },
+    mounted () {
+        let self = this
+        self.count = self.getCount
+    },
     methods: {
+        /* Use Vuetify Modal */
+        openShoppingCart () {
+            Bus.$emit('shopping-cart-open')
+        },
         toggleDrawer () {
             Bus.$emit('toggleDrawer')
+        },
+        /* Uses Cart Route */
+        openCart () {
+            let self = this
+            self.$router.push({ name: 'cart' })
+        }
+    },
+    watch: {
+        getCount (newValue) {
+            let self = this
+            self.count = newValue
         }
     }
 }

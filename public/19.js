@@ -1,14 +1,14 @@
 webpackJsonp([19],{
 
-/***/ 631:
+/***/ 634:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(310)
+var normalizeComponent = __webpack_require__(314)
 /* script */
-var __vue_script__ = __webpack_require__(701)
+var __vue_script__ = __webpack_require__(707)
 /* template */
-var __vue_template__ = __webpack_require__(702)
+var __vue_template__ = __webpack_require__(708)
 /* styles */
 var __vue_styles__ = null
 /* scopeId */
@@ -33,9 +33,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-8fde7da0", Component.options)
+    hotAPI.createRecord("data-v-5c4342cd", Component.options)
   } else {
-    hotAPI.reload("data-v-8fde7da0", Component.options)
+    hotAPI.reload("data-v-5c4342cd", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -47,7 +47,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 649:
+/***/ 653:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55,7 +55,7 @@ module.exports = Component.exports
 
 exports.__esModule = true;
 
-var _assign = __webpack_require__(652);
+var _assign = __webpack_require__(656);
 
 var _assign2 = _interopRequireDefault(_assign);
 
@@ -77,48 +77,48 @@ exports.default = _assign2.default || function (target) {
 
 /***/ }),
 
-/***/ 652:
+/***/ 656:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(653), __esModule: true };
+module.exports = { "default": __webpack_require__(657), __esModule: true };
 
 /***/ }),
 
-/***/ 653:
+/***/ 657:
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(654);
+__webpack_require__(658);
 module.exports = __webpack_require__(31).Object.assign;
 
 
 /***/ }),
 
-/***/ 654:
+/***/ 658:
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.3.1 Object.assign(target, source)
 var $export = __webpack_require__(60);
 
-$export($export.S + $export.F, 'Object', { assign: __webpack_require__(655) });
+$export($export.S + $export.F, 'Object', { assign: __webpack_require__(659) });
 
 
 /***/ }),
 
-/***/ 655:
+/***/ 659:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // 19.1.2.1 Object.assign(target, source, ...)
 var getKeys = __webpack_require__(91);
-var gOPS = __webpack_require__(132);
+var gOPS = __webpack_require__(131);
 var pIE = __webpack_require__(92);
-var toObject = __webpack_require__(311);
-var IObject = __webpack_require__(312);
+var toObject = __webpack_require__(315);
+var IObject = __webpack_require__(316);
 var $assign = Object.assign;
 
 // should work with symbols and should have deterministic property order (V8 bug)
-module.exports = !$assign || __webpack_require__(69)(function () {
+module.exports = !$assign || __webpack_require__(68)(function () {
   var A = {};
   var B = {};
   // eslint-disable-next-line no-undef
@@ -146,13 +146,13 @@ module.exports = !$assign || __webpack_require__(69)(function () {
 
 /***/ }),
 
-/***/ 701:
+/***/ 707:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_shop_node_modules_babel_runtime_helpers_extends__ = __webpack_require__(649);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_shop_node_modules_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_shop_node_modules_babel_runtime_helpers_extends__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends__ = __webpack_require__(653);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(90);
 
 //
@@ -271,7 +271,7 @@ var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["createNam
             }
         };
     },
-    computed: __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_shop_node_modules_babel_runtime_helpers_extends___default()({
+    computed: __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default()({
         icon: function icon() {
             return this.password_visible ? 'visibility' : 'visibility_off';
         }
@@ -292,7 +292,7 @@ var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["createNam
         self.passwordResetForm.token = self.token;
     },
 
-    methods: __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_shop_node_modules_babel_runtime_helpers_extends___default()({}, mapActions({
+    methods: __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default()({}, mapActions({
         reset: 'passwordreset'
     }), {
         goHome: function goHome() {
@@ -318,7 +318,7 @@ var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["createNam
 
 /***/ }),
 
-/***/ 702:
+/***/ 708:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -451,7 +451,11 @@ var render = function() {
                               model: {
                                 value: _vm.passwordResetForm.username,
                                 callback: function($$v) {
-                                  _vm.passwordResetForm.username = $$v
+                                  _vm.$set(
+                                    _vm.passwordResetForm,
+                                    "username",
+                                    $$v
+                                  )
                                 },
                                 expression: "passwordResetForm.username"
                               }
@@ -505,7 +509,11 @@ var render = function() {
                               model: {
                                 value: _vm.passwordResetForm.password,
                                 callback: function($$v) {
-                                  _vm.passwordResetForm.password = $$v
+                                  _vm.$set(
+                                    _vm.passwordResetForm,
+                                    "password",
+                                    $$v
+                                  )
                                 },
                                 expression: "passwordResetForm.password"
                               }
@@ -564,7 +572,11 @@ var render = function() {
                                 value:
                                   _vm.passwordResetForm.password_confirmation,
                                 callback: function($$v) {
-                                  _vm.passwordResetForm.password_confirmation = $$v
+                                  _vm.$set(
+                                    _vm.passwordResetForm,
+                                    "password_confirmation",
+                                    $$v
+                                  )
                                 },
                                 expression:
                                   "passwordResetForm.password_confirmation"
@@ -631,7 +643,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-8fde7da0", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-5c4342cd", module.exports)
   }
 }
 

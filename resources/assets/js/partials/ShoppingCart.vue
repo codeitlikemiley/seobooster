@@ -61,7 +61,7 @@
                 selected-key="id"
                 select-all
             >
-            <template slot="items" scope="props">
+            <template slot="items" slot-scope="props">
                 <td>
                     <v-checkbox
                     color="primary"
@@ -114,7 +114,7 @@
 
             </template>
 
-            <template slot="pageText" scope="{ pageStart, pageStop }">
+            <template slot="pageText" slot-scope="{ pageStart, pageStop }">
                 From {{ pageStart }} to {{ pageStop }}
             </template>
 

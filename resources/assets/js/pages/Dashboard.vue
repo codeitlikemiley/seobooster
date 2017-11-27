@@ -10,7 +10,7 @@
                 light
                 expand
             >
-            <template slot="items" scope="props">
+            <template slot="items" slot-scope="props">
             <tr>
                 <td class="title text-xs-left primary--text">
                     <v-btn color="primary" icon @click="props.expanded = !props.expanded"><v-icon>shopping_basket</v-icon></v-btn>
@@ -75,20 +75,20 @@
             </tr>
             </template>
 
-            <template slot="expand" scope="props">
+            <template slot="expand" slot-scope="props">
                 <v-data-table
                     :items="getItems(props.item.cart)"
                     hide-actions
                     light
                     >
-                    <template slot="headers" scope="orders">
+                    <template slot="headers" slot-scope="orders">
                             <th class="text-xs-left">Product</th>
                             <th class="text-xs-left">Qty</th>
                             <th class="text-xs-left">Price</th>
                             <th class="text-xs-left">Tax</th>
                             <th class="text-xs-left">Subtotal</th>
                     </template>
-                        <template slot="items" scope="orders">
+                        <template slot="items" slot-scope="orders">
                         <td class="text-xs-left">{{ orders.item.name }}</td>
                         <td class="text-xs-left">{{ orders.item.qty }}</td>
                         <td class="text-xs-left">{{ orders.item.price | currency(currency) }}</td>
@@ -98,7 +98,7 @@
                 </v-data-table>
             </template>
 
-            <template slot="pageText" scope="{ pageStart, pageStop }">
+            <template slot="pageText" slot-scope="{ pageStart, pageStop }">
                 From {{ pageStart }} to {{ pageStop }}
             </template>
 
