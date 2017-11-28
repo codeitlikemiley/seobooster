@@ -48726,6 +48726,12 @@ App.forms = {
         sku: '',
         description: '',
         options: []
+    },
+    contactForm: {
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
         // Add Other Form Object Here
     } };
 
