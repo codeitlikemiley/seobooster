@@ -132,11 +132,6 @@ export default {
             { show: true, title: 'Video Rankings On Steroids', tagline: 'Machine social SEO and video embedding technology is the key to ranking videos quickly in Google and Youtube.', src: '/img/features-video-rankings.svg', xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }
         ],
         photos: [
-            // 'http://sourcemachine.io/img/features-cloud-based.svg',
-            // 'http://sourcemachine.io/img/features-full-client-reporting.svg',
-            // 'http://sourcemachine.io/img/features-wordpress.svg',
-            // 'http://sourcemachine.io/img/features-social-posting.svg',
-            // 'http://sourcemachine.io/img/features-video-rankings.svg'
         ]
     }),
     computed: {
