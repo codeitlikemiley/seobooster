@@ -33,7 +33,7 @@ return [
     'trademark' => env('HOME_TRADEMARK','Vuetified'),
     'domain' => env('APP_DOMAIN', 'vuetified.app'),
     'url' => env('APP_URL', 'http://localhost'),
-    'email' => env('MAIL_USERNAME', 'admin@vuetified.app'),
+    'email' => env('ADMIN_EMAIL', 'admin@vuetified.app'),
     'social_links' => [
         'facebook' => env('HOME_FB','https://www.facebook.com/vuetified'),
         'instagram' => env('HOME_INSTA','https://www.instagram.com/vuetified'),
