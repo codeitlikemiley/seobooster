@@ -16,7 +16,7 @@
                 </v-btn>
                 </v-flex>
                 <v-flex xs6>
-                <v-btn block color="accent" @click.native="openModal()"
+                <v-btn block color="accent" @click.native="openModal()" class="white--text"
                 >Create Contact Details
                     <v-icon right>fa-plus</v-icon>
                 </v-btn>
