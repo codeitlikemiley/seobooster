@@ -24,7 +24,7 @@
             </v-layout>
             <v-layout row wrap v-else>
                 <v-flex xs12>
-                <v-btn block color="accent" @click.native="openModal()"
+                <v-btn block color="accent" @click.native="openModal()" class="white--text"
                 >Create Social Link
                     <v-icon right>fa-plus</v-icon>
                 </v-btn>
