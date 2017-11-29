@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar :style="navbarStyle" :dark="!isDark" fixed>
+  <v-toolbar :style="navbarStyle" :dark="!isDark" fixed style="z-index:999;">
     <v-toolbar-side-icon :style="toggleBarStyle" @click.native.stop="toggleDrawer()"></v-toolbar-side-icon>
         <!-- Title -->
         <v-toolbar-title v-if="extension" class="text-xs-center" slot="extension">

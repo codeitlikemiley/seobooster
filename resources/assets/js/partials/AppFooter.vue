@@ -10,7 +10,7 @@ import VLink from '../components/VLink.vue'
 export default {
     mixins: [Theme],
     data: () => ({
-        footerClass: {'primary--text': true}
+        footerClass: {'primary--text': true, 'grey': true, 'darken-4': true}
     }),
     created () {
         /* Emit On a Child Component If You Want This To Be Visible */

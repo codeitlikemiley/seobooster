@@ -6,6 +6,7 @@
       enable-resize-watcher
       v-model="drawer"
       class="accent"
+      style="z-index:1000;"
     >
       <v-list dense>
         <!-- V-For Links From Menu -->
@@ -19,6 +20,8 @@
         <v-link v-if="isLoggedIn() && hasRole('admin')" :dark="darkClass"  title="User Management"  :href="'/users'" icon="fa-users"></v-link>
         <!-- Normal User Links -->
         <v-link v-if="isLoggedIn()" :dark="darkClass"  title="Dashboard"  :href="'/dashboard'" icon="dashboard"></v-link>
+        <v-link v-if="isLoggedIn()" :dark="darkClass"  title="Accounts"  :href="'/accounts'" icon="fa-address-card "></v-link>
+        <v-link v-if="isLoggedIn()" :dark="darkClass"  title="Posts"  :href="'/posts'" icon="insert_invitation"></v-link>
         <v-link v-if="isLoggedIn()" :dark="darkClass"  title="Settings"  :href="'/settings'" icon="fa-cogs"></v-link>
         <v-link v-if="isLoggedIn()" :dark="darkClass"  title="Logout"  :href="'/logout'" icon="power_settings_new"></v-link>
         <!-- Guest Links -->
