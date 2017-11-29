@@ -46,7 +46,7 @@
                 <v-card-text>
                 <p class="text-xs-center">
                     <v-btn icon v-if="card.icon" :color="card.color">
-                    <v-icon>{{ card.icon }}</v-icon>
+                    <v-icon dark>{{ card.icon }}</v-icon>
                 </v-btn>
                 </p>
                 </v-card-text>
