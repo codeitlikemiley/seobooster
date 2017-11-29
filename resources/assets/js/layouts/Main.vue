@@ -1,5 +1,5 @@
 <template>
- <v-app :dark="App.theme.dark"  standalone v-cloak>
+ <v-app standalone v-cloak>
     <left-side-bar></left-side-bar>
     <app-nav-bar></app-nav-bar>
     <main>
