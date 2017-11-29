@@ -1,14 +1,14 @@
 webpackJsonp([17],{
 
-/***/ 635:
+/***/ 633:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(314)
 /* script */
-var __vue_script__ = __webpack_require__(709)
+var __vue_script__ = __webpack_require__(702)
 /* template */
-var __vue_template__ = __webpack_require__(710)
+var __vue_template__ = __webpack_require__(703)
 /* styles */
 var __vue_styles__ = null
 /* scopeId */
@@ -22,9 +22,9 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\pages\\ForgotPassword.vue"
+Component.options.__file = "resources\\assets\\js\\pages\\Logout.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] ForgotPassword.vue: functional components are not supported with templates, they should use render functions.")}
+if (Component.options.functional) {console.error("[vue-loader] Logout.vue: functional components are not supported with templates, they should use render functions.")}
 
 /* hot reload */
 if (false) {(function () {
@@ -33,9 +33,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-7e4e9fab", Component.options)
+    hotAPI.createRecord("data-v-ee735552", Component.options)
   } else {
-    hotAPI.reload("data-v-7e4e9fab", Component.options)
+    hotAPI.reload("data-v-ee735552", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -47,7 +47,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 654:
+/***/ 658:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55,7 +55,7 @@ module.exports = Component.exports
 
 exports.__esModule = true;
 
-var _assign = __webpack_require__(656);
+var _assign = __webpack_require__(659);
 
 var _assign2 = _interopRequireDefault(_assign);
 
@@ -77,34 +77,34 @@ exports.default = _assign2.default || function (target) {
 
 /***/ }),
 
-/***/ 656:
+/***/ 659:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(657), __esModule: true };
+module.exports = { "default": __webpack_require__(660), __esModule: true };
 
 /***/ }),
 
-/***/ 657:
+/***/ 660:
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(658);
+__webpack_require__(661);
 module.exports = __webpack_require__(31).Object.assign;
 
 
 /***/ }),
 
-/***/ 658:
+/***/ 661:
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.3.1 Object.assign(target, source)
 var $export = __webpack_require__(60);
 
-$export($export.S + $export.F, 'Object', { assign: __webpack_require__(659) });
+$export($export.S + $export.F, 'Object', { assign: __webpack_require__(662) });
 
 
 /***/ }),
 
-/***/ 659:
+/***/ 662:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -146,7 +146,7 @@ module.exports = !$assign || __webpack_require__(68)(function () {
 
 /***/ }),
 
-/***/ 691:
+/***/ 695:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
@@ -154,7 +154,7 @@ var normalizeComponent = __webpack_require__(314)
 /* script */
 var __vue_script__ = null
 /* template */
-var __vue_template__ = __webpack_require__(692)
+var __vue_template__ = __webpack_require__(696)
 /* styles */
 var __vue_styles__ = null
 /* scopeId */
@@ -193,7 +193,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 692:
+/***/ 696:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -243,22 +243,16 @@ if (false) {
 
 /***/ }),
 
-/***/ 709:
+/***/ 702:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_asyncToGenerator__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_asyncToGenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_asyncToGenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends__ = __webpack_require__(654);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__layouts_ModalLayout__ = __webpack_require__(691);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__layouts_ModalLayout___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__layouts_ModalLayout__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vuex__ = __webpack_require__(90);
-
-
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends__ = __webpack_require__(658);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_ModalLayout__ = __webpack_require__(695);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_ModalLayout___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__layouts_ModalLayout__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vuex__ = __webpack_require__(90);
 
 //
 //
@@ -306,278 +300,373 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
 
-var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_4_vuex__["createNamespacedHelpers"])('auth'),
-    mapGetters = _createNamespacedHelp.mapGetters;
+var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_2_vuex__["createNamespacedHelpers"])('auth'),
+    mapActions = _createNamespacedHelp.mapActions,
+    mapGetters = _createNamespacedHelp.mapGetters,
+    mapMutations = _createNamespacedHelp.mapMutations;
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            resetForm: new AppForm(App.forms.resetForm)
+            tile: false,
+            avatarSize: '200px',
+            logoutForm: new AppForm(App.forms.logoutForm),
+            visible: false
         };
     },
-    computed: __WEBPACK_IMPORTED_MODULE_2_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default()({}, mapGetters({
-        getAuth: 'getAuth'
+    computed: __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default()({}, mapGetters({
+        getAuth: 'getAuth',
+        user: 'getMe'
     })),
     mounted: function mounted() {
         var self = this;
-        /* Make Sure We Only Load Forgot Password Page If Not Authenticated */
-        if (self.getAuth) {
+        /* Make Sure We Only Show Logout Page If Authenticated */
+        if (!self.getAuth) {
             /* nextick make sure our modal wount be visible before redirect */
             return self.$nextTick(function () {
                 return self.$router.go(-1);
             });
         }
-        /* Show Forgot Password Modal */
+        self.visible = true;
     },
 
-    methods: {
-        goHome: function goHome() {
-            var self = this;
-            self.$nextTick(function () {
-                return self.$router.push({ name: 'home' });
-            });
-        },
+    methods: __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default()({
         redirectBack: function redirectBack() {
             var self = this;
             return self.$nextTick(function () {
                 return self.$router.go(-1);
             });
         },
-        sendEmail: function () {
-            var _ref = __WEBPACK_IMPORTED_MODULE_1_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_asyncToGenerator___default()( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator___default.a.mark(function _callee() {
-                var self;
-                return __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
-                    while (1) {
-                        switch (_context.prev = _context.next) {
-                            case 0:
-                                self = this;
-
-                                self.$validator.validateAll();
-
-                                if (self.errors.any()) {
-                                    _context.next = 6;
-                                    break;
-                                }
-
-                                self.resetForm.busy = true;
-                                _context.next = 6;
-                                return axios.post(route('api.auth.forgotpassword'), self.resetForm).then(function (response) {
-                                    self.$popup({ message: response.data.message, backgroundColor: '#4db6ac', delay: 5, color: '#fffffa' });
-                                    self.resetForm.busy = false;
-                                    self.$router.push({ name: 'home' });
-                                }).catch(function (error) {
-                                    self.resetForm.busy = false;
-                                    self.$popup({ message: error.response.data.message, backgroundColor: '#e57373', delay: 5, color: '#fffffa' });
-                                });
-
-                            case 6:
-                            case 'end':
-                                return _context.stop();
-                        }
-                    }
-                }, _callee, this);
-            }));
-
-            function sendEmail() {
-                return _ref.apply(this, arguments);
-            }
-
-            return sendEmail;
-        }()
-    },
+        logout: function logout() {
+            var self = this;
+            self.logoutForm.busy = true;
+            return self.$nextTick(function () {
+                return self.submit(self.logoutForm);
+            });
+        }
+    }, mapActions({
+        submit: 'logout'
+    }), mapMutations({
+        setToken: 'setToken',
+        setRefreshToken: 'setRefreshToken',
+        setExpiration: 'setExpiration',
+        setMe: 'setMe'
+    })),
     components: {
-        ModalLayout: __WEBPACK_IMPORTED_MODULE_3__layouts_ModalLayout___default.a
+        ModalLayout: __WEBPACK_IMPORTED_MODULE_1__layouts_ModalLayout___default.a
     }
 });
 
 /***/ }),
 
-/***/ 710:
+/***/ 703:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "modal-layout",
-    [
-      _c(
-        "v-card",
-        { attrs: { flat: true } },
+  return _vm.visible
+    ? _c(
+        "modal-layout",
         [
           _c(
-            "v-toolbar",
-            { staticClass: "accent" },
+            "v-card",
+            { attrs: { flat: true } },
             [
               _c(
-                "v-btn",
-                {
-                  attrs: { flat: "", icon: "", color: "primary" },
-                  nativeOn: {
-                    click: function($event) {
-                      _vm.redirectBack()
-                    }
-                  }
-                },
-                [_c("v-icon", [_vm._v("arrow_back")])],
-                1
-              ),
-              _vm._v(" "),
-              _c("v-spacer"),
-              _vm._v(" "),
-              _c(
-                "v-toolbar-title",
-                { staticClass: "text-xs-center primary--text" },
-                [_vm._v("Reset Password")]
-              ),
-              _vm._v(" "),
-              _c("v-spacer"),
-              _vm._v(" "),
-              _c(
-                "v-toolbar-items",
+                "v-toolbar",
+                { staticClass: "accent" },
                 [
                   _c(
                     "v-btn",
                     {
-                      attrs: { flat: "", color: "primary" },
+                      attrs: { flat: "", icon: "", color: "primary" },
                       nativeOn: {
                         click: function($event) {
-                          _vm.goHome()
+                          _vm.redirectBack()
                         }
                       }
                     },
-                    [_c("v-icon", [_vm._v("fa-home")])],
+                    [_c("v-icon", [_vm._v("arrow_back")])],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-spacer"),
+                  _vm._v(" "),
+                  _c(
+                    "v-toolbar-title",
+                    { staticClass: "text-xs-center primary--text" },
+                    [_vm._v("Are You Sure You Want To Log Out?")]
+                  ),
+                  _vm._v(" "),
+                  _c("v-spacer"),
+                  _vm._v(" "),
+                  _c(
+                    "v-toolbar-items",
+                    [
+                      _c(
+                        "v-btn",
+                        {
+                          attrs: { flat: "", color: "error", flat: "" },
+                          nativeOn: {
+                            click: function($event) {
+                              _vm.logout()
+                            }
+                          }
+                        },
+                        [
+                          _c("v-icon", { attrs: { right: "" } }, [
+                            _vm._v("fa-power-off")
+                          ])
+                        ],
+                        1
+                      )
+                    ],
                     1
                   )
                 ],
                 1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "v-card-text",
-            { staticStyle: { "padding-top": "100px" } },
-            [
-              _c("v-container", { attrs: { fluid: "" } }, [
-                _c(
-                  "form",
-                  {
-                    on: {
-                      submit: function($event) {
-                        $event.preventDefault()
-                        _vm.sendEmail()
-                      }
-                    }
-                  },
-                  [
+              ),
+              _vm._v(" "),
+              _c(
+                "v-card-text",
+                { staticStyle: { "padding-top": "100px" } },
+                [
+                  _c("v-container", { attrs: { fluid: "" } }, [
                     _c(
-                      "v-layout",
-                      { attrs: { row: "" } },
+                      "form",
+                      {
+                        on: {
+                          submit: function($event) {
+                            $event.preventDefault()
+                            _vm.logout()
+                          }
+                        }
+                      },
                       [
-                        _c(
-                          "v-flex",
-                          {
-                            attrs: {
-                              xs12: "",
-                              sm12: "",
-                              md4: "",
-                              "offset-md4": "",
-                              lg4: "",
-                              "offset-lg4": "",
-                              xl4: "",
-                              "offset-xl4": ""
-                            }
-                          },
-                          [
-                            _c("v-text-field", {
-                              directives: [
-                                {
-                                  name: "validate",
-                                  rawName: "v-validate",
-                                  value: "required|email",
-                                  expression: "'required|email'"
-                                }
+                        _vm.user
+                          ? _c(
+                              "v-layout",
+                              { attrs: { row: "" } },
+                              [
+                                _c(
+                                  "v-flex",
+                                  {
+                                    attrs: {
+                                      x12: "",
+                                      sm12: "",
+                                      md4: "",
+                                      "offset-md4": "",
+                                      lg4: "",
+                                      "offset-lg4": "",
+                                      xl4: "",
+                                      "offset-xl4": ""
+                                    }
+                                  },
+                                  [
+                                    _c(
+                                      "v-card",
+                                      { attrs: { flat: "" } },
+                                      [
+                                        _c(
+                                          "v-container",
+                                          {
+                                            attrs: {
+                                              "fill-height": "",
+                                              fluid: ""
+                                            }
+                                          },
+                                          [
+                                            _c(
+                                              "v-layout",
+                                              { attrs: { "fill-height": "" } },
+                                              [
+                                                _c(
+                                                  "v-flex",
+                                                  {
+                                                    attrs: {
+                                                      xs12: "",
+                                                      "text-xs-center": "",
+                                                      flexbox: ""
+                                                    }
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "v-avatar",
+                                                      {
+                                                        staticClass:
+                                                          "grey lighten-4",
+                                                        attrs: {
+                                                          tile: _vm.tile,
+                                                          size: _vm.avatarSize,
+                                                          "fill-height": "",
+                                                          fluid: ""
+                                                        }
+                                                      },
+                                                      [
+                                                        _c("img", {
+                                                          attrs: {
+                                                            src:
+                                                              _vm.user
+                                                                .photo_url,
+                                                            alt: _vm.user.name
+                                                          }
+                                                        })
+                                                      ]
+                                                    )
+                                                  ],
+                                                  1
+                                                )
+                                              ],
+                                              1
+                                            )
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "v-layout",
+                                          [
+                                            _c(
+                                              "v-flex",
+                                              {
+                                                attrs: {
+                                                  xs12: "",
+                                                  "text-xs-center": "",
+                                                  flexbox: ""
+                                                }
+                                              },
+                                              [
+                                                _c(
+                                                  "h5",
+                                                  {
+                                                    staticClass:
+                                                      "primary--text title"
+                                                  },
+                                                  [
+                                                    _vm._v(
+                                                      _vm._s(
+                                                        _vm._f("uppercase")(
+                                                          _vm.user.name
+                                                        )
+                                                      )
+                                                    )
+                                                  ]
+                                                )
+                                              ]
+                                            )
+                                          ],
+                                          1
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                )
                               ],
-                              staticClass: "primary--text",
-                              attrs: {
-                                name: "username",
-                                label: "Type Your Registered Email",
-                                "prepend-icon": "email",
-                                "data-vv-name": "username",
-                                "error-messages": _vm.errors.collect(
-                                  "username"
-                                ),
-                                counter: "255"
+                              1
+                            )
+                          : _vm._e(),
+                        _vm._v(" "),
+                        _c(
+                          "v-layout",
+                          { attrs: { row: "" } },
+                          [
+                            _c(
+                              "v-flex",
+                              {
+                                attrs: {
+                                  xs12: "",
+                                  sm12: "",
+                                  md4: "",
+                                  "offset-md4": "",
+                                  lg4: "",
+                                  "offset-lg4": "",
+                                  xl4: "",
+                                  "offset-xl4": ""
+                                }
                               },
-                              model: {
-                                value: _vm.resetForm.username,
-                                callback: function($$v) {
-                                  _vm.$set(_vm.resetForm, "username", $$v)
-                                },
-                                expression: "resetForm.username"
-                              }
-                            })
+                              [
+                                _c(
+                                  "v-card-actions",
+                                  [
+                                    _c(
+                                      "v-btn",
+                                      {
+                                        staticClass: "info--text error",
+                                        attrs: { block: "", flat: "" },
+                                        nativeOn: {
+                                          click: function($event) {
+                                            _vm.redirectBack()
+                                          }
+                                        }
+                                      },
+                                      [_vm._v("No, I Want To Stay")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "v-btn",
+                                      {
+                                        staticClass: "error--text",
+                                        class: {
+                                          primary: !_vm.logoutForm.busy,
+                                          accent: _vm.logoutForm.busy
+                                        },
+                                        attrs: {
+                                          block: "",
+                                          flat: "",
+                                          loading: _vm.logoutForm.busy,
+                                          disabled: _vm.logoutForm.busy,
+                                          type: "submit",
+                                          block: ""
+                                        }
+                                      },
+                                      [_vm._v("Yes, Log Me Out")]
+                                    )
+                                  ],
+                                  1
+                                )
+                              ],
+                              1
+                            )
                           ],
                           1
                         )
                       ],
                       1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "v-flex",
-                      {
-                        attrs: {
-                          xs12: "",
-                          sm12: "",
-                          md4: "",
-                          "offset-md4": "",
-                          lg4: "",
-                          "offset-lg4": "",
-                          xl4: "",
-                          "offset-xl4": ""
-                        }
-                      },
-                      [
-                        _c(
-                          "v-btn",
-                          {
-                            class: {
-                              primary: !_vm.resetForm.busy,
-                              error: _vm.resetForm.busy
-                            },
-                            attrs: {
-                              disabled: _vm.errors.any(),
-                              loading: _vm.resetForm.busy,
-                              type: "submit",
-                              block: ""
-                            }
-                          },
-                          [_vm._v("Send Password Reset Email")]
-                        )
-                      ],
-                      1
                     )
-                  ],
-                  1
-                )
-              ])
+                  ])
+                ],
+                1
+              )
             ],
             1
           )
         ],
         1
       )
-    ],
-    1
-  )
+    : _vm._e()
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -585,7 +674,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-7e4e9fab", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-ee735552", module.exports)
   }
 }
 
