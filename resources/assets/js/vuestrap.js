@@ -18,10 +18,7 @@ import initialData from './mixins/initial-state' /* Our Initial State Provided B
 import './services/acl' /* Add ACL To Our Routes */
 import VueTruncate from 'vue-truncate-filter'
 
-if (window.Vue === undefined) {
-    window.Vue = Vue
-    window.Bus = new Vue()
-}
+window.Bus = new Vue()
 
 /* Global Form Helpers : AppForm , App.forms */
 require('./forms/form-bootstrap')
