@@ -526,7 +526,7 @@ var IObject = __webpack_require__(316);
 var $assign = Object.assign;
 
 // should work with symbols and should have deterministic property order (V8 bug)
-module.exports = !$assign || __webpack_require__(68)(function () {
+module.exports = !$assign || __webpack_require__(69)(function () {
   var A = {};
   var B = {};
   // eslint-disable-next-line no-undef

@@ -545,13 +545,13 @@ function updateLink (link, options, obj) {
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(946)
+  __webpack_require__(940)
 }
 var normalizeComponent = __webpack_require__(314)
 /* script */
-var __vue_script__ = __webpack_require__(948)
+var __vue_script__ = __webpack_require__(942)
 /* template */
-var __vue_template__ = __webpack_require__(968)
+var __vue_template__ = __webpack_require__(962)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -986,7 +986,7 @@ var IObject = __webpack_require__(316);
 var $assign = Object.assign;
 
 // should work with symbols and should have deterministic property order (V8 bug)
-module.exports = !$assign || __webpack_require__(68)(function () {
+module.exports = !$assign || __webpack_require__(69)(function () {
   var A = {};
   var B = {};
   // eslint-disable-next-line no-undef
@@ -6043,13 +6043,13 @@ if (false) {
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(953)
+  __webpack_require__(947)
 }
 var normalizeComponent = __webpack_require__(314)
 /* script */
-var __vue_script__ = __webpack_require__(955)
+var __vue_script__ = __webpack_require__(949)
 /* template */
-var __vue_template__ = __webpack_require__(956)
+var __vue_template__ = __webpack_require__(950)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -6090,13 +6090,13 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 946:
+/***/ 940:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(947);
+var content = __webpack_require__(941);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -6117,7 +6117,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 947:
+/***/ 941:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(631)(undefined);
@@ -6132,7 +6132,7 @@ exports.push([module.i, "\n.breadcrumbs li[data-v-4c32c06c]:not(:last-child):aft
 
 /***/ }),
 
-/***/ 948:
+/***/ 942:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6141,11 +6141,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__layouts_Main_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__layouts_Main_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__mixins_theme__ = __webpack_require__(657);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mixins_acl__ = __webpack_require__(664);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_posts_BlogPost_vue__ = __webpack_require__(949);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_posts_BlogPost_vue__ = __webpack_require__(943);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_posts_BlogPost_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_posts_BlogPost_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_posts_SocialPost_vue__ = __webpack_require__(958);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_posts_SocialPost_vue__ = __webpack_require__(952);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_posts_SocialPost_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_posts_SocialPost_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_posts_VideoPost_vue__ = __webpack_require__(963);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_posts_VideoPost_vue__ = __webpack_require__(957);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_posts_VideoPost_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__components_posts_VideoPost_vue__);
 //
 //
@@ -6230,19 +6230,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 949:
+/***/ 943:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(950)
+  __webpack_require__(944)
 }
 var normalizeComponent = __webpack_require__(314)
 /* script */
-var __vue_script__ = __webpack_require__(952)
+var __vue_script__ = __webpack_require__(946)
 /* template */
-var __vue_template__ = __webpack_require__(957)
+var __vue_template__ = __webpack_require__(951)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -6283,13 +6283,13 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 950:
+/***/ 944:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(951);
+var content = __webpack_require__(945);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -6310,7 +6310,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 951:
+/***/ 945:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(631)(undefined);
@@ -6325,7 +6325,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 /***/ }),
 
-/***/ 952:
+/***/ 946:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6604,13 +6604,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 953:
+/***/ 947:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(954);
+var content = __webpack_require__(948);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -6631,7 +6631,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 954:
+/***/ 948:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(631)(undefined);
@@ -6646,7 +6646,7 @@ exports.push([module.i, "\n.jbtn-file[data-v-0cdd7a0a] {\n  cursor: pointer;\n  
 
 /***/ }),
 
-/***/ 955:
+/***/ 949:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6679,7 +6679,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 956:
+/***/ 950:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -6715,7 +6715,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 957:
+/***/ 951:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -7311,19 +7311,19 @@ if (false) {
 
 /***/ }),
 
-/***/ 958:
+/***/ 952:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(959)
+  __webpack_require__(953)
 }
 var normalizeComponent = __webpack_require__(314)
 /* script */
-var __vue_script__ = __webpack_require__(961)
+var __vue_script__ = __webpack_require__(955)
 /* template */
-var __vue_template__ = __webpack_require__(962)
+var __vue_template__ = __webpack_require__(956)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -7364,13 +7364,13 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 959:
+/***/ 953:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(960);
+var content = __webpack_require__(954);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -7391,7 +7391,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 960:
+/***/ 954:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(631)(undefined);
@@ -7406,7 +7406,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 /***/ }),
 
-/***/ 961:
+/***/ 955:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7618,7 +7618,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 962:
+/***/ 956:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -8043,19 +8043,19 @@ if (false) {
 
 /***/ }),
 
-/***/ 963:
+/***/ 957:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(964)
+  __webpack_require__(958)
 }
 var normalizeComponent = __webpack_require__(314)
 /* script */
-var __vue_script__ = __webpack_require__(966)
+var __vue_script__ = __webpack_require__(960)
 /* template */
-var __vue_template__ = __webpack_require__(967)
+var __vue_template__ = __webpack_require__(961)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -8096,13 +8096,13 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 964:
+/***/ 958:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(965);
+var content = __webpack_require__(959);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -8123,7 +8123,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 965:
+/***/ 959:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(631)(undefined);
@@ -8138,7 +8138,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 /***/ }),
 
-/***/ 966:
+/***/ 960:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8335,7 +8335,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 967:
+/***/ 961:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -8726,7 +8726,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 968:
+/***/ 962:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {

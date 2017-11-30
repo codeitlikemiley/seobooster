@@ -89,9 +89,9 @@ function toComment(sourceMap) {
 var disposed = false
 var normalizeComponent = __webpack_require__(314)
 /* script */
-var __vue_script__ = __webpack_require__(893)
+var __vue_script__ = __webpack_require__(889)
 /* template */
-var __vue_template__ = __webpack_require__(899)
+var __vue_template__ = __webpack_require__(895)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -526,7 +526,7 @@ var IObject = __webpack_require__(316);
 var $assign = Object.assign;
 
 // should work with symbols and should have deterministic property order (V8 bug)
-module.exports = !$assign || __webpack_require__(68)(function () {
+module.exports = !$assign || __webpack_require__(69)(function () {
   var A = {};
   var B = {};
   // eslint-disable-next-line no-undef
@@ -3138,12 +3138,12 @@ if (false) {
 
 /***/ }),
 
-/***/ 893:
+/***/ 889:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(894);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(890);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_toConsumableArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_toConsumableArray__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator__ = __webpack_require__(61);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator__);
@@ -3156,6 +3156,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+//
+//
 //
 //
 //
@@ -3810,7 +3812,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 894:
+/***/ 890:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3818,7 +3820,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 exports.__esModule = true;
 
-var _from = __webpack_require__(895);
+var _from = __webpack_require__(891);
 
 var _from2 = _interopRequireDefault(_from);
 
@@ -3838,35 +3840,35 @@ exports.default = function (arr) {
 
 /***/ }),
 
-/***/ 895:
+/***/ 891:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(896), __esModule: true };
+module.exports = { "default": __webpack_require__(892), __esModule: true };
 
 /***/ }),
 
-/***/ 896:
+/***/ 892:
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(133);
-__webpack_require__(897);
+__webpack_require__(893);
 module.exports = __webpack_require__(31).Array.from;
 
 
 /***/ }),
 
-/***/ 897:
+/***/ 893:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var ctx = __webpack_require__(69);
+var ctx = __webpack_require__(70);
 var $export = __webpack_require__(60);
 var toObject = __webpack_require__(315);
 var call = __webpack_require__(317);
 var isArrayIter = __webpack_require__(318);
 var toLength = __webpack_require__(134);
-var createProperty = __webpack_require__(898);
+var createProperty = __webpack_require__(894);
 var getIterFn = __webpack_require__(319);
 
 $export($export.S + $export.F * !__webpack_require__(320)(function (iter) { Array.from(iter); }), 'Array', {
@@ -3900,13 +3902,13 @@ $export($export.S + $export.F * !__webpack_require__(320)(function (iter) { Arra
 
 /***/ }),
 
-/***/ 898:
+/***/ 894:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var $defineProperty = __webpack_require__(38);
-var createDesc = __webpack_require__(70);
+var createDesc = __webpack_require__(71);
 
 module.exports = function (object, index, value) {
   if (index in object) $defineProperty.f(object, index, createDesc(0, value));
@@ -3916,7 +3918,7 @@ module.exports = function (object, index, value) {
 
 /***/ }),
 
-/***/ 899:
+/***/ 895:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -4070,13 +4072,14 @@ var render = function() {
                         _vm._l(props.item.roles, function(role, key) {
                           return _c(
                             "v-chip",
-                            { key: key },
+                            { key: key, attrs: { dark: "" } },
                             [
                               _c(
                                 "v-avatar",
                                 {
                                   class: {
                                     primary: role === "admin",
+                                    "white--text": true,
                                     accent: role === "customer",
                                     info: role === "merchant",
                                     success: role === "reseller"
