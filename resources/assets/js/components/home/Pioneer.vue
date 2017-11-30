@@ -73,7 +73,7 @@
 <script>
 export default {
     data: () => ({
-        title: '<h2 class="accent--text">THE FIRST SOCIAL BUILDER THAT ALSO <strong>MANIPULATES REAL TRAFFIC</strong></h2>',
+        title: '<h1 class="accent--text">THE FIRST SOCIAL BUILDER THAT ALSO <strong class="primary--text">MANIPULATES REAL TRAFFIC</strong></h1>',
         subtitle: 'One of the most essential keys to increasing rankings is getting people to actually visit and search for your site. With proxies and various tactics we can get geo targeted traffic to your site TODAY.',
         'current_image': '/img/manipulates-traffic.svg',
         photos: [

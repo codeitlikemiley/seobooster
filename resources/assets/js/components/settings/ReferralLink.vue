@@ -4,18 +4,18 @@
     >
         <v-container>
             <v-layout row wrap>
-                <p class="primary--text">Referral Link</p>
-                <v-flex xs12>
+                <v-flex xs12 md8 offset-md2>
                     <v-alert color="primary" icon="fa-link" value="true">
                         <v-list dense light class="primary">
                             <v-link  link-color="white" :dark="false"  :title="`Your Online Shop Link : ${href}`" :href="href"></v-link>
                         </v-list>
                     </v-alert>
                 </v-flex>
-                <v-flex xs12>
+                <v-flex xs12 md8 offset-md2>
                     <v-text-field
                     label="Referral Link"
                     v-model="link"
+                    prepend-icon="fa-link"
                     light
                     v-validate="{ required: true, regex: /^[a-zA-Z0-9][a-zA-Z0-9.-]+[a-zA-Z0-9]$/ }"
                     :error-messages="errors.collect('referral link')"
@@ -23,9 +23,11 @@
                     >
                     </v-text-field>
                 </v-flex>
-                <v-btn block color="primary" @click="updateLink()">
+                <v-flex xs12 md8 offset-md2>
+                    <v-btn block color="primary" @click="updateLink()">
                     Update Referral Link <v-icon right>fa-send</v-icon>
-                </v-btn>
+                    </v-btn>
+                </v-flex>
             </v-layout>
         </v-container>
     </v-tabs-content>

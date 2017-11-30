@@ -1,9 +1,9 @@
 <template>
   <v-carousel icon="crop_square" class="primary--text">
         <v-carousel-item  v-for="(item,i) in images" :src="item.src" :key="i">
-            <div class="caption text-xs-center">
+            <div class="headline text-xs-center">
             <h3 class="white--text"> <span style="background-color:#103050;opacity:0.75;">{{ item.headline }}</span></h3>
-            <p class="white--text headline" ><span style="background-color:#607D8B;opacity:0.75;">{{ item.subheader }}</span></p>
+            <p class="white--text title" ><span style="background-color:#607D8B;opacity:0.75;">{{ item.subheader }}</span></p>
             <v-btn class="primary white--text" :to="item.buttonlink">{{ item.buttontext }} <v-icon right dark>{{ item.icon }}</v-icon></v-btn>
             </div>
         </v-carousel-item>

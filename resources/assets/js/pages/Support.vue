@@ -2,7 +2,8 @@
   <main-layout :class="[contentClass]" :style="{ paddingTop: `100px` }">
     <v-container fluid>
         <v-layout row wrap>
-            <v-breadcrumbs icons divider="forward" light>
+            <v-breadcrumbs>
+                <v-icon slot="divider" color="teal">forward</v-icon>
                 <v-breadcrumbs-item
                 active-class="primary--text"
                 :disabled="false"
@@ -25,7 +26,7 @@
                             <v-container fill-height fluid>
                                     <v-layout fill-height>
                                     <v-flex xs12 align-end flexbox>
-                                        <p class="headline">Ask Questions</p>
+                                        <p class="headline accent--text">Ask Questions</p>
                                         <v-text-field
                                         light
                                         name="name"
@@ -55,7 +56,7 @@
                                         multi-line
                                         >
                                         </v-text-field>
-                                        <v-btn block color="accent" @click="submit">Send<v-icon right>send</v-icon></v-btn>
+                                        <v-btn block color="accent" class="white--text" @click="submit">Send<v-icon right>send</v-icon></v-btn>
                                     </v-flex>
                                 </v-layout>
                             </v-container>
@@ -66,7 +67,7 @@
                 <v-layout row wrap>
                     <v-flex d-flex xs12>
                         <v-card flat light color="grey lighten-4">
-                            <v-card-title class="headline">Contact Details</v-card-title>
+                            <v-card-title class="headline accent--text">Contact Details</v-card-title>
                             <v-card-text class="headline blue-grey--text">
                                 <v-icon color="red">place</v-icon> 1120 5TH Street
                             </v-card-text>
@@ -133,10 +134,4 @@ export default {
 }
 </script>
 
-<style scoped>
-.breadcrumbs li:not(:last-child):after {
-    color: #009688;
-    content: attr(data-divider);
-    vertical-align: middle;
-}
-</style>
+

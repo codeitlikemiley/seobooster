@@ -1,14 +1,12 @@
 <template>
   <v-navigation-drawer
-      temporary
-      hide-overlay
-      height="100%"
+      fixed
       enable-resize-watcher
+      clipped
       v-model="drawer"
-      class="accent"
-      style="z-index:1000;"
+      class="secondary"
     >
-      <v-list dense>
+      <v-list dense style="padding-top:100px;">
         <!-- V-For Links From Menu -->
         <v-link :dark="darkClass" v-for="link in links" :key="link.id" :title="link.title" :href="link.href" :icon="link.action"></v-link>
         <!-- Individual Link (Custom Additional) -->

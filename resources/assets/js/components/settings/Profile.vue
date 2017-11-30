@@ -4,13 +4,12 @@
     >
         <v-container>
             <v-layout row wrap>
-                <p class="primary--text">Profile Details</p>
-                <v-flex xs12>
+                <v-flex xs12 md8 offset-md2>
                     <v-alert color="primary" icon="warning" value="true">
                         <span class="white--text">** This Will be Used as Default for Shipping and Payment Details **</span>
                     </v-alert>
                 </v-flex>
-                <v-flex xs12>
+                <v-flex xs12 md8 offset-md2>
                     <v-text-field
                     :label="toProperCase(key)"
                     v-model="profile[key]"
@@ -22,9 +21,11 @@
                     >
                     </v-text-field>
                 </v-flex>
-                <v-btn block color="primary" @click="updateProfile()">
+                <v-flex xs12 md8 offset-md2>
+                    <v-btn block color="primary" @click="updateProfile()">
                     Update Profile <v-icon right>fa-send</v-icon>
-                </v-btn>
+                    </v-btn>
+                </v-flex>
             </v-layout>
         </v-container>
     </v-tabs-content>

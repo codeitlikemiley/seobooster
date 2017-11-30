@@ -44,9 +44,15 @@
         <v-layout row>
         <v-flex xs12 sm12 md4 offset-md4 lg4 offset-lg4 xl4 offset-xl4>
             <v-card-actions>
-            <v-btn @click.native="redirectBack()" block flat class="info--text error">No, I Want To Stay</v-btn>
-            <v-btn block flat class="error--text"
-            :loading="logoutForm.busy" :disabled="logoutForm.busy" type="submit" block :class="{primary: !logoutForm.busy, accent: logoutForm.busy}"
+            <v-btn @click.native="redirectBack()" block flat class="white--text" color="red">No, I Want To Stay</v-btn>
+            <v-btn
+            block
+            flat
+            color="primary"
+            class="white--text"
+            :loading="logoutForm.busy"
+            :disabled="logoutForm.busy"
+            type="submit"
             >Yes, Log Me Out</v-btn>
             </v-card-actions>
          </v-flex>

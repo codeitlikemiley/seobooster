@@ -2,8 +2,8 @@
   <v-container fluid class="pa-0 ma-0">
       <v-layout row wrap>
           <v-flex xs12 text-xs-center>
-              <h3 class="primary--text">See it In Actions</h3>
-              <p class="headline accent--text">Watch Us Manage Our Entire Social SEO In Seconds</p>
+              <h1 class="primary--text">SEE IT IN ACTIONS</h1>
+              <h2 class="headline accent--text">Watch Us Manage Our Entire Social SEO In Seconds</h2>
           </v-flex>
       </v-layout>
       <v-layout row justify-center>
@@ -17,7 +17,7 @@
                 </v-card-media>
                 <v-card-title style="background-color: #103050;">
                 <v-spacer></v-spacer>
-                <span>{{ video.title }}</span>
+                <span class="headline white--text">{{ video.title }}</span>
                 <v-spacer></v-spacer>
                 </v-card-title>
             </v-card>

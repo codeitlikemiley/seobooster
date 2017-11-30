@@ -3,42 +3,14 @@
     id="contact-details"
     >
         <v-container>
+=
             <v-layout row wrap v-if="hasContactKeys">
-                <v-flex xs6>
-                <v-btn block @click.native="updateContactDetails()"
-                :disabled="errors.any()"
-                :loading="contactDetailsForm.busy"
-                class="white--text"
-                :class="{primary: !contactDetailsForm.busy , error: contactDetailsForm.busy }"
-                light
-                >Update Contact Details
-                    <v-icon right>fa-send</v-icon>
-                </v-btn>
-                </v-flex>
-                <v-flex xs6>
-                <v-btn block color="accent" @click.native="openModal()" class="white--text"
-                >Create Contact Details
-                    <v-icon right>fa-plus</v-icon>
-                </v-btn>
-                </v-flex>
-            </v-layout>
-            <v-layout row wrap v-else>
-                <v-flex xs12>
-                <v-btn block color="accent" @click.native="openModal()"
-                >Create Contact Details
-                    <v-icon right>fa-plus</v-icon>
-                </v-btn>
-                </v-flex>
-            </v-layout>
-
-            <v-layout row wrap v-if="hasContactKeys">
-                <p class="primary--text">Contact Details</p>
-                <v-flex xs12>
+                <v-flex xs12 md8 offset-md2>
                     <v-alert color="primary" icon="warning" value="true">
                             <span class="white--text">** This Will Be Displayed Publicly in The Homepage **</span>
                     </v-alert>
                 </v-flex>
-                <v-flex xs12>
+                <v-flex xs12 md8 offset-md2>
                     <v-text-field
                     :label="toProperCase(key)"
                     v-model="contact_details[key]"
@@ -56,7 +28,7 @@
             </v-layout>
 
             <v-layout row wrap v-else>
-                <v-flex xs12 text-xs-center>
+                <v-flex xs12 md8 offset-md2 text-xs-center>
                     <v-card light :class="[contentClass]" flat >
                             <v-card-text>
                             <h4>No Contact Details Yet!</h4>
@@ -64,6 +36,34 @@
                             <p class="body-2">Note: This Will Displayed In Your Homepage.</p>
                         </v-card-text>
                     </v-card>
+                </v-flex>
+            </v-layout>
+
+            <v-layout row wrap v-if="hasContactKeys">
+                <v-flex xs6 md4 offset-md2>
+                <v-btn block @click.native="updateContactDetails()"
+                :disabled="errors.any()"
+                :loading="contactDetailsForm.busy"
+                class="white--text"
+                :class="{primary: !contactDetailsForm.busy , error: contactDetailsForm.busy }"
+                light
+                >Update Contact Details
+                    <v-icon right>fa-send</v-icon>
+                </v-btn>
+                </v-flex>
+                <v-flex xs6 md4>
+                <v-btn block color="accent" @click.native="openModal()" class="white--text"
+                >Create Contact Details
+                    <v-icon right>fa-plus</v-icon>
+                </v-btn>
+                </v-flex>
+            </v-layout>
+            <v-layout row wrap v-else>
+                <v-flex xs12 md8 offset-md2>
+                <v-btn block color="accent" @click.native="openModal()"
+                >Create Contact Details
+                    <v-icon right>fa-plus</v-icon>
+                </v-btn>
                 </v-flex>
             </v-layout>
 

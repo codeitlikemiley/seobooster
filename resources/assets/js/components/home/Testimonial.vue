@@ -31,7 +31,7 @@ export default {
     data: () => ({
         avatar: 'https://randomuser.me/api/portraits/men/35.jpg',
         name: '-SEO Agency Owner',
-        testimonial: '<h5 class="accent--text">With Machine I can instantly have hundreds of social signals and traffic</h5><h5 class="accent--text"> <strong>Signs going to my clients sites the DAY they sign on wit my agency</strong></h5>'
+        testimonial: '<h1 class="primary--text">With Seo Socio I can instantly have hundreds of social signals and traffic</h1><h1 class="accent--text"> <strong>Signs going to my clients sites the DAY they sign on wit my agency</strong></h1>'
     })
 }
 </script>

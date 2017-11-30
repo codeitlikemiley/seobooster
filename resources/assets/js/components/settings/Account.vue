@@ -4,77 +4,88 @@
     >
         <v-container>
             <v-layout row wrap>
-                <p class="primary--text">Account Details</p>
-                <v-flex xs12>
+
+                <v-flex xs12 md8 offset-md2>
                     <v-text-field
                     label="Username"
                     v-model="username"
-                    light
+                    prepend-icon=" fa-at"
                     v-validate="{ required: true, regex: /^[a-zA-Z0-9][a-zA-Z0-9.-]+[a-zA-Z0-9]$/ }"
                     :error-messages="errors.collect('username')"
                     data-vv-name="username"
                     >
                     </v-text-field>
                 </v-flex>
-                <v-flex xs12>
+                <v-flex xs12 md8 offset-md2>
                     <v-text-field
                     label="Email"
                     v-model="email"
-                    light
+                    prepend-icon=" mail"
                     v-validate="{ required: true, email: true }"
                     :error-messages="errors.collect('email')"
                     data-vv-name="email"
                     >
                     </v-text-field>
                 </v-flex>
-                <v-flex xs12>
+                <v-flex xs12 md8 offset-md2>
                     <v-text-field
                     label="Account Name"
                     v-model="name"
-                    light
+                    prepend-icon=" fa-address-card"
                     v-validate="{ required: true, regex: /^[a-zA-Z0-9 ]+$/ }"
                     :error-messages="errors.collect('name')"
                     data-vv-name="name"
                     >
                     </v-text-field>
                 </v-flex>
-                <v-flex xs12>
+                <v-flex xs12 md8 offset-md2>
                     <v-text-field
                     label="Current Password"
                     v-model="old_password"
-                    light
+                    prepend-icon="fa-hashtag"
+                    :append-icon="icon"
+                    :append-icon-cb="() => (password_visible = !password_visible)"
+                    :type="!password_visible ? 'password' : 'text'"
                     v-validate="{ min: 6,regex: /^([a-zA-Z0-9@*#]{6,15})$/ }"
                     :error-messages="errors.collect('current password')"
                     data-vv-name="current password"
                     >
                     </v-text-field>
                 </v-flex>
-                <v-flex xs12>
+                <v-flex xs12 md8 offset-md2>
                     <v-text-field
                     label="New Password"
                     v-model="password"
-                    light
                     name="password"
+                    prepend-icon="fiber_new"
+                    :append-icon="icon"
+                    :append-icon-cb="() => (password_visible = !password_visible)"
+                    :type="!password_visible ? 'password' : 'text'"
                     v-validate="{ min: 6,regex: /^([a-zA-Z0-9@*#]{6,15})$/ }"
                     :error-messages="errors.collect('new password')"
                     data-vv-name="new password"
                     >
                     </v-text-field>
                 </v-flex>
-                <v-flex xs12>
+                <v-flex xs12 md8 offset-md2>
                     <v-text-field
                     label="Confirm New Password"
+                    prepend-icon="done_all"
+                    :append-icon="icon"
+                    :append-icon-cb="() => (password_visible = !password_visible)"
+                    :type="!password_visible ? 'password' : 'text'"
                     v-model="password_confirmation"
-                    light
                     v-validate="'confirmed:password'"
                     :error-messages="errors.collect('confirm new password')"
                     data-vv-name="confirm new password"
                     >
                     </v-text-field>
                 </v-flex>
-                <v-btn block color="primary" @click="updateAccount()">
+                <v-flex xs12 md8 offset-md2>
+                    <v-btn block color="primary" @click="updateAccount()">
                     Update Account <v-icon right>fa-send</v-icon>
-                </v-btn>
+                    </v-btn>
+                </v-flex>
             </v-layout>
         </v-container>
     </v-tabs-content>
@@ -92,12 +103,16 @@ export default {
         username: null,
         old_password: null,
         password: null,
-        password_confirmation: null
+        password_confirmation: null,
+        password_visible: false
     }),
     computed: {
         ...mapGetters({
             getMe: 'getMe'
-        })
+        }),
+        icon () {
+            return this.password_visible ? 'visibility' : 'visibility_off'
+        }
     },
     mounted () {
         let self = this
@@ -153,7 +168,3 @@ export default {
     }
 }
 </script>
-
-<style>
-
-</style>

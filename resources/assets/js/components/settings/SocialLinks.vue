@@ -4,41 +4,12 @@
     >
         <v-container>
             <v-layout row wrap v-if="hasSocialKeys">
-                <v-flex xs6>
-                <v-btn block @click.native="updateSocialLinks()"
-                :disabled="errors.any()"
-                :loading="socialLinksForm.busy"
-                class="white--text"
-                :class="{primary: !socialLinksForm.busy , error: socialLinksForm.busy }"
-                light
-                >Update Links
-                    <v-icon right>fa-send</v-icon>
-                </v-btn>
-                </v-flex>
-                <v-flex xs6>
-                <v-btn block color="accent" @click.native="openModal()"
-                >Create Social Link
-                    <v-icon right>fa-plus</v-icon>
-                </v-btn>
-                </v-flex>
-            </v-layout>
-            <v-layout row wrap v-else>
-                <v-flex xs12>
-                <v-btn block color="accent" @click.native="openModal()" class="white--text"
-                >Create Social Link
-                    <v-icon right>fa-plus</v-icon>
-                </v-btn>
-                </v-flex>
-            </v-layout>
-
-            <v-layout row wrap v-if="hasSocialKeys">
-                <p class="primary--text">Social Links</p>
-                <v-flex xs12>
+                <v-flex xs12 md8 offset-md2>
                     <v-alert color="primary" icon="warning" value="true">
                             <span class="white--text">** This Will Be Displayed Publicly in The Homepage **</span>
                     </v-alert>
                 </v-flex>
-                <v-flex xs12>
+                <v-flex xs12 md8 offset-md2>
                     <v-text-field
                     :label="toProperCase(key)"
                     v-model="social_links[key]"
@@ -56,17 +27,44 @@
             </v-layout>
 
             <v-layout row wrap v-else>
-                <v-flex xs12 text-xs-center>
+                <v-flex xs12 md8 offset-md2 text-xs-center>
                     <v-card light :class="[contentClass]" flat >
                             <v-card-text>
                             <h4>NO SOCIAL LINKS YET!</h4>
-                            <p class="title">Create Your First Social Link.</p>
+                            <p class="title white--text">Create Your First Social Link.</p>
                             <p class="body-2">Note: This Will Displayed In Your Homepage.</p>
                         </v-card-text>
                     </v-card>
                 </v-flex>
             </v-layout>
 
+            <v-layout row wrap v-if="hasSocialKeys">
+                <v-flex xs6 md4 offset-md2>
+                <v-btn block @click.native="updateSocialLinks()"
+                :disabled="errors.any()"
+                :loading="socialLinksForm.busy"
+                class="white--text"
+                :class="{primary: !socialLinksForm.busy , error: socialLinksForm.busy }"
+                light
+                >Update Links
+                    <v-icon right>fa-send</v-icon>
+                </v-btn>
+                </v-flex>
+                <v-flex xs6 md4>
+                <v-btn block color="accent white--text" @click.native="openModal()"
+                >Create Social Link
+                    <v-icon right>fa-plus</v-icon>
+                </v-btn>
+                </v-flex>
+            </v-layout>
+            <v-layout row wrap v-else>
+                <v-flex xs12 md8 offset-md2>
+                <v-btn block color="accent" @click.native="openModal()" class="white--text"
+                >Create Social Link
+                    <v-icon right>fa-plus</v-icon>
+                </v-btn>
+                </v-flex>
+            </v-layout>
             <new-social-link></new-social-link>
 
         </v-container>

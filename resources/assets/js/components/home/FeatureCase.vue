@@ -98,7 +98,7 @@
                                         xs12
                                         >
                                             <v-slide-y-transition>
-                                                <v-card-text v-show="card.show" v-text="card.tagline" class="accent--text">
+                                                <v-card-text v-show="card.show" v-text="card.tagline" class="accent--text title">
                                                 </v-card-text>
                                             </v-slide-y-transition>
                                         </v-flex>
@@ -121,7 +121,7 @@
 <script>
 export default {
     data: () => ({
-        title: '<h2 class="accent--text">Everything You Need To Measure <strong>Every Aspect Of Your SEO Sites</strong></h2>',
+        title: '<h1 class="accent--text">Everything You Need To Measure <strong class="primary--text">Every Aspect Of Your SEO Sites</strong></h1>',
         'current_image': '/img/SEOSolutions.jpg',
         lorem: 'Lorem Ipsum Text',
         features: [

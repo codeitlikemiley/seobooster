@@ -2,10 +2,10 @@
   <main-layout :class="[contentClass]" :style="{ paddingTop: `56px`}">
     <v-parallax src="/img/bg.jpg">
       <v-layout column align-center justify-center>
-        <h4 class="white--text">ABOUT {{ `${App.site.trademark}` }}</h4>
-        <h5 class="white--text" text-xs-center>
+        <h1 class="white--text">ABOUT {{ `${App.site.trademark}` }}</h1>
+        <h2 class="white--text" text-xs-center>
             A company committed in Providing Solutions To The Latest SEO Needs Of Everone Who Want To Boost Their Google Rank Search.
-        </h5>
+        </h2>
       </v-layout>
     </v-parallax>
     <v-container light fluid>
@@ -18,9 +18,9 @@
         </v-layout>
         <v-layout row wrap pa-5>
             <v-flex xs12 text-xs-center>
-                <p light class="title">
+                <h1 light class="primary--text">
                   CEO/Founder
-              </p>
+                </h1>
             </v-flex>
           <v-flex xs12 text-xs-left>
               <p class="headline blue-grey--text">
@@ -33,9 +33,9 @@
         </v-layout>
         <v-layout row wrap pa-5>
              <v-flex xs12 text-xs-center>
-              <h4 light class="primary--text">
+              <h2 light class="primary--text">
                   Company Core Values
-              </h4>
+              </h2>
           </v-flex>
             <v-flex
             v-bind="{ [`xs${card.xs}`]: true, [`sm${card.sm}`]: true, [`md${card.md}`]: true,[`lg${card.lg}`]: true,[`xl${card.xl}`]: true }"

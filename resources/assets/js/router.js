@@ -36,10 +36,14 @@ router.beforeEach((to, from, next) => {
     /* for all authenticated routes */
     if (to.matched.some(m => m.meta.requiresAuth)) {
         /* Check For Laravel Passport Access Token Cookie */
-        if (!Bus.$cookie.get('access_token')) {
-            return next({ path: '/login' })
+        if (to.matched.some(m => m.meta.requiresAuth)) {
+            return axios.post(route('api.auth.check')).then(() => {
+                return next()
+            }).catch(() => {
+                let form = new AppForm(App.forms.logoutForm)
+                vm.$store.dispatch('auth/logout', form)
+            })
         }
-        return next()
     }
     /* If No Middleware, Then Just Proceed As Normal */
     return next()

@@ -1,29 +1,29 @@
 <template>
-  <main-layout :class="[contentClass]" :style="{ paddingTop: `55px`}">
-      <v-tabs dark fixed icons centered>
-      <v-tabs-bar class="blue-grey darken-4">
+  <main-layout :style="{ paddingTop: `100px`, backgroundColor: `white` }">
+      <v-tabs fixed icons centered>
+      <v-tabs-bar>
         <v-tabs-slider color="primary"></v-tabs-slider>
         <!-- tabs -->
-        <v-tabs-item href="#account">
-          <v-icon>fa-user</v-icon>
+        <v-tabs-item href="#account"  class="primary--text">
+          <v-icon color="indigo">fa-user</v-icon>
           Account
         </v-tabs-item>
-        <v-tabs-item href="#referral-link" v-if="active">
-          <v-icon>timeline</v-icon>
+        <v-tabs-item href="#referral-link" v-if="active" class="primary--text">
+          <v-icon color="red lighten-2">timeline</v-icon>
           Link
         </v-tabs-item>
-        <v-tabs-item href="#profile">
-          <v-icon>fa-address-card</v-icon>
+        <v-tabs-item href="#profile" class="primary--text">
+          <v-icon color="teal">fa-address-card</v-icon>
           Profile
         </v-tabs-item>
             <!-- for reseller account only -->
-        <v-tabs-item href="#contact-details" v-if="active">
-          <v-icon>phone</v-icon>
+        <v-tabs-item href="#contact-details" v-if="active" class="primary--text">
+          <v-icon color="orange">phone</v-icon>
           Contact Details
         </v-tabs-item>
             <!-- for reseller account only -->
-        <v-tabs-item href="#social-links" v-if="active">
-          <v-icon>link</v-icon>
+        <v-tabs-item href="#social-links" v-if="active" class="primary--text">
+          <v-icon color="blue">link</v-icon>
           Social Links
         </v-tabs-item>
         <!-- tabs -->

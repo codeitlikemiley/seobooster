@@ -72,7 +72,7 @@
                 v-model="spin"
               >
                 <div slot="label" @click.stop="">
-                 <v-icon color="info">autorenew</v-icon> Do you Want To Spin This Post?
+                 Do you Want To Spin  <v-icon color="info">autorenew</v-icon> Text?
                 </div>
               </v-checkbox>
             </v-flex>

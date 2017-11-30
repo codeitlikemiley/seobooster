@@ -1,8 +1,9 @@
 <template>
-<main-layout :dark="false"  :style="{ paddingTop: `100px`, backgroundColor: `white` }">
+<main-layout :style="{ paddingTop: `100px`, backgroundColor: `white` }">
     <v-container  fluid>
         <v-layout row wrap>
-            <v-breadcrumbs icons divider="forward">
+            <v-breadcrumbs>
+                <v-icon slot="divider" color="teal">forward</v-icon>
                 <v-breadcrumbs-item
                 active-class="primary--text"
                 :disabled="false"
@@ -17,9 +18,9 @@
                 </v-breadcrumbs-item>
             </v-breadcrumbs>
         </v-layout>
-        <v-tabs fixed light centered>
-            <v-toolbar color="white" light>
-                <v-tabs-bar class="white" slot="extension">
+        <v-layout row wrap>
+        <v-tabs fixed icons centered>
+                <v-tabs-bar>
                 <v-tabs-slider color="primary"></v-tabs-slider>
                 <v-tabs-item
                 v-for="(tab,key) in tabs"
@@ -29,9 +30,9 @@
                 class="primary--text"
                 >
                 <v-icon :color="tab.iconColor">{{tab.icon}}</v-icon>
+                {{ tab.name }}
                 </v-tabs-item>
                 </v-tabs-bar>
-            </v-toolbar>
             <v-tabs-items>
                 <v-tabs-content
                  v-for="(tab, key) in tabs"
@@ -45,6 +46,7 @@
                 </v-tabs-content>
             </v-tabs-items>
         </v-tabs>
+        </v-layout>
     </v-container>
 </main-layout>
 </template>
@@ -79,11 +81,3 @@ export default {
     })
 }
 </script>
-
-<style scoped>
-.breadcrumbs li:not(:last-child):after {
-    color: #009688;
-    content: attr(data-divider);
-    vertical-align: middle;
-}
-</style>
