@@ -4,6 +4,7 @@ const Posts = () => import('../pages/Posts.vue')
 const Failure = () => import('../pages/Failure.vue')
 const Published = () => import('../pages/Published.vue')
 const Scheduled = () => import('../pages/Scheduled.vue')
+const EditPost = () => import('../pages/EditPost.vue')
 export default [
     /* Start Dashboard Routes */
     {
@@ -30,6 +31,37 @@ export default [
         path: '/posts',
         component: Posts,
         name: 'posts',
+        meta: {
+            requiresAuth: true,
+            permission: 'guest',
+            fail: '/error'
+        }
+
+    },
+    {
+        path: '/blog/:id/edit',
+        component: EditPost,
+        name: 'post.blog.edit',
+        meta: {
+            requiresAuth: true,
+            permission: 'guest',
+            fail: '/error'
+        }
+    },
+    {
+        path: '/social/:id/edit',
+        component: EditPost,
+        name: 'post.social.edit',
+        meta: {
+            requiresAuth: true,
+            permission: 'guest',
+            fail: '/error'
+        }
+    },
+    {
+        path: '/video/:id/edit',
+        component: EditPost,
+        name: 'post.video.edit',
         meta: {
             requiresAuth: true,
             permission: 'guest',

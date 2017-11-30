@@ -14,12 +14,12 @@
                 <v-breadcrumbs-item
                 :disabled="true"
                 >
-                    <span class="blue-grey--text">Posts</span>
+                    <span class="blue-grey--text">Edit {{ post | capitalize }} Posts</span>
                 </v-breadcrumbs-item>
             </v-breadcrumbs>
         </v-layout>
         <v-layout row wrap>
-        <v-tabs fixed icons centered>
+        <v-tabs fixed icons centered v-model="activeTab">
                 <v-tabs-bar>
                 <v-tabs-slider color="primary"></v-tabs-slider>
                 <v-tabs-item
@@ -55,37 +55,43 @@
 import MainLayout from '../layouts/Main.vue'
 import Theme from '../mixins/theme'
 import Acl from '../mixins/acl'
-import BlogPost from '../components/posts/BlogPost.vue'
-import SocialPost from '../components/posts/SocialPost.vue'
-import VideoPost from '../components/posts/VideoPost.vue'
+import BlogPostEdit from '../components/posts/BlogPostEdit.vue'
+import SocialPostEdit from '../components/posts/SocialPostEdit.vue'
+import VideoPostEdit from '../components/posts/VideoPostEdit.vue'
 
 export default {
     mixins: [Theme, Acl],
     components: {
         MainLayout,
-        BlogPost,
-        SocialPost,
-        VideoPost
+        BlogPostEdit,
+        SocialPostEdit,
+        VideoPostEdit
 
     },
     data: () => ({
         /* tabs */
         tabs: [
-            {name: 'blog post', component: 'blog-post', icon: 'fa-newspaper-o', iconColor: 'amber'},
-            {name: 'social post', component: 'social-post', icon: 'fa-address-book', iconColor: 'cyan'},
-            {name: 'video post', component: 'video-post', icon: 'fa-youtube-play ', iconColor: 'red darken-4'}
+            {name: 'blog post edit', component: 'blog-post-edit', icon: 'fa-newspaper-o', iconColor: 'amber lighten-2'},
+            {name: 'social post edit', component: 'social-post-edit', icon: 'fa-address-book', iconColor: 'cyan'},
+            {name: 'video post edit', component: 'video-post-edit', icon: 'fa-youtube-play ', iconColor: 'red darken-4'}
         ],
-        active: {
-            name: 'blog post'
+        activeTab: '',
+        post: ''
+    }),
+    created () {
+        this.getTab()
+    },
+    methods: {
+        getTab () {
+            let self = this
+            let segment = window.location.pathname.split('/')
+            let activeTab = _.filter(self.tabs, function (tab) {
+                return tab.name === `${segment[1]} post edit`
+            })
+            self.tabs = activeTab
+            self.post = segment[1]
+            self.activeTab = activeTab[0].name
         }
-    })
+    }
 }
 </script>
-
-<style scoped>
-.breadcrumbs li:not(:last-child):after {
-    color: #009688;
-    content: attr(data-divider);
-    vertical-align: middle;
-}
-</style>
