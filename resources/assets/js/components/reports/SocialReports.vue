@@ -1,8 +1,8 @@
 <template>
-<v-card light>
+<v-card>
     <v-card-title>
     <v-text-field
-    light
+    v-if="items.length > 0"
     append-icon="search"
     label="Search By Campaign"
     single-line
@@ -14,13 +14,24 @@
     :headers="headers"
     :items="items"
     :search="search"
+    v-model="selected"
     item-key="id"
+    select-all
     :pagination.sync="pagination"
-    light
     expand
     >
         <template slot="headers" slot-scope="props">
             <tr>
+            <th>
+            <v-checkbox
+            v-if="items.length > 0"
+            primary
+            hide-details
+            @click.native="toggleAll"
+            :input-value="props.all"
+            :indeterminate="props.indeterminate"
+            ></v-checkbox>
+            </th>
             <th v-for="header in props.headers" :key="header.text"
                 :class="['column sortable', pagination.descending ? 'desc' : 'asc', header.value === pagination.sortBy ? 'active' : '']"
                 @click="changeSort(header.value)"
@@ -29,11 +40,21 @@
                 {{ header.text }}
             </th>
             <th>
-                Actions
+                <span v-if="selected < 1">Actions</span>
+                <v-btn v-else flat icon color="error" @click.native="deleteSelected">
+                    <v-icon>fa-trash</v-icon>
+                </v-btn>
             </th>
             </tr>
         </template>
         <template slot="items" slot-scope="props">
+                <td>
+                <v-checkbox
+                primary
+                hide-details
+                v-model="props.selected"
+                ></v-checkbox>
+                </td>
                 <td class="title text-xs-left primary--text">
                     {{ props.item.name }}
                 </td>
@@ -47,21 +68,23 @@
                     <span class="title blue-grey--text">{{ props.item.scheduled_at }}</span>
                 </td>
                 <td class="title text-xs-center">
-                    <v-btn light  flat icon :class="{'amber--text': props.expanded, 'amber': props.expanded, 'teal': !props.expanded, 'teal--text': !props.expanded }" @click="props.expanded = !props.expanded">
+                    <v-btn  flat icon :class="{'amber--text': props.expanded, 'amber': props.expanded, 'teal': !props.expanded, 'teal--text': !props.expanded }" @click="props.expanded = !props.expanded">
                     <v-icon v-if="!props.expanded">fa-expand</v-icon>
                     <v-icon v-if="props.expanded">fa-compress</v-icon>
+                    </v-btn>
+                    <v-btn flat icon color="error" @click.native="deleteItem(props.item)">
+                    <v-icon>fa-remove</v-icon>
                     </v-btn>
                 </td>
             </tr>
         </template>
-        <!--
-        //!Working Only in vuetify v 0.17
+
         <template slot="no-data">
-            <v-alert :value="true" color="error" icon="warning">
-            Sorry, nothing to display here :(
+            <v-alert :value="true" color="info" icon="warning">
+            You Havent Posted Anything Yet.
             </v-alert>
         </template>
-        -->
+
         <template slot="expand" slot-scope="props">
         <report-props :posts='props.item.posts'></report-props>
         </template>
@@ -87,6 +110,7 @@ export default {
             sortBy: 'name'
         },
         search: '',
+        selected: [],
         /* table */
         headers: [
             /* remove sort and value since we cant access dot anotation in item */
@@ -108,7 +132,7 @@ export default {
                     {
                         //! post id
                         id: 1,
-                        posted: true, //! 
+                        posted: true, //!
                         posted_at: '16 Nov 2017 @ 10:15:01',
                         //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
                         platform: 'Stumbleupon',
@@ -121,7 +145,7 @@ export default {
                     {
                         //! post id
                         id: 2,
-                        posted: true, //! 
+                        posted: true, //!
                         posted_at: '16 Nov 2017 @ 10:15:01',
                         //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
                         platform: 'Stumbleupon',
@@ -133,7 +157,7 @@ export default {
                     {
                         //! post id
                         id: 3,
-                        posted: true, //! 
+                        posted: true, //!
                         posted_at: '16 Nov 2017 @ 10:15:01',
                         //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
                         platform: 'Stumbleupon',
@@ -145,7 +169,7 @@ export default {
                     {
                         //! post id
                         id: 4,
-                        posted: true, //! 
+                        posted: true, //!
                         posted_at: '16 Nov 2017 @ 10:15:01',
                         //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
                         platform: 'Stumbleupon',
@@ -157,7 +181,7 @@ export default {
                     {
                         //! post id
                         id: 5,
-                        posted: true, //! 
+                        posted: true, //!
                         posted_at: '16 Nov 2017 @ 10:15:01',
                         //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
                         platform: 'Stumbleupon',
@@ -179,7 +203,7 @@ export default {
                     {
                         //! post id
                         id: 6,
-                        posted: true, //! 
+                        posted: true, //!
                         posted_at: '16 Nov 2017 @ 10:15:01',
                         //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
                         platform: 'Stumbleupon',
@@ -201,7 +225,7 @@ export default {
                     {
                         //! post id
                         id: 7,
-                        posted: true, //! 
+                        posted: true, //!
                         posted_at: '16 Nov 2017 @ 10:15:01',
                         //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
                         platform: 'Stumbleupon',
@@ -223,7 +247,7 @@ export default {
                     {
                         //! post id
                         id: 8,
-                        posted: true, //! 
+                        posted: true, //!
                         posted_at: '16 Nov 2017 @ 10:15:01',
                         //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
                         platform: 'Stumbleupon',
@@ -245,7 +269,7 @@ export default {
                     {
                         //! post id
                         id: 9,
-                        posted: true, //! 
+                        posted: true, //!
                         posted_at: '16 Nov 2017 @ 10:15:01',
                         //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
                         platform: 'Stumbleupon',
@@ -257,7 +281,7 @@ export default {
                     {
                         //! post id
                         id: 10,
-                        posted: false, //! 
+                        posted: false, //!
                         posted_at: '16 Nov 2017 @ 10:15:01',
                         //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
                         platform: 'Stumbleupon',
@@ -278,6 +302,24 @@ export default {
                 this.pagination.sortBy = column
                 this.pagination.descending = false
             }
+        },
+        toggleAll () {
+            if (this.selected.length) this.selected = []
+            else this.selected = this.items.slice()
+        },
+        deleteSelected () {
+            let self = this
+            let newItems = _.difference(self.items, self.selected)
+            self.items = newItems
+            self.selected = []
+            //! Send Api Call To Delete The Social Account
+        },
+        deleteItem (item) {
+            let self = this
+            let itemIndex = _.findIndex(self.items, ['id', item.id])
+            self.items.splice(itemIndex, 1)
+            let selectedIndex = _.findIndex(self.selected, ['id', item.id])
+            self.selected.splice(selectedIndex, 1)
         }
     }
 }
