@@ -2,7 +2,8 @@
 <main-layout :dark="false"  :style="{ paddingTop: `100px`, backgroundColor: `white` }">
     <v-container  fluid>
         <v-layout row wrap>
-            <v-breadcrumbs icons divider="forward">
+            <v-breadcrumbs>
+                <v-icon slot="divider" color="teal">forward</v-icon>
                 <v-breadcrumbs-item
                 active-class="primary--text"
                 :disabled="false"
@@ -17,9 +18,9 @@
                 </v-breadcrumbs-item>
             </v-breadcrumbs>
         </v-layout>
-        <v-tabs fixed light centered>
-            <v-toolbar color="white" light>
-                <v-tabs-bar class="white" slot="extension">
+        <v-tabs fixed icons centered>
+            <v-toolbar color="white">
+                <v-tabs-bar class="white">
                 <v-tabs-slider color="primary"></v-tabs-slider>
                 <v-tabs-item
                 v-for="(tab,key) in tabs"
@@ -29,6 +30,7 @@
                 class="primary--text"
                 >
                 <v-icon :color="tab.iconColor">{{tab.icon}}</v-icon>
+                {{ tab.name }}
                 </v-tabs-item>
                 </v-tabs-bar>
             </v-toolbar>
@@ -38,7 +40,7 @@
                 :key="key"
                 :id="tab.name"
                 >
-                <v-card flat :light="true">
+                <v-card flat>
                     <component :is="tab.component" :tab="tab">
                     </component>
                 </v-card>
@@ -69,7 +71,7 @@ export default {
 
         /* tabs */
         tabs: [
-            {name: 'blog reports', component: 'blog-reports', icon: 'fa-newspaper-o', iconColor: 'amber lighten-2'},
+            {name: 'blog reports', component: 'blog-reports', icon: 'fa-newspaper-o', iconColor: 'amber'},
             {name: 'social reports', component: 'social-reports', icon: 'fa-address-book', iconColor: 'cyan'},
             {name: 'video reports', component: 'video-reports', icon: 'fa-youtube-play ', iconColor: 'red darken-4'}
         ],
@@ -79,11 +81,3 @@ export default {
     })
 }
 </script>
-
-<style scoped>
-.breadcrumbs li:not(:last-child):after {
-    color: #009688;
-    content: attr(data-divider);
-    vertical-align: middle;
-}
-</style>
