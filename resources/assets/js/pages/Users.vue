@@ -50,11 +50,13 @@
                     </td>
                     <td class="title text-xs-left primary--text">
                         <v-chip
+                        dark
                         v-for="(role,key) in props.item.roles" :key="key"
                         >
                             <v-avatar
                             :class="{
                             primary: (role === 'admin'),
+                            'white--text': true,
                             accent: (role === 'customer'),
                             info: (role === 'merchant'),
                             success: (role === 'reseller')
