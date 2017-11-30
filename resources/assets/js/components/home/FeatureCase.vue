@@ -98,7 +98,7 @@
                                         xs12
                                         >
                                             <v-slide-y-transition>
-                                                <v-card-text v-show="card.show" v-text="card.tagline" class="accent--text title">
+                                                <v-card-text v-show="card.show" v-text="card.tagline" class="accent--text" :class="[taglineSize]">
                                                 </v-card-text>
                                             </v-slide-y-transition>
                                         </v-flex>
@@ -154,6 +154,15 @@ export default {
             case 'md': return `${width}px`
             case 'lg': return `${width}px`
             case 'xl': return `${width}px`
+            }
+        },
+        taglineSize () {
+            switch (this.$vuetify.breakpoint.name) {
+            case 'xs': return {}
+            case 'sm': return {}
+            case 'md': return {title: true}
+            case 'lg': return {title: true}
+            case 'xl': return {title: true}
             }
         }
     },
