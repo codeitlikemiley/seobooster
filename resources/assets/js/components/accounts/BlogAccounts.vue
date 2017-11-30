@@ -34,7 +34,7 @@
             </tr>
         </template>
         <template slot="items" slot-scope="props">
-                <td class="title text-xs-left primary--text">
+                <td class="title text-xs-center primary--text">
                     <v-icon :color="props.item.iconColor">{{ props.item.icon }}</v-icon>
                     <span class="caption accent--text">{{ props.item.platform }}</span>
                 </td>
@@ -88,8 +88,8 @@ export default {
         /* table */
         headers: [
             /* remove sort and value since we cant access dot anotation in item */
-            { text: 'Platform', value: 'platform', align: 'left', sortable: true },
-            { text: 'Accounts #', value: 'accounts.length', align: 'left', sortable: false }
+            { text: 'Platform', value: 'platform', align: 'center', sortable: true },
+            { text: 'Accounts #', value: 'accounts.length', align: 'center', sortable: false }
         ],
         items: [
             {
