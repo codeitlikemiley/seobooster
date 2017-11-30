@@ -1,4 +1,4 @@
-webpackJsonp([23],[
+webpackJsonp([25],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -47439,19 +47439,19 @@ var routes = routeFiles.concat(__WEBPACK_IMPORTED_MODULE_0__routes_authRoutes__[
 
 "use strict";
 var Login = function Login() {
-    return __webpack_require__.e/* import() */(19).then(__webpack_require__.bind(null, 633));
+    return __webpack_require__.e/* import() */(21).then(__webpack_require__.bind(null, 633));
 };
 var Logout = function Logout() {
-    return __webpack_require__.e/* import() */(18).then(__webpack_require__.bind(null, 634));
+    return __webpack_require__.e/* import() */(20).then(__webpack_require__.bind(null, 634));
 };
 var Register = function Register() {
-    return __webpack_require__.e/* import() */(17).then(__webpack_require__.bind(null, 635));
+    return __webpack_require__.e/* import() */(19).then(__webpack_require__.bind(null, 635));
 };
 var ResetPassword = function ResetPassword() {
-    return __webpack_require__.e/* import() */(22).then(__webpack_require__.bind(null, 636));
+    return __webpack_require__.e/* import() */(24).then(__webpack_require__.bind(null, 636));
 };
 var ForgotPassword = function ForgotPassword() {
-    return __webpack_require__.e/* import() */(20).then(__webpack_require__.bind(null, 637));
+    return __webpack_require__.e/* import() */(22).then(__webpack_require__.bind(null, 637));
 };
 
 /* harmony default export */ __webpack_exports__["a"] = ([
@@ -48276,10 +48276,10 @@ if (hadRuntime) {
 
 "use strict";
 var Categories = function Categories() {
-    return __webpack_require__.e/* import() */(13).then(__webpack_require__.bind(null, 638));
+    return __webpack_require__.e/* import() */(15).then(__webpack_require__.bind(null, 638));
 };
 var Category = function Category() {
-    return __webpack_require__.e/* import() */(12).then(__webpack_require__.bind(null, 639));
+    return __webpack_require__.e/* import() */(14).then(__webpack_require__.bind(null, 639));
 };
 
 /* harmony default export */ __webpack_exports__["a"] = ([{
@@ -48320,19 +48320,19 @@ var Category = function Category() {
 
 "use strict";
 var Home = function Home() {
-    return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 640));
+    return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 640));
 };
 var About = function About() {
-    return __webpack_require__.e/* import() */(15).then(__webpack_require__.bind(null, 641));
+    return __webpack_require__.e/* import() */(17).then(__webpack_require__.bind(null, 641));
 };
 var Cart = function Cart() {
-    return __webpack_require__.e/* import() */(16).then(__webpack_require__.bind(null, 642));
+    return __webpack_require__.e/* import() */(18).then(__webpack_require__.bind(null, 642));
 };
 var Support = function Support() {
-    return __webpack_require__.e/* import() */(14).then(__webpack_require__.bind(null, 643));
+    return __webpack_require__.e/* import() */(16).then(__webpack_require__.bind(null, 643));
 };
 var ThankYou = function ThankYou() {
-    return __webpack_require__.e/* import() */(9).then(__webpack_require__.bind(null, 644));
+    return __webpack_require__.e/* import() */(11).then(__webpack_require__.bind(null, 644));
 };
 
 /* harmony default export */ __webpack_exports__["a"] = ([
@@ -48385,14 +48385,14 @@ var ThankYou = function ThankYou() {
 
 "use strict";
 var Products = function Products() {
-    return __webpack_require__.e/* import() */(10).then(__webpack_require__.bind(null, 645));
+    return __webpack_require__.e/* import() */(12).then(__webpack_require__.bind(null, 645));
 };
 var Product = function Product() {
-    return __webpack_require__.e/* import() */(11).then(__webpack_require__.bind(null, 646));
+    return __webpack_require__.e/* import() */(13).then(__webpack_require__.bind(null, 646));
 };
 //* much better if we can use the same Product page for edit
 var EditProduct = function EditProduct() {
-    return __webpack_require__.e/* import() */(5).then(__webpack_require__.bind(null, 647));
+    return __webpack_require__.e/* import() */(4).then(__webpack_require__.bind(null, 647));
 };
 
 /* harmony default export */ __webpack_exports__["a"] = ([{
@@ -48438,16 +48438,16 @@ var EditProduct = function EditProduct() {
 
 "use strict";
 var Checkout = function Checkout() {
-    return __webpack_require__.e/* import() */(8).then(__webpack_require__.bind(null, 648));
+    return __webpack_require__.e/* import() */(10).then(__webpack_require__.bind(null, 648));
 };
 var Dashboard = function Dashboard() {
-    return __webpack_require__.e/* import() */(6).then(__webpack_require__.bind(null, 649));
+    return __webpack_require__.e/* import() */(7).then(__webpack_require__.bind(null, 649));
 };
 var Settings = function Settings() {
-    return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 650));
+    return __webpack_require__.e/* import() */(8).then(__webpack_require__.bind(null, 650));
 };
 var Users = function Users() {
-    return __webpack_require__.e/* import() */(7).then(__webpack_require__.bind(null, 651));
+    return __webpack_require__.e/* import() */(9).then(__webpack_require__.bind(null, 651));
 };
 
 /* harmony default export */ __webpack_exports__["a"] = ([
@@ -48497,13 +48497,22 @@ var Users = function Users() {
 
 "use strict";
 var Accounts = function Accounts() {
-    return __webpack_require__.e/* import() */(4).then(__webpack_require__.bind(null, 652));
+    return __webpack_require__.e/* import() */(30).then(__webpack_require__.bind(null, 652));
 };
 var Reports = function Reports() {
-    return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, 653));
+    return __webpack_require__.e/* import() */(29).then(__webpack_require__.bind(null, 653));
 };
 var Posts = function Posts() {
-    return __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, 654));
+    return __webpack_require__.e/* import() */(28).then(__webpack_require__.bind(null, 654));
+};
+var Failure = function Failure() {
+    return __webpack_require__.e/* import() */(32).then(__webpack_require__.bind(null, 655));
+};
+var Published = function Published() {
+    return __webpack_require__.e/* import() */(31).then(__webpack_require__.bind(null, 656));
+};
+var Scheduled = function Scheduled() {
+    return __webpack_require__.e/* import() */(33).then(__webpack_require__.bind(null, 973));
 };
 /* harmony default export */ __webpack_exports__["a"] = ([
 /* Start Dashboard Routes */
@@ -48534,6 +48543,33 @@ var Posts = function Posts() {
         permission: 'guest',
         fail: '/error'
     }
+}, {
+    path: '/failure',
+    component: Failure,
+    name: 'failure',
+    meta: {
+        requiresAuth: true,
+        permission: 'guest',
+        fail: '/error'
+    }
+}, {
+    path: '/published',
+    component: Published,
+    name: 'published',
+    meta: {
+        requiresAuth: true,
+        permission: 'guest',
+        fail: '/error'
+    }
+}, {
+    path: '/scheduled',
+    component: Scheduled,
+    name: 'scheduled',
+    meta: {
+        requiresAuth: true,
+        permission: 'guest',
+        fail: '/error'
+    }
     /* End Dashboard Routes */
 }]);
 
@@ -48543,7 +48579,7 @@ var Posts = function Posts() {
 
 "use strict";
 var NotFound = function NotFound() {
-    return __webpack_require__.e/* import() */(21).then(__webpack_require__.bind(null, 655));
+    return __webpack_require__.e/* import() */(23).then(__webpack_require__.bind(null, 657));
 };
 
 /* harmony default export */ __webpack_exports__["a"] = ([
