@@ -17,7 +17,6 @@ import Pioneer from '../components/home/Pioneer.vue'
 import FeatureCase from '../components/home/FeatureCase.vue'
 import Carousel from '../components/home/Carousel.vue'
 import VideoCase from '../components/home/VideoCase.vue'
-// import FooterNote from '../partials/FooterNote'
 import Testimonial from '../components/home/Testimonial.vue'
 import CallToAction from '../components/home/CallToAction.vue'
 import Theme from '../mixins/theme'
@@ -37,10 +36,9 @@ export default {
         FeatureCase,
         VideoCase,
         Carousel,
-        // FooterNote,
+        Testimonial,
         Pioneer,
-        CallToAction,
-        Testimonial
+        CallToAction
     }
 }
 </script>
