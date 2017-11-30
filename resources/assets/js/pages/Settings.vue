@@ -8,23 +8,9 @@
           <v-icon color="indigo">fa-user</v-icon>
           Account
         </v-tabs-item>
-        <v-tabs-item href="#referral-link" v-if="active" class="primary--text">
-          <v-icon color="red lighten-2">timeline</v-icon>
-          Link
-        </v-tabs-item>
         <v-tabs-item href="#profile" class="primary--text">
           <v-icon color="teal">fa-address-card</v-icon>
           Profile
-        </v-tabs-item>
-            <!-- for reseller account only -->
-        <v-tabs-item href="#contact-details" v-if="active" class="primary--text">
-          <v-icon color="orange">phone</v-icon>
-          Contact Details
-        </v-tabs-item>
-            <!-- for reseller account only -->
-        <v-tabs-item href="#social-links" v-if="active" class="primary--text">
-          <v-icon color="blue">link</v-icon>
-          Social Links
         </v-tabs-item>
         <!-- tabs -->
       </v-tabs-bar>
@@ -44,10 +30,7 @@
 <script>
 import MainLayout from '../layouts/Main.vue'
 import Account from '../components/settings/Account.vue'
-import ReferralLink from '../components/settings/ReferralLink.vue'
-import ContactDetails from '../components/settings/ContactDetails.vue'
 import Profile from '../components/settings/Profile.vue'
-import SocialLinks from '../components/settings/SocialLinks.vue'
 import Theme from '../mixins/theme'
 
 export default {
@@ -58,10 +41,7 @@ export default {
     components: {
         MainLayout,
         Account,
-        ReferralLink,
-        ContactDetails,
-        Profile,
-        SocialLinks
+        Profile
     },
     computed: {
         /* need to logout to reflect changes in account */
