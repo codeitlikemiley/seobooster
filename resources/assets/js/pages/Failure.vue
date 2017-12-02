@@ -14,7 +14,7 @@
                 <v-breadcrumbs-item
                 :disabled="true"
                 >
-                    <span class="blue-grey--text">Failured Posts</span>
+                    <span class="blue-grey--text">Failed Posts</span>
                 </v-breadcrumbs-item>
             </v-breadcrumbs>
         </v-layout>

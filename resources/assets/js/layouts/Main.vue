@@ -1,5 +1,5 @@
 <template>
- <v-app standalone v-cloak>
+ <v-app v-cloak>
     <left-side-bar></left-side-bar>
     <app-nav-bar></app-nav-bar>
     <main>

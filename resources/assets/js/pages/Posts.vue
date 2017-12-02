@@ -14,7 +14,7 @@
                 <v-breadcrumbs-item
                 :disabled="true"
                 >
-                    <span class="blue-grey--text">Posts</span>
+                    <span class="blue-grey--text">Create Post</span>
                 </v-breadcrumbs-item>
             </v-breadcrumbs>
         </v-layout>

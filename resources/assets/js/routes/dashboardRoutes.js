@@ -5,6 +5,7 @@ const Failure = () => import('../pages/Failure.vue')
 const Published = () => import('../pages/Published.vue')
 const Scheduled = () => import('../pages/Scheduled.vue')
 const EditPost = () => import('../pages/EditPost.vue')
+const Traffic = () => import('../pages/Traffic.vue')
 export default [
     /* Start Dashboard Routes */
     {
@@ -92,6 +93,16 @@ export default [
         path: '/scheduled',
         component: Scheduled,
         name: 'scheduled',
+        meta: {
+            requiresAuth: true,
+            permission: 'guest',
+            fail: '/error'
+        }
+    },
+    {
+        path: '/traffic',
+        component: Traffic,
+        name: 'traffic',
         meta: {
             requiresAuth: true,
             permission: 'guest',

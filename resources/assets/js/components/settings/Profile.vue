@@ -6,7 +6,7 @@
             <v-layout row wrap>
                 <v-flex xs12 md8 offset-md2>
                     <v-alert color="primary" icon="warning" value="true">
-                        <span class="white--text">** This Will be Used as Default for Shipping and Payment Details **</span>
+                        <span class="white--text">** This Will be Used as Default for Billing Details **</span>
                     </v-alert>
                 </v-flex>
                 <v-flex xs12 md8 offset-md2>

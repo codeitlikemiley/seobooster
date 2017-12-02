@@ -1,5 +1,5 @@
 <template>
-  <main-layout :class="[contentClass]" :style="{ paddingTop: `56px`}">
+  <main-layout :class="[contentClass]">
     <v-parallax src="/img/bg.jpg">
       <v-layout column align-center justify-center>
         <h1 class="white--text">ABOUT {{ `${App.site.trademark}` }}</h1>

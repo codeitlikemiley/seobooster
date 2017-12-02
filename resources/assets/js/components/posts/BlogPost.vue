@@ -1,6 +1,5 @@
 <template>
 <v-card flat>
-      <v-card-text>
         <v-container>
           <v-layout row>
             <v-flex xs12 md8 offset-md2>
@@ -200,7 +199,6 @@
               </v-flex>
           </v-layout>
         </v-container>
-      </v-card-text>
     </v-card>
 </template>
 

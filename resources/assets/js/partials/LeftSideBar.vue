@@ -1,12 +1,12 @@
 <template>
   <v-navigation-drawer
       fixed
-      enable-resize-watcher
-      clipped
+      :clipped="$vuetify.breakpoint.width > 1264"
       v-model="drawer"
       class="secondary"
+      app
     >
-      <v-list dense style="padding-top:100px;">
+      <v-list dense>
         <!-- V-For Links From Menu -->
         <v-link :dark="darkClass" v-for="link in links" :key="link.id" :title="link.title" :href="link.href" :icon="link.action"></v-link>
         <!-- Individual Link (Custom Additional) -->

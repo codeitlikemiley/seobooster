@@ -14,7 +14,7 @@
                 <v-breadcrumbs-item
                 :disabled="true"
                 >
-                    <span class="blue-grey--text">Published Post</span>
+                    <span class="blue-grey--text">Scheduled Post</span>
                 </v-breadcrumbs-item>
             </v-breadcrumbs>
         </v-layout>
