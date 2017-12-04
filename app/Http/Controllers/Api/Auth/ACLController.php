@@ -14,11 +14,6 @@ class ACLController extends Controller
     {
         $this->request = $request;
     }
-    // get a authenticated user
-    public function getAuth()
-    {
-        return $this->request->user();
-    }
     // All Permissions Inherited From Roles Assigned to a User
     public function getPermissionsViaRoles()
     {

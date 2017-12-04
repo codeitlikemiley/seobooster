@@ -20934,18 +20934,10 @@ module.exports = Math.scale || function scale(x, inLow, inHigh, outLow, outHigh)
 
 
 
-// import Meta from 'vue-meta'
+
 // import VueHead from 'vue-head'
 
-// Vue.use(Meta)
 // Vue.use(VueHead)
-/* SEO META */
-// Vue.use(Meta, {
-//     keyName: 'metaInfo', // the component option name that vue-meta looks for meta info on.
-//     attribute: 'data-vue-meta', // the attribute name vue-meta adds to the tags it observes
-//     ssrAttribute: 'data-vue-meta-server-rendered', // the attribute name that lets vue-meta know that meta info has already been server-rendered
-//     tagIDKeyName: 'vmid' // the property name that vue-meta uses to determine whether to overwrite or append a tag
-// })
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_router__["default"]);
 
@@ -47412,14 +47404,10 @@ function _classCallCheck(e,r){if(!(e instanceof r))throw new TypeError("Cannot c
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__routes_authRoutes__ = __webpack_require__(570);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__routes_categoryRoutes__ = __webpack_require__(573);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__routes_homeRoutes__ = __webpack_require__(574);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__routes_productRoutes__ = __webpack_require__(575);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__routes_profileRoutes__ = __webpack_require__(577);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__routes_dashboardRoutes__ = __webpack_require__(578);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__routes_errorRoutes__ = __webpack_require__(579);
-
-
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__routes_homeRoutes__ = __webpack_require__(574);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__routes_profileRoutes__ = __webpack_require__(577);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__routes_dashboardRoutes__ = __webpack_require__(578);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__routes_errorRoutes__ = __webpack_require__(579);
 
 
 
@@ -47428,7 +47416,7 @@ function _classCallCheck(e,r){if(!(e instanceof r))throw new TypeError("Cannot c
 
 var routeFiles = [];
 /* Multi Route Files */
-var routes = routeFiles.concat(__WEBPACK_IMPORTED_MODULE_0__routes_authRoutes__["a" /* default */], __WEBPACK_IMPORTED_MODULE_1__routes_categoryRoutes__["a" /* default */], __WEBPACK_IMPORTED_MODULE_2__routes_homeRoutes__["a" /* default */], __WEBPACK_IMPORTED_MODULE_3__routes_productRoutes__["a" /* default */], __WEBPACK_IMPORTED_MODULE_4__routes_profileRoutes__["a" /* default */], __WEBPACK_IMPORTED_MODULE_5__routes_dashboardRoutes__["a" /* default */], __WEBPACK_IMPORTED_MODULE_6__routes_errorRoutes__["a" /* default */]
+var routes = routeFiles.concat(__WEBPACK_IMPORTED_MODULE_0__routes_authRoutes__["a" /* default */], __WEBPACK_IMPORTED_MODULE_1__routes_homeRoutes__["a" /* default */], __WEBPACK_IMPORTED_MODULE_2__routes_profileRoutes__["a" /* default */], __WEBPACK_IMPORTED_MODULE_3__routes_dashboardRoutes__["a" /* default */], __WEBPACK_IMPORTED_MODULE_4__routes_errorRoutes__["a" /* default */]
 /* add here Other Routes File */
 );
 /* harmony default export */ __webpack_exports__["a"] = (routes);
@@ -48271,68 +48259,22 @@ if (hadRuntime) {
 
 
 /***/ }),
-/* 573 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-var Categories = function Categories() {
-    return __webpack_require__.e/* import() */(18).then(__webpack_require__.bind(null, 638));
-};
-var Category = function Category() {
-    return __webpack_require__.e/* import() */(17).then(__webpack_require__.bind(null, 639));
-};
-
-/* harmony default export */ __webpack_exports__["a"] = ([{
-    path: '/categories',
-    component: Categories,
-    name: 'category.index',
-    props: function props(route) {
-        return { query: {
-                q: route.query.q || '',
-                page: route.query.page || 1
-            } };
-    },
-    meta: {
-        permission: 'guest',
-        fail: '/error'
-    }
-}, {
-    path: '/categories/:slug',
-    component: Category,
-    props: function props(route) {
-        return {
-            query: {
-                q: route.query.q || '',
-                page: route.query.page || 1
-            },
-            slug: route.params.slug };
-    },
-    name: 'category.show',
-    meta: {
-        permission: 'guest',
-        fail: '/error'
-    }
-}]);
-
-/***/ }),
+/* 573 */,
 /* 574 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 var Home = function Home() {
-    return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 640));
+    return __webpack_require__.e/* import() */(17).then(__webpack_require__.bind(null, 640));
 };
 var About = function About() {
-    return __webpack_require__.e/* import() */(20).then(__webpack_require__.bind(null, 641));
-};
-var Cart = function Cart() {
-    return __webpack_require__.e/* import() */(21).then(__webpack_require__.bind(null, 642));
+    return __webpack_require__.e/* import() */(32).then(__webpack_require__.bind(null, 641));
 };
 var Support = function Support() {
-    return __webpack_require__.e/* import() */(19).then(__webpack_require__.bind(null, 643));
+    return __webpack_require__.e/* import() */(31).then(__webpack_require__.bind(null, 643));
 };
 var ThankYou = function ThankYou() {
-    return __webpack_require__.e/* import() */(14).then(__webpack_require__.bind(null, 644));
+    return __webpack_require__.e/* import() */(18).then(__webpack_require__.bind(null, 644));
 };
 
 /* harmony default export */ __webpack_exports__["a"] = ([
@@ -48341,14 +48283,6 @@ var ThankYou = function ThankYou() {
     path: '/about',
     component: About,
     name: 'about',
-    meta: {
-        permission: 'guest',
-        fail: '/error'
-    }
-}, {
-    path: '/cart',
-    component: Cart,
-    name: 'cart',
     meta: {
         permission: 'guest',
         fail: '/error'
@@ -48380,74 +48314,20 @@ var ThankYou = function ThankYou() {
 }]);
 
 /***/ }),
-/* 575 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-var Products = function Products() {
-    return __webpack_require__.e/* import() */(15).then(__webpack_require__.bind(null, 645));
-};
-var Product = function Product() {
-    return __webpack_require__.e/* import() */(16).then(__webpack_require__.bind(null, 646));
-};
-//* much better if we can use the same Product page for edit
-var EditProduct = function EditProduct() {
-    return __webpack_require__.e/* import() */(6).then(__webpack_require__.bind(null, 647));
-};
-
-/* harmony default export */ __webpack_exports__["a"] = ([{
-    path: '/products',
-    component: Products,
-    name: 'product.index',
-    props: function props(route) {
-        return { query: {
-                q: route.query.q || '',
-                page: route.query.page || 1
-            } };
-    },
-    meta: {
-        permission: 'guest',
-        fail: '/error'
-    }
-}, {
-    path: '/products/:slug',
-    component: Product,
-    props: true,
-    name: 'product.show',
-    meta: {
-        permission: 'guest',
-        fail: '/error'
-    }
-},
-//* much better if we can use the same Product page for edit
-{
-    path: '/products/:slug/edit',
-    component: EditProduct,
-    props: true,
-    name: 'product.edit',
-    meta: {
-        permission: 'guest',
-        fail: '/error'
-    }
-}]);
-
-/***/ }),
+/* 575 */,
 /* 576 */,
 /* 577 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var Checkout = function Checkout() {
-    return __webpack_require__.e/* import() */(13).then(__webpack_require__.bind(null, 648));
-};
 var Dashboard = function Dashboard() {
-    return __webpack_require__.e/* import() */(10).then(__webpack_require__.bind(null, 649));
+    return __webpack_require__.e/* import() */(6).then(__webpack_require__.bind(null, 649));
 };
 var Settings = function Settings() {
-    return __webpack_require__.e/* import() */(11).then(__webpack_require__.bind(null, 650));
+    return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 650));
 };
 var Users = function Users() {
-    return __webpack_require__.e/* import() */(12).then(__webpack_require__.bind(null, 651));
+    return __webpack_require__.e/* import() */(14).then(__webpack_require__.bind(null, 651));
 };
 
 /* harmony default export */ __webpack_exports__["a"] = ([
@@ -48465,15 +48345,6 @@ var Users = function Users() {
     path: '/settings',
     component: Settings,
     name: 'settings',
-    meta: {
-        requiresAuth: true,
-        permission: 'guest',
-        fail: '/error'
-    }
-}, {
-    path: '/checkout',
-    component: Checkout,
-    name: 'checkout',
     meta: {
         requiresAuth: true,
         permission: 'guest',
@@ -48503,7 +48374,7 @@ var Reports = function Reports() {
     return __webpack_require__.e/* import() */(4).then(__webpack_require__.bind(null, 653));
 };
 var Posts = function Posts() {
-    return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 654));
+    return __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, 654));
 };
 var Failure = function Failure() {
     return __webpack_require__.e/* import() */(9).then(__webpack_require__.bind(null, 655));
@@ -48515,10 +48386,10 @@ var Scheduled = function Scheduled() {
     return __webpack_require__.e/* import() */(7).then(__webpack_require__.bind(null, 657));
 };
 var EditPost = function EditPost() {
-    return __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, 658));
+    return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, 658));
 };
 var Traffic = function Traffic() {
-    return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, 659));
+    return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 659));
 };
 /* harmony default export */ __webpack_exports__["a"] = ([
 /* Start Dashboard Routes */
@@ -48717,12 +48588,6 @@ _.extend(App, __WEBPACK_IMPORTED_MODULE_2__http__["a" /* default */]);
 
 // All Fields Declared Here When Initiated Will Be Reactive
 App.forms = {
-    cartForm: {
-        'id': null,
-        'options': {},
-        'qty': 0,
-        'rowId': null
-    },
     passwordResetForm: {
         username: '',
         password: '',
@@ -48750,79 +48615,8 @@ App.forms = {
         role: '',
         sponsor_id: ''
     },
-    checkOutForm: {
-        cart: {
-            items: [],
-            subtotal: 0,
-            tax: 0,
-            total: 0
-        },
-        shipping_details: {
-            address_1: '',
-            address_2: '',
-            city: '',
-            country: '',
-            zip_code: '',
-            state_province: ''
-        },
-        customer_details: {
-            first_name: '',
-            last_name: '',
-            email: '',
-            contact_no: ''
-        },
-        shipping_fee: 0,
-        courier: {} // fetch courrier or save it on store for courier.js
-    },
     toggleForm: {
         toggle: false
-    },
-    customerForm: {
-        customer_details: {
-            first_name: '',
-            last_name: '',
-            email: '',
-            contact_no: ''
-        }
-    },
-    addressForm: {
-        shipping_details: {
-            address_1: '',
-            address_2: '',
-            city: '',
-            country: '',
-            zip_code: '',
-            state_province: ''
-        }
-    },
-    paymentForm: {
-        id: '',
-        transaction_no: '',
-        date_paid: null,
-        account_name: '',
-        account_no: '',
-        amount: '',
-        currency: '',
-        gateway: {
-            id: '',
-            name: '',
-            slug: '',
-            group: '',
-            avatar: '',
-            details: '',
-            model: ''
-        }
-    },
-    shipmentForm: {
-        id: null,
-        courier: {},
-        shipping_fee: 0,
-        currency: null,
-        tracking_no: '',
-        sent: false,
-        date_sent: null,
-        received: false,
-        date_received: null
     },
     accountForm: {
         email: null,
@@ -48842,8 +48636,6 @@ App.forms = {
         zip_code: null,
         state_province: null
     },
-    contactDetailsForm: {},
-    socialLinksForm: {},
     usersForm: {},
     linkForm: {
         link: '',
@@ -48855,16 +48647,6 @@ App.forms = {
     },
     permissionsForm: {
         permissions: []
-    },
-    editProductForm: {
-        'category_id': '',
-        currency: '',
-        excerpt: '',
-        name: '',
-        slug: '',
-        sku: '',
-        description: '',
-        options: []
     },
     contactForm: {
         name: '',
@@ -49633,16 +49415,10 @@ if (false) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex_persistedstate__ = __webpack_require__(621);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__store_modules_auth__ = __webpack_require__(622);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__store_modules_permission__ = __webpack_require__(623);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__store_modules_cart__ = __webpack_require__(624);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__store_modules_checkout__ = __webpack_require__(625);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__store_modules_wizard__ = __webpack_require__(626);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__store_modules_referral__ = __webpack_require__(627);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__store_modules_referral__ = __webpack_require__(627);
 
 
 /* Add Below All Your Modules */
-
-
-
 
 
 
@@ -49652,11 +49428,7 @@ if (false) {
     modules: {
         auth: __WEBPACK_IMPORTED_MODULE_2__store_modules_auth__["a" /* default */],
         permission: __WEBPACK_IMPORTED_MODULE_3__store_modules_permission__["a" /* default */],
-        cart: __WEBPACK_IMPORTED_MODULE_4__store_modules_cart__["a" /* default */],
-        checkout: __WEBPACK_IMPORTED_MODULE_5__store_modules_checkout__["a" /* default */],
-        wizard: __WEBPACK_IMPORTED_MODULE_6__store_modules_wizard__["a" /* default */],
-        referral: __WEBPACK_IMPORTED_MODULE_7__store_modules_referral__["a" /* default */]
-        // users,
+        referral: __WEBPACK_IMPORTED_MODULE_4__store_modules_referral__["a" /* default */]
         /* add other modules here */
     },
 
@@ -49665,7 +49437,7 @@ if (false) {
         /* https://github.com/robinvdvleuten/vuex-persistedstate#createpersistedstateoptions */
         key: App.site.trademark,
         // Declare All The State We Want to Persist (use dot anotation for object.key)
-        paths: ['auth', 'checkout', 'wizard', 'referral']
+        paths: ['auth', 'permission', 'referral']
     })]
 }));
 
@@ -50344,745 +50116,9 @@ var mutations = {
 });
 
 /***/ }),
-/* 624 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_asyncToGenerator__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_asyncToGenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_asyncToGenerator__);
-
-
-var state = {
-    /* gloudemans/shoppingcart */
-    items: App.cart.items,
-    tax: App.cart.tax,
-    subtotal: App.cart.subtotal,
-    total: App.cart.total,
-    form: new AppForm(App.forms.cartForm),
-    count: App.cart.count
-};
-
-var getters = {
-    getItems: function getItems(state) {
-        return state.items;
-    },
-    getTax: function getTax(state) {
-        return state.tax;
-    },
-    getSubTotal: function getSubTotal(state) {
-        return state.subtotal;
-    },
-    getTotal: function getTotal(state) {
-        return state.total;
-    },
-    getCount: function getCount(state) {
-        return state.count;
-    },
-    getForm: function getForm(state) {
-        return state.form;
-    }
-};
-
-var actions = {
-    /* Tested Working */
-    /* form : id, qty, options  */
-    // ? Variations happens if there is an options
-    addItem: function () {
-        var _ref3 = __WEBPACK_IMPORTED_MODULE_1_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_asyncToGenerator___default()( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(_ref, _ref2) {
-            var commit = _ref.commit,
-                state = _ref.state;
-            var id = _ref2.id,
-                qty = _ref2.qty,
-                options = _ref2.options;
-            var payload, errors, message;
-            return __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
-                while (1) {
-                    switch (_context.prev = _context.next) {
-                        case 0:
-                            commit('newForm');
-                            state.form.busy = true;
-                            state.form.qty = qty;
-                            state.form.id = id;
-                            state.form.options = options;
-                            _context.prev = 5;
-                            _context.next = 8;
-                            return App.post(route('api.cart.add'), state.form);
-
-                        case 8:
-                            payload = _context.sent;
-
-                            commit('setItems', payload.cart.items);
-                            commit('setTax', payload.cart.tax);
-                            commit('setSubTotal', payload.cart.subtotal);
-                            commit('setTotal', payload.cart.total);
-                            commit('setCount', payload.cart.count);
-                            state.form.busy = false;
-                            commit('newForm');
-                            vm.$popup({ message: payload.message, backgroundColor: '#4db6ac', delay: 5, color: '#fffffa' });
-                            _context.next = 27;
-                            break;
-
-                        case 19:
-                            _context.prev = 19;
-                            _context.t0 = _context['catch'](5);
-                            errors = _context.t0.errors;
-                            message = _context.t0.message;
-
-                            state.form.errors.set(errors);
-                            state.form.busy = false;
-                            commit('newForm');
-                            vm.$popup({ message: message, backgroundColor: '#e57373', delay: 5, color: '#fffffa' });
-
-                        case 27:
-                        case 'end':
-                            return _context.stop();
-                    }
-                }
-            }, _callee, this, [[5, 19]]);
-        }));
-
-        function addItem(_x, _x2) {
-            return _ref3.apply(this, arguments);
-        }
-
-        return addItem;
-    }(),
-
-
-    /* Tested Working */
-    /* form : product.id */
-    removeItem: function () {
-        var _ref6 = __WEBPACK_IMPORTED_MODULE_1_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_asyncToGenerator___default()( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator___default.a.mark(function _callee2(_ref5, id) {
-            var commit = _ref5.commit,
-                state = _ref5.state;
-            var item, payload, errors, message;
-            return __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
-                while (1) {
-                    switch (_context2.prev = _context2.next) {
-                        case 0:
-                            commit('newForm');
-                            state.form.busy = true;
-                            item = _.find(state.items, function (i) {
-                                return i.id === id;
-                            });
-
-                            state.form.rowId = item.rowId;
-                            _context2.prev = 4;
-                            _context2.next = 7;
-                            return App.post(route('api.cart.delete'), state.form);
-
-                        case 7:
-                            payload = _context2.sent;
-
-                            commit('setItems', payload.cart.items);
-                            commit('setTax', payload.cart.tax);
-                            commit('setSubTotal', payload.cart.subtotal);
-                            commit('setTotal', payload.cart.total);
-                            commit('setCount', payload.cart.count);
-                            state.form.busy = false;
-                            commit('newForm');
-                            vm.$popup({ message: payload.message, backgroundColor: '#4db6ac', delay: 5, color: '#fffffa' });
-                            _context2.next = 26;
-                            break;
-
-                        case 18:
-                            _context2.prev = 18;
-                            _context2.t0 = _context2['catch'](4);
-                            errors = _context2.t0.errors;
-                            message = _context2.t0.message;
-
-                            state.form.errors.set(errors);
-                            state.form.busy = false;
-                            commit('newForm');
-                            vm.$popup({ message: message, backgroundColor: '#e57373', delay: 5, color: '#fffffa' });
-
-                        case 26:
-                        case 'end':
-                            return _context2.stop();
-                    }
-                }
-            }, _callee2, this, [[4, 18]]);
-        }));
-
-        function removeItem(_x3, _x4) {
-            return _ref6.apply(this, arguments);
-        }
-
-        return removeItem;
-    }(),
-    destroyCart: function () {
-        var _ref9 = __WEBPACK_IMPORTED_MODULE_1_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_asyncToGenerator___default()( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator___default.a.mark(function _callee3(_ref8) {
-            var commit = _ref8.commit,
-                state = _ref8.state;
-            var payload, errors, message;
-            return __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee3$(_context3) {
-                while (1) {
-                    switch (_context3.prev = _context3.next) {
-                        case 0:
-                            commit('newForm');
-                            state.form.busy = true;
-                            _context3.prev = 2;
-                            _context3.next = 5;
-                            return App.post(route('api.cart.destroy'), state.form);
-
-                        case 5:
-                            payload = _context3.sent;
-
-                            commit('setItems', payload.cart.items);
-                            commit('setTax', payload.cart.tax);
-                            commit('setSubTotal', payload.cart.subtotal);
-                            commit('setTotal', payload.cart.total);
-                            commit('setCount', payload.cart.count);
-                            state.form.busy = false;
-                            commit('newForm');
-                            vm.$popup({ message: payload.message, backgroundColor: '#4db6ac', delay: 5, color: '#fffffa' });
-                            _context3.next = 24;
-                            break;
-
-                        case 16:
-                            _context3.prev = 16;
-                            _context3.t0 = _context3['catch'](2);
-                            errors = _context3.t0.errors;
-                            message = _context3.t0.message;
-
-                            state.form.errors.set(errors);
-                            state.form.busy = false;
-                            commit('newForm');
-                            vm.$popup({ message: message, backgroundColor: '#e57373', delay: 5, color: '#fffffa' });
-
-                        case 24:
-                        case 'end':
-                            return _context3.stop();
-                    }
-                }
-            }, _callee3, this, [[2, 16]]);
-        }));
-
-        function destroyCart(_x5) {
-            return _ref9.apply(this, arguments);
-        }
-
-        return destroyCart;
-    }(),
-
-    /* form: id and qty */
-    updateItem: function () {
-        var _ref13 = __WEBPACK_IMPORTED_MODULE_1_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_asyncToGenerator___default()( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator___default.a.mark(function _callee4(_ref11, _ref12) {
-            var commit = _ref11.commit,
-                state = _ref11.state;
-            var rowId = _ref12.rowId,
-                qty = _ref12.qty;
-            var payload, errors, message;
-            return __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee4$(_context4) {
-                while (1) {
-                    switch (_context4.prev = _context4.next) {
-                        case 0:
-                            commit('newForm');
-                            state.form.busy = true;
-                            state.form.rowId = rowId;
-                            state.form.qty = qty;
-                            _context4.prev = 4;
-                            _context4.next = 7;
-                            return App.post(route('api.cart.update'), state.form);
-
-                        case 7:
-                            payload = _context4.sent;
-
-                            commit('setItems', payload.cart.items);
-                            commit('setTax', payload.cart.tax);
-                            commit('setSubTotal', payload.cart.subtotal);
-                            commit('setTotal', payload.cart.total);
-                            commit('setCount', payload.cart.count);
-                            state.form.busy = false;
-                            commit('newForm');
-                            vm.$popup({ message: payload.message, backgroundColor: '#4db6ac', delay: 5, color: '#fffffa' });
-                            _context4.next = 26;
-                            break;
-
-                        case 18:
-                            _context4.prev = 18;
-                            _context4.t0 = _context4['catch'](4);
-                            errors = _context4.t0.errors;
-                            message = _context4.t0.message;
-
-                            state.form.errors.set(errors);
-                            state.form.busy = false;
-                            commit('newForm');
-                            vm.$popup({ message: message, backgroundColor: '#e57373', delay: 5, color: '#fffffa' });
-
-                        case 26:
-                        case 'end':
-                            return _context4.stop();
-                    }
-                }
-            }, _callee4, this, [[4, 18]]);
-        }));
-
-        function updateItem(_x6, _x7) {
-            return _ref13.apply(this, arguments);
-        }
-
-        return updateItem;
-    }(),
-    resetCart: function resetCart(_ref15) {
-        var commit = _ref15.commit;
-
-        commit('setItems', []);
-        commit('setTax', 0);
-        commit('setSubTotal', 0);
-        commit('setTotal', 0);
-        commit('setCount', 0);
-        commit('newForm');
-    }
-};
-
-var mutations = {
-    setItems: function setItems(state, payload) {
-        state.items = payload;
-    },
-    setTax: function setTax(state, payload) {
-        state.tax = payload;
-    },
-    setSubTotal: function setSubTotal(state, payload) {
-        state.subtotal = payload;
-    },
-    setTotal: function setTotal(state, payload) {
-        state.total = payload;
-    },
-    setCount: function setCount(state, payload) {
-        state.count = payload;
-    },
-    newForm: function newForm(state) {
-        state.form = new AppForm(App.forms.cartForm);
-    }
-};
-
-/* harmony default export */ __webpack_exports__["a"] = ({
-    namespaced: true,
-    state: state,
-    getters: getters,
-    mutations: mutations,
-    actions: actions
-});
-
-/***/ }),
-/* 625 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_asyncToGenerator__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_asyncToGenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_asyncToGenerator__);
-
-
-var state = {
-    shipping_details: {
-        address_1: '',
-        address_2: '',
-        city: '',
-        country: '',
-        zip_code: '',
-        state_province: ''
-    },
-    customer_details: {
-        first_name: '',
-        last_name: '',
-        email: '',
-        contact_no: ''
-    },
-    couriers: [],
-    courier: null,
-    gateways: [],
-    mop: null
-
-};
-
-var getters = {
-    getShippingDetails: function getShippingDetails(state) {
-        return state.shipping_details;
-    },
-    getCustomerDetails: function getCustomerDetails(state) {
-        return state.customer_details;
-    },
-    getModeOfPayment: function getModeOfPayment(state) {
-        return state.mop;
-    },
-    getDeliveryMethod: function getDeliveryMethod(state) {
-        return state.courier;
-    },
-    getCouriers: function getCouriers(state) {
-        return state.couriers;
-    },
-    getGateways: function getGateways(state) {
-        return state.gateways;
-    }
-};
-
-var actions = {
-    checkout: function () {
-        var _ref2 = __WEBPACK_IMPORTED_MODULE_1_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_asyncToGenerator___default()( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(_ref, form) {
-            var dispatch = _ref.dispatch;
-            var payload, errors, message;
-            return __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
-                while (1) {
-                    switch (_context.prev = _context.next) {
-                        case 0:
-                            form.busy = true;
-                            _context.prev = 1;
-                            _context.next = 4;
-                            return App.post(route('api.order.create'), form);
-
-                        case 4:
-                            payload = _context.sent;
-
-                            form.busy = false;
-                            dispatch('resetCheckout');
-                            vm.$router.push({ name: 'thankyou' });
-                            vm.$popup({ message: payload.message, backgroundColor: '#4db6ac', delay: 5, color: '#fffffa' });
-                            _context.next = 18;
-                            break;
-
-                        case 11:
-                            _context.prev = 11;
-                            _context.t0 = _context['catch'](1);
-                            errors = _context.t0.errors;
-                            message = _context.t0.message;
-
-                            form.errors.set(errors);
-                            form.busy = false;
-                            vm.$popup({ message: message, backgroundColor: '#e57373', delay: 5, color: '#fffffa' });
-
-                        case 18:
-                        case 'end':
-                            return _context.stop();
-                    }
-                }
-            }, _callee, this, [[1, 11]]);
-        }));
-
-        function checkout(_x, _x2) {
-            return _ref2.apply(this, arguments);
-        }
-
-        return checkout;
-    }(),
-    fetchCouriers: function () {
-        var _ref5 = __WEBPACK_IMPORTED_MODULE_1_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_asyncToGenerator___default()( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator___default.a.mark(function _callee2(_ref4) {
-            var commit = _ref4.commit;
-            return __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
-                while (1) {
-                    switch (_context2.prev = _context2.next) {
-                        case 0:
-                            _context2.next = 2;
-                            return axios.get('/couriers').then(function (response) {
-                                commit('setCouriers', response.data);
-                            });
-
-                        case 2:
-                        case 'end':
-                            return _context2.stop();
-                    }
-                }
-            }, _callee2, this);
-        }));
-
-        function fetchCouriers(_x3) {
-            return _ref5.apply(this, arguments);
-        }
-
-        return fetchCouriers;
-    }(),
-    fetchGateways: function () {
-        var _ref7 = __WEBPACK_IMPORTED_MODULE_1_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_asyncToGenerator___default()( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator___default.a.mark(function _callee3(_ref6) {
-            var commit = _ref6.commit;
-            return __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee3$(_context3) {
-                while (1) {
-                    switch (_context3.prev = _context3.next) {
-                        case 0:
-                            _context3.next = 2;
-                            return axios.get('/gateways').then(function (response) {
-                                commit('setGateways', response.data);
-                            });
-
-                        case 2:
-                        case 'end':
-                            return _context3.stop();
-                    }
-                }
-            }, _callee3, this);
-        }));
-
-        function fetchGateways(_x4) {
-            return _ref7.apply(this, arguments);
-        }
-
-        return fetchGateways;
-    }(),
-    resetCheckout: function resetCheckout(_ref8) {
-        var commit = _ref8.commit;
-
-        commit('setShippingDetails', {
-            address_1: '',
-            address_2: '',
-            city: '',
-            country: '',
-            zip_code: '',
-            state_province: ''
-        });
-        commit('setCustomerDetails', {
-            first_name: '',
-            last_name: '',
-            email: '',
-            contact_no: ''
-        });
-        commit('setDeliveryMethod', null);
-        commit('setModeOfPayment', null);
-    }
-};
-
-var mutations = {
-    setShippingDetails: function setShippingDetails(state, payload) {
-        state.shipping_details = payload;
-    },
-    setCustomerDetails: function setCustomerDetails(state, payload) {
-        state.customer_details = payload;
-    },
-    setModeOfPayment: function setModeOfPayment(state, payload) {
-        state.mop = payload;
-    },
-    setDeliveryMethod: function setDeliveryMethod(state, payload) {
-        state.courier = payload;
-    },
-    newForm: function newForm(state) {
-        state.form = new AppForm(state.form);
-    },
-    setForm: function setForm(state) {
-        state.form.cart = state.cart;
-        state.form.shipping_details = state.shipping_details;
-        state.form.customer_details = state.customer_details;
-        state.form.courier = state.courier;
-    },
-    setCouriers: function setCouriers(state, payload) {
-        state.couriers = payload;
-    },
-    setGateways: function setGateways(state, payload) {
-        state.gateways = payload;
-    }
-};
-
-/* harmony default export */ __webpack_exports__["a"] = ({
-    namespaced: true,
-    state: state,
-    getters: getters,
-    mutations: mutations,
-    actions: actions
-});
-
-/***/ }),
-/* 626 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_asyncToGenerator__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_asyncToGenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_asyncToGenerator__);
-
-
-var state = {
-    steps: [{ title: 'Customer Details', subtitle: 'Fill Up Customer Info', component: 'customer-details', active: true, validated: true }, { title: 'Delivery Method', subtitle: 'Choose Courier', component: 'delivery-method', active: true, validated: true }, { title: 'Shipment Details', subtitle: 'Fill Up Shipping Details', component: 'shipping-details', active: false, validated: true }, { title: 'Mode of Payment', subtitle: 'Select Payment Options', component: 'mode-of-payment', active: true, validated: true }, { title: 'Purchase', subtitle: 'Create Order', component: 'order-details', active: true, validated: true }],
-    current: { title: 'Customer Details', subtitle: 'Fill Up Customer Info', component: 'customer-details', active: true, validated: true },
-    step: 1,
-    previous: null,
-    next: 2
-};
-
-var getters = {
-    getSteps: function getSteps(state) {
-        return state.steps;
-    },
-    getActiveSteps: function getActiveSteps(state) {
-        return _.filter(state.steps, _.iteratee(['active', true]));
-    },
-    getCurrent: function getCurrent(state) {
-        return state.current;
-    },
-    getIndex: function getIndex(state) {
-        return _.findIndex(state.steps, function (step) {
-            return step.component === state.current.component;
-        });
-    },
-    getStep: function getStep(state) {
-        return state.step;
-    },
-    getPrevious: function getPrevious(state) {
-        return state.previous;
-    },
-    getNext: function getNext(state) {
-        return state.next;
-    }
-};
-
-var actions = {
-    /* payload = checkout form */
-    checkout: function () {
-        var _ref2 = __WEBPACK_IMPORTED_MODULE_1_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_asyncToGenerator___default()( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(_ref, form) {
-            var dispatch = _ref.dispatch;
-            var payload, errors, message;
-            return __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
-                while (1) {
-                    switch (_context.prev = _context.next) {
-                        case 0:
-                            form.busy = true;
-                            _context.prev = 1;
-                            _context.next = 4;
-                            return App.post(route('api.order.add'), form);
-
-                        case 4:
-                            payload = _context.sent;
-
-                            form.busy = false;
-                            dispatch('resetWizard');
-                            vm.$popup({ message: payload.message, backgroundColor: '#4db6ac', delay: 5, color: '#fffffa' });
-                            _context.next = 17;
-                            break;
-
-                        case 10:
-                            _context.prev = 10;
-                            _context.t0 = _context['catch'](1);
-                            errors = _context.t0.errors;
-                            message = _context.t0.message;
-
-                            form.errors.set(errors);
-                            form.busy = false;
-                            vm.$popup({ message: message, backgroundColor: '#e57373', delay: 5, color: '#fffffa' });
-
-                        case 17:
-                        case 'end':
-                            return _context.stop();
-                    }
-                }
-            }, _callee, this, [[1, 10]]);
-        }));
-
-        function checkout(_x, _x2) {
-            return _ref2.apply(this, arguments);
-        }
-
-        return checkout;
-    }(),
-
-    /* payload = step */
-    move: function move(_ref4, payload) {
-        var state = _ref4.state,
-            commit = _ref4.commit;
-
-        // Moving Forward
-        if (state.current.validated) {
-            commit('setStep', payload);
-            var next = payload + 1;
-            commit('setNext', next);
-            var previous = payload - 1;
-            commit('setPrevious', previous);
-            var current = null;
-            if (state.previous > 0) {
-                current = state.steps[state.previous];
-            } else {
-                current = state.steps[0];
-            }
-            commit('setCurrent', current);
-            // Moving Back
-        } else if (state.step > payload) {
-            commit('setStep', payload);
-            var _next = payload + 1;
-            commit('setNext', _next);
-            var _previous = payload - 1;
-            commit('setPrevious', _previous);
-            var _current = null;
-            if (state.previous > 0) {
-                _current = state.steps[state.previous];
-            } else {
-                _current = state.steps[0];
-            }
-            commit('setCurrent', _current);
-        }
-    },
-
-    /* no payload */
-    resetWizard: function resetWizard(_ref5) {
-        var commit = _ref5.commit;
-
-        var steps = [{ title: 'Customer Details', subtitle: 'Fill Up Customer Info', component: 'customer-details', active: true, validated: true }, { title: 'Delivery Method', subtitle: 'Choose Courier', component: 'delivery-method', active: true, validated: true }, { title: 'Shipment Details', subtitle: 'Fill Up Shipping Details', component: 'shipping-details', active: true, validated: true }, { title: 'Mode of Payment', subtitle: 'Select Payment Options', component: 'mode-of-payment', active: true, validated: true }, { title: 'Purchase', subtitle: 'Create Order', component: 'order-details', active: true, validated: true }];
-        var current = { title: 'Customer Details', subtitle: 'Fill Up Customer Info', component: 'customer-details', active: true, validated: true };
-        var step = parseInt(1);
-        var previous = null;
-        var next = parseInt(2);
-        commit('setSteps', steps);
-        commit('setCurrent', current);
-        commit('setStep', step);
-        commit('setPrevious', previous);
-        commit('setNext', next);
-    }
-};
-
-var mutations = {
-    /* payload = int */
-    setStep: function setStep(state, payload) {
-        state.step = payload;
-    },
-    /* payload = int */
-    setPrevious: function setPrevious(state, payload) {
-        state.previous = payload;
-    },
-    /* payload = int */
-    setNext: function setNext(state, payload) {
-        state.next = payload;
-    },
-    /* payload = object */
-    setCurrent: function setCurrent(state, payload) {
-        state.current = payload;
-    },
-    /* payload = array */
-    setSteps: function setSteps(state, payload) {
-        state.steps = payload;
-    },
-    /* payload = component and active */
-    setStepStatus: function setStepStatus(state, payload) {
-        var index = _.findIndex(state.steps, function (step) {
-            return step.component === payload.component;
-        });
-        var step = _.find(state.steps, function (step) {
-            return step.component === payload.component;
-        });
-        step.active = payload.active;
-        vm.$set(state.steps, index, step);
-    },
-    /* payload = component and validated */
-    setStepValidated: function setStepValidated(state, payload) {
-        var index = _.findIndex(state.steps, function (step) {
-            return step.component === payload.component;
-        });
-        var step = _.find(state.steps, function (step) {
-            return step.component === payload.component;
-        });
-        step.validated = payload.validated;
-        vm.$set(state.steps, index, step);
-    }
-
-};
-
-/* harmony default export */ __webpack_exports__["a"] = ({
-    namespaced: true,
-    state: state,
-    getters: getters,
-    mutations: mutations,
-    actions: actions
-});
-
-/***/ }),
+/* 624 */,
+/* 625 */,
+/* 626 */,
 /* 627 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 

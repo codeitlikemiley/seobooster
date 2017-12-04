@@ -22,11 +22,6 @@ class User extends Authenticatable
      * @var array
      */
     public $incrementing = false;
-
-    public function getRouteKeyName()
-    {
-        return 'id';
-    }
     
     protected $fillable = [
         'name', 'email', 'password', 'username'
@@ -54,10 +49,6 @@ class User extends Authenticatable
         ];
     }
 
-    public function reservedSlugs()
-    {
-        return ['admin', 'support', 'api', 'administrator','helpdesk','customer-support','forum','blog','shop','billing','products','category', 'categories'];
-    }
     // Override the Built In PasswordResetNotification by Laravel
     public function sendPasswordResetNotification($token)
     {
@@ -67,6 +58,16 @@ class User extends Authenticatable
     public function orders() 
     {
         return $this->hasMany(Order::class);
+    }
+
+    public function campaigns() 
+    {
+        return $this->hasMany(Order::class);
+    }
+
+    public function accounts() 
+    {
+        return $this->hasMany(SocialAccount::class);
     }
 
 

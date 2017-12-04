@@ -1,5 +1,391 @@
 webpackJsonp([11],{
 
+/***/ 1050:
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(1051)
+}
+var normalizeComponent = __webpack_require__(314)
+/* script */
+var __vue_script__ = __webpack_require__(1053)
+/* template */
+var __vue_template__ = __webpack_require__(1054)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\settings\\ReferralLink.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-347731a9", Component.options)
+  } else {
+    hotAPI.reload("data-v-347731a9", Component.options)
+' + '  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 1051:
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(1052);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(661)("00dc0f0f", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-347731a9\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./ReferralLink.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-347731a9\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./ReferralLink.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ 1052:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(631)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ 1053:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_asyncToGenerator__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_asyncToGenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_asyncToGenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends__ = __webpack_require__(664);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__VLink_vue__ = __webpack_require__(663);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__VLink_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__VLink_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vuex__ = __webpack_require__(90);
+
+
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_4_vuex__["createNamespacedHelpers"])('auth'),
+    mapGetters = _createNamespacedHelp.mapGetters,
+    mapMutations = _createNamespacedHelp.mapMutations;
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            linkForm: new AppForm(App.forms.linkForm),
+            link: null
+        };
+    },
+    computed: __WEBPACK_IMPORTED_MODULE_2_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default()({}, mapGetters({
+        getMe: 'getMe'
+    }), {
+        href: function href() {
+            return 'http://' + this.link + '.' + App.site.domain;
+        }
+    }),
+    components: {
+        VLink: __WEBPACK_IMPORTED_MODULE_3__VLink_vue___default.a
+    },
+    mounted: function mounted() {
+        var self = this;
+        self.link = self.getMe.referral_link.link;
+        self.link_id = self.getMe.referral_link.id;
+        self.user_id = self.getMe.id;
+    },
+
+    methods: __WEBPACK_IMPORTED_MODULE_2_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default()({}, mapMutations({
+        setMe: 'setMe'
+    }), {
+        prepareLinkForm: function prepareLinkForm() {
+            var self = this;
+            self.linkForm.link = self.link;
+            self.linkForm.link_id = self.link_id;
+            self.linkForm.user_id = self.user_id;
+        },
+        resetLinkForm: function resetLinkForm() {
+            this.linkForm = new AppForm(App.forms.linkForm);
+        },
+        updateLink: function () {
+            var _ref = __WEBPACK_IMPORTED_MODULE_1_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_asyncToGenerator___default()( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator___default.a.mark(function _callee() {
+                var self, payload, errors, message;
+                return __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+                    while (1) {
+                        switch (_context.prev = _context.next) {
+                            case 0:
+                                self = this;
+
+                                self.linkForm.busy = true;
+                                self.prepareLinkForm();
+                                _context.prev = 3;
+                                _context.next = 6;
+                                return App.post(route('api.user.updateReferralLink'), self.linkForm);
+
+                            case 6:
+                                payload = _context.sent;
+
+                                self.resetLinkForm();
+                                self.setMe(payload.data);
+                                /* logout ->redirect to main link /login */
+
+                                vm.$popup({ message: payload.message, backgroundColor: '#4db6ac', delay: 5, color: '#fffffa' });
+                                _context.next = 19;
+                                break;
+
+                            case 12:
+                                _context.prev = 12;
+                                _context.t0 = _context['catch'](3);
+                                errors = _context.t0.errors;
+                                message = _context.t0.message;
+
+                                self.linkForm.errors.set(errors);
+                                self.linkForm.busy = false;
+                                vm.$popup({ message: message, backgroundColor: '#e57373', delay: 5, color: '#fffffa' });
+
+                            case 19:
+                            case 'end':
+                                return _context.stop();
+                        }
+                    }
+                }, _callee, this, [[3, 12]]);
+            }));
+
+            function updateLink() {
+                return _ref.apply(this, arguments);
+            }
+
+            return updateLink;
+        }()
+    })
+});
+
+/***/ }),
+
+/***/ 1054:
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-tabs-content",
+    { attrs: { id: "referral-link" } },
+    [
+      _c(
+        "v-container",
+        [
+          _c(
+            "v-layout",
+            { attrs: { row: "", wrap: "" } },
+            [
+              _c(
+                "v-flex",
+                { attrs: { xs12: "", md8: "", "offset-md2": "" } },
+                [
+                  _c(
+                    "v-alert",
+                    {
+                      attrs: {
+                        color: "primary",
+                        icon: "fa-link",
+                        value: "true"
+                      }
+                    },
+                    [
+                      _c(
+                        "v-list",
+                        {
+                          staticClass: "primary",
+                          attrs: { dense: "", light: "" }
+                        },
+                        [
+                          _c("v-link", {
+                            attrs: {
+                              "link-color": "white",
+                              dark: false,
+                              title: "Your Online Shop Link : " + _vm.href,
+                              href: _vm.href
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-flex",
+                { attrs: { xs12: "", md8: "", "offset-md2": "" } },
+                [
+                  _c("v-text-field", {
+                    directives: [
+                      {
+                        name: "validate",
+                        rawName: "v-validate",
+                        value: {
+                          required: true,
+                          regex: /^[a-zA-Z0-9][a-zA-Z0-9.-]+[a-zA-Z0-9]$/
+                        },
+                        expression:
+                          "{ required: true, regex: /^[a-zA-Z0-9][a-zA-Z0-9.-]+[a-zA-Z0-9]$/ }"
+                      }
+                    ],
+                    attrs: {
+                      label: "Referral Link",
+                      "prepend-icon": "fa-link",
+                      light: "",
+                      "error-messages": _vm.errors.collect("referral link"),
+                      "data-vv-name": "referral link"
+                    },
+                    model: {
+                      value: _vm.link,
+                      callback: function($$v) {
+                        _vm.link = $$v
+                      },
+                      expression: "link"
+                    }
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-flex",
+                { attrs: { xs12: "", md8: "", "offset-md2": "" } },
+                [
+                  _c(
+                    "v-btn",
+                    {
+                      attrs: { block: "", color: "primary" },
+                      on: {
+                        click: function($event) {
+                          _vm.updateLink()
+                        }
+                      }
+                    },
+                    [
+                      _vm._v("\r\n                    Update Referral Link "),
+                      _c("v-icon", { attrs: { right: "" } }, [
+                        _vm._v("fa-send")
+                      ])
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-347731a9", module.exports)
+  }
+}
+
+/***/ }),
+
 /***/ 631:
 /***/ (function(module, exports) {
 
@@ -3217,7 +3603,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_settings_Account_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_settings_Account_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_settings_Profile_vue__ = __webpack_require__(863);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_settings_Profile_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_settings_Profile_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mixins_theme__ = __webpack_require__(662);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_settings_ReferralLink_vue__ = __webpack_require__(1050);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_settings_ReferralLink_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_settings_ReferralLink_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mixins_theme__ = __webpack_require__(662);
 //
 //
 //
@@ -3247,6 +3635,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+
 
 
 
@@ -3254,7 +3645,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    mixins: [__WEBPACK_IMPORTED_MODULE_3__mixins_theme__["a" /* default */]],
+    mixins: [__WEBPACK_IMPORTED_MODULE_4__mixins_theme__["a" /* default */]],
     data: function data() {
         return {
             contentClass: { 'grey': true, 'lighten-4': true, 'accent--text': true }
@@ -3263,13 +3654,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     components: {
         MainLayout: __WEBPACK_IMPORTED_MODULE_0__layouts_Main_vue___default.a,
         Account: __WEBPACK_IMPORTED_MODULE_1__components_settings_Account_vue___default.a,
-        Profile: __WEBPACK_IMPORTED_MODULE_2__components_settings_Profile_vue___default.a
-    },
-    computed: {
-        /* need to logout to reflect changes in account */
-        active: function active() {
-            return !!this.$store.getters['auth/getMe']['referral_link']['active'];
-        }
+        Profile: __WEBPACK_IMPORTED_MODULE_2__components_settings_Profile_vue___default.a,
+        ReferralLink: __WEBPACK_IMPORTED_MODULE_3__components_settings_ReferralLink_vue___default.a
     }
 });
 
@@ -4261,6 +4647,19 @@ var render = function() {
                   _vm._v("\n        Profile\n      ")
                 ],
                 1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-tabs-item",
+                {
+                  staticClass: "primary--text",
+                  attrs: { href: "#referral-link" }
+                },
+                [
+                  _c("v-icon", { attrs: { color: "cyan" } }, [_vm._v("link")]),
+                  _vm._v("\n        Referral Link\n      ")
+                ],
+                1
               )
             ],
             1
@@ -4271,13 +4670,9 @@ var render = function() {
             [
               _c("account"),
               _vm._v(" "),
-              _vm.active ? _c("referral-link") : _vm._e(),
-              _vm._v(" "),
               _c("profile"),
               _vm._v(" "),
-              _vm.active ? _c("contact-details") : _vm._e(),
-              _vm._v(" "),
-              _vm.active ? _c("social-links") : _vm._e()
+              _c("referral-link")
             ],
             1
           )

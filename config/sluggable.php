@@ -28,7 +28,7 @@ return [
      * want to make sure your slugs aren't too long.
      */
 
-    'maxLength' => null,
+    'maxLength' => 80,
 
     /**
      * If left to "null", then use the cocur/slugify package to generate the slug
@@ -84,7 +84,7 @@ return [
      * If set to "true", then uniqueness is enforced across trashed and existing models.
      */
 
-    'includeTrashed' => false,
+    'includeTrashed' => true,
 
     /**
      * An array of slug names that can never be used for this model,
@@ -111,7 +111,7 @@ return [
      */
 
     'reserved' => function(Model $model) {
-        return $model->reservedSlugs();
+        return ['admin', 'support', 'api', 'administrator','helpdesk','customer-support','forum','blog','shop','billing','products','category', 'categories'];
       },
 
     /**
@@ -125,6 +125,6 @@ return [
      * Only set this to true if you understand the possible consequences.
      */
     
-    'onUpdate' => false,
+    'onUpdate' => true,
 
 ];

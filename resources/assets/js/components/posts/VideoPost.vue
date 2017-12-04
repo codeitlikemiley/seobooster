@@ -89,15 +89,15 @@
                 v-model="videoName"
                 name="filename"
                 label="Video"
-                prepend-icon="image"
+                prepend-icon="video"
                 single-line
-                :append-icon="!!videoName ? 'fa-remove' : ''"
+                :append-icon="!!fileName ? 'fa-remove' : ''"
                 :append-icon-cb="() => (removeVideo())"
               ></v-text-field>
 
             </v-flex>
             <v-flex xs2>
-                <upload-button :title="video_title" :selectedCallback="fileSelectedFunc">
+                <upload-button :title="file_title" :selectedCallback="fileSelectedFunc">
                 </upload-button>
             </v-flex>
           </v-layout>
@@ -105,8 +105,8 @@
             <v-flex xs12 md8 offset-md2>
                 <!-- image preview -->
                 <v-card-media
-                v-if="video"
-                :src="imageUrl"
+                v-if="file"
+                :src="fileUrl"
                 height="250px"
                 contain
                 >
@@ -136,25 +136,19 @@ export default {
     data: () => ({
         name: '',
         title: '',
-        body: '',
-        bookmark: '',
-        embed: '',
-        spin: false,
         description: '',
-        keywords: [],
+        spin: false,
         scheduled_at: null,
-        /* image related */
-        video: null,
-        imageUrl: '',
-        videoName: '',
-        /* set of save keywords in db */
-        items: [],
-        modal: false
-
+        /* modal for scheduled at */
+        modal: false,
+        /* video related use spatie media library */
+        file: null,
+        fileUrl: '',
+        fileName: ''
     }),
     computed: {
-        'video_title' () {
-            if (!this.videoName) {
+        'file_title' () {
+            if (!this.fileName) {
                 return 'Upload Video'
             } else {
                 return 'Remove Video'
@@ -165,19 +159,19 @@ export default {
         //! prop function of upload button
         fileSelectedFunc (file) {
             let self = this
-            this.videoName = file.name
-            this.video = file
+            this.fileName = file.name
+            this.file = file
             let reader = new FileReader()
 
             reader.onload = function (event) {
-                self.imageUrl = event.target.result
+                self.fileUrl = event.target.result
             }
             reader.readAsDataURL(file)
         },
         removeVideo () {
-            this.video = null
-            this.videoName = ''
-            this.imageUrl = ''
+            this.file = null
+            this.fileName = ''
+            this.fileUrl = ''
         }
     }
 }

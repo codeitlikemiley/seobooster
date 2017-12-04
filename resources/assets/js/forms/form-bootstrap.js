@@ -7,12 +7,6 @@ _.extend(App, http)
 
 // All Fields Declared Here When Initiated Will Be Reactive
 App.forms = {
-    cartForm: {
-        'id': null,
-        'options': {},
-        'qty': 0,
-        'rowId': null
-    },
     passwordResetForm: {
         username: '',
         password: '',
@@ -40,79 +34,8 @@ App.forms = {
         role: '',
         sponsor_id: ''
     },
-    checkOutForm: {
-        cart: {
-            items: [],
-            subtotal: 0,
-            tax: 0,
-            total: 0
-        },
-        shipping_details: {
-            address_1: '',
-            address_2: '',
-            city: '',
-            country: '',
-            zip_code: '',
-            state_province: ''
-        },
-        customer_details: {
-            first_name: '',
-            last_name: '',
-            email: '',
-            contact_no: ''
-        },
-        shipping_fee: 0,
-        courier: {} // fetch courrier or save it on store for courier.js
-    },
     toggleForm: {
         toggle: false
-    },
-    customerForm: {
-        customer_details: {
-            first_name: '',
-            last_name: '',
-            email: '',
-            contact_no: ''
-        }
-    },
-    addressForm: {
-        shipping_details: {
-            address_1: '',
-            address_2: '',
-            city: '',
-            country: '',
-            zip_code: '',
-            state_province: ''
-        }
-    },
-    paymentForm: {
-        id: '',
-        transaction_no: '',
-        date_paid: null,
-        account_name: '',
-        account_no: '',
-        amount: '',
-        currency: '',
-        gateway: {
-            id: '',
-            name: '',
-            slug: '',
-            group: '',
-            avatar: '',
-            details: '',
-            model: ''
-        }
-    },
-    shipmentForm: {
-        id: null,
-        courier: {},
-        shipping_fee: 0,
-        currency: null,
-        tracking_no: '',
-        sent: false,
-        date_sent: null,
-        received: false,
-        date_received: null
     },
     accountForm: {
         email: null,
@@ -132,10 +55,6 @@ App.forms = {
         zip_code: null,
         state_province: null
     },
-    contactDetailsForm: {
-    },
-    socialLinksForm: {
-    },
     usersForm: {
 
     },
@@ -149,16 +68,6 @@ App.forms = {
     },
     permissionsForm: {
         permissions: []
-    },
-    editProductForm: {
-        'category_id': '',
-        currency: '',
-        excerpt: '',
-        name: '',
-        slug: '',
-        sku: '',
-        description: '',
-        options: []
     },
     contactForm: {
         name: '',

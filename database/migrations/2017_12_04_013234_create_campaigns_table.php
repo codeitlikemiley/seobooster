@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSocialAccounts extends Migration
+class CreateCampaignsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class CreateSocialAccounts extends Migration
      */
     public function up()
     {
-        Schema::create('social_accounts', function (Blueprint $table) {
-            $table->unsignedBigInteger('user_id');
-            $table->string('provider');
-            $table->unsignedBigInteger('provider_user_id');
-            $table->unique(['user_id', 'provider']);
+        Schema::create('campaigns', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->string('slug')->unique();
+            $table->unsignedInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->index(['provider_user_id', 'provider']);
+            /* create a method to update this when all post is posted */
+            $table->boolean('completed')->default(0);
             $table->timestamps();
         });
     }
@@ -31,6 +32,6 @@ class CreateSocialAccounts extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('social_accounts');
+        Schema::dropIfExists('campaigns');
     }
 }

@@ -36,11 +36,6 @@ class Product extends Model implements Buyable, HasMediaConversions
         ];
     }
 
-    public function reservedSlugs()
-    {
-        return ['admin', 'support', 'api', 'administrator','helpdesk','customer-support','forum','blog','shop','billing','products','category', 'categories'];
-    }
-
     public function category()
     {
         return $this->belongsTo(Category::class);

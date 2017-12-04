@@ -77,11 +77,7 @@ export default {
         subtitle: 'One of the most essential keys to increasing rankings is getting people to actually visit and search for your site. With proxies and various tactics we can get geo targeted traffic to your site TODAY.',
         'current_image': '/img/manipulates-traffic.svg',
         photos: [
-            // 'http://sourcemachine.io/img/features-cloud-based.svg',
-            // 'http://sourcemachine.io/img/features-full-client-reporting.svg',
-            // 'http://sourcemachine.io/img/features-wordpress.svg',
-            // 'http://sourcemachine.io/img/features-social-posting.svg',
-            // 'http://sourcemachine.io/img/features-video-rankings.svg'
+
         ]
     }),
     computed: {

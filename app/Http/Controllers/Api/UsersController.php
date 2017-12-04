@@ -24,12 +24,6 @@ class UsersController extends Controller
         return new UserCollection(User::all()->load('profile','referralLink', 'roles', 'permissions', 'sponsor.referralLink')->paginate(10));
     }
 
-    public function show($id)
-    {
-        $user = User::with('profile','referralLink', 'roles', 'permissions')->find($id);
-        return new UserResouce($user);
-    }
-
     public function me(Request $request)
     {
         $user = $request->user();

@@ -250,7 +250,7 @@ export default {
             { text: 'ID', value: 'id', align: 'left', sortable: true },
             { text: 'Name', value: 'name', align: 'left', sortable: true },
             { text: 'Sponsor', value: 'sponsor.name', align: 'left', sortable: true },
-            { text: 'Shop Link', value: 'referral_link.link', align: 'left', sortable: true },
+            { text: 'Referrak Link', value: 'referral_link.link', align: 'left', sortable: true },
             { text: 'Roles', value: 'roles', align: 'left', sortable: false },
             { text: 'Actions', value: 'actions', align: 'center', sortable: false }
         ],
