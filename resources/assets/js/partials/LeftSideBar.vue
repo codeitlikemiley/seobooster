@@ -8,8 +8,8 @@
     >
       <v-list dense>
         <!-- V-For Links From Menu -->
-        <v-link :dark="darkClass" v-for="link in links" :key="link.id" :title="link.title" :href="link.href" :icon="link.action"></v-link>
         <!-- Individual Link (Custom Additional) -->
+        <v-link :dark="darkClass"  title="Home" :href="'/'"   icon="fa-home"></v-link>
         <v-link :dark="darkClass"  title="Company Profile" :href="'/about'"   icon="fa-building"></v-link>
         <v-link :dark="darkClass"  title="Support" :href="'/support'"   icon="message"></v-link>
         <!-- Expandable Group Links from Group Link -->
@@ -37,38 +37,21 @@
 <script>
 import Acl from '../mixins/acl'
 import VLink from '../components/VLink.vue'
-import CategoryLink from '../components/CategoryLink.vue'
 import Theme from '../mixins/theme'
 
 export default {
     mixins: [Theme, Acl],
     data: () => ({
-        drawer: false,
-        links: [], // site navigation links
-        members: [], // change with featured Products
-        grouplinks: [] // product categories
+        drawer: false
     }),
     components: {
-        VLink,
-        CategoryLink
+        VLink
     },
     mounted () {
         var self = this
         Bus.$on('toggleDrawer', function () {
             self.drawer = !self.drawer
         })
-        self.fetchCategories()
-        self.fetchNavLinks()
-    },
-    methods: {
-        fetchCategories () {
-            this.grouplinks = App.grouplinks
-        },
-        fetchNavLinks () {
-            this.links = App.menu
-        }
-
     }
-
 }
 </script>

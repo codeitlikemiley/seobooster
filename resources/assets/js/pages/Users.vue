@@ -72,12 +72,6 @@
                             <v-icon v-if="!props.expanded">fa-expand</v-icon>
                             <v-icon v-if="props.expanded">fa-compress</v-icon>
                         </v-btn>
-                        <!--
-                        removed edit button
-                        <v-btn :disabled="!can('edit_user')"  flat icon color="accent" @click.native="editUser(props.item)">
-                            <v-icon>fa-edit</v-icon>
-                        </v-btn>
-                        -->
                         <v-btn :disabled="!can('delete_user')" flat icon color="error" @click.native="deleteUser(props.item)">
                             <v-icon>fa-trash</v-icon>
                         </v-btn>
@@ -345,14 +339,6 @@ export default {
                 self.usersForm.busy = false
             }
         },
-        editUser (user) {
-            /* Apply this after successful ajax request //
-            let index = _.findIndex(self.items, { id: user.id })
-            self.$set(self.items, index, response.data.user)
-            */
-            // redirect to edit User page
-            console.log('edit user', user)
-        },
         deleteUser (user) {
             let self = this
             /* delete item */
@@ -361,10 +347,6 @@ export default {
             // except if your email is = admin@
             let index = _.findIndex(self.items, { id: user.id })
             self.$delete(self.items, index)
-        },
-        viewUser (user) {
-            // redirect to view User page
-            console.log('view user', user)
         },
         toProperCase (key) {
             let newStr = key.replace(/_/g, ' ')
@@ -417,15 +399,15 @@ export default {
     watch: {
         items: {
             handler: function (newValue) {
-                console.log('items changed', newValue)
+
             },
             deep: true
         },
         roles (newValue) {
-            console.log('new Roles', newValue)
+
         },
         permissions (newValue) {
-            console.log('new Permissions', newValue)
+
         }
     }
 }

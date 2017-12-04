@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title' => 'Home', // Title
+    'title' => env('APP_NAME', 'vuetified.app'),
     'titleStyle' => [
         'color' => '#BA9A5A' , //gold
     ],
@@ -34,11 +34,4 @@ return [
     'domain' => env('APP_DOMAIN', 'vuetified.app'),
     'url' => env('APP_URL', 'http://localhost'),
     'email' => env('ADMIN_EMAIL', 'admin@vuetified.app'),
-    'social_links' => [
-        'facebook' => env('HOME_FB','https://www.facebook.com/vuetified'),
-        'instagram' => env('HOME_INSTA','https://www.instagram.com/vuetified'),
-        'twitter' => env('HOME_TWITTER','https://twitter.com/@vuetified'),
-        'youtube' => env('HOME_YOUTUBE','https://www.youtube.com/vuetified'),
-        'linkedIn' => env('HOME_LINKEDIN','https://www.linkedin.com/in/vuetified'),
-    ]
 ];

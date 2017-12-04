@@ -21,7 +21,6 @@ import AppNavBar from '../partials/AppNavBar.vue'
 import LeftSideBar from '../partials/LeftSideBar.vue'
 import FabButton from '../components/FabButton.vue'
 import CookieLaw from '../partials/CookieLaw.vue'
-// import ShoppingCart from '../partials/ShoppingCart.vue'
 
 export default {
     components: {
@@ -30,7 +29,6 @@ export default {
         LeftSideBar,
         FabButton,
         CookieLaw
-        // ShoppingCart
     }
 }
 </script>
