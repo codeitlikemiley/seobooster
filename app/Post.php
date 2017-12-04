@@ -23,9 +23,19 @@ class Post extends Model
         ];
     }
 
-    public function postable()
+    public function socialpost()
     {
-        return $this->morphTo();
+        return $this->morphedByMany(SocialPost::class, 'postable');
+    }
+    
+    public function videopost()
+    {
+        return $this->morphedByMany(VideoPost::class, 'postable');
+    }
+
+    public function blogpost()
+    {
+        return $this->morphedByMany(BlogPost::class, 'postable');
     }
 
     public static function last()

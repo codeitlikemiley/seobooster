@@ -20,6 +20,10 @@ class EventServiceProvider extends ServiceProvider
         'Laravel\Passport\Events\RefreshTokenCreated' => [
             'App\Listeners\PruneOldTokens',
         ],
+        \SocialiteProviders\Manager\SocialiteWasCalled::class => [
+            // add your listeners (aka providers) here
+            'SocialiteProviders\Twitter\TwitterExtendSocialite@handle',
+        ],
     ];
 
     /**

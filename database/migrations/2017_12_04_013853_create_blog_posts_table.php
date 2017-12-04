@@ -15,6 +15,8 @@ class CreateBlogPostsTable extends Migration
     {
         Schema::create('blog_posts', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->text('body');
             $table->string('url');
             $table->text('embed');

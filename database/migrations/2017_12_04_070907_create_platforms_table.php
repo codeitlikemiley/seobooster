@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePostsTable extends Migration
+class CreatePlatformsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,15 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('platforms', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->string('title');
+            $table->enum('platform_type', ['blog', 'social', 'video']);
+            $table->string('name');
             $table->string('slug');
-            $table->unsignedInteger('campaign_id')->nullable();
-            $table->foreign('campaign_id')->references('id')->on('campaigns')->onDelete('cascade');
-            // we need to add here a morphable entity to connect to accounts
+            $table->json('config');
+            $table->string('redirect_url');
             $table->timestamps();
         });
     }
@@ -33,6 +33,6 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('providers');
     }
 }

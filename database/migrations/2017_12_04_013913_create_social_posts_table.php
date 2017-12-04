@@ -15,10 +15,11 @@ class CreateSocialPostsTable extends Migration
     {
         Schema::create('social_posts', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('description');
             $table->string('url');
             $table->boolena('spin')->default(0);
-            // we need to set  image thru spatie media library
             $table->timestamp('scheduled_at');
             $table->timestamp('posted_at')->nullable();
             $table->timestamps();

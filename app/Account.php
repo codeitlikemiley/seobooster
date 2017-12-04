@@ -12,7 +12,7 @@ class Account extends Model
     public $incrementing = false;
 
     protected $fillable = [
-        'provider', 'username', 'access_token', 'refresh_token', 'expires_at', 'scope'
+        'username', 'access_token', 'refresh_token', 'expires_at', 'scope'
     ];
 
     protected $dates = ['created_at', 'updated_at', 'expires_at'];
@@ -24,6 +24,11 @@ class Account extends Model
     public function posts()
     {
     	return $this->hasMany(Post::class);
+    }
+
+    public function provider()
+    {
+    	return $this->belongsTo(Provider::class);
     }
 
     public static function last()

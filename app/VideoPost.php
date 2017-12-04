@@ -18,7 +18,7 @@ class VideoPost extends Model implements HasMediaConversions
 
     public function posts()
     {
-        return $this->morphMany(Post::class, 'postable');
+        return $this->morphToMany(Post::class, 'postable');
     }
     
     /* uses laravel queue system , use laravel horizon */

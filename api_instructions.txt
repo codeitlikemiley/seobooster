@@ -1,0 +1,66 @@
+$user = User::find(1)
+$campaign = $user->campaigns()->find(1);
+$post = $campaign->posts()->find(1)
+$socialpost = $posts->socialpost
+
+$user = User::find(1)
+$platforms = $user->platforms;
+foreach($platforms as $platform)
+{
+    $platform->posts;
+}
+
+// Creating new Post
+
+$campaign = Campaign::findBySlug('$request->campaign_name')
+if(!$campaign){
+// we need to change the campaign input to select box
+// to show all campaign or create a new campaign
+$campaign = new Campaign()
+$campaign->name = $request->campaign_name;
+$campaign->save();
+}
+$post = new Post();
+$post->title =  $request->title;
+$post->save();
+$campaign->posts()->save($post);
+if($request->post_type === 'blog_post'){
+$blogpost = new BlogPost();
+    $blogpost->fill([
+        'body', 'url', 'embed', 'spin', 'preview_title', 'preview_description', 'keywords', 'scheduled_at'
+    ])
+    $blogpost->posts()->save($post);
+    // we select here all blog accounts
+}
+    
+elseif ($request->post_type === 'social_post'){
+    $socialpost = new SocialPost();
+    $socialpost->fill([
+       'description', 'url', 'spin', 'scheduled_at'
+    ])
+    $socialpost->posts()->save($post);
+    // we select here all social accounts
+}
+
+elseif($request->post_type === 'video_post'){
+    $videoPost = new VideoPost();
+    $videoPost->fill([
+        'description', 'url', 'spin', 'scheduled_at'
+    ])
+    $videoPost->posts()->save($post);
+    // we select here all video accounts
+}
+
+Post  = Platform
+postables table = platformables table
+Social Post = Social Account (we need to add here user id, post id) ->this is link to all models for 
+Blog Post = Blog Account 
+video Post = Video Account 
+
+We can do 
+$user->platforms
+$user->campaigns
+$user->posts
+$user->socialposts
+$user->blogposts
+$user->videoposts

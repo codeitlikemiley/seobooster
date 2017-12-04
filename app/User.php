@@ -55,21 +55,39 @@ class User extends Authenticatable
         $this->notify(new PasswordResetNotification($token));
     }
 
-    public function orders() 
-    {
-        return $this->hasMany(Order::class);
-    }
-
     public function campaigns() 
     {
-        return $this->hasMany(Order::class);
+        return $this->hasMany(Campaign::class);
     }
 
-    public function accounts() 
+    public function accounts()
     {
-        return $this->hasMany(SocialAccount::class);
+        return $this->hasMany(Platform::class);
     }
 
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+
+    public function socialposts()
+    {
+        return $this->hasMany(SocialPost::class);
+    }
+
+    public function blogposts()
+    {
+        return $this->hasMany(BlogPost::class);
+    }
+
+    public function videoposts()
+    {
+        return $this->hasMany(VideoPost::class);
+    }
+    public function twitter_accounts()
+    {
+        return $this->hasMany(Twitter::class);
+    }
 
     public function sponsor()
     {
