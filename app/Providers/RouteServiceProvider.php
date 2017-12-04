@@ -3,10 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\Facades\Route;
-use App\Order;
 use App\User;
 use App\Link;
-use App\Exceptions\OrderNotFound;
 use App\Exceptions\LinkNotFound;
 use App\Exceptions\UserNameNotFound;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
@@ -53,17 +51,8 @@ class RouteServiceProvider extends ServiceProvider
             }
         });
         Route::pattern('name', '[a-z]+');
-        Route::bind('order', function ($value) {
-            $order = Order::where('id', $value)->first();
-            if($order){
-                return $order;
-            }
-            throw new OrderNotFound;
-        });
-        Route::pattern('order', '[0-9]+');
         Route::model('user', User::class);
         Route::pattern('user', '[0-9]+');
-        
         parent::boot();
     }
 
