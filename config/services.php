@@ -41,4 +41,76 @@ return [
         'redirect' => env('TWITTER_REDIRECT_URI'),  
     ], 
 
+    'facebook' => [
+        'client_id' => env('FACEBOOK_APP_ID'),
+        'client_secret' => env('FACEBOOK_APP_SECRET'),
+        'redirect' => env('FACEBOOK_REDIRECT_URL'),  
+    ], 
+
+    'dailymotion' => [
+        'client_id' => env('DAILYMOTION_KEY'),
+        'client_secret' => env('DAILYMOTION_SECRET'),
+        'redirect' => env('DAILYMOTION_REDIRECT_URI'),  
+    ], 
+
+    'google' => [
+        'client_id' => env('GOOGLE_KEY'),
+        'client_secret' => env('GOOGLE_SECRET'),
+        'redirect' => env('GOOGLE_REDIRECT_URI'),  
+    ], 
+
+    'imgur' => [
+        'client_id' => env('IMGUR_KEY'),
+        'client_secret' => env('IMGUR_SECRET'),
+        'redirect' => env('IMGUR_REDIRECT_URI'),  
+    ], 
+
+    'instagram' => [
+        'client_id' => env('INSTAGRAM_KEY'),
+        'client_secret' => env('INSTAGRAM_SECRET'),
+        'redirect' => env('INSTAGRAM_REDIRECT_URI'),  
+    ], 
+
+    'medium' => [
+        'client_id' => env('MEDIUM_KEY'),
+        'client_secret' => env('MEDIUM_SECRET'),
+        'redirect' => env('MEDIUM_REDIRECT_URI'),  
+    ], 
+
+    'pinterest' => [
+        'client_id' => env('PINTEREST_KEY'),
+        'client_secret' => env('PINTEREST_SECRET'),
+        'redirect' => env('PINTEREST_REDIRECT_URI'),  
+    ], 
+
+    'reddit' => [
+        'client_id' => env('REDDIT_KEY'),
+        'client_secret' => env('REDDIT_SECRET'),
+        'redirect' => env('REDDIT_REDIRECT_URI'),  
+    ],
+
+    'tumblr' => [
+        'client_id' => env('TUMBLR_KEY'),
+        'client_secret' => env('TUMBLR_SECRET'),
+        'redirect' => env('TUMBLR_REDIRECT_URI'),  
+    ], 
+
+    'vimeo' => [
+        'client_id' => env('VIMEO_KEY'),
+        'client_secret' => env('VIMEO_SECRET'),
+        'redirect' => env('VIMEO_REDIRECT_URI'),  
+    ], 
+
+    'wordpress' => [
+        'client_id' => env('WORDPRESS_KEY'),
+        'client_secret' => env('WORDPRESS_SECRET'),
+        'redirect' => env('WORDPRESS_REDIRECT_URI'),  
+    ], 
+
+    'youtube' => [
+        'client_id' => env('YOUTUBE_KEY'),
+        'client_secret' => env('YOUTUBE_SECRET'),
+        'redirect' => env('YOUTUBE_REDIRECT_URI'),  
+    ], 
+
 ];
