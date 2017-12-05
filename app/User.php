@@ -62,7 +62,7 @@ class User extends Authenticatable
 
     public function accounts()
     {
-        return $this->hasMany(Platform::class);
+        return $this->hasMany(Account::class);
     }
 
     public function posts()
@@ -83,10 +83,6 @@ class User extends Authenticatable
     public function videoposts()
     {
         return $this->hasMany(VideoPost::class);
-    }
-    public function twitter_accounts()
-    {
-        return $this->hasMany(Twitter::class);
     }
 
     public function sponsor()
@@ -127,5 +123,12 @@ class User extends Authenticatable
 
         });
     }
+
+    public function twitter_accounts()
+    {
+        return $this->hasMany(Twitter::class);
+    }
+
+    // add below all your social media accounts
 
 }
