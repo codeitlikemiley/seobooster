@@ -15,10 +15,10 @@ class CreateCampaignsTable extends Migration
     {
         Schema::create('campaigns', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('name');
             $table->string('slug')->unique();
-            $table->unsignedInteger('user_id')->nullable();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             /* create a method to update this when all post is posted */
             $table->boolean('completed')->default(0);
             $table->timestamps();
