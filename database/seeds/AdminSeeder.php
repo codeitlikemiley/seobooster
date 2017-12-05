@@ -37,15 +37,7 @@ class AdminSeeder extends Seeder
             'last_name'  => 'Admin',
         ]);
         $user->profile()->save($profile);
-        $file1 = public_path('contact_details.json');
-        $contact_details = file_get_contents($file1);
-        
-        $user->contact_details = $contact_details;
-        $file2 = public_path('social_links.json');
-        $social_links =file_get_contents($file2);
-        $user->social_links = $social_links;
         $user->save();
-        
         
     }
 }
