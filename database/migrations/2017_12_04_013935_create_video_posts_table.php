@@ -19,7 +19,7 @@ class CreateVideoPostsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->text('description');
             $table->string('url');
-            $table->boolena('spin')->default(0);
+            $table->boolean('spin')->default(0);
             $table->timestamp('scheduled_at');
             $table->timestamp('posted_at')->nullable();
             $table->timestamps();

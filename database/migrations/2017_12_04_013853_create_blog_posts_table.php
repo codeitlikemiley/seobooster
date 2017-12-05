@@ -20,7 +20,7 @@ class CreateBlogPostsTable extends Migration
             $table->text('body');
             $table->string('url');
             $table->text('embed');
-            $table->boolena('spin')->default(0);
+            $table->boolean('spin')->default(0);
             $table->string('preview_title');
             $table->string('preview_description');
             $table->string('keywords');
