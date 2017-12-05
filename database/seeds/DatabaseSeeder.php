@@ -11,17 +11,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(GatewaySeeder::class);
-        $this->call(CourierSeeder::class);
-        $this->call(IamProductSeeder::class);
-        // $this->call(CategorySeeder::class);
-        // $this->call(ProductSeeder::class);
         $this->call(RolesAndPermissionsSeeder::class);
         $this->call(AdminSeeder::class);
         \Artisan::call('passport:client', [
         '--password' => true,
         '-n'    => true,
         ]);
-        $this->call(UsersSeeder::class);
+        $this->call(ProviderSeeder::class);
+        // $this->call(UsersSeeder::class);
     }
 }
