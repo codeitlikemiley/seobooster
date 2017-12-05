@@ -3,51 +3,41 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Traits\GenerateUniqueID;
+use Cviebrock\EloquentSluggable\Sluggable;
+use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 
 class Account extends Model
 {
-    use GenerateUniqueID;
-
-    public $incrementing = false;
+    use Sluggable,SluggableScopeHelpers;
 
     protected $fillable = [
-        'username', 'access_token', 'refresh_token', 'expires_at', 'scope'
-    ];
+        'type', 'name', 'slug', 'client_id', 'client_secret', 'redirect_url', 'scope', 'config'
+     ];
 
-    protected $dates = ['created_at', 'updated_at', 'expires_at'];
+    protected $dates = ['created_at', 'updated_at'];
 
     protected $casts = [
-        'scope' => 'array', 
+        'scope' => 'array',
+        'config' => 'array',
     ];
 
-    public function posts()
+    public function sluggable()
     {
-    	return $this->hasMany(Post::class);
+        return [
+            'slug' => [
+                'source' => 'name'
+            ]
+        ];
     }
 
-    public function provider()
+    public function owner()
     {
-    	return $this->belongsTo(Provider::class);
+        return $this->belongsTo(User::class);
     }
 
-    public static function last()
+    public function twitter_accounts()
     {
-        return self::latest()->first();
+        return $this->morphedByMany(Twitter::class, 'accountable');
     }
-
-    public function getAvatarAttribute($value)
-    {
-        return empty($value) ? 'https://www.gravatar.com/avatar/'.md5(Str::lower($this->email)).'.jpg?s=200&d=mm' : url($value);
-    }
-
-    public static function findByUsername($username)
-    {
-        return self::whereUsername($username)->first();
-    }
-
-    public static function findByProvider($provider)
-    {
-        return self::whereProvider($provider)->first();
-    }
+    // Add below Other Accounts
 }
