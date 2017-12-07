@@ -32,10 +32,7 @@ class PublishTwitterPost implements ShouldQueue
     {
         sleep(3);
         //! make an api call then pass all our twitter post model public properties to post to twitter
-    }
-
-    public function tags()
-    {
-        return ['twitterpost:'.$this->post->id];
+        //! post to Twitter the new Status
+        //! if posted successfully update posted_at
     }
 }
