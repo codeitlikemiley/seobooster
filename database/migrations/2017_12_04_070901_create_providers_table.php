@@ -24,6 +24,7 @@ class CreateProvidersTable extends Migration
             /* namespace of the model for our providers */
             $table->string('account_model'); // useful for creating new account
             $table->string('post_model'); // useful for creating new post
+            $table->string('job_model'); //useful for queueing post job
             /* will be used for route provider slug */
             $table->string('client_id');
             $table->string('client_secret');

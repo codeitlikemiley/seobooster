@@ -8,8 +8,8 @@ use App\Account;
 use App\BlogPost;
 use App\Provider;
 use App\VideoPost;
+use Carbon\Carbon;
 use App\SocialPost;
-//! IMPORT HERE ALL POST MODEL THAT WE WILL USE
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -87,16 +87,26 @@ class PostController extends Controller
                             if(!empty(${$account->name .'_ids'})){
                                 //! itterate in all active account ONLY as ID
                                 foreach(${$account->name .'_ids'} as $id){
+                                    //! Create a Dynamic Function
+                                    ${'create'.ucfirst($account->name).'Post'} = 'create'.ucfirst($account->name).'Post';
                                     //! Check If A Method Exist For that Post , Using Dynamic Generated Method Name
                                     if(method_exists(get_called_class(), ${'create'.ucfirst($account->name).'Post'}))
                                     {
                                         //! Create Specific Post, pass PARAMS {$request,$model,$id}
-                                        $this->${'create'.ucfirst($account->name).'Post'}($request,$model,$id);
+                                        //? this should return an instance of post ie. TwitterPost
+                                        $post = $this->${'create'.ucfirst($account->name).'Post'}($request,$model,$id);
+                                        // PublishTwitterPost
+                                        //! Define queque name
+                                        ${$account->name.'-post'} = $account->name.'-post';
+                                        //! Define Job Model
+                                        ${$account->job_model} = $account->job_model;
+                                        //! Schedule a Post
+                                        //? $scheduleat should be a carbon instance of the date time
+                                        dispatch((new ${$account->job_model}($post))->onQueue(${$account->name.'-post'})->delay(Carbon::now()->addMinutes(10)));
+
                                     }else{
                                         throw new \Exception('Method Does Not Exist: '. ${'create'.ucfirst($account->name).'Post'});
                                     }
-                                    
-                                    //! Schedule a Post
                                 }
                             }else{
                                 throw new Exception('User Have No Active Account For This Provider: '. $account->name);

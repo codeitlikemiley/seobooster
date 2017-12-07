@@ -20,6 +20,7 @@ class ProviderSeeder extends Seeder
         $provider->name = 'twitter';
         $provider->account_model = 'App\Twitter';
         $provider->post_model = 'App\TwitterPost';
+        $provider->job_model = 'App\Jobs\PublishTwitterPost';
         $provider->client_id = str_random(30);
         $provider->client_secret = str_random(30);
         $provider->redirect_url = 'http://seobooster.app/providers/twitter/callback';

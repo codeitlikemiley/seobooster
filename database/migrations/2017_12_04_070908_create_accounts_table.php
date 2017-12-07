@@ -24,6 +24,7 @@ class CreateAccountsTable extends Migration
             /* namespace of the model for our providers */
             $table->string('account_model');
             $table->string('post_model');
+            $table->string('job_model');
             /* will be used for route provider slug */
             $table->string('slug')->unique();
             $table->string('client_id');
