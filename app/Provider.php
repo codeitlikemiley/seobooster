@@ -11,7 +11,7 @@ class Provider extends Model
     use Sluggable,SluggableScopeHelpers;
 
     protected $fillable = [
-       'type', 'name', 'slug', 'client_id', 'client_secret', 'redirect_url', 'scope', 'config'
+       'type', 'name', 'slug', 'client_id', 'client_secret', 'redirect_url', 'scope', 'config', 'account_model', 'post_model'
     ];
 
     protected $dates = ['created_at', 'updated_at'];

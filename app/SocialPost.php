@@ -34,4 +34,10 @@ class SocialPost extends Model implements HasMediaConversions
     {
         return self::latest()->first();
     }
+
+    public function twitter_posts()
+    {
+        return $this->morphedByMany(TwitterPost::class, 'socialable');
+    }
+    // add below other model of post
 }

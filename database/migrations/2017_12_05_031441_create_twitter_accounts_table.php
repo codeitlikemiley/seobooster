@@ -23,6 +23,7 @@ class CreateTwitterAccountsTable extends Migration
             /* scope that is given permission */
             $table->json('scope')->nullable();
             /* revoke or approve */
+            $table->boolean('active')->default(0);
             $table->boolean('revoked')->default(0);
             $table->timestamp('expires_at')->nullable();
             $table->index(['user_id','username']);

@@ -18,9 +18,12 @@ class CreateProvidersTable extends Migration
             $table->enum('type', ['blog', 'social', 'video']);
             /* pattern based on laravel socialite */
             $table->string('name');
+            $table->string('icon')->nullable();
+            $table->string('icon_color')->nullable();
             $table->string('slug')->unique();
             /* namespace of the model for our providers */
-            $table->string('model');
+            $table->string('account_model'); // useful for creating new account
+            $table->string('post_model'); // useful for creating new post
             /* will be used for route provider slug */
             $table->string('client_id');
             $table->string('client_secret');

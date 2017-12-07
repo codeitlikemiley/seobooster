@@ -19,8 +19,11 @@ class CreateAccountsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->enum('type', ['blog', 'social', 'video']);
             $table->string('name');
+            $table->string('icon')->nullable();
+            $table->string('icon_color')->nullable();
             /* namespace of the model for our providers */
-            $table->string('model');
+            $table->string('account_model');
+            $table->string('post_model');
             /* will be used for route provider slug */
             $table->string('slug')->unique();
             $table->string('client_id');
