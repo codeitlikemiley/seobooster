@@ -8168,6 +8168,10 @@ vue-agile@^0.2.5:
   dependencies:
     vue "2.*.*"
 
+vue-axios@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/vue-axios/-/vue-axios-2.0.2.tgz#0fe5a69f1edb09a1cd6c4a7f88c74d2fb7fe1778"
+
 vue-clazy-load@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/vue-clazy-load/-/vue-clazy-load-0.2.0.tgz#e7b32fba813d85196b453c88b4f8745fd342bad9"
