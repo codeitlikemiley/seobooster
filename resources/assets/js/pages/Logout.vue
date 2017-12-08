@@ -79,14 +79,14 @@ export default {
     }),
     computed: {
         ...mapGetters({
-            getAuth: 'getAuth',
+            isAuthenticated: 'isAuthenticated',
             user: 'getMe'
         })
     },
     mounted () {
         let self = this
         /* Make Sure We Only Show Logout Page If Authenticated */
-        if (!self.getAuth) {
+        if (!self.isAuthenticated) {
             /* nextick make sure our modal wount be visible before redirect */
             return self.$nextTick(() => self.$router.go(-1))
         }

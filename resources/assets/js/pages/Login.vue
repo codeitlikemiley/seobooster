@@ -74,26 +74,25 @@
 <script>
 import ModalLayout from '../layouts/ModalLayout'
 import { createNamespacedHelpers } from 'vuex'
-const { mapActions, mapGetters } = createNamespacedHelpers('auth')
+const { mapActions, mapState } = createNamespacedHelpers('auth')
 
 export default {
     data: () => ({
         loginForm: new AppForm(App.forms.loginForm),
         password_visible: false
-
     }),
     computed: {
         icon () {
             return this.password_visible ? 'visibility' : 'visibility_off'
         },
-        ...mapGetters({
-            getAuth: 'getAuth'
+        ...mapState({
+            isAuthenticated: 'isAuthenticated'
         })
     },
     mounted () {
         let self = this
         /* Make Sure We Only Load Login Page If Not Authenticated */
-        if (self.getAuth) {
+        if (self.isAuthenticated) {
             /* nextick make sure our modal wount be visible before redirect */
             return self.$nextTick(() => self.$router.go(-1))
         }

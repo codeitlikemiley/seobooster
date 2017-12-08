@@ -108,13 +108,13 @@ export default {
             return this.password_visible ? 'visibility' : 'visibility_off'
         },
         ...mapGetters({
-            getAuth: 'getAuth'
+            isAuthenticated: 'isAuthenticated'
         })
     },
     mounted () {
         let self = this
         /* Make Sure We Only Load Reset Password Page If Not Authenticated */
-        if (self.getAuth) {
+        if (self.isAuthenticated) {
             /* nextick make sure our modal wount be visible before redirect */
             return self.$nextTick(() => self.$router.go(-1))
         }

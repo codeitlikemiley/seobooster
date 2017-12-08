@@ -1,7 +1,7 @@
 export default {
     methods: {
         isLoggedIn () {
-            return !!this.$store.getters['auth/getMe']
+            return !!this.$store.state.auth.isAuthenticated
         },
         hasRole (payload) {
             let me = this.$store.getters['auth/getMe']

@@ -47,21 +47,21 @@
 <script>
 import ModalLayout from '../layouts/ModalLayout'
 import { createNamespacedHelpers } from 'vuex'
-const { mapGetters } = createNamespacedHelpers('auth')
+const { mapState } = createNamespacedHelpers('auth')
 
 export default {
     data: () => ({
         resetForm: new AppForm(App.forms.resetForm)
     }),
     computed: {
-        ...mapGetters({
-            getAuth: 'getAuth'
+        ...mapState({
+            isAuthenticated: 'isAuthenticated'
         })
     },
     mounted () {
         let self = this
         /* Make Sure We Only Load Forgot Password Page If Not Authenticated */
-        if (self.getAuth) {
+        if (self.isAuthenticated) {
             /* nextick make sure our modal wount be visible before redirect */
             return self.$nextTick(() => self.$router.go(-1))
         }

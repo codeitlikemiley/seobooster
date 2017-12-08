@@ -1,3 +1,8 @@
+import Vue from 'vue'
+import VueAxios from 'vue-axios'
+import axios from 'axios'
+Vue.use(VueAxios, axios)
+
 window._ = require('lodash')
 window.moment = require('moment')
 window.Promise = require('promise')
@@ -41,7 +46,7 @@ if ($('#app').length > 0) {
 }
 
 /* Load Axios */
-window.axios = require('axios')
+window.axios = axios
 
 /* Allows Us To Authorized Api Request If Authenticated Using Web Middleware */
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
@@ -52,15 +57,3 @@ if (token) {
 } else {
     console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token')
 }
-/* Allows Us To Authorized Api Request If Authenticated Using Api Middleware */
-/* Set The Token if Present So We Can Authorize Request */
-window.axios.interceptors.request.use(function (response) {
-    const AUTH_TOKEN = vm.$cookie.get('access_token')
-
-    if (AUTH_TOKEN) {
-        response.headers.common['Authorization'] = `Bearer ${AUTH_TOKEN}`
-    }
-    return response
-}, function (error) {
-    return Promise.reject(error)
-})

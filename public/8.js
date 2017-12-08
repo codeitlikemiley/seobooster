@@ -1,5 +1,88 @@
 webpackJsonp([8],{
 
+/***/ 626:
+/***/ (function(module, exports) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function(useSourceMap) {
+	var list = [];
+
+	// return the list of modules as css string
+	list.toString = function toString() {
+		return this.map(function (item) {
+			var content = cssWithMappingToString(item, useSourceMap);
+			if(item[2]) {
+				return "@media " + item[2] + "{" + content + "}";
+			} else {
+				return content;
+			}
+		}).join("");
+	};
+
+	// import a list of modules into the list
+	list.i = function(modules, mediaQuery) {
+		if(typeof modules === "string")
+			modules = [[null, modules, ""]];
+		var alreadyImportedModules = {};
+		for(var i = 0; i < this.length; i++) {
+			var id = this[i][0];
+			if(typeof id === "number")
+				alreadyImportedModules[id] = true;
+		}
+		for(i = 0; i < modules.length; i++) {
+			var item = modules[i];
+			// skip already imported module
+			// this implementation is not 100% perfect for weird media query combinations
+			//  when a module is imported multiple times with different media queries.
+			//  I hope this will never occur (Hey this way we have smaller bundles)
+			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+				if(mediaQuery && !item[2]) {
+					item[2] = mediaQuery;
+				} else if(mediaQuery) {
+					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+				}
+				list.push(item);
+			}
+		}
+	};
+	return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+	var content = item[1] || '';
+	var cssMapping = item[3];
+	if (!cssMapping) {
+		return content;
+	}
+
+	if (useSourceMap && typeof btoa === 'function') {
+		var sourceMapping = toComment(cssMapping);
+		var sourceURLs = cssMapping.sources.map(function (source) {
+			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
+		});
+
+		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+	}
+
+	return [content].join('\n');
+}
+
+// Adapted from convert-source-map (MIT)
+function toComment(sourceMap) {
+	// eslint-disable-next-line no-undef
+	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+
+	return '/*# ' + data + ' */';
+}
+
+
+/***/ }),
+
 /***/ 643:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -409,7 +492,7 @@ exports.default = _assign2.default || function (target) {
 /* harmony default export */ __webpack_exports__["a"] = ({
     methods: {
         isLoggedIn: function isLoggedIn() {
-            return !!this.$store.getters['auth/getMe'];
+            return !!this.$store.state.auth.isAuthenticated;
         },
         hasRole: function hasRole(payload) {
             var me = this.$store.getters['auth/getMe'];
@@ -1377,10 +1460,13 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__mixins_acl__ = __webpack_require__(653);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends__ = __webpack_require__(652);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_VLink_vue__ = __webpack_require__(651);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_VLink_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_VLink_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mixins_theme__ = __webpack_require__(650);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vuex__ = __webpack_require__(88);
+
 //
 //
 //
@@ -1421,9 +1507,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+
+var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_3_vuex__["createNamespacedHelpers"])('auth'),
+    mapState = _createNamespacedHelp.mapState;
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    mixins: [__WEBPACK_IMPORTED_MODULE_2__mixins_theme__["a" /* default */], __WEBPACK_IMPORTED_MODULE_0__mixins_acl__["a" /* default */]],
+    mixins: [__WEBPACK_IMPORTED_MODULE_2__mixins_theme__["a" /* default */]],
     data: function data() {
         return {
             drawer: false
@@ -1437,7 +1526,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         Bus.$on('toggleDrawer', function () {
             self.drawer = !self.drawer;
         });
-    }
+    },
+
+    computed: __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default()({}, mapState({
+        isAuthenticated: 'isAuthenticated'
+    }))
+
 });
 
 /***/ }),
@@ -1510,7 +1604,7 @@ var render = function() {
             [_vm._v("Members Area")]
           ),
           _vm._v(" "),
-          _vm.isLoggedIn() && _vm.hasRole("admin")
+          _vm.isAuthenticated
             ? _c("v-link", {
                 attrs: {
                   dark: _vm.darkClass,
@@ -1521,7 +1615,7 @@ var render = function() {
               })
             : _vm._e(),
           _vm._v(" "),
-          _vm.isLoggedIn()
+          _vm.isAuthenticated
             ? _c("v-link", {
                 attrs: {
                   dark: _vm.darkClass,
@@ -1532,7 +1626,7 @@ var render = function() {
               })
             : _vm._e(),
           _vm._v(" "),
-          _vm.isLoggedIn()
+          _vm.isAuthenticated
             ? _c("v-link", {
                 attrs: {
                   dark: _vm.darkClass,
@@ -1543,7 +1637,7 @@ var render = function() {
               })
             : _vm._e(),
           _vm._v(" "),
-          _vm.isLoggedIn()
+          _vm.isAuthenticated
             ? _c("v-link", {
                 attrs: {
                   dark: _vm.darkClass,
@@ -1554,7 +1648,7 @@ var render = function() {
               })
             : _vm._e(),
           _vm._v(" "),
-          _vm.isLoggedIn()
+          _vm.isAuthenticated
             ? _c("v-link", {
                 attrs: {
                   dark: _vm.darkClass,
@@ -1565,7 +1659,7 @@ var render = function() {
               })
             : _vm._e(),
           _vm._v(" "),
-          _vm.isLoggedIn()
+          _vm.isAuthenticated
             ? _c("v-link", {
                 attrs: {
                   dark: _vm.darkClass,
@@ -1576,7 +1670,7 @@ var render = function() {
               })
             : _vm._e(),
           _vm._v(" "),
-          _vm.isLoggedIn()
+          _vm.isAuthenticated
             ? _c("v-link", {
                 attrs: {
                   dark: _vm.darkClass,
@@ -1587,7 +1681,7 @@ var render = function() {
               })
             : _vm._e(),
           _vm._v(" "),
-          _vm.isLoggedIn()
+          _vm.isAuthenticated
             ? _c("v-link", {
                 attrs: {
                   dark: _vm.darkClass,
@@ -1598,7 +1692,7 @@ var render = function() {
               })
             : _vm._e(),
           _vm._v(" "),
-          _vm.isLoggedIn()
+          _vm.isAuthenticated
             ? _c("v-link", {
                 attrs: {
                   dark: _vm.darkClass,
@@ -1609,7 +1703,7 @@ var render = function() {
               })
             : _vm._e(),
           _vm._v(" "),
-          _vm.isLoggedIn()
+          _vm.isAuthenticated
             ? _c("v-link", {
                 attrs: {
                   dark: _vm.darkClass,
@@ -1620,7 +1714,7 @@ var render = function() {
               })
             : _vm._e(),
           _vm._v(" "),
-          _vm.isLoggedIn()
+          _vm.isAuthenticated
             ? _c("v-link", {
                 attrs: {
                   dark: _vm.darkClass,
@@ -1631,7 +1725,7 @@ var render = function() {
               })
             : _vm._e(),
           _vm._v(" "),
-          !_vm.isLoggedIn()
+          !_vm.isAuthenticated
             ? _c("v-link", {
                 attrs: {
                   dark: _vm.darkClass,
@@ -1642,7 +1736,7 @@ var render = function() {
               })
             : _vm._e(),
           _vm._v(" "),
-          !_vm.isLoggedIn()
+          !_vm.isAuthenticated
             ? _c("v-link", {
                 attrs: {
                   dark: _vm.darkClass,
@@ -1771,7 +1865,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["createNamespacedHelpers"])('auth'),
-    mapGetters = _createNamespacedHelp.mapGetters;
+    mapState = _createNamespacedHelp.mapState;
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -1786,14 +1880,14 @@ var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["createNam
             left: false,
             absolute: false,
             transition: 'slide-y-reverse-transition',
-            buttons: [{ name: 'home', href: '/', class: 'indigo lighten-2', icon: 'fa-home', requiresAuth: false }, { name: 'dashboard', href: '/dashboard', class: 'amber lighten-2', icon: 'fa-shopping-bag', requiresAuth: false }, { name: 'login', href: '/login', class: 'success', icon: 'fa-key', requiresAuth: false }, { name: 'register', href: '/register', class: 'info', icon: 'fa-user-plus', requiresAuth: false }, { name: 'logout', href: '/logout', class: 'red lighten-2', icon: 'fa-power-off', requiresAuth: true }, { name: 'scroll-up', href: null, class: 'blue-grey', icon: 'flight_takeoff', requiresAuth: false }],
+            buttons: [{ name: 'home', href: '/', class: 'indigo lighten-2', icon: 'fa-home', requiresAuth: false }, { name: 'dashboard', href: '/dashboard', class: 'amber lighten-2', icon: 'fa-tachometer', requiresAuth: true }, { name: 'login', href: '/login', class: 'success', icon: 'fa-key', requiresAuth: false }, { name: 'register', href: '/register', class: 'info', icon: 'fa-user-plus', requiresAuth: false }, { name: 'logout', href: '/logout', class: 'red lighten-2', icon: 'fa-power-off', requiresAuth: true }, { name: 'scroll-up', href: null, class: 'blue-grey', icon: 'flight_takeoff', requiresAuth: false }],
             activeFab: {
                 'class': 'primary', icon: 'fa-rocket'
             }
         };
     },
-    computed: __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default()({}, mapGetters({
-        getAuth: 'getAuth'
+    computed: __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default()({}, mapState({
+        isAuthenticated: 'isAuthenticated'
     })),
     watch: {
         top: function top(val) {
@@ -1844,11 +1938,11 @@ var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["createNam
         isVisible: function isVisible(button) {
             var self = this;
             if (button.requiresAuth === false && button.name === 'login') {
-                return !self.getAuth;
+                return !self.isAuthenticated;
             } else if (button.requiresAuth === false && button.name === 'register') {
-                return !self.getAuth;
+                return !self.isAuthenticated;
             } else if (button.requiresAuth === true) {
-                return self.getAuth;
+                return self.isAuthenticated;
             } else if (button.requiresAuth === false) {
                 return true;
             }

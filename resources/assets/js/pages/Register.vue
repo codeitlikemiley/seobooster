@@ -96,7 +96,7 @@
 <script>
 import ModalLayout from '../layouts/ModalLayout'
 import { createNamespacedHelpers } from 'vuex'
-const { mapActions, mapGetters } = createNamespacedHelpers('auth')
+const { mapActions, mapState } = createNamespacedHelpers('auth')
 
 export default {
     data: () => ({
@@ -105,8 +105,8 @@ export default {
 
     }),
     computed: {
-        ...mapGetters({
-            getAuth: 'getAuth'
+        ...mapState({
+            isAuthenticated: 'isAuthenticated'
         }),
         icon () {
             return this.password_visible ? 'visibility' : 'visibility_off'
@@ -115,7 +115,7 @@ export default {
     mounted () {
         let self = this
         /* Make Sure We Only Load Registration Page If Not Authenticated */
-        if (self.getAuth) {
+        if (self.isAuthenticated) {
             /* nextick make sure our modal would not be visible before redirect */
             return self.$nextTick(() => self.$router.go(-1))
         }

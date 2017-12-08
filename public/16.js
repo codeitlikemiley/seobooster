@@ -344,13 +344,13 @@ var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_2_vuex__["createNam
         };
     },
     computed: __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default()({}, mapGetters({
-        getAuth: 'getAuth',
+        isAuthenticated: 'isAuthenticated',
         user: 'getMe'
     })),
     mounted: function mounted() {
         var self = this;
         /* Make Sure We Only Show Logout Page If Authenticated */
-        if (!self.getAuth) {
+        if (!self.isAuthenticated) {
             /* nextick make sure our modal wount be visible before redirect */
             return self.$nextTick(function () {
                 return self.$router.go(-1);

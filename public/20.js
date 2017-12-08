@@ -278,12 +278,12 @@ var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["createNam
             return this.password_visible ? 'visibility' : 'visibility_off';
         }
     }, mapGetters({
-        getAuth: 'getAuth'
+        isAuthenticated: 'isAuthenticated'
     })),
     mounted: function mounted() {
         var self = this;
         /* Make Sure We Only Load Reset Password Page If Not Authenticated */
-        if (self.getAuth) {
+        if (self.isAuthenticated) {
             /* nextick make sure our modal wount be visible before redirect */
             return self.$nextTick(function () {
                 return self.$router.go(-1);

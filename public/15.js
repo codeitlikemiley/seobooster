@@ -359,7 +359,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_2_vuex__["createNamespacedHelpers"])('auth'),
     mapActions = _createNamespacedHelp.mapActions,
-    mapGetters = _createNamespacedHelp.mapGetters;
+    mapState = _createNamespacedHelp.mapState;
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -369,8 +369,8 @@ var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_2_vuex__["createNam
 
         };
     },
-    computed: __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default()({}, mapGetters({
-        getAuth: 'getAuth'
+    computed: __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default()({}, mapState({
+        isAuthenticated: 'isAuthenticated'
     }), {
         icon: function icon() {
             return this.password_visible ? 'visibility' : 'visibility_off';
@@ -379,7 +379,7 @@ var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_2_vuex__["createNam
     mounted: function mounted() {
         var self = this;
         /* Make Sure We Only Load Registration Page If Not Authenticated */
-        if (self.getAuth) {
+        if (self.isAuthenticated) {
             /* nextick make sure our modal would not be visible before redirect */
             return self.$nextTick(function () {
                 return self.$router.go(-1);

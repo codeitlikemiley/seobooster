@@ -337,27 +337,26 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_2_vuex__["createNamespacedHelpers"])('auth'),
     mapActions = _createNamespacedHelp.mapActions,
-    mapGetters = _createNamespacedHelp.mapGetters;
+    mapState = _createNamespacedHelp.mapState;
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
             loginForm: new AppForm(App.forms.loginForm),
             password_visible: false
-
         };
     },
     computed: __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default()({
         icon: function icon() {
             return this.password_visible ? 'visibility' : 'visibility_off';
         }
-    }, mapGetters({
-        getAuth: 'getAuth'
+    }, mapState({
+        isAuthenticated: 'isAuthenticated'
     })),
     mounted: function mounted() {
         var self = this;
         /* Make Sure We Only Load Login Page If Not Authenticated */
-        if (self.getAuth) {
+        if (self.isAuthenticated) {
             /* nextick make sure our modal wount be visible before redirect */
             return self.$nextTick(function () {
                 return self.$router.go(-1);

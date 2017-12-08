@@ -38,7 +38,7 @@
 
 <script>
 import { createNamespacedHelpers } from 'vuex'
-const { mapGetters } = createNamespacedHelpers('auth')
+const { mapState } = createNamespacedHelpers('auth')
 export default {
     data: () => ({
         direction: 'top',
@@ -53,7 +53,7 @@ export default {
         transition: 'slide-y-reverse-transition',
         buttons: [
             { name: 'home', href: '/', class: 'indigo lighten-2', icon: 'fa-home', requiresAuth: false },
-            { name: 'dashboard', href: '/dashboard', class: 'amber lighten-2', icon: 'fa-shopping-bag', requiresAuth: false },
+            { name: 'dashboard', href: '/dashboard', class: 'amber lighten-2', icon: 'fa-tachometer', requiresAuth: true },
             { name: 'login', href: '/login', class: 'success', icon: 'fa-key', requiresAuth: false },
             { name: 'register', href: '/register', class: 'info', icon: 'fa-user-plus', requiresAuth: false },
             { name: 'logout', href: '/logout', class: 'red lighten-2', icon: 'fa-power-off', requiresAuth: true },
@@ -64,8 +64,8 @@ export default {
         }
     }),
     computed: {
-        ...mapGetters({
-            getAuth: 'getAuth'
+        ...mapState({
+            isAuthenticated: 'isAuthenticated'
         })
     },
     watch: {
@@ -117,11 +117,11 @@ export default {
         isVisible (button) {
             let self = this
             if (button.requiresAuth === false && button.name === 'login') {
-                return !self.getAuth
+                return !self.isAuthenticated
             } else if (button.requiresAuth === false && button.name === 'register') {
-                return !self.getAuth
+                return !self.isAuthenticated
             } else if (button.requiresAuth === true) {
-                return self.getAuth
+                return self.isAuthenticated
             } else if (button.requiresAuth === false) {
                 return true
             }
