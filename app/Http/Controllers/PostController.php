@@ -102,7 +102,7 @@ class PostController extends Controller
                                         ${$account->job_model} = $account->job_model;
                                         //! Schedule a Post
                                         //? $scheduleat should be a carbon instance of the date time
-                                        dispatch((new ${$account->job_model}($post))->onQueue(${$account->name.'-post'})->delay(Carbon::now()->addMinutes(10)));
+                                        dispatch((new ${$account->job_model}($post))->onQueue(${$account->name.'-post'})->delay($post->scheduled_at));
 
                                     }else{
                                         throw new \Exception('Method Does Not Exist: '. ${'create'.ucfirst($account->name).'Post'});
@@ -118,23 +118,38 @@ class PostController extends Controller
                 
             }
     }
+    /**
+     * Schedule A Twitter Post function
+     *
+     * @param Request $request
+     * @param Model $model
+     * @param [TwitterUserId] $id
+     * @return void
+     */
+    private function createTwitterPost(Request $request,Model $model,$id)
+    {
+        $post = new $model;
+        $post->status = $request->description;
+        $post->attachment_url = $request->url;
+        $post->scheduled_at = $request->scheduled_at;
+        $post->save();
+        return $post;
+        // $this->uploadImage();
+        // $post->media_ids = $this->uploadImage();
 
-    private function createTwitterPost()
+    }
+
+    private function createFacebookPost(Request $request,Model $model,$id)
     {
         dd('creating twitter post');
     }
 
-    private function createFacebookPost()
+    private function createTumblrPost(Request $request,Model $model,$id)
     {
         dd('creating twitter post');
     }
 
-    private function createTumblrPost()
-    {
-        dd('creating twitter post');
-    }
-
-    private function createWordPressPost()
+    private function createWordPressPost(Request $request,Model $model,$id)
     {
         dd('creating twitter post');
     }

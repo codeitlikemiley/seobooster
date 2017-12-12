@@ -6,6 +6,7 @@ use App\Account;
 use App\Provider;
 use Illuminate\Http\Request;
 use App\Exceptions\UserTokenNotFound;
+use App\Http\Resources\ProviderResource;
 
 class AccountController extends Controller
 {
@@ -14,23 +15,32 @@ class AccountController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index(Request $request,$type=null)
     {
+        
         $user = $request->user();
         if(!$user){
             throw new UserTokenNotFound;
         }
-        return Account::where('user_id' ,$user->id);
-    }
+        if(!$type){
+            throw new \Exception('Request Type Not Found!');
+        }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        $providers = Provider::with(array('accounts'=>function($query) use ($request){
+            $query->where('user_id', '=', $request->user()->id);
+        }))->where('type',$type)->get();
+
+        foreach ($providers as $providerIndex => $provider) {
+            foreach ($provider->accounts as $accountIndex => $account) {
+                $provider->accounts[$accountIndex]->load($account->name.'_accounts');
+            }
+        }
+        
+        // Return All Providers as ProviderCollection
+        // Call Account Resource On Each Provider
+
+        
+        return ProviderResource::collection($providers);
     }
 
     /**

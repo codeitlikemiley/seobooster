@@ -17,6 +17,7 @@ class CreateAccountsTable extends Migration
             $table->increments('id');
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->unsignedBigInteger('provider_id')->nullable();
             $table->enum('type', ['blog', 'social', 'video']);
             $table->string('name');
             $table->string('icon')->nullable();

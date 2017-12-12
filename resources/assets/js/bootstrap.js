@@ -57,3 +57,17 @@ if (token) {
 } else {
     console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token')
 }
+
+window.axios.interceptors.response.use((response) => {
+    return response
+}, (error) => {
+    switch (error.response.status) {
+    case 401:
+        vm.$router.push('login')
+        break
+    case 402:
+    vm.$router.push('subscribe')
+        break
+    }
+    return Promise.reject(error)
+})

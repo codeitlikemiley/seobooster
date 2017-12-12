@@ -137,7 +137,7 @@ export default {
         tmp: ''
     }),
     mounted () {
-        this.items = this.accounts
+        this.items = this.accounts[0].accounts
     },
     methods: {
         toggleAll () {

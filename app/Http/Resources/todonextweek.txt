@@ -1,0 +1,4 @@
+move api calls for provider in the main accounts page
+and just pass a props for the account...
+
+fix 401 to be intercepted by vueAxios to remove vue-authenticate access_token in local storage

@@ -14,7 +14,9 @@ class ProviderController extends Controller
      */
     public function index()
     {
-        return Provider::all();
+        $providers = Provider::with(array('accounts'=>function($query){
+            $query->where('user_id', '=', request()->user()->id);
+        }))->get();
     }
 
      /**

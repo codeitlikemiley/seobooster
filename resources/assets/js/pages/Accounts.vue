@@ -54,13 +54,12 @@
 <script>
 import MainLayout from '../layouts/Main.vue'
 import Theme from '../mixins/theme'
-import Acl from '../mixins/acl'
-import BlogAccounts from '../components/accounts/BlogAccounts.vue'
+import BlogAccounts from '../components/accounts/BlogAccounts.vue'  
 import SocialAccounts from '../components/accounts/SocialAccounts.vue'
 import VideoAccounts from '../components/accounts/VideoAccounts.vue'
 
 export default {
-    mixins: [Theme, Acl],
+    mixins: [Theme],
     components: {
         MainLayout,
         BlogAccounts,
@@ -68,16 +67,48 @@ export default {
         VideoAccounts
     },
     data: () => ({
-
+        accounts: {
+            blog: [],
+            social: [],
+            video: []
+        },
         /* tabs */
         tabs: [
-            {name: 'blog accounts', component: 'blog-accounts', icon: 'fa-newspaper-o', iconColor: 'amber lighten-2'},
-            {name: 'social accounts', component: 'social-accounts', icon: 'fa-address-book', iconColor: 'cyan'},
-            {name: 'video accounts', component: 'video-accounts', icon: 'fa-youtube-play ', iconColor: 'red darken-4'}
+            {name: 'blog accounts', component: 'blog-accounts', icon: 'fa-newspaper-o', iconColor: 'amber lighten-2', accounts:[]},
+            {name: 'social accounts', component: 'social-accounts', icon: 'fa-address-book', iconColor: 'cyan',accounts:[]},
+            {name: 'video accounts', component: 'video-accounts', icon: 'fa-youtube-play ', iconColor: 'red darken-4',accounts:[]}
         ],
         active: {
             name: 'blog accounts'
         }
-    })
+    }),
+    created () {
+        this.getAccountsByType('blog')
+        this.getAccountsByType('social')
+        this.getAccountsByType('video')
+    },
+    methods: {
+        async getAccountsByType(type='') {
+            let self = this
+
+            await axios.post(`/api/accounts/${type}`).then(({data}) => {
+                if(type === 'blog'){
+                    self.accounts.blog = data.data
+                    self.tabs[0].accounts = data.data
+                }
+                else if(type === 'social'){
+                    self.accounts.social = data.data
+                    self.tabs[1].accounts = data.data
+                }
+                else if(type === 'video'){
+                    self.accounts.video = data.data
+                    self.tabs[2].accounts = data.data
+                } else{
+                    console.log('index')
+                }
+            })
+            
+        }
+    }
 }
 </script>

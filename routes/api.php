@@ -29,6 +29,7 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::get('/hasAllRoles', 'Api\Auth\ACLController@hasAllRoles')->name('api.auth.hasAllRoles');
     //? Router For Logout
     Route::post('/auth/logout', 'Api\Auth\LoginController@logout')->name('api.auth.logout');
+    Route::post('/accounts/{type?}', 'AccountController@index')->name('api.account.index');
 });
 /* Can Be Accessed Without Access Token */
 //? Router For Authentication

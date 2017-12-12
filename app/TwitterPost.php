@@ -26,7 +26,7 @@ class TwitterPost extends Model
         'fail_dm_commands',
     ];
 
-    protected $dates = ['created_at', 'updated_at', 'posted_at'];
+    protected $dates = ['created_at', 'updated_at', 'posted_at', 'scheduled_at'];
     
     /* check if this is correct */
     public function accounts()

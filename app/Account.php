@@ -39,5 +39,10 @@ class Account extends Model
     {
         return $this->morphedByMany(Twitter::class, 'accountable');
     }
+
+    public function facebook_accounts()
+    {
+        return $this->morphedByMany(Facebook::class, 'accountable');
+    }
     // Add below Other Accounts
 }
