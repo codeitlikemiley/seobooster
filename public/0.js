@@ -975,7 +975,7 @@ $export($export.S + $export.F, 'Object', { assign: __webpack_require__(664) });
 
 // 19.1.2.1 Object.assign(target, source, ...)
 var getKeys = __webpack_require__(89);
-var gOPS = __webpack_require__(128);
+var gOPS = __webpack_require__(129);
 var pIE = __webpack_require__(90);
 var toObject = __webpack_require__(316);
 var IObject = __webpack_require__(317);
@@ -3698,7 +3698,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(true)
-		module.exports = factory(__webpack_require__(131), __webpack_require__(702), __webpack_require__(703));
+		module.exports = factory(__webpack_require__(132), __webpack_require__(702), __webpack_require__(703));
 	else if(typeof define === 'function' && define.amd)
 		define("VueTrumbowyg", ["jquery", "trumbowyg", "trumbowyg/dist/ui/icons.svg"], factory);
 	else if(typeof exports === 'object')

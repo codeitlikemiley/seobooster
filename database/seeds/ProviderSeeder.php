@@ -28,8 +28,8 @@ class ProviderSeeder extends Seeder
         $provider->account_model = 'App\Twitter';
         $provider->post_model = 'App\TwitterPost';
         $provider->job_model = 'App\Jobs\PublishTwitterPost';
-        $provider->client_id = str_random(30);
-        $provider->client_secret = str_random(30);
+        $provider->client_id = 'RlB6T8QimvLI0VFiGMEgSdDIG';
+        $provider->client_secret = 'UQTdtSssUAMf1HPrlXsyItlIogfknM63YPYVe75YgWXQvq7uEI';
         $provider->redirect_url = 'http://seobooster.app/providers/twitter/callback';
         // we should have a fix scope or config
         $provider->save();
@@ -87,8 +87,8 @@ class ProviderSeeder extends Seeder
         $provider->account_model = 'App\Facebook';
         $provider->post_model = 'App\FacebookPost';
         $provider->job_model = 'App\Jobs\PublishFacebookPost';
-        $provider->client_id = str_random(30);
-        $provider->client_secret = str_random(30);
+        $provider->client_id = '362696210843620';
+        $provider->client_secret = '1fb8d5b744f8f72c754360593941b81d';
         $provider->redirect_url = 'http://seobooster.app/providers/facebook/callback';
         // we should have a fix scope or config
         $provider->save();

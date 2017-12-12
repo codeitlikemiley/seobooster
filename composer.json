@@ -1,7 +1,10 @@
 {
     "name": "laravel/laravel",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "type": "project",
     "require": {
@@ -51,7 +54,8 @@
         ],
         "psr-4": {
             "App\\": "app/",
-            "Vuetified\\": "vuetified/"
+            "Vuetified\\": "vuetified/",
+            "SocialiteProviders\\Facebook\\": "SocialiteProviders/Facebook/src/"
         },
         "files": [
             "app/Helpers.php"
@@ -64,8 +68,7 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": [
-            ]
+            "dont-discover": []
         }
     },
     "scripts": {

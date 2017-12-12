@@ -17,6 +17,7 @@ Route::get('/post', function () {
 //! Provider Link Redirect
 Route::get('/auth/{provider}/user/{id}/login', 'AccountProviderController@redirectToProvider')->where('provider', '[\/\w\.-]*')->name('account_provider_redirect');
 //! We Should Create Callback URL on our Vue Front End... Then Make Api Calls In OUr Database, to Save the Data We Got!
+Route::post('/providers/{provider}/callback', 'AccountProviderController@handleProviderCallback')->where('provider', '[\/\w\.-]*')->name('account_provider_callback');
 
 Route::domain('{referrallink}.'.config('app.domain'))->group(function () {
     Route::get('/{vue?}', 'DomainController@sponsor')->where('vue', '[\/\w\.-]*')->name('sponsor');
