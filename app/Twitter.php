@@ -22,6 +22,8 @@ class Twitter extends Model
         'active' => 'boolean'
     ];
 
+    protected $appends = ['post_count', 'link'];
+
     public function accounts()
     {
         return $this->morphToMany(Account::class, 'accountable');
@@ -38,5 +40,15 @@ class Twitter extends Model
         // 2rd arg = current model column name
         // 3rd arg = joining table column name
         return $this->belongsToMany(TwitterPost::class,'twitter_post_twitter_account','twitter_account_id','twitter_post_id');
+    }
+
+    public function getPostCountAttribute()
+    {
+        return $this->posts->where('posted_at', '!=', null)->count();
+    }
+
+    public function getLinkAttribute()
+    {
+        return config('app.url') .'/auth/twitter/user/'. $this->user_id .'/login';
     }
 }

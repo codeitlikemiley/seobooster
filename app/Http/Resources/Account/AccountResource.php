@@ -29,6 +29,7 @@ class AccountResource extends Resource
             'redirect_url' => $this->redirect_url,
             'scope' => $this->scope ?? [],
             'config' => $this->config ?? json_encode (json_decode ("{}")),
+            //! Fine Grain Post to Load Using Each Of Their Resources
             'accounts' => $this->whenLoaded(${$this->name.'_accounts'}),
         ];
     }

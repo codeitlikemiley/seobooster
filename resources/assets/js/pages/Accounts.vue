@@ -95,7 +95,7 @@ export default {
                 if(type === 'blog'){
                     self.accounts.blog = data.data
                     self.tabs[0].accounts = data.data
-                }
+                }   
                 else if(type === 'social'){
                     self.accounts.social = data.data
                     self.tabs[1].accounts = data.data

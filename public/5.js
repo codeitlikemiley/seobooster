@@ -3813,8 +3813,13 @@ var render = function() {
                     _c(
                       "v-btn",
                       {
-                        attrs: { flat: "", icon: "", color: "green darken-2" },
-                        nativeOn: { click: function($event) {} }
+                        attrs: {
+                          flat: "",
+                          icon: "",
+                          color: "green darken-2",
+                          href: props.item.link,
+                          target: "_blank"
+                        }
                       },
                       [_c("v-icon", [_vm._v("fa-sign-in")])],
                       1

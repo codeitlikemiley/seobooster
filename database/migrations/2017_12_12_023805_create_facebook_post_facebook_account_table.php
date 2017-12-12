@@ -14,8 +14,8 @@ class CreateFacebookPostFacebookAccountTable extends Migration
     public function up()
     {
         Schema::create('facebook_post_facebook_account', function (Blueprint $table) {
-            $table->integer('twitter_post_id');
-            $table->bigInteger('twitter_account_id');
+            $table->integer('facebook_post_id');
+            $table->bigInteger('facebook_account_id');
         });
     }
 

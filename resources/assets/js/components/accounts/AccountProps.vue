@@ -89,7 +89,7 @@
                 <v-icon>fa-eye</v-icon>
                 </v-btn>
                 <!-- //! Only Show This When Account is Not Yet Active -->
-                <v-btn flat icon color="green darken-2" @click.native="">
+                <v-btn flat icon color="green darken-2" :href="props.item.link" target="_blank">
                 <v-icon>fa-sign-in</v-icon>
                 </v-btn>
                 <!-- //! Only Show This When Token is Expired -->
