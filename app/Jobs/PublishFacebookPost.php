@@ -2,26 +2,27 @@
 
 namespace App\Jobs;
 
-use App\TwitterPost;
+use App\FacebookPost;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 
-class PublishTwitterPost implements ShouldQueue
+class PublishFacebookPost implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     public $post;
+
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct(TwitterPost $twitter)
+    public function __construct(FacebookPost $facebok)
     {
-        $this->post = $twitter;
+        $this->post = $facebook;
     }
 
     /**
