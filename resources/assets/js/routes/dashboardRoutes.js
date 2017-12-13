@@ -6,12 +6,24 @@ const Published = () => import('../pages/Published.vue')
 const Scheduled = () => import('../pages/Scheduled.vue')
 const EditPost = () => import('../pages/EditPost.vue')
 const Traffic = () => import('../pages/Traffic.vue')
+const ProviderCallback = () => import('../pages/ProviderCallback.vue')
 export default [
     /* Start Dashboard Routes */
     {
         path: '/accounts',
         component: Accounts,
         name: 'accounts',
+        meta: {
+            requiresAuth: true,
+            permission: 'guest',
+            fail: '/error'
+        }
+    },
+    {
+        path: '/providers/:provider/callback',
+        component: ProviderCallback,
+        name: 'accounts',
+        props: true,
         meta: {
             requiresAuth: true,
             permission: 'guest',

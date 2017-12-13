@@ -48404,28 +48404,31 @@ var Users = function Users() {
 
 "use strict";
 var Accounts = function Accounts() {
-    return __webpack_require__.e/* import() */(5).then(__webpack_require__.bind(null, 648));
+    return __webpack_require__.e/* import() */(28).then(__webpack_require__.bind(null, 648));
 };
 var Reports = function Reports() {
-    return __webpack_require__.e/* import() */(4).then(__webpack_require__.bind(null, 649));
+    return __webpack_require__.e/* import() */(27).then(__webpack_require__.bind(null, 649));
 };
 var Posts = function Posts() {
-    return __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, 650));
+    return __webpack_require__.e/* import() */(25).then(__webpack_require__.bind(null, 650));
 };
 var Failure = function Failure() {
-    return __webpack_require__.e/* import() */(8).then(__webpack_require__.bind(null, 651));
+    return __webpack_require__.e/* import() */(31).then(__webpack_require__.bind(null, 651));
 };
 var Published = function Published() {
-    return __webpack_require__.e/* import() */(7).then(__webpack_require__.bind(null, 652));
+    return __webpack_require__.e/* import() */(30).then(__webpack_require__.bind(null, 652));
 };
 var Scheduled = function Scheduled() {
-    return __webpack_require__.e/* import() */(6).then(__webpack_require__.bind(null, 653));
+    return __webpack_require__.e/* import() */(29).then(__webpack_require__.bind(null, 653));
 };
 var EditPost = function EditPost() {
-    return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, 654));
+    return __webpack_require__.e/* import() */(26).then(__webpack_require__.bind(null, 654));
 };
 var Traffic = function Traffic() {
-    return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 655));
+    return __webpack_require__.e/* import() */(24).then(__webpack_require__.bind(null, 655));
+};
+var ProviderCallback = function ProviderCallback() {
+    return __webpack_require__.e/* import() */(32).then(__webpack_require__.bind(null, 980));
 };
 /* harmony default export */ __webpack_exports__["a"] = ([
 /* Start Dashboard Routes */
@@ -48433,6 +48436,16 @@ var Traffic = function Traffic() {
     path: '/accounts',
     component: Accounts,
     name: 'accounts',
+    meta: {
+        requiresAuth: true,
+        permission: 'guest',
+        fail: '/error'
+    }
+}, {
+    path: '/providers/:provider/callback',
+    component: ProviderCallback,
+    name: 'accounts',
+    props: true,
     meta: {
         requiresAuth: true,
         permission: 'guest',

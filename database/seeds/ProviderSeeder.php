@@ -30,7 +30,7 @@ class ProviderSeeder extends Seeder
         $provider->job_model = 'App\Jobs\PublishTwitterPost';
         $provider->client_id = 'RlB6T8QimvLI0VFiGMEgSdDIG';
         $provider->client_secret = 'UQTdtSssUAMf1HPrlXsyItlIogfknM63YPYVe75YgWXQvq7uEI';
-        $provider->redirect_url = 'http://seobooster.app/providers/twitter/callback';
+        $provider->redirect_url = config('app.url').'/providers/twitter/callback';
         // we should have a fix scope or config
         $provider->save();
         /* this is user specific, they can change their api keys at will */
@@ -89,7 +89,7 @@ class ProviderSeeder extends Seeder
         $provider->job_model = 'App\Jobs\PublishFacebookPost';
         $provider->client_id = '362696210843620';
         $provider->client_secret = '1fb8d5b744f8f72c754360593941b81d';
-        $provider->redirect_url = 'http://seobooster.app/providers/facebook/callback';
+        $provider->redirect_url = config('app.url').'/providers/facebook/callback';
         // we should have a fix scope or config
         $provider->save();
         /* this is user specific, they can change their api keys at will */

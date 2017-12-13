@@ -29,7 +29,10 @@ class AccountProviderController extends Controller
     //! This Should be Called From Front End, Where We Passed 
     public function handleProviderCallback($provider)
     {
-        $user = \Socialite::driver($provider)->user();
+        // $user = \Socialite::driver($provider)->user();
+        $user = \Socialite::driver('facebook')->user();
+        $accessTokenResponseBody = $user->accessTokenResponseBody;  
+        // Account::where('name', $provider)->where('user_id', request()->user()->id)->first();
         // $user->accessTokenResponseBody
         // "oauth_token": "2878046635-79xesuwmI1DExvSOnHh5WFLLjTM5CiU7urOJM5Y",
         // "oauth_token_secret": "hrmcLWaPRVn95eYJf5GMDUck9PKDPdMwC3TOw0uXZEzws",
@@ -37,7 +40,7 @@ class AccountProviderController extends Controller
         // "screen_name": "uriahg17",
         // "x_auth_expires": "0"
         // Save this to the Twitter Database
-        return  response()->json($user);
+        return  response()->json($accessTokenResponseBody);
         // POST API by twitter
         // https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update
     }
