@@ -87,6 +87,10 @@ class PostController extends Controller
                             if(!empty(${$account->name .'_ids'})){
                                 //! itterate in all active account ONLY as ID
                                 foreach(${$account->name .'_ids'} as $id){
+                                    //! Upload Image to Specific Endpoint depending on provider
+                                    //! note for multiple account we only need to upload one image then we can use the image id 
+                                    //! In other Account
+                                    //? ADD HERE YOUR UPLOAD METHOD
                                     //! Create a Dynamic Function
                                     ${'create'.ucfirst($account->name).'Post'} = 'create'.ucfirst($account->name).'Post';
                                     //! Check If A Method Exist For that Post , Using Dynamic Generated Method Name
@@ -128,20 +132,26 @@ class PostController extends Controller
      */
     private function createTwitterPost(Request $request,Model $model,$id)
     {
+        //! https://upload.twitter.com/1.1/media/upload.json
         $post = new $model;
         $post->status = $request->description;
         $post->attachment_url = $request->url;
         $post->scheduled_at = $request->scheduled_at;
         $post->save();
         return $post;
+        //! https://api.twitter.com/1.1/statuses/update.json
         // $this->uploadImage();
         // $post->media_ids = $this->uploadImage();
 
     }
-
+    //? please read instruction.md
     private function createFacebookPost(Request $request,Model $model,$id)
     {
-        dd('creating twitter post');
+        //! upload photos
+        //! /object-id/photos
+        dd('creating facebook post');
+        //! post to newsfeed
+        //! object-id/feed
     }
 
     private function createTumblrPost(Request $request,Model $model,$id)

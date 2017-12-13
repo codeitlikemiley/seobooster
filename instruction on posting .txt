@@ -1,0 +1,64 @@
+dynamically accept request
+dynamically determine what endpoint to use for posting image based on probiver.
+POST TO FB
+ /object-id/photos where the /object-id can be a user, page, event or album.
+upload file under 4 mb for fb
+fb permissions
+publish_action
+manage_pages
+publish_pages
+
+we need to add extra field and relation to fb to determine what object id to use
+
+
+pass param published=false
+
+publishing user photo requires
+user_photos permission and user access_token
+publishing page requires page access_token with either  publisha actions or manage_pages and publish_pages_permissions
+
+on successful upload  provide a response of id for photo upload
+
+for multi upload photo 
+you need to pass 
+message
+attached_media[0] = {"media_fbid": "123123123123"}\
+attached_media[1] = {"media_fbid": "4345345345345345"}
+
+submit to /me/feed
+
+for twitter
+
+Content-Type application/octet-stream
+When posting base64 encoded images, be sure to set the 
+“Content-Transfer-Encoding: base64” 
+
+implement on the front end,
+upload image first , save it to vuex the media id...
+after that proceed to normal posting of message
+attaching a media_id
+
+params for twitter
+media = file image itself
+media_data if using base64
+POST https://upload.twitter.com/1.1/media/upload.json
+example response 
+```
+{
+  "media_id": 710511363345354753,
+  "media_id_string": "710511363345354753",
+  "size": 11065,
+  "expires_after_secs": 86400,
+  "image": {
+    "image_type": "image/jpeg",
+    "w": 800,
+    "h": 320
+  }
+}
+    
+```
+note we can only include up to 4 image_id 
+image ids are separated by comma at format strings
+
+post twitter status to
+https://api.twitter.com/1.1/statuses/update.json
