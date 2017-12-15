@@ -32,7 +32,19 @@ class Provider extends AbstractProvider implements ProviderInterface
      * {@inheritdoc}
      */
 
-    protected $popup = true;
+    /**
+     * Display the dialog in a popup view.
+     *
+     * @var bool
+     */
+    protected $popup = false;
+
+    /**
+     * Re-request a declined permission.
+     *
+     * @var bool
+     */
+    protected $reRequest = false;
 
     protected function getAuthUrl($state)
     {
