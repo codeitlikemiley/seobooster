@@ -38,10 +38,10 @@ class AccountProviderController extends Controller
         $accounts = $account->${$provider.'_accounts'};
         //! set the user
         $user = \Socialite::driver($provider)->stateless()->user();
-        //! we will search for the account username
-        $user = $accounts->where('username', $user->nickname)->orWhere('username', $user->email)->first();
-        //!  We Get the Specific Provider Based on Email or NickName
-        //? Nick name is username while email can be either a username or email
+        //! we will search for the account username either of the following
+        $fields = [$user->nickname,$user->email,$user->username];
+        //! We return the first instance 
+        $user = $accounts->whereIn('username', $fields)->first();
         
         // $user = \Socialite::driver($provider)->user();
         // $user = \Socialite::driver($provider)->getAccessTokenResponse($request->code);
