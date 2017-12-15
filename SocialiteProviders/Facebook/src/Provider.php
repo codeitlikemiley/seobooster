@@ -176,10 +176,12 @@ class Provider extends AbstractProvider implements ProviderInterface
             throw new InvalidStateException;
         }
         $response = $this->getAccessTokenResponse($this->getCode());
-        $user = $this->mapUserToObject($this->getUserByToken(
+        $user = $this->mapUserToObject($this->getUserByToken( //!something wrong with this
             $token = Arr::get($response, 'access_token')
         ));
-        return $user;
+        return $user->setToken($token)
+                    ->setRefreshToken(Arr::get($response, 'refresh_token'))
+                    ->setExpiresIn(Arr::get($response, 'expires_in'));
     }
 
     protected function getCode()
