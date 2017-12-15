@@ -57,7 +57,7 @@ class ProviderSeeder extends Seeder
         $twitter = new $account->account_model;
         // we need to add dynamic validation logic for each type of account/providers
         $twitter->user_id = 1;
-        $twitter->username = 'urigh17';
+        $twitter->username = 'uriahg17';
         $twitter->access_token = str_random(30);
         $twitter->access_token_secret = str_random(30);
         $twitter->save();
@@ -67,7 +67,7 @@ class ProviderSeeder extends Seeder
         $twitter1 = new $account->account_model;
         // logic to determine what we will fill
         $twitter1->user_id = 1;
-        $twitter1->username = 'urigh172';
+        $twitter1->username = 'iyuri305';
         $twitter1->access_token = str_random(30);
         $twitter1->access_token_secret = str_random(30);
         $twitter1->save();
@@ -116,7 +116,7 @@ class ProviderSeeder extends Seeder
         $twitter = new $account->account_model;
         // we need to add dynamic validation logic for each type of account/providers
         $twitter->user_id = 1;
-        $twitter->username = 'urigh17@gmail.com';
+        $twitter->username = 'uriahg@outlook.com';
         $twitter->access_token = str_random(30);
         $twitter->save();
         $twitter->accounts()->save($account);
