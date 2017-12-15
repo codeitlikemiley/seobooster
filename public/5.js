@@ -5079,7 +5079,13 @@ var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_8_vuex__["createNam
         providerCallback: function providerCallback() {
             var self = this;
             self.usersForm.id = self.getMe.id;
-            this.$http.post('/providers/' + self.$route.params.provider + '/callback?code=' + self.$route.query.code, self.usersForm).then(function (response) {
+            var data = self.$route.query;
+            for (var k in data) {
+                if (data.hasOwnProperty(k)) {
+                    self.usersForm[k] = data[k];
+                }
+            }
+            window.axios.post('/providers/' + self.$route.params.provider + '/callback', self.usersForm).then(function (response) {
                 console.log(response);
             });
         }

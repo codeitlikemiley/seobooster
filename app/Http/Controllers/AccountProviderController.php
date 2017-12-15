@@ -36,7 +36,7 @@ class AccountProviderController extends Controller
         // $user = \Socialite::driver($provider)->user();
         // $user = \Socialite::driver($provider)->getAccessTokenResponse($request->code);
         // //! Process provider for the user...
-        $request->user();
+        
         // $accessTokenResponseBody = $user->accessTokenResponseBody;  
         // Account::where('name', $provider)->where('user_id', request()->user()->id)->first();
         // $user->accessTokenResponseBody
@@ -46,7 +46,7 @@ class AccountProviderController extends Controller
         // "screen_name": "uriahg17",
         // "x_auth_expires": "0"
         // Save this to the Twitter Database
-        return  response()->json($user);
+        return  response()->json($request->all());
         // POST API by twitter
         // https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update
     }

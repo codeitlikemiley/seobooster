@@ -124,7 +124,13 @@ export default {
         providerCallback(){
             let self = this
             self.usersForm.id = self.getMe.id
-            this.$http.post(`/providers/${self.$route.params.provider}/callback?code=${self.$route.query.code}`,self.usersForm)
+            let data = self.$route.query
+             for (let k in data) {
+                if (data.hasOwnProperty(k)) {
+                self.usersForm[k] = data[k];
+                }
+            }
+            window.axios.post(`/providers/${self.$route.params.provider}/callback`,self.usersForm)
             .then((response) => {
                 console.log(response)
             })
