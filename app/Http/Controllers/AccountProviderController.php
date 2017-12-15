@@ -31,6 +31,7 @@ class AccountProviderController extends Controller
     {
         //! check if we can post with the user token
         $user = User::find($request->id);
+        \Auth::loginUsingId($user->id);
         $account = $user->accounts->where('name', $provider)->first();
         $config = new \SocialiteProviders\Manager\Config($account->client_id, $account->client_secret, $account->redirect_url);
         $user = \Socialite::with($provider)->setConfig($config)->user();
