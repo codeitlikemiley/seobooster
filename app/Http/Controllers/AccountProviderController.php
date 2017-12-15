@@ -23,7 +23,7 @@ class AccountProviderController extends Controller
             //! We Should Also Throw Error Here If That Service Provider is Not Loaded Or Present
             //! We Should make this Stateless
             $config = new \SocialiteProviders\Manager\Config($account->client_id, $account->client_secret, $account->redirect_url);
-            return \Socialite::with($provider)->setConfig($config)->redirect();
+            return \Socialite::with($provider)->setConfig($config)->stateless()->redirect();
         }
     }
     //! This Should be Called From Front End, Where We Passed 
