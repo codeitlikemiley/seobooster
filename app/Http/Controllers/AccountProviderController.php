@@ -30,7 +30,7 @@ class AccountProviderController extends Controller
     public function handleProviderCallback($provider)
     {
         // $user = \Socialite::driver($provider)->user();
-        $user = \Socialite::driver('facebook')->user();
+        $user = \Socialite::driver($provider)->user();
         $accessTokenResponseBody = $user->accessTokenResponseBody;  
         // Account::where('name', $provider)->where('user_id', request()->user()->id)->first();
         // $user->accessTokenResponseBody
