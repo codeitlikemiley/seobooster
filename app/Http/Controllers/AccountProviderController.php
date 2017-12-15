@@ -23,7 +23,7 @@ class AccountProviderController extends Controller
             //! We Should Also Throw Error Here If That Service Provider is Not Loaded Or Present
             //! We Should make this Stateless
             $config = new \SocialiteProviders\Manager\Config($account->client_id, $account->client_secret, $account->redirect_url);
-            return \Socialite::with($provider)->setConfig($config)->stateless()->redirect();
+            return \Socialite::with($provider)->setConfig($config)->redirect();
         }
     }
     //! This Should be Called From Front End, Where We Passed 
@@ -33,7 +33,7 @@ class AccountProviderController extends Controller
         $user = User::find($request->id);
         \Auth::loginUsingId($user->id);
         $account = $user->accounts->where('name', $provider)->first();
-        $config = new \SocialiteProviders\Manager\Config($account->client_id, $account->client_secret, $account->redirect_url);
+        
         $user = \Socialite::driver($provider)->user();
         // $user = \Socialite::driver($provider)->getAccessTokenResponse($request->code);
         // //! Process provider for the user...
