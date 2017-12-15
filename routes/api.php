@@ -30,6 +30,8 @@ Route::group(['middleware' => ['auth:api']], function () {
     //? Router For Logout
     Route::post('/auth/logout', 'Api\Auth\LoginController@logout')->name('api.auth.logout');
     Route::post('/accounts/{type?}', 'AccountController@index')->name('api.account.index');
+    //? Router For Making post
+    Route::post('/post', 'PostController@store')->name('api.post.create');
 });
 /* Can Be Accessed Without Access Token */
 //? Router For Authentication
