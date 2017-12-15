@@ -9,8 +9,29 @@ use App\User;
 
 class AccountProviderController extends Controller
 {
+
+    protected $providers = [
+        'facebook',
+        'google',
+        'twitter',
+        'dailymotion',
+        'imgur',
+        'instagram',
+        'medium',
+        'pinterest',
+        'reddit',
+        'tumblr',
+        'vimeo',
+        'wordpress',
+        'youtube'
+    ];
+
     public function redirectToProvider($provider,$userId)
     {
+        //! check if provider is allowed
+        if( ! $this->isProviderAllowed($driver) ) {
+            throw new ProviderNotFound;
+        }
         $user = User::find($userId);
         if(!$user){
             throw new UserNotFound;
@@ -29,6 +50,10 @@ class AccountProviderController extends Controller
     //! This Should be Called From Front End, Where We Passed 
     public function handleProviderCallback(Request $request,$provider)
     {
+        //! check if provider is allowed
+        if( ! $this->isProviderAllowed($driver) ) {
+            throw new ProviderNotFound;
+        }
         //! We get the User Currently Using the App
         $auth = User::find($request->id);
         //! We get the Account Provider
@@ -45,8 +70,8 @@ class AccountProviderController extends Controller
         
         // $user = \Socialite::driver($provider)->user();
         // $user = \Socialite::driver($provider)->getAccessTokenResponse($request->code);
-        // //! Process provider for the user...
-        
+        //! Update Our Access Token in the Front End To Avoid Being Locked Down
+        //! We Need to Avoid Invalidation of The Old Token We Shouldnt be providing a new Token for the User!
         // $accessTokenResponseBody = $user->accessTokenResponseBody;  
         // Account::where('name', $provider)->where('user_id', request()->user()->id)->first();
         // $user->accessTokenResponseBody
@@ -58,8 +83,16 @@ class AccountProviderController extends Controller
         // Save this to the Twitter Database
         // $user = \Socialite::driver($provider)->stateless()->user();
 
+        //! Better if we can broadcast an event to front end using laravel echo 
+        //! to notify the user has verified their account
+
         return  response()->json($user);
         // POST API by twitter
         // https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update
+    }
+
+    private function isProviderAllowed($driver)
+    {
+        return in_array($driver, $this->providers) && config()->has("services.{$driver}");
     }
 }

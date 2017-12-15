@@ -22,7 +22,7 @@ export default [
     {
         path: '/providers/:provider/callback',
         component: ProviderCallback,
-        name: 'accounts',
+        name: 'accounts.callback',
         props: true,
         meta: {
             requiresAuth: true,
