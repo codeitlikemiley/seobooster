@@ -46,7 +46,7 @@ class AccountProviderController extends Controller
         // "screen_name": "uriahg17",
         // "x_auth_expires": "0"
         // Save this to the Twitter Database
-        return  response()->json($request->all());
+        return \Socialite::driver($provider)->stateless()->user();
         // POST API by twitter
         // https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update
     }
