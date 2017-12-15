@@ -30,12 +30,12 @@ class AccountProviderController extends Controller
     public function handleProviderCallback(Request $request,$provider)
     {
         //! check if we can post with the user token
-        $user = $request->user();
+        $user = $request->all();
         // $user = \Socialite::driver($provider)->user();
-        $user = \Socialite::driver($provider)->user();
-        //! Process provider for the user...
+        // $user = \Socialite::driver($provider)->user();
+        // //! Process provider for the user...
 
-        $accessTokenResponseBody = $user->accessTokenResponseBody;  
+        // $accessTokenResponseBody = $user->accessTokenResponseBody;  
         // Account::where('name', $provider)->where('user_id', request()->user()->id)->first();
         // $user->accessTokenResponseBody
         // "oauth_token": "2878046635-79xesuwmI1DExvSOnHh5WFLLjTM5CiU7urOJM5Y",
