@@ -28,8 +28,8 @@ class ProviderSeeder extends Seeder
         $provider->account_model = 'App\Twitter';
         $provider->post_model = 'App\TwitterPost';
         $provider->job_model = 'App\Jobs\PublishTwitterPost';
-        $provider->client_id = 'GJewhdgC8GGDX0TV0cgjhGh0Q';
-        $provider->client_secret = '7UEsDKhG3PGp5VuzS1JTLp337oEF2K9T0qiP4dpekHykxQdDLL';
+        $provider->client_id = 'qezKRfKOhHdgUCYt3P2VircVx';
+        $provider->client_secret = 'nOiOBAeyPcY5O3hFkZ3AAzyVFkbz2qG4AizXvMRq9yMXRVrQsL';
         $provider->redirect_url = config('app.url').'/providers/twitter/callback';
         // we should have a fix scope or config
         $provider->save();
