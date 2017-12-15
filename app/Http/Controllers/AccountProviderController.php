@@ -39,7 +39,7 @@ class AccountProviderController extends Controller
         //! set the user
         $user = \Socialite::driver($provider)->stateless()->user();
         //! we will search for the account username either of the following
-        $fields = [$user->nickname,$user->email,$user->username];
+        $fields = [$user->nickname,$user->email];
         //! We return the first instance 
         $user = $accounts->whereIn('username', $fields)->first();
         
