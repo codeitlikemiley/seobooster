@@ -118,7 +118,6 @@ class ProviderSeeder extends Seeder
         $twitter->user_id = 1;
         $twitter->username = 'urigh17@gmail.com';
         $twitter->access_token = str_random(30);
-        $twitter->access_token_secret = str_random(30);
         $twitter->save();
         $twitter->accounts()->save($account);
         $account->save();
@@ -128,7 +127,6 @@ class ProviderSeeder extends Seeder
         $twitter1->user_id = 1;
         $twitter1->username = 'super.elite.vip@gmail.com';
         $twitter1->access_token = str_random(30);
-        $twitter1->access_token_secret = str_random(30);
         $twitter1->save();
         $twitter1->accounts()->save($account);
         // we can do something like this
