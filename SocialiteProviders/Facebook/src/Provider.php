@@ -5,6 +5,8 @@ namespace SocialiteProviders\Facebook;
 use Laravel\Socialite\Two\ProviderInterface;
 use SocialiteProviders\Manager\OAuth2\AbstractProvider;
 use SocialiteProviders\Manager\OAuth2\User;
+use GuzzleHttp\ClientInterface;
+use Illuminate\Support\Arr;
 
 class Provider extends AbstractProvider implements ProviderInterface
 {
@@ -13,10 +15,15 @@ class Provider extends AbstractProvider implements ProviderInterface
      */
     const IDENTIFIER = 'FACEBOOK';
 
+    protected $graphUrl = 'https://graph.facebook.com';
+    protected $version = 'v2.11';
+
+    protected $fields = ['name', 'email', 'gender', 'verified', 'link'];
+
     /**
      * {@inheritdoc}
      */
-    protected $scopes = ['public_profile','email', 'manage_pages','user_managed_groups','publish_actions'];
+    protected $scopes = ['email', 'manage_pages','publish_actions'];
     //! publish_actions - for profile posting
     //! manage_pages / publish_pages for - posting to fan pages
     //! user_managed_groups + publish actions = post only on your group own
@@ -24,9 +31,12 @@ class Provider extends AbstractProvider implements ProviderInterface
     /**
      * {@inheritdoc}
      */
+
+    protected $popup = true;
+
     protected function getAuthUrl($state)
     {
-        return $this->buildAuthUrlFromBase('https://www.facebook.com/v2.11/dialog/oauth', $state);
+        return $this->buildAuthUrlFromBase('https://www.facebook.com/'.$this->version.'/dialog/oauth', $state);
     }
 
     /**
@@ -34,7 +44,25 @@ class Provider extends AbstractProvider implements ProviderInterface
      */
     protected function getTokenUrl()
     {
-        return 'https://graph.facebook.com/v2.11/oauth/access_token';
+        return $this->graphUrl.'/'.$this->version.'/oauth/access_token';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getAccessTokenResponse($code)
+    {
+        $postKey = (version_compare(ClientInterface::VERSION, '6') === 1) ? 'form_params' : 'body';
+
+        $response = $this->getHttpClient()->post($this->getTokenUrl(), [
+            $postKey => $this->getTokenFields($code),
+        ]);
+
+        $data = [];
+
+        $data = json_decode($response->getBody(), true);
+
+        return Arr::add($data, 'expires_in', Arr::pull($data, 'expires'));
     }
 
     /**
@@ -42,9 +70,17 @@ class Provider extends AbstractProvider implements ProviderInterface
      */
     protected function getUserByToken($token)
     {
-        $response = $this->getHttpClient()->get('https://graph.facebook.com/v2.11/me', [
+        $meUrl = $this->graphUrl.'/'.$this->version.'/me?access_token='.$token.'&fields='.implode(',', $this->fields);
+
+        if (! empty($this->clientSecret)) {
+            $appSecretProof = hash_hmac('sha256', $token, $this->clientSecret);
+
+            $meUrl .= '&appsecret_proof='.$appSecretProof;
+        }
+
+        $response = $this->getHttpClient()->get($meUrl, [
             'headers' => [
-                'Authorization' => 'Bearer '.$token,
+                'Accept' => 'application/json',
             ],
         ]);
 
@@ -56,21 +92,68 @@ class Provider extends AbstractProvider implements ProviderInterface
      */
     protected function mapUserToObject(array $user)
     {
-        return (new User())->setRaw($user)->map([
-            'id'       => $user['id'],
-            'name'     => $user['name'],
-            'email'    => $user['email'],
-            'avatar'   => $user['avatar'],
+        $avatarUrl = $this->graphUrl.'/'.$this->version.'/'.$user['id'].'/picture';
+
+        return (new User)->setRaw($user)->map([
+            'id' => $user['id'], 'nickname' => null, 'name' => isset($user['name']) ? $user['name'] : null,
+            'email' => isset($user['email']) ? $user['email'] : null, 'avatar' => $avatarUrl.'?type=normal',
+            'avatar_original' => $avatarUrl.'?width=1920',
+            'profileUrl' => isset($user['link']) ? $user['link'] : null,
         ]);
     }
 
     /**
      * {@inheritdoc}
      */
-    protected function getTokenFields($code)
+    protected function getCodeFields($state = null)
     {
-        return array_merge(parent::getTokenFields($code), [
-            'grant_type' => 'authorization_code'
-        ]);
+        $fields = parent::getCodeFields($state);
+
+        if ($this->popup) {
+            $fields['display'] = 'popup';
+        }
+
+        if ($this->reRequest) {
+            $fields['auth_type'] = 'rerequest';
+        }
+
+        return $fields;
+    }
+
+    /**
+     * Set the user fields to request from Facebook.
+     *
+     * @param  array  $fields
+     * @return $this
+     */
+    public function fields(array $fields)
+    {
+        $this->fields = $fields;
+
+        return $this;
+    }
+
+    /**
+     * Set the dialog to be displayed as a popup.
+     *
+     * @return $this
+     */
+    public function asPopup()
+    {
+        $this->popup = true;
+
+        return $this;
+    }
+
+    /**
+     * Re-request permissions which were previously declined.
+     *
+     * @return $this
+     */
+    public function reRequest()
+    {
+        $this->reRequest = true;
+
+        return $this;
     }
 }
