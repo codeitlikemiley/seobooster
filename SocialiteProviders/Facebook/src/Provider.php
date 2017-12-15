@@ -179,9 +179,7 @@ class Provider extends AbstractProvider implements ProviderInterface
         $user = $this->mapUserToObject($this->getUserByToken(
             $token = Arr::get($response, 'access_token')
         ));
-        return $user->setToken($token)
-                    ->setRefreshToken(Arr::get($response, 'refresh_token'))
-                    ->setExpiresIn(Arr::get($response, 'expires_in'));
+        return $user;
     }
 
     protected function getCode()
