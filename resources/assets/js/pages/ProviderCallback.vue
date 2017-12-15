@@ -80,6 +80,7 @@ export default {
             social: [],
             video: []
         },
+        usersForm: new AppForm(App.forms.usersForm),
         /* tabs */
         tabs: [
             {name: 'blog accounts', component: 'blog-accounts', icon: 'fa-newspaper-o', iconColor: 'amber lighten-2', accounts:[]},
@@ -122,7 +123,8 @@ export default {
         },
         providerCallback(){
             let self = this
-            this.$http.post(`/providers/${self.$route.params.provider}/callback?code=${self.$route.query.code}`,{user: self.getMe.id})
+            self.usersForm.id = self.getMe.id
+            this.$http.post(`/providers/${self.$route.params.provider}/callback?code=${self.$route.query.code}`,self.usersForm)
             .then((response) => {
                 console.log(response)
             })

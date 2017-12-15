@@ -5017,6 +5017,7 @@ var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_8_vuex__["createNam
                 social: [],
                 video: []
             },
+            usersForm: new AppForm(App.forms.usersForm),
             /* tabs */
             tabs: [{ name: 'blog accounts', component: 'blog-accounts', icon: 'fa-newspaper-o', iconColor: 'amber lighten-2', accounts: [] }, { name: 'social accounts', component: 'social-accounts', icon: 'fa-address-book', iconColor: 'cyan', accounts: [] }, { name: 'video accounts', component: 'video-accounts', icon: 'fa-youtube-play ', iconColor: 'red darken-4', accounts: [] }],
             active: {
@@ -5077,7 +5078,8 @@ var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_8_vuex__["createNam
         }(),
         providerCallback: function providerCallback() {
             var self = this;
-            this.$http.post('/providers/' + self.$route.params.provider + '/callback?code=' + self.$route.query.code, { user: self.getMe.id }).then(function (response) {
+            self.usersForm.id = self.getMe.id;
+            this.$http.post('/providers/' + self.$route.params.provider + '/callback?code=' + self.$route.query.code, self.usersForm).then(function (response) {
                 console.log(response);
             });
         }
