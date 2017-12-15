@@ -29,9 +29,19 @@ class AccountProviderController extends Controller
     //! This Should be Called From Front End, Where We Passed 
     public function handleProviderCallback(Request $request,$provider)
     {
-        //! check if we can post with the user token
-        // $user = User::find($request->id);
-        // $account = $user->accounts->where('name', $provider)->first();
+        //! We get the User Currently Using the App
+        $auth = User::find($request->id);
+        //! We get the Account Provider
+        $account = $auth->accounts->where('name', $provider)->first();
+        //! we load all accounts dynamically
+        ${$provider.'_accounts'} = $provider.'_accounts';
+        $accounts = $account->${$provider.'_accounts'};
+        //! set the user
+        $user = \Socialite::driver($provider)->stateless()->user();
+        //! we will search for the account username
+        $user = $accounts->where('username', $user->nickname)->orWhere('username', $user->email)->first();
+        //!  We Get the Specific Provider Based on Email or NickName
+        //? Nick name is username while email can be either a username or email
         
         // $user = \Socialite::driver($provider)->user();
         // $user = \Socialite::driver($provider)->getAccessTokenResponse($request->code);
@@ -46,7 +56,8 @@ class AccountProviderController extends Controller
         // "screen_name": "uriahg17",
         // "x_auth_expires": "0"
         // Save this to the Twitter Database
-        $user = \Socialite::driver($provider)->stateless()->user();
+        // $user = \Socialite::driver($provider)->stateless()->user();
+
         return  response()->json($user);
         // POST API by twitter
         // https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update
