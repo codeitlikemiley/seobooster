@@ -19,7 +19,6 @@ class CreateFacebooksTable extends Migration
             $table->unsignedBigInteger('user_id')->nullable();
             $table->string('username')->unique();
             $table->string('access_token')->nullable();
-            $table->string('access_token_secret')->nullable();
             /* scope that is given permission */
             $table->json('scope')->nullable();
             /* revoke or approve */
