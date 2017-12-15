@@ -31,8 +31,7 @@ class AccountProviderController extends Controller
     {
         //! check if we can post with the user token
         $user = User::find($request->id);
-        \Auth::loginUsingId($user->id);
-        $account = $user->accounts->where('name', $provider)->first();
+        // $account = $user->accounts->where('name', $provider)->first();
         
         $user = \Socialite::driver($provider)->user();
         // $user = \Socialite::driver($provider)->getAccessTokenResponse($request->code);
