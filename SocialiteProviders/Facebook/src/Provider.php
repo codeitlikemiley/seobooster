@@ -2,11 +2,12 @@
 
 namespace SocialiteProviders\Facebook;
 
-use Laravel\Socialite\Two\ProviderInterface;
-use SocialiteProviders\Manager\OAuth2\AbstractProvider;
-use SocialiteProviders\Manager\OAuth2\User;
-use GuzzleHttp\ClientInterface;
 use Illuminate\Support\Arr;
+use GuzzleHttp\ClientInterface;
+use SocialiteProviders\Manager\OAuth2\User;
+use Laravel\Socialite\Two\ProviderInterface;
+use Laravel\Socialite\Two\InvalidStateException;
+use SocialiteProviders\Manager\OAuth2\AbstractProvider;
 
 class Provider extends AbstractProvider implements ProviderInterface
 {
@@ -167,5 +168,24 @@ class Provider extends AbstractProvider implements ProviderInterface
         $this->reRequest = true;
 
         return $this;
+    }
+
+    public function user()
+    {
+        if ($this->hasInvalidState()) {
+            throw new InvalidStateException;
+        }
+        $response = $this->getAccessTokenResponse($this->getCode());
+        $user = $this->mapUserToObject($this->getUserByToken(
+            $token = Arr::get($response, 'access_token')
+        ));
+        return $user->setToken($token)
+                    ->setRefreshToken(Arr::get($response, 'refresh_token'))
+                    ->setExpiresIn(Arr::get($response, 'expires_in'));
+    }
+
+    protected function getCode()
+    {
+        return $this->request->input('code');
     }
 }
