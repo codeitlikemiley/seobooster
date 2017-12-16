@@ -62,7 +62,7 @@ class AccountProviderController extends Controller
         ${$provider.'_accounts'} = $provider.'_accounts';
         $accounts = $account->${$provider.'_accounts'};
         //* set the user
-        $user = \Socialite::driver($provider)->user();
+        $user = \Socialite::driver($provider)->stateless()->user();
         //* we will search for the account username either of the following
         //? $fields = [$user->nickname,$user->email];
         //* We return the first instance 
