@@ -10,6 +10,10 @@ use App\User;
 class AccountProviderController extends Controller
 {
 
+    public function __construct()
+    {
+        $this->middleware(['api']);
+    }
     protected $providers = [
         'facebook',
         'google',
@@ -50,6 +54,7 @@ class AccountProviderController extends Controller
     //! This Should be Called From Front End, Where We Passed 
     public function handleProviderCallback(Request $request,$provider)
     {
+        return $request->user();
         //! check if provider is allowed
         if( ! $this->isProviderAllowed($provider) ) {
             throw new ProviderNotFound;
