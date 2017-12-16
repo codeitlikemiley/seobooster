@@ -54,29 +54,24 @@ class AccountProviderController extends Controller
     //! This Should be Called From Front End, Where We Passed 
     public function handleProviderCallback(Request $request,$provider)
     {
-        //! confirmed axios is sending the bearer token
-        // return $request->user();
+        //* confirmed axios is sending the bearer token
         //! check if provider is allowed
         if( ! $this->isProviderAllowed($provider) ) {
             throw new ProviderNotFound;
         }
-        //! We get the User Currently Using the App
+        //* We get the User Currently Using the App
         $auth = $request->user();
-        //! We get the Account Provider
+        //* We get the Account Provider
         $account = $auth->accounts->where('name', $provider)->first();
-        //! we load all accounts dynamically
+        //* we load all accounts dynamically
         ${$provider.'_accounts'} = $provider.'_accounts';
         $accounts = $account->${$provider.'_accounts'};
-        //! set the user
-        // $user = \Socialite::driver($provider)->stateless()->user();
-        //? test here
-        $user =  \Socialite::with($provider)->user();
-        return  response()->json($user);
-        //? end test here
-        //! we will search for the account username either of the following
-        $fields = [$user->nickname,$user->email];
-        //! We return the first instance 
-        $user = $accounts->whereIn('username', $fields)->first();
+        //* set the user
+        $user = \Socialite::driver($provider)->user();
+        //* we will search for the account username either of the following
+        //? $fields = [$user->nickname,$user->email];
+        //* We return the first instance 
+        //? $user = $accounts->whereIn('username', $fields)->first();
         
         // $user = \Socialite::driver($provider)->user();
         // $user = \Socialite::driver($provider)->getAccessTokenResponse($request->code);

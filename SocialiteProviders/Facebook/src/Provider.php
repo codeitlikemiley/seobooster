@@ -169,4 +169,24 @@ class Provider extends AbstractProvider implements ProviderInterface
 
         return $this;
     }
+
+    public function user()
+    {
+
+        $response = $this->getAccessTokenResponse($this->getCode());
+
+        $user = $this->mapUserToObject($this->getUserByToken(
+            $token = $this->parseAccessToken($response)
+        ));
+
+        // $this->credentialsResponseBody = $response;
+
+        // if ($user instanceof User) {
+        //     $user->setAccessTokenResponseBody($this->credentialsResponseBody);
+        // }
+
+        return $user->setToken($token)
+                    ->setRefreshToken($this->parseRefreshToken($response))
+                    ->setExpiresIn($this->parseExpiresIn($response));
+    }
 }
