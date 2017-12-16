@@ -130,7 +130,7 @@ export default {
                 self.usersForm[k] = data[k];
                 }
             }
-            window.axios.post(`/providers/${self.$route.params.provider}/callback`,self.usersForm)
+            window.axios.post(`/api/providers/${self.$route.params.provider}/callback`,self.usersForm)
             .then((response) => {
                 console.log(response)
             })

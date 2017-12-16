@@ -47,6 +47,6 @@ class Facebook extends Model
 
     public function getLinkAttribute()
     {
-        return config('app.url') .'/auth/facebook/user/'. $this->user_id .'/login';
+        return config('app.url') .'/api/auth/facebook/user/'. $this->user_id .'/login';
     }
 }
