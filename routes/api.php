@@ -32,6 +32,10 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::post('/accounts/{type?}', 'AccountController@index')->name('api.account.index');
     //? Router For Making post
     Route::post('/post', 'PostController@store')->name('api.post.create');
+
+    Route::get('/auth/{provider}/user/{id}/login', 'AccountProviderController@redirectToProvider')->where('provider', '[\/\w\.-]*')->name('account_provider_redirect');
+    Route::post('/providers/{provider}/callback', 'AccountProviderController@handleProviderCallback')->where('provider', '[\/\w\.-]*')->name('account_provider_callback');
+
 });
 /* Can Be Accessed Without Access Token */
 //? Router For Authentication
