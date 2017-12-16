@@ -54,13 +54,14 @@ class AccountProviderController extends Controller
     //! This Should be Called From Front End, Where We Passed 
     public function handleProviderCallback(Request $request,$provider)
     {
-        return $request->user();
+        //! confirmed axios is sending the bearer token
+        // return $request->user();
         //! check if provider is allowed
         if( ! $this->isProviderAllowed($provider) ) {
             throw new ProviderNotFound;
         }
         //! We get the User Currently Using the App
-        $auth = User::find($request->id);
+        $auth = $request->user();
         //! We get the Account Provider
         $account = $auth->accounts->where('name', $provider)->first();
         //! we load all accounts dynamically
