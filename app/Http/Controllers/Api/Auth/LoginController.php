@@ -57,8 +57,7 @@ class LoginController extends Controller
     		->update(['revoked' => true]);
 
     	$accessToken->revoke();
-		$cookie = \Cookie::forget('access_token');
-    	return response()->json(['message' => 'User Logout.'], 200)->withCookie($cookie);
+    	return response()->json(['message' => 'User Logout.'], 200);
 	}
 	
 	public function check(Request $request){
