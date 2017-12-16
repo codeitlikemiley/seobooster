@@ -61,6 +61,7 @@ class AccountProviderController extends Controller
         }
         //* We get the User Currently Using the App
         $auth = $request->user();
+        return $auth;
         //* We get the Account Provider
         $account = $auth->accounts->where('name', $provider)->first();
         //* we load all accounts dynamically
