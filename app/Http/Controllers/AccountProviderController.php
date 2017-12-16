@@ -9,6 +9,11 @@ use App\User;
 
 class AccountProviderController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['api']);
+    }
+
     protected $providers = [
         'facebook',
         'google',

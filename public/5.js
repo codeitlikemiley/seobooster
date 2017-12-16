@@ -4995,6 +4995,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+
 var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_8_vuex__["createNamespacedHelpers"])('auth'),
     mapGetters = _createNamespacedHelp.mapGetters;
 
@@ -5085,7 +5086,7 @@ var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_8_vuex__["createNam
                     self.usersForm[k] = data[k];
                 }
             }
-            window.axios.post('/api/providers/' + self.$route.params.provider + '/callback', self.usersForm).then(function (response) {
+            window.axios.post('/providers/' + self.$route.params.provider + '/callback', self.usersForm).then(function (response) {
                 console.log(response);
             });
         }
