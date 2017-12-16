@@ -169,4 +169,18 @@ class Provider extends AbstractProvider implements ProviderInterface
 
         return $this;
     }
+    public function user()
+    {
+        if ($this->hasInvalidState()) {
+            throw new InvalidStateException;
+        }
+
+        $response = $this->getAccessTokenResponse($this->getCode());
+
+        $user = $this->mapUserToObject($this->getUserByToken(
+            $token = Arr::get($response, 'access_token')
+        ));
+
+        return $user;
+    }
 }
