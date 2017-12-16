@@ -48442,7 +48442,7 @@ var ProviderCallback = function ProviderCallback() {
         fail: '/error'
     }
 }, {
-    path: '/providers/:provider/callback',
+    path: '/api/providers/:provider/callback',
     component: ProviderCallback,
     name: 'accounts.callback',
     props: true,

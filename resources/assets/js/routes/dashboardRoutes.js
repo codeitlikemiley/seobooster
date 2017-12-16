@@ -20,7 +20,7 @@ export default [
         }
     },
     {
-        path: '/providers/:provider/callback',
+        path: '/api/providers/:provider/callback',
         component: ProviderCallback,
         name: 'accounts.callback',
         props: true,
