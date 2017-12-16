@@ -68,6 +68,7 @@ class AccountProviderController extends Controller
         $accounts = $account->${$provider.'_accounts'};
         //* set the user
         //! WE NEED TO AVOID REPLACE BEARER TOKEN!
+        //? Be Sure To Create Provider Individually and Override User Method Not to Use SetToken and other Method After mapUserObject
         $user = \Socialite::driver($provider)->stateless()->user();
         //* we will search for the account username either of the following
         //? $fields = [$user->nickname,$user->email];
