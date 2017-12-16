@@ -29,7 +29,7 @@ class AccountProviderController extends Controller
     public function redirectToProvider($provider,$userId)
     {
         //! check if provider is allowed
-        if( ! $this->isProviderAllowed($driver) ) {
+        if( ! $this->isProviderAllowed($provider) ) {
             throw new ProviderNotFound;
         }
         $user = User::find($userId);
@@ -51,7 +51,7 @@ class AccountProviderController extends Controller
     public function handleProviderCallback(Request $request,$provider)
     {
         //! check if provider is allowed
-        if( ! $this->isProviderAllowed($driver) ) {
+        if( ! $this->isProviderAllowed($provider) ) {
             throw new ProviderNotFound;
         }
         //! We get the User Currently Using the App
