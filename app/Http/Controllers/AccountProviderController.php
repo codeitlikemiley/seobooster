@@ -60,8 +60,7 @@ class AccountProviderController extends Controller
             throw new ProviderNotFound;
         }
         //* We get the User Currently Using the App
-        $auth = $request->user();
-        return $auth;
+        $auth = User::find($request->id());
         //* We get the Account Provider
         $account = $auth->accounts->where('name', $provider)->first();
         //* we load all accounts dynamically
