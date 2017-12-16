@@ -27,7 +27,7 @@ class PruneOldTokens
      */
     public function handle(RefreshTokenCreated $event)
     {
-        \Log::info($event);
+        \Log::info('refershing token');
         DB::table('oauth_refresh_tokens')
         ->where('id', '<>', $event->refreshTokenId)
         ->where('access_token_id', '<>', $event->accessTokenId)
