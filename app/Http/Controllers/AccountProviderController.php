@@ -36,22 +36,29 @@ class AccountProviderController extends Controller
         if( ! $this->isProviderAllowed($provider) ) {
             throw new ProviderNotFound;
         }
+        //! Check if UserId present in Request
         $user = User::find($userId);
         if(!$user){
             throw new UserNotFound;
         }
+        //! Get the User Accounts by Provider Name
         $account = $user->accounts->where('name', $provider)->first();
         if(!$account){
+            //! Throw error If No Account Yet
             throw new ProviderNotFound;
         }else{
-            //! We Need To Add Socialite Extention Provider For Each Provider
-            //! We Should Also Throw Error Here If That Service Provider is Not Loaded Or Present
-            //! We Should make this Stateless
+            //! Authenticate User Third Party Account
             $config = new \SocialiteProviders\Manager\Config($account->client_id, $account->client_secret, $account->redirect_url);
             return \Socialite::with($provider)->setConfig($config)->stateless()->redirect();
         }
     }
-    //! This Should be Called From Front End, Where We Passed 
+    /**
+     * Handle Callback function
+     *
+     * @param Request $request
+     * @param [string] $provider
+     * @return Response $response
+     */
     public function handleProviderCallback(Request $request,$provider)
     {
         //* confirmed axios is sending the bearer token
@@ -59,49 +66,78 @@ class AccountProviderController extends Controller
         if( ! $this->isProviderAllowed($provider) ) {
             throw new ProviderNotFound;
         }
-        //! Check if we have the user already access token in that account...
+        //! Check For User Id in the request
         //! If there is Token we Retrive User Token
         //* We get the User Currently Using the App
         $auth = User::find($request->id);
         //* We get the Account Provider
         $account = $auth->accounts->where('name', $provider)->first();
-        //* we load all accounts dynamically
+        //! We Load The RelationShip Dynamically
         ${$provider.'_accounts'} = $provider.'_accounts';
         $accounts = $account->${$provider.'_accounts'};
-        //* set the user
-        //! WE NEED TO AVOID REPLACE BEARER TOKEN!
-        //? Be Sure To Create Provider Individually and Override User Method Not to Use SetToken and other Method After mapUserObject
-        $user = \Socialite::driver($provider)->stateless()->user();
-        //* we will search for the account username either of the following
-        //? $fields = [$user->nickname,$user->email];
-        //* We return the first instance 
-        //? $user = $accounts->whereIn('username', $fields)->first();
+        //! We Either Search For Nickname or Email
+        $fields = [$user->nickname,$user->email];
+        //! We get The Account By Username
+        $user = $accounts->whereIn('username', $fields)->first();
         
-        // $user = \Socialite::driver($provider)->user();
-        // $user = \Socialite::driver($provider)->getAccessTokenResponse($request->code);
-        //! Update Our Access Token in the Front End To Avoid Being Locked Down
-        //! We Need to Avoid Invalidation of The Old Token We Shouldnt be providing a new Token for the User!
-        // $accessTokenResponseBody = $user->accessTokenResponseBody;  
-        // Account::where('name', $provider)->where('user_id', request()->user()->id)->first();
-        // $user->accessTokenResponseBody
-        // "oauth_token": "2878046635-79xesuwmI1DExvSOnHh5WFLLjTM5CiU7urOJM5Y",
-        // "oauth_token_secret": "hrmcLWaPRVn95eYJf5GMDUck9PKDPdMwC3TOw0uXZEzws",
-        // "user_id": "2878046635",
-        // "screen_name": "uriahg17",
-        // "x_auth_expires": "0"
-        // Save this to the Twitter Database
-        // $user = \Socialite::driver($provider)->stateless()->user();
+        //? When Adding New Service Provider Add A Modified user() method that wont add Token to response Header
+        $response = \Socialite::driver($provider)->stateless()->user();
 
+        //! We Save The Provider Account Access Token
+        //! We Will Dynamically Save Access Token By provider and username
+        ${'update'.title_case($provider).'AccessToken'} = 'update'.ucfirst($provider).'AccessToken';
+        $this->${'update'.title_case($provider).'AccessToken'}($user, $response);
+
+        //* Be Sure To Check Token Expiration When Posting!
         //! Better if we can broadcast an event to front end using laravel echo 
         //! to notify the user has verified their account
-
+        
         return  response()->json($user);
-        // POST API by twitter
-        // https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update
     }
 
     private function isProviderAllowed($driver)
     {
         return in_array($driver, $this->providers) && config()->has("services.{$driver}");
+    }
+
+    private function updateFacebookAccessToken($user, $response)
+    {
+        
+        if($response->id){
+            $user->user_id = $response->id;
+        }
+        if($response->access_token){
+            $user->access_token = $response->access_token;
+        }
+        //! verify if we have the correct expires name
+        if($response->expires_at){
+            $user->expires_at = $response->expires_at;
+        }
+        if(is_null($reponse->id) || is_null($response->access_token) || is_null($response->expires_at)){
+            throw new \Exception('Error On Updating Facebook Account: id = '.$reponse->id.', access_token = '.$response->access_token.', expires_at = '.$response->expires_at);
+        }else{
+            $user->active = true;
+            $user->save();
+        }
+
+    }
+
+    private function updateTwitterAccessToken($user, $response)
+    {
+        if($response->token){
+            $user->access_token = $response->token;
+        }
+        if($response->tokenSecret){
+            $user->access_token_secret = $response->tokenSecret;
+        }
+        if($response->id){
+            $user->user_id = $response->id;
+        }
+        if(is_null($reponse->id) || is_null($response->token) || is_null($response->tokenSecret)){
+            throw new \Exception('Error On Updating Facebook Account: id = '.$reponse->id.', token = '.$response->token.', tokenSecret = '.$response->tokenSecret);
+        }else{
+            $user->active = true;
+            $user->save();
+        }
     }
 }
