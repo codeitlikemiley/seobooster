@@ -15,20 +15,29 @@ class Provider extends AbstractProvider
     /**
      * {@inheritDoc}
      */
+    protected function mapUserToObject(array $user)
+    {
+        return (new User())->setRaw($user['extra'])->map([
+             'id' => $user['id'],
+             'nickname' => $user['nickname'],
+             'name' => $user['name'],
+             'email' => $user['email'],
+             'avatar' => $user['avatar'],
+        ]);
+    }
+
     public function user()
     {
-        if (! $this->hasNecessaryVerifier()) {
-            throw new \InvalidArgumentException("Invalid request. Missing OAuth verifier.");
+        if ($this->hasInvalidState()) {
+            throw new InvalidStateException;
         }
 
-        $user = $this->server->getUserDetails($token = $this->getToken());
+        $response = $this->getAccessTokenResponse($this->getCode());
 
-        return (new User())->setRaw($user->extra)->map([
-            'id'       => $user->id,
-            'nickname' => $user->nickname,
-            'name'     => $user->name,
-            'email'    => $user->email,
-            'avatar'   => $user->avatar,
-        ]);
+        $user = $this->mapUserToObject($this->getUserByToken(
+            $token = Arr::get($response, 'access_token')
+        ));
+
+        return $user;
     }
 }
