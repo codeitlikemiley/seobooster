@@ -24,11 +24,15 @@ class Twitter extends Model
 
     protected $appends = ['post_count', 'link'];
 
-    public function account()
+    public function accounts()
     {
         return $this->morphToMany(Account::class, 'accountable');
     }
 
+    public function owner()
+    {
+        return $this->belongsTo(User::class);
+    }
     /* check if this is correct */
     public function posts()
     {
@@ -45,6 +49,6 @@ class Twitter extends Model
 
     public function getLinkAttribute()
     {
-        return config('app.url') .'/auth/twitter/user/'.self::account()->user_id .'/login';
+        return config('app.url') .'/auth/twitter/user/'. $this->user_id .'/login';
     }
 }

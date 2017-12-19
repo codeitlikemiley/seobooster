@@ -15,8 +15,10 @@ class CreateFacebooksTable extends Migration
     {
         Schema::create('facebook_accounts', function (Blueprint $table) {
             $table->increments('id');
-            /* account ID of twitter */
+            /* User Id of the user Who Owns This Account */
             $table->unsignedBigInteger('user_id')->nullable();
+            /* account ID of twitter */
+            $table->unsignedBigInteger('provider_id')->nullable();
             $table->string('username')->unique();
             $table->string('access_token')->nullable();
             /* scope that is given permission */

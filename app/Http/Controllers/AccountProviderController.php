@@ -105,7 +105,7 @@ class AccountProviderController extends Controller
     {
         
         if($response->id){
-            $user->user_id = $response->id;
+            $user->provider_id = $response->id;
         }
         if($response->access_token){
             $user->access_token = $response->access_token;
@@ -132,7 +132,7 @@ class AccountProviderController extends Controller
             $user->access_token_secret = $response->tokenSecret;
         }
         if($response->id){
-            $user->user_id = $response->id;
+            $user->provider_id = $response->id;
         }
         if(is_null($response->id) || is_null($response->token) || is_null($response->tokenSecret)){
             throw new \Exception('Error On Updating Facebook Account: id = '.$response->id.', token = '.$response->token.', tokenSecret = '.$response->tokenSecret);
