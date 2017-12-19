@@ -59,6 +59,8 @@ class AccountProviderController extends Controller
         if( ! $this->isProviderAllowed($provider) ) {
             throw new ProviderNotFound;
         }
+        //! Check if we have the user already access token in that account...
+        //! If there is Token we Retrive User Token
         //* We get the User Currently Using the App
         $auth = User::find($request->id);
         //* We get the Account Provider
