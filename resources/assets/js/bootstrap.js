@@ -61,9 +61,10 @@ if (token) {
 window.axios.interceptors.response.use((response) => {
     return response
 }, (error) => {
+    let form = new AppForm(App.forms.usersForm)
     switch (error.response.status) {
     case 401:
-        vm.$router.push('login')
+        vm.$store.dispatch('auth/logout', form)
         break
     case 402:
     vm.$router.push('subscribe')
