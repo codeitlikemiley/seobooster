@@ -23,6 +23,8 @@ class EventServiceProvider extends ServiceProvider
         // ],
         \SocialiteProviders\Manager\SocialiteWasCalled::class => [
             // add your listeners (aka providers) here
+            'SocialiteProviders\DailyMotion\DailyMotionExtendSocialite@handle',
+            'SocialiteProviders\Vimeo\VimeoExtendSocialite@handle',
             'SocialiteProviders\Youtube\YoutubeExtendSocialite@handle',
             'SocialiteProviders\Twitter\TwitterExtendSocialite@handle',
             'SocialiteProviders\Facebook\FacebookExtendSocialite@handle',
