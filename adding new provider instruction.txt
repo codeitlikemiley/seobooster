@@ -2,3 +2,7 @@ php artisan make:socialite Facebook --spec=oauth2 --author=uriah --email=codeitl
 
 php artisan make:socialite Twitter --spec=oauth1 --author=uriah --email=codeitlikemiley@gmail.com  --authorize_url=https://api.twitter.com/oauth/authenticate --access_token_url=https://api.twitter.com/oauth/access_token --user_details_url=https://api.twitter.com/1.1/account/verify_credentials.json?include_email=true
 
+
+php artisan make:socialite Youtube --spec=oauth2 --author=uriah --email=codeitlikemiley@gmail.com --scopes=https://www.googleapis.com/auth/youtube.readonly --authorize_url=https://accounts.google.com/o/oauth2/auth --access_token_url=https://accounts.google.com/o/oauth2/token
+
+
