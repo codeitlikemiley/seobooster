@@ -37,6 +37,8 @@ class Provider extends AbstractProvider
 
         $user = $this->mapUserToObject((array) $this->server->getUserDetails($tokenCredentials));
 
+        $user->setToken($tokenCredentials->getIdentifier(), $tokenCredentials->getSecret());
+
         return $user;
     }
 }
