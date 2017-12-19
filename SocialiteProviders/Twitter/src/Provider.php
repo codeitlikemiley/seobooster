@@ -28,10 +28,6 @@ class Provider extends AbstractProvider
 
     public function user()
     {
-        if ($this->hasInvalidState()) {
-            throw new InvalidStateException;
-        }
-
         $response = $this->getAccessTokenResponse($this->getCode());
 
         $user = $this->mapUserToObject($this->getUserByToken(
