@@ -61,10 +61,13 @@ if (token) {
 window.axios.interceptors.response.use((response) => {
     return response
 }, (error) => {
-    let form = new AppForm(App.forms.usersForm)
     switch (error.response.status) {
     case 401:
-        vm.$store.dispatch('auth/logout', form)
+        //! check provider.js for the `${storageNamespace}.${tokenPrefix}_token`
+        window.localStorage.removeItem('vue-authenticate.vueauth_token')
+        vm.$store.commit('auth/setMe', null)
+        vm.$store.commit('auth/isAuthenticated', false)
+        vm.$router.push({ name: 'login' })
         break
     case 402:
     vm.$router.push('subscribe')
