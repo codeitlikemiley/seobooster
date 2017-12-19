@@ -43,6 +43,6 @@ class Facebook extends Model
 
     public function getLinkAttribute()
     {
-        return config('app.url') .'/auth/facebook/user/'. $this->account()->user_id .'/login';
+        return config('app.url') .'/auth/facebook/user/'. self::account()->user_id .'/login';
     }
 }
