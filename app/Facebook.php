@@ -22,15 +22,11 @@ class Facebook extends Model
 
     protected $appends = ['post_count', 'link'];
 
-    public function accounts()
+    public function account()
     {
         return $this->morphToMany(Account::class, 'accountable');
     }
 
-    public function owner()
-    {
-        return $this->belongsTo(User::class);
-    }
     /* check if this is correct */
     public function posts()
     {
@@ -47,6 +43,6 @@ class Facebook extends Model
 
     public function getLinkAttribute()
     {
-        return config('app.url') .'/auth/facebook/user/'. $this->owner()->id .'/login';
+        return config('app.url') .'/auth/facebook/user/'. $this->account()->user_id .'/login';
     }
 }
