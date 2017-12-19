@@ -78,7 +78,8 @@ class AccountProviderController extends Controller
         
         //? When Adding New Service Provider Add A Modified user() method that wont add Token to response Header
         $response = \Socialite::driver($provider)->stateless()->user();
-        return  response()->json($response);
+        //* Uncomment this For Testing For Getting the User Details!
+        // return  response()->json($response);
         //! We Either Search For Nickname or Email From Response
         $fields = [$response->nickname,$response->email];
 
@@ -112,14 +113,14 @@ class AccountProviderController extends Controller
         if($response->id){
             $user->provider_id = $response->id;
         }
-        if($response->access_token){
-            $user->access_token = $response->access_token;
+        if($response->accessTokenResponseBody['access_token']){
+            $user->access_token = $response->accessTokenResponseBody['access_token'];
         }
         //! verify if we have the correct expires name
-        if($response->expires_at){
-            $user->expires_at = $response->expires_at;
+        if($response->accessTokenResponseBody['expires_in']){
+            $user->expires_at = $response->accessTokenResponseBody['expires_in'];
         }
-        if(is_null($response->id) || is_null($response->access_token) || is_null($response->expires_at)){
+        if(is_null($response->id) || is_null($response->accessTokenResponseBody['access_token']) || is_null($response->accessTokenResponseBody['expires_in'])){
             throw new \Exception('Error On Updating Facebook Account: id = '.$response->id.', access_token = '.$response->access_token.', expires_at = '.$response->expires_at);
         }else{
             $user->active = true;
@@ -130,17 +131,20 @@ class AccountProviderController extends Controller
 
     private function updateTwitterAccessToken($user, $response)
     {
-        if($response->token){
-            $user->access_token = $response->token;
+        if($response->accessTokenResponseBody['oauth_token']){
+            $user->access_token = $response->accessTokenResponseBody['oauth_token'];
         }
-        if($response->tokenSecret){
-            $user->access_token_secret = $response->tokenSecret;
+        if($response->accessTokenResponseBody['oauth_token_secret']){
+            $user->access_token_secret = $response->accessTokenResponseBody['oauth_token_secret'];
+        }
+        if($response->accessTokenResponseBody['x_auth_expires']){
+            $user->expires_at = $response->accessTokenResponseBody['x_auth_expires'];
         }
         if($response->id){
             $user->provider_id = $response->id;
         }
-        if(is_null($response->id) || is_null($response->token) || is_null($response->tokenSecret)){
-            throw new \Exception('Error On Updating Facebook Account: id = '.$response->id.', token = '.$response->token.', tokenSecret = '.$response->tokenSecret);
+        if(is_null($response->id) || is_null($response->accessTokenResponseBody['oauth_token']) || is_null($response->accessTokenResponseBody['oauth_token_secret']) || is_null($response->accessTokenResponseBody['x_auth_expires'])){
+            throw new \Exception('Error On Updating Twitter Account: id = '.$response->id.', token = '.$response->accessTokenResponseBody['oauth_token'].', tokenSecret = '.$response->accessTokenResponseBody['oauth_token_secret'].', expires_at = '.$response->accessTokenResponseBody['x_auth_expires']);
         }else{
             $user->active = true;
             $user->save();
