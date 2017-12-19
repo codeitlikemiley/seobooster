@@ -114,8 +114,8 @@ class AccountProviderController extends Controller
         if($response->expires_at){
             $user->expires_at = $response->expires_at;
         }
-        if(is_null($reponse->id) || is_null($response->access_token) || is_null($response->expires_at)){
-            throw new \Exception('Error On Updating Facebook Account: id = '.$reponse->id.', access_token = '.$response->access_token.', expires_at = '.$response->expires_at);
+        if(is_null($response->id) || is_null($response->access_token) || is_null($response->expires_at)){
+            throw new \Exception('Error On Updating Facebook Account: id = '.$response->id.', access_token = '.$response->access_token.', expires_at = '.$response->expires_at);
         }else{
             $user->active = true;
             $user->save();
@@ -134,8 +134,8 @@ class AccountProviderController extends Controller
         if($response->id){
             $user->user_id = $response->id;
         }
-        if(is_null($reponse->id) || is_null($response->token) || is_null($response->tokenSecret)){
-            throw new \Exception('Error On Updating Facebook Account: id = '.$reponse->id.', token = '.$response->token.', tokenSecret = '.$response->tokenSecret);
+        if(is_null($response->id) || is_null($response->token) || is_null($response->tokenSecret)){
+            throw new \Exception('Error On Updating Facebook Account: id = '.$response->id.', token = '.$response->token.', tokenSecret = '.$response->tokenSecret);
         }else{
             $user->active = true;
             $user->save();
