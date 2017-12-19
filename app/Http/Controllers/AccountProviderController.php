@@ -75,18 +75,19 @@ class AccountProviderController extends Controller
         //! We Load The RelationShip Dynamically
         ${$provider.'_accounts'} = $provider.'_accounts';
         $accounts = $account->${$provider.'_accounts'};
-        //! We Either Search For Nickname or Email
-        $fields = [$user->nickname,$user->email];
-        //! We get The Account By Username
-        $user = $accounts->whereIn('username', $fields)->first();
         
         //? When Adding New Service Provider Add A Modified user() method that wont add Token to response Header
         $response = \Socialite::driver($provider)->stateless()->user();
+        //! We Either Search For Nickname or Email From Response
+        $fields = [$response->nickname,$response->email];
+
+        //! We get The Account By Username
+        $user = $accounts->whereIn('username', $fields)->first();
 
         //! We Save The Provider Account Access Token
         //! We Will Dynamically Save Access Token By provider and username
-        ${'update'.title_case($provider).'AccessToken'} = 'update'.ucfirst($provider).'AccessToken';
-        $this->${'update'.title_case($provider).'AccessToken'}($user, $response);
+        ${'update'.ucfirst($provider).'AccessToken'} = 'update'.ucfirst($provider).'AccessToken';
+        $this->${'update'.ucfirst($provider).'AccessToken'}($user, $response);
 
         //* Be Sure To Check Token Expiration When Posting!
         //! Better if we can broadcast an event to front end using laravel echo 
