@@ -16,6 +16,10 @@ class Twitter extends Model
 
     protected $dates = ['created_at', 'updated_at', 'expires_at'];
 
+    protected $hidden = [
+        'access_token', 'access_token_secret',
+    ];
+
     protected $casts = [
         'scope' => 'array', 
         'revoked' => 'boolean',

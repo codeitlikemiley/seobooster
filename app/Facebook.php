@@ -20,6 +20,10 @@ class Facebook extends Model
         'active' => 'boolean'
     ];
 
+    protected $hidden = [
+        'access_token', 'access_token_secret',
+    ];
+
     protected $appends = ['post_count', 'link'];
 
     public function accounts()
