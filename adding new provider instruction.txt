@@ -5,4 +5,5 @@ php artisan make:socialite Twitter --spec=oauth1 --author=uriah --email=codeitli
 
 php artisan make:socialite Youtube --spec=oauth2 --author=uriah --email=codeitlikemiley@gmail.com --scopes=https://www.googleapis.com/auth/youtube.readonly --authorize_url=https://accounts.google.com/o/oauth2/auth --access_token_url=https://accounts.google.com/o/oauth2/token
 
+php artisan make:socialite Vimeo --spec=oauth2 --author=uriah --email=codeitlikemiley@gmail.com --authorize_url=https://api.vimeo.com/oauth/authorize --access_token_url=https://api.vimeo.com/oauth/access_token
 

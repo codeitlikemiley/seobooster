@@ -46,7 +46,8 @@
             "Vuetified\\": "vuetified/",
             "SocialiteProviders\\Facebook\\": "SocialiteProviders/Facebook/src/",
             "SocialiteProviders\\Twitter\\": "SocialiteProviders/Twitter/src/",
-            "SocialiteProviders\\Youtube\\": "SocialiteProviders/Youtube/src/"
+            "SocialiteProviders\\Youtube\\": "SocialiteProviders/Youtube/src/",
+            "SocialiteProviders\\Vimeo\\": "SocialiteProviders/Vimeo/src/"
         },
         "files": [
             "app/Helpers.php"
