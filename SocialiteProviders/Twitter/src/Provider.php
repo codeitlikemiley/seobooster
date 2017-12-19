@@ -22,23 +22,4 @@ class Provider extends AbstractProvider
              'avatar' => $user['avatar'],
         ]);
     }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function user()
-    {
-        if (! $this->hasNecessaryVerifier()) {
-            throw new \InvalidArgumentException('Invalid request. Missing OAuth verifier.');
-        }
-
-        $token = $this->getToken();
-        $tokenCredentials = $token['tokenCredentials'];
-
-        $user = $this->mapUserToObject((array) $this->server->getUserDetails($tokenCredentials));
-
-        $user->setToken($tokenCredentials->getIdentifier(), $tokenCredentials->getSecret());
-
-        return $user;
-    }
 }

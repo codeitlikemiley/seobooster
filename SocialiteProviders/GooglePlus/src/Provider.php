@@ -83,22 +83,4 @@ class Provider extends AbstractProvider implements ProviderInterface
             'grant_type' => 'authorization_code',
         ]);
     }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function user()
-    {
-        if ($this->hasInvalidState()) {
-            throw new InvalidStateException;
-        }
-
-        $response = $this->getAccessTokenResponse($this->getCode());
-
-        $user = $this->mapUserToObject($this->getUserByToken(
-            $token = Arr::get($response, 'access_token')
-        ));
-
-        return $user;
-    }
 }

@@ -93,7 +93,11 @@ class AccountProviderController extends Controller
         //! Better if we can broadcast an event to front end using laravel echo 
         //! to notify the user has verified their account
         
+        //! NOTE WHEN RETURNING RESPONSE AVOID RETURNING A DATA WITH KEY OF access_token
+        //! COZ it will be automatically be converted by vueauthenticate
+        //! Either we Make that private so we wont return it or have the package creator fixed it!!!
         return  response()->json($user);
+
     }
 
     private function isProviderAllowed($driver)
