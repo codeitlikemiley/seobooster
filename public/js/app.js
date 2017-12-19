@@ -20975,9 +20975,6 @@ router.beforeEach(function (to, from, next) {
         })) {
             return axios.post(route('api.auth.check')).then(function () {
                 return next();
-            }).catch(function () {
-                var form = new AppForm(App.forms.logoutForm);
-                vm.$store.dispatch('auth/logout', form);
             });
         }
     }

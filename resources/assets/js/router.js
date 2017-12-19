@@ -31,9 +31,6 @@ router.beforeEach((to, from, next) => {
         if (to.matched.some(m => m.meta.requiresAuth)) {
             return axios.post(route('api.auth.check')).then(() => {
                 return next()
-            }).catch(() => {
-                let form = new AppForm(App.forms.logoutForm)
-                vm.$store.dispatch('auth/logout', form)
             })
         }
     }
