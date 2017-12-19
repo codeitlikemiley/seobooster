@@ -1,0 +1,35 @@
+Blogger API, v3
+Scopes
+https://www.googleapis.com/auth/blogger	Manage your Blogger account
+https://www.googleapis.com/auth/blogger.readonly
+
+Google Sign-In
+Scopes
+profile	View your basic profile info
+email	View your email address
+openid	Authenticate using OpenID Connect
+
+
+Google+ API, v1
+Scopes
+https://www.googleapis.com/auth/plus.login	Know the list of people in your circles, your age range, and language
+https://www.googleapis.com/auth/plus.me	Know who you are on Google
+https://www.googleapis.com/auth/userinfo.email	View your email address
+https://www.googleapis.com/auth/userinfo.profile	View your basic profile info
+
+YouTube Data API, v3
+Scopes
+https://www.googleapis.com/auth/youtube	Manage your YouTube account
+https://www.googleapis.com/auth/youtube.force-ssl	Manage your YouTube account
+https://www.googleapis.com/auth/youtube.readonly	View your YouTube account
+https://www.googleapis.com/auth/youtube.upload	Manage your YouTube videos
+https://www.googleapis.com/auth/youtubepartner	View and manage your assets and associated content on YouTube
+https://www.googleapis.com/auth/youtubepartner-channel-audit	View private information of your YouTube channel relevant during the audit process with a YouTube partner
+
+
+Google+ Domains API
+To create posts for a user within your domain, your app must include the following scopes:
+
+https://www.googleapis.com/auth/plus.me
+
+https://developers.google.com/+/domains/posts/creating

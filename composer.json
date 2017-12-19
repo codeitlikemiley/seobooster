@@ -48,7 +48,8 @@
             "SocialiteProviders\\Twitter\\": "SocialiteProviders/Twitter/src/",
             "SocialiteProviders\\Youtube\\": "SocialiteProviders/Youtube/src/",
             "SocialiteProviders\\Vimeo\\": "SocialiteProviders/Vimeo/src/",
-            "SocialiteProviders\\DailyMotion\\": "SocialiteProviders/DailyMotion/src/"
+            "SocialiteProviders\\DailyMotion\\": "SocialiteProviders/DailyMotion/src/",
+            "SocialiteProviders\\GooglePlus\\": "SocialiteProviders/GooglePlus/src/"
         },
         "files": [
             "app/Helpers.php"

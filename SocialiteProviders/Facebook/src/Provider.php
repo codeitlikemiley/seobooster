@@ -169,6 +169,10 @@ class Provider extends AbstractProvider implements ProviderInterface
 
         return $this;
     }
+
+    /**
+     * {@inheritdoc}
+     */
     public function user()
     {
         if ($this->hasInvalidState()) {
