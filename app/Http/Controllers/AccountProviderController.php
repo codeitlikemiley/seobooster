@@ -86,8 +86,8 @@ class AccountProviderController extends Controller
 
         //! We Save The Provider Account Access Token
         //! We Will Dynamically Save Access Token By provider and username
-        ${'update'.ucfirst($provider).'AccessToken'} = 'update'.ucfirst($provider).'AccessToken';
-        $this->${'update'.ucfirst($provider).'AccessToken'}($user, $response);
+        ${'update'.camel_case($provider).'AccessToken'} = 'update'.camel_case($provider).'AccessToken';
+        $this->${'update'.camel_case($provider).'AccessToken'}($user, $response);
 
         //* Be Sure To Check Token Expiration When Posting!
         //! Better if we can broadcast an event to front end using laravel echo 

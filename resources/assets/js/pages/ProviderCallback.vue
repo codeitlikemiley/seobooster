@@ -134,6 +134,7 @@ export default {
             window.axios.post(`/providers/${self.$route.params.provider}/callback`,self.usersForm)
             .then((response) => {
                 console.log(response)
+                //! Activate the New User
             })
         }
     }

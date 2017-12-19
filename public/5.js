@@ -5088,6 +5088,7 @@ var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_8_vuex__["createNam
             }
             window.axios.post('/providers/' + self.$route.params.provider + '/callback', self.usersForm).then(function (response) {
                 console.log(response);
+                //! Activate the New User
             });
         }
     }
