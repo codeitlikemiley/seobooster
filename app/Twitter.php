@@ -49,6 +49,6 @@ class Twitter extends Model
 
     public function getLinkAttribute()
     {
-        return config('app.url') .'/auth/twitter/user/'. $this->user_id .'/login';
+        return config('app.url') .'/auth/twitter/user/'. $this->owner()->id .'/login';
     }
 }
