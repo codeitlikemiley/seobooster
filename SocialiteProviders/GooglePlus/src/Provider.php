@@ -1,6 +1,6 @@
 <?php
 
-namespace SocialiteProviders\Google;
+namespace SocialiteProviders\GooglePlus;
 
 use Illuminate\Support\Arr;
 use SocialiteProviders\Manager\OAuth2\User;
