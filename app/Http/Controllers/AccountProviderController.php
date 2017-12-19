@@ -96,7 +96,7 @@ class AccountProviderController extends Controller
         //! NOTE WHEN RETURNING RESPONSE AVOID RETURNING A DATA WITH KEY OF access_token
         //! COZ it will be automatically be converted by vueauthenticate
         //! Either we Make that private so we wont return it or have the package creator fixed it!!!
-        return  response()->json($user);
+        return  response()->json($response);
 
     }
 
