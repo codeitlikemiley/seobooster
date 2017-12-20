@@ -19,7 +19,7 @@ const actions = {
     async register ({ commit, dispatch }, form) {
         form.busy = true
         try {
-            await vueAuth.register(form).then((response) => {
+            await vueAuth.register(form).then(() => {
                 commit('isAuthenticated', {
                     isAuthenticated: vueAuth.isAuthenticated()
                 })
@@ -41,7 +41,7 @@ const actions = {
     async login ({ commit, dispatch }, form) {
         form.busy = true
         try {
-            await vueAuth.login(form).then((response) => {
+            await vueAuth.login(form).then(() => {
                 commit('isAuthenticated', {
                     isAuthenticated: vueAuth.isAuthenticated()
                 })
@@ -119,7 +119,7 @@ const actions = {
     async passwordreset ({ commit }, form) {
         form.busy = true
         try {
-             await App.post(route('api.auth.reset-password'), form).then(() => {
+            await App.post(route('api.auth.reset-password'), form).then(() => {
                 commit('isAuthenticated', {
                     isAuthenticated: vueAuth.isAuthenticated()
                 })
@@ -133,10 +133,10 @@ const actions = {
             form.busy = false
             vm.$popup({ message: message, backgroundColor: '#e57373', delay: 5, color: '#fffffa' })
         }
-    },
+    }
     //! Not working as expected only showing empty popup 
     /* form : name,email ,provider(fb),provider_user_id(fb_id) */
-    async oauthLogin ({ commit, dispatch,state }, { provider, form, redirectUri } = payload) {
+    /* async oauthLogin ({ commit, dispatch,state }, { provider, form, redirectUri } = payload) {
         form.busy = true
         let user = state.me
         vueAuth.options.providers[provider].url = `/auth/${provider}/user/${user.id}/login`
@@ -155,7 +155,8 @@ const actions = {
             form.busy = false
             vm.$popup({ message: message, backgroundColor: '#e57373', delay: 5, color: '#fffffa' })
         }
-    },
+    }
+    */
 
 }
 

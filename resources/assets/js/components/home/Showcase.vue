@@ -1,28 +1,39 @@
 <template>
-    <v-container fluid class="accent">
-        <v-layout row wrap>
-            <v-flex
-            v-bind="{ [`xs${card.xs}`]: true, [`sm${card.sm}`]: true, [`md${card.md}`]: true,[`lg${card.lg}`]: true,[`xl${card.xl}`]: true }"
-            v-for="card in showcase"
-            :key="card.title"
-            class="pa-2"
-            >
-                <v-card flat color="accent">
-                    <v-card-media
-                    :src="card.src"
-                    height="150px"
-                    contain
-                    >
-                    </v-card-media>
-                    <v-card-actions>
-                        <v-spacer></v-spacer>
-                        <p class="headline primary--text" v-text="card.title"></p>
-                        <v-spacer></v-spacer>
-                    </v-card-actions>
-                </v-card>
-            </v-flex>
-        </v-layout>
-    </v-container>
+  <v-container 
+    fluid 
+    class="accent"
+  >
+    <v-layout 
+      row 
+      wrap
+    >
+      <v-flex
+        v-bind="{ [`xs${card.xs}`]: true, [`sm${card.sm}`]: true, [`md${card.md}`]: true,[`lg${card.lg}`]: true,[`xl${card.xl}`]: true }"
+        v-for="card in showcase"
+        :key="card.title"
+        class="pa-2"
+      >
+        <v-card 
+          flat 
+          color="accent"
+        >
+          <v-card-media
+            :src="card.src"
+            height="150px"
+            contain
+          />
+          <v-card-actions>
+            <v-spacer/>
+            <p 
+              class="headline primary--text" 
+              v-text="card.title"
+            />
+            <v-spacer/>
+          </v-card-actions>
+        </v-card>
+      </v-flex>
+    </v-layout>
+  </v-container>
 </template>
 
 <script>

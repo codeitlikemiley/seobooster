@@ -1,83 +1,123 @@
 <template>
-<v-data-table
-v-model="selected"
-:headers="headers"
-:items="items"
-item-key="id"
-select-all
-:pagination.sync="pagination"
-light
-class="elevation-1"
->
-    <template slot="headers" slot-scope="props">
-        <tr>
-          <th>
-            <v-checkbox
+  <v-data-table
+    v-model="selected"
+    :headers="headers"
+    :items="items"
+    item-key="id"
+    select-all
+    :pagination.sync="pagination"
+    light
+    class="elevation-1"
+  >
+    <template 
+      slot="headers" 
+      slot-scope="props"
+    >
+      <tr>
+        <th>
+          <v-checkbox
             light
             primary
             hide-details
             @click.native="toggleAll"
             :input-value="props.all"
             :indeterminate="props.indeterminate"
-            ></v-checkbox>
-          </th>
-          <th v-for="header in props.headers" :key="header.text"
-            :class="['column sortable', pagination.descending ? 'desc' : 'asc', header.value === pagination.sortBy ? 'active' : '']"
-            @click="changeSort(header.value)"
+          />
+        </th>
+        <th 
+          v-for="header in props.headers" 
+          :key="header.text"
+          :class="['column sortable', pagination.descending ? 'desc' : 'asc', header.value === pagination.sortBy ? 'active' : '']"
+          @click="changeSort(header.value)"
+        >
+          <v-icon>arrow_upward</v-icon>
+          {{ header.text }}
+        </th>
+        <th text-xs-right>
+          <span v-if="selected.length < 1">Actions</span>
+          <v-btn 
+            v-else 
+            flat 
+            icon 
+            color="error" 
+            @click.native="deleteAll()"
           >
-            <v-icon>arrow_upward</v-icon>
-            {{ header.text }}
-          </th>
-          <th text-xs-right>
-            <span v-if="selected.length < 1">Actions</span>
-            <v-btn v-else flat icon color="error" @click.native="deleteAll()">
-                    <v-icon>fa-trash</v-icon>
-            </v-btn>
-          </th>
-        </tr>
+            <v-icon>fa-trash</v-icon>
+          </v-btn>
+        </th>
+      </tr>
     </template>
-    <template slot="items" slot-scope="props">
-        <tr :active="props.selected" @click="props.selected = !props.selected">
-            <td class="title text-xs-left primary--text">
-            <v-checkbox
-              primary
-              hide-details
-              :input-value="props.selected"
-              light
-            ></v-checkbox>
-          </td>
-            <td class="title text-xs-left primary--text">
-                <v-icon :color="props.item.iconColor">{{ props.item.icon }}</v-icon>
-                <span class="caption accent--text">{{ props.item.username }}</span>
-            </td>
-            <td class="title text-xs-left primary--text">
-                <span class="title blue-grey--text">{{ props.item.message }}</span>
-            </td>
-            <td class="title text-xs-left primary--text">{{ props.item.date }}</td>
-            <td class="title text-xs-center">
-                <v-chip :class="{ 'green': isActive(props.item),'amber': !isActive(props.item) }" text-color="white"><span>{{ `${props.item.active ? 'Active' : 'On-Queue'}` }}</span></v-chip>
-            </td>
-            <td class="title text-xs-center">
-                <v-btn flat icon color="accent" @click.native="">
-                    <v-icon>fa-eye</v-icon>
-                </v-btn>
-                <v-btn flat icon color="error" @click.native="">
-                    <v-icon>fa-trash</v-icon>
-                </v-btn>
-            </td>
-        </tr>
+    <template 
+      slot="items" 
+      slot-scope="props"
+    >
+      <tr 
+        :active="props.selected" 
+        @click="props.selected = !props.selected"
+      >
+        <td class="title text-xs-left primary--text">
+          <v-checkbox
+            primary
+            hide-details
+            :input-value="props.selected"
+            light
+          />
+        </td>
+        <td class="title text-xs-left primary--text">
+          <v-icon :color="props.item.iconColor">{{ props.item.icon }}</v-icon>
+          <span class="caption accent--text">{{ props.item.username }}</span>
+        </td>
+        <td class="title text-xs-left primary--text">
+          <span class="title blue-grey--text">{{ props.item.message }}</span>
+        </td>
+        <td class="title text-xs-left primary--text">{{ props.item.date }}</td>
+        <td class="title text-xs-center">
+          <v-chip 
+            :class="{ 'green': isActive(props.item),'amber': !isActive(props.item) }" 
+            text-color="white"
+          >
+            <span>{{ `${props.item.active ? 'Active' : 'On-Queue'}` }}</span>
+          </v-chip>
+        </td>
+        <td class="title text-xs-center">
+          <v-btn 
+            flat 
+            icon 
+            color="accent"
+            @click.native=""
+          >
+            <v-icon>fa-eye</v-icon>
+          </v-btn>
+          <v-btn 
+            flat 
+            icon
+            color="error" 
+            @click.native=""
+          >
+            <v-icon>fa-trash</v-icon>
+          </v-btn>
+        </td>
+      </tr>
     </template>
 
-    <template slot="pageText" slot-scope="{ pageStart, pageStop }">
-        From {{ pageStart }} to {{ pageStop }}
+    <template 
+      slot="pageText" 
+      slot-scope="{ pageStart, pageStop }"
+    >
+      From {{ pageStart }} to {{ pageStop }}
     </template>
 
-</v-data-table>
+  </v-data-table>
 </template>
 
 <script>
 export default {
-    props: ['tab'],
+    props:{
+        tab: {
+            type: Object,
+            required: true
+        }
+    },
     data: () => ({
         pagination: {
             sortBy: 'name'

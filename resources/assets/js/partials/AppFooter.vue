@@ -1,13 +1,16 @@
 <template>
-<v-footer :class="[footerClass]">
-<v-spacer></v-spacer><span>© {{ year }} {{ domain }} ® | {{ trademark }}™</span><v-spacer></v-spacer>
-</v-footer>
+  <v-footer :class="[footerClass]">
+    <v-spacer/><span>© {{ year }} {{ domain }} ® | {{ trademark }}™</span><v-spacer/>
+  </v-footer>
 </template>
 
 <script>
 import Theme from '../mixins/theme'
 import VLink from '../components/VLink.vue'
 export default {
+    components: {
+        VLink
+    },
     mixins: [Theme],
     data: () => ({
         footerClass: {'primary--text': true, 'grey': true, 'darken-4': true}
@@ -17,9 +20,6 @@ export default {
         Bus.$on('footer-content-visible', (visibility) => {
             this.contentVisible = visibility
         })
-    },
-    components: {
-        VLink
     }
 }
 </script>

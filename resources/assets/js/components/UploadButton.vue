@@ -1,15 +1,31 @@
 <template>
-  <v-btn flat icon color="cyan" dark class="jbtn-file">
-   <v-icon>fa-upload</v-icon>
-   <input id="selectFile" type="file" v-on:change="fileSelected">
+  <v-btn 
+    flat 
+    icon 
+    color="cyan"
+    dark 
+    class="jbtn-file"
+  >
+    <v-icon>fa-upload</v-icon>
+    <input 
+      id="selectFile" 
+      type="file" 
+      @change="fileSelected"
+    >
   </v-btn>
 </template>
 
 <script>
 export default {
-    props: {
-        selectedCallback: Function,
-        title: String
+    props:{
+        selectedCallback: {
+            type: Function,
+            required: true
+        },
+        title: {
+            type: String,
+            required: true
+        }
     },
     methods: {
         fileSelected (e) {

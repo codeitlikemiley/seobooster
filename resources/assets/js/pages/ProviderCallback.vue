@@ -91,7 +91,7 @@ export default {
     mixins: [Theme],
     props:{
         route: {
-            type: Array,
+            type: Object,
             required: true
         }
     },

@@ -1,12 +1,12 @@
 <template>
   <main-layout :class="[contentClass]">
-    <carousel></carousel>
-    <show-case></show-case>
-    <feature-case></feature-case>
-    <pioneer></pioneer>
-    <video-case></video-case>
-    <testimonial></testimonial>
-    <call-to-action></call-to-action>
+    <carousel/>
+    <show-case/>
+    <feature-case/>
+    <pioneer/>
+    <video-case/>
+    <testimonial/>
+    <call-to-action/>
   </main-layout>
 </template>
 
@@ -22,14 +22,6 @@ import CallToAction from '../components/home/CallToAction.vue'
 import Theme from '../mixins/theme'
 
 export default {
-    mixins: [Theme],
-    data: () => ({
-        contentClass: { 'white': true, 'accent--text': true }
-    }),
-    mounted () {
-        Bus.$emit('footer-content-visible', true)
-    },
-
     components: {
         MainLayout,
         ShowCase,
@@ -39,6 +31,13 @@ export default {
         Testimonial,
         Pioneer,
         CallToAction
+    },
+    mixins: [Theme],
+    data: () => ({
+        contentClass: { 'white': true, 'accent--text': true }
+    }),
+    mounted () {
+        Bus.$emit('footer-content-visible', true)
     }
 }
 </script>

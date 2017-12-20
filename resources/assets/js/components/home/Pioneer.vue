@@ -1,73 +1,121 @@
 <template>
-  <v-container fluid grid-list-md>
-        <v-layout row wrap>
-            <!-- left side -->
-            <v-flex d-flex xs12 sm12 md6 lg6>
-                <v-layout row wrap>
-                    <!-- Pioneer Message -->
-                    <v-flex d-flex xs12 text-xs-center>
-                        <v-card flat light>
-                            <v-card-title >
-                                <v-card-text v-html="title"></v-card-text>
-                            </v-card-title>
-                            <!-- Product Description HTML -->
-                            <v-card-text class="grey--text headline" v-text="subtitle">
-                            </v-card-text>
-                            <!-- Product Description HTML -->
-                        </v-card>
-                    </v-flex>
-                    <!-- Pioneer Message -->
-                </v-layout>
-            </v-flex>
-            <!-- left side -->
-            <!-- right side -->
-            <v-flex d-flex xs12 sm12 md6 lg6>
-                <v-layout row wrap>
-                    <!-- Pioneer Image -->
-                    <v-flex d-flex xs12 text-xs-right>
-                        <v-card flat light>
-
-                            <!-- Image Placeholder -->
-
-                            <!-- Image Placeholder -->
-                            <!-- Image -->
-                            <v-container>
-                            <div v-if="!current_image" style="background-color:#d3d3d3;height:322px;width:483px;margin: auto;width: 50%;">
-                            </div>
-                            <v-card-media
-                            v-else
-                            :src="current_image"
-                            height="400px"
-                            contain
-                            >
-                            </v-card-media>
-                            </v-container>
-
-                            <!-- Image -->
-                            <!-- Gallery -->
-                            <v-container fill-height fluid v-if="photos !== null && photos !== undefined && photos.length > 0">
-                                <v-layout fill-height>
-                                    <v-flex xs12 align-end flexbox>
-                                        <div
-                                        class="image"
-                                        v-for="(image,key) in photos"
-                                        :key="key"
-                                        @click="setCurrentImage(key)"
-                                        :style="{ backgroundImage: 'url(' + image + ')', width: imageHeight, height: imageWidth }"
-                                        >
-                                        </div>
-                                    </v-flex>
-                                </v-layout>
-                            </v-container>
-                            <!-- Gallery -->
-                        </v-card>
-                    </v-flex>
-                    <!-- Pioneer Image -->
-                </v-layout>
-            </v-flex>
-            <!-- right side -->
+  <v-container 
+    fluid 
+    grid-list-md
+  >
+    <v-layout 
+      row
+      wrap
+    >
+      <!-- left side -->
+      <v-flex 
+        d-flex 
+        xs12 
+        sm12 
+        md6 
+        lg6
+      >
+        <v-layout 
+          row 
+          wrap
+        >
+          <!-- Pioneer Message -->
+          <v-flex 
+            d-flex 
+            xs12 
+            text-xs-center
+          >
+            <v-card 
+              flat 
+              light
+            >
+              <v-card-title >
+                <v-card-text v-html="title"/>
+              </v-card-title>
+              <!-- Product Description HTML -->
+              <v-card-text 
+                class="grey--text headline" 
+                v-text="subtitle"
+              />
+              <!-- Product Description HTML -->
+            </v-card>
+          </v-flex>
+          <!-- Pioneer Message -->
         </v-layout>
-    </v-container>
+      </v-flex>
+      <!-- left side -->
+      <!-- right side -->
+      <v-flex 
+        d-flex 
+        xs12 
+        sm12
+        md6 
+        lg6
+      >
+        <v-layout 
+          row
+          wrap
+        >
+          <!-- Pioneer Image -->
+          <v-flex
+            d-flex 
+            xs12 
+            text-xs-right
+          >
+            <v-card 
+              flat 
+              light
+            >
+
+              <!-- Image Placeholder -->
+
+              <!-- Image Placeholder -->
+              <!-- Image -->
+              <v-container>
+                <div 
+                  v-if="!current_image" 
+                  style="background-color:#d3d3d3;height:322px;width:483px;margin: auto;width: 50%;"
+                />
+                <v-card-media
+                  v-else
+                  :src="current_image"
+                  height="400px"
+                  contain
+                />
+              </v-container>
+
+              <!-- Image -->
+              <!-- Gallery -->
+              <v-container 
+                fill-height 
+                fluid 
+                v-if="photos !== null && photos !== undefined && photos.length > 0"
+              >
+                <v-layout fill-height>
+                  <v-flex 
+                    xs12 
+                    align-end 
+                    flexbox
+                  >
+                    <div
+                      class="image"
+                      v-for="(image,key) in photos"
+                      :key="key"
+                      @click="setCurrentImage(key)"
+                      :style="{ backgroundImage: 'url(' + image + ')', width: imageHeight, height: imageWidth }"
+                    />
+                  </v-flex>
+                </v-layout>
+              </v-container>
+              <!-- Gallery -->
+            </v-card>
+          </v-flex>
+          <!-- Pioneer Image -->
+        </v-layout>
+      </v-flex>
+      <!-- right side -->
+    </v-layout>
+  </v-container>
 </template>
 
 <script>

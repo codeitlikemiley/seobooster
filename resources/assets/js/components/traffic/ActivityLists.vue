@@ -1,54 +1,88 @@
 <template>
-<v-dialog v-model="dialog" fullscreen transition="dialog-bottom-transition" :overlay=false>
-        <v-card>
-          <v-toolbar dark color="accent" style="z-index:1000;">
-            <v-btn icon @click.native="dialog = false" dark>
-              <v-icon color="red darken-4">close</v-icon>
-            </v-btn>
-            <v-spacer></v-spacer>
-            <v-toolbar-name>
-                Campaign Activity #{{ id }}
-            </v-toolbar-name>
-            <v-spacer></v-spacer>
-            <v-toolbar-items>
-              <v-btn dark flat @click.native="dialog = false" color="red darken-4">Close</v-btn>
-            </v-toolbar-items>
-          </v-toolbar>
-          <v-container>
-            <v-layout row wrap>
-              <v-flex xs12 md8 offset-md2>
-                <v-list>
-            <v-list-group v-for="item in items" v-bind:key="item.name">
-              <v-list-tile slot="item" @click="">
-                <v-list-tile-action>
-                <v-icon>fa-plus</v-icon>
-              </v-list-tile-action>
-                <v-list-tile-content>
-                  <v-list-tile-name>
-                     {{ item.name }} - Total Duration: {{ item.total_duration }}
-                  </v-list-tile-name>
-                </v-list-tile-content>
-                <v-list-tile-action>
-                  <v-icon>keyboard_arrow_down</v-icon>
-                </v-list-tile-action>
-              </v-list-tile>
-              <v-list-tile v-for="subItem in item.activities" v-bind:key="subItem.name" @click="">
-                <v-list-tile-content>
-                  <v-list-tile-name>{{ subItem.name }}</v-list-tile-name>
-                </v-list-tile-content>
-                <v-list-tile-action>
-                {{ subItem.duration }}
-                </v-list-tile-action>
-              </v-list-tile>
-            </v-list-group>
-          </v-list>
-              </v-flex>
-            </v-layout>
+  <v-dialog 
+    v-model="dialog" 
+    fullscreen 
+    transition="dialog-bottom-transition" 
+    :overlay="false"
+  >
+    <v-card>
+      <v-toolbar 
+        dark 
+        color="accent" 
+        style="z-index:1000;"
+      >
+        <v-btn 
+          icon
+          @click.native="dialog = false" 
+          dark
+        >
+          <v-icon color="red darken-4">close</v-icon>
+        </v-btn>
+        <v-spacer/>
+        <v-toolbar-name>
+          Campaign Activity #{{ id }}
+        </v-toolbar-name>
+        <v-spacer/>
+        <v-toolbar-items>
+          <v-btn 
+            dark 
+            flat 
+            @click.native="dialog = false" 
+            color="red darken-4"
+          >
+            Close
+          </v-btn>
+        </v-toolbar-items>
+      </v-toolbar>
+      <v-container>
+        <v-layout 
+          row 
+          wrap
+        >
+          <v-flex 
+            xs12
+            md8 
+            offset-md2
+          >
+            <v-list>
+              <v-list-group 
+                v-for="item in items" 
+                :key="item.name"
+              >
+                <v-list-tile slot="item" @click="">
+                  <v-list-tile-action>
+                    <v-icon>fa-plus</v-icon>
+                  </v-list-tile-action>
+                  <v-list-tile-content>
+                    <v-list-tile-name>
+                      {{ item.name }} - Total Duration: {{ item.total_duration }}
+                    </v-list-tile-name>
+                  </v-list-tile-content>
+                  <v-list-tile-action>
+                    <v-icon>keyboard_arrow_down</v-icon>
+                  </v-list-tile-action>
+                </v-list-tile>
+                <v-list-tile 
+                  v-for="subItem in item.activities" 
+                  :key="subItem.name" 
+                  @click=""
+                >
+                  <v-list-tile-content>
+                    <v-list-tile-name>{{ subItem.name }}</v-list-tile-name>
+                  </v-list-tile-content>
+                  <v-list-tile-action>
+                    {{ subItem.duration }}
+                  </v-list-tile-action>
+                </v-list-tile>
+              </v-list-group>
+            </v-list>
+          </v-flex>
+        </v-layout>
 
-          </v-container>
+      </v-container>
 
-        </v-card>
-      </v-dialog>
+    </v-card>
+  </v-dialog>
 </template>
 
 <script>

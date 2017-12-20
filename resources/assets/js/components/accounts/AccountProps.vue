@@ -223,6 +223,7 @@ export default {
         },
         tokenExpired (item) {
             //! Compare Current Date with Date of Expiration
+            console.log(item)
             return false
         }
     }

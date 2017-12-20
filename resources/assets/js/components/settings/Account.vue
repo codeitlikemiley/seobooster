@@ -1,94 +1,123 @@
 <template>
-    <v-tabs-content
-          id="account"
-    >
-        <v-container>
-            <v-layout row wrap>
+  <v-tabs-content
+    id="account"
+  >
+    <v-container>
+      <v-layout 
+        row 
+        wrap
+      >
 
-                <v-flex xs12 md8 offset-md2>
-                    <v-text-field
-                    label="Username"
-                    v-model="username"
-                    prepend-icon=" fa-at"
-                    v-validate="{ required: true, regex: /^[a-zA-Z0-9][a-zA-Z0-9.-]+[a-zA-Z0-9]$/ }"
-                    :error-messages="errors.collect('username')"
-                    data-vv-name="username"
-                    >
-                    </v-text-field>
-                </v-flex>
-                <v-flex xs12 md8 offset-md2>
-                    <v-text-field
-                    label="Email"
-                    v-model="email"
-                    prepend-icon=" mail"
-                    v-validate="{ required: true, email: true }"
-                    :error-messages="errors.collect('email')"
-                    data-vv-name="email"
-                    >
-                    </v-text-field>
-                </v-flex>
-                <v-flex xs12 md8 offset-md2>
-                    <v-text-field
-                    label="Account Name"
-                    v-model="name"
-                    prepend-icon=" fa-address-card"
-                    v-validate="{ required: true, regex: /^[a-zA-Z0-9 ]+$/ }"
-                    :error-messages="errors.collect('name')"
-                    data-vv-name="name"
-                    >
-                    </v-text-field>
-                </v-flex>
-                <v-flex xs12 md8 offset-md2>
-                    <v-text-field
-                    label="Current Password"
-                    v-model="old_password"
-                    prepend-icon="fa-hashtag"
-                    :append-icon="icon"
-                    :append-icon-cb="() => (password_visible = !password_visible)"
-                    :type="!password_visible ? 'password' : 'text'"
-                    v-validate="{ min: 6,regex: /^([a-zA-Z0-9@*#]{6,15})$/ }"
-                    :error-messages="errors.collect('current password')"
-                    data-vv-name="current password"
-                    >
-                    </v-text-field>
-                </v-flex>
-                <v-flex xs12 md8 offset-md2>
-                    <v-text-field
-                    label="New Password"
-                    v-model="password"
-                    name="password"
-                    prepend-icon="fiber_new"
-                    :append-icon="icon"
-                    :append-icon-cb="() => (password_visible = !password_visible)"
-                    :type="!password_visible ? 'password' : 'text'"
-                    v-validate="{ min: 6,regex: /^([a-zA-Z0-9@*#]{6,15})$/ }"
-                    :error-messages="errors.collect('new password')"
-                    data-vv-name="new password"
-                    >
-                    </v-text-field>
-                </v-flex>
-                <v-flex xs12 md8 offset-md2>
-                    <v-text-field
-                    label="Confirm New Password"
-                    prepend-icon="done_all"
-                    :append-icon="icon"
-                    :append-icon-cb="() => (password_visible = !password_visible)"
-                    :type="!password_visible ? 'password' : 'text'"
-                    v-model="password_confirmation"
-                    v-validate="'confirmed:password'"
-                    :error-messages="errors.collect('confirm new password')"
-                    data-vv-name="confirm new password"
-                    >
-                    </v-text-field>
-                </v-flex>
-                <v-flex xs12 md8 offset-md2>
-                    <v-btn block color="primary" @click="updateAccount()">
-                    Update Account <v-icon right>fa-send</v-icon>
-                    </v-btn>
-                </v-flex>
-            </v-layout>
-        </v-container>
-    </v-tabs-content>
+        <v-flex 
+          xs12
+          md8 
+          offset-md2
+        >
+          <v-text-field
+            label="Username"
+            v-model="username"
+            prepend-icon=" fa-at"
+            v-validate="{ required: true, regex: /^[a-zA-Z0-9][a-zA-Z0-9.-]+[a-zA-Z0-9]$/ }"
+            :error-messages="errors.collect('username')"
+            data-vv-name="username"
+          />
+        </v-flex>
+        <v-flex 
+          xs12 
+          md8 
+          offset-md2
+        >
+          <v-text-field
+            label="Email"
+            v-model="email"
+            prepend-icon=" mail"
+            v-validate="{ required: true, email: true }"
+            :error-messages="errors.collect('email')"
+            data-vv-name="email"
+          />
+        </v-flex>
+        <v-flex 
+          xs12 
+          md8 
+          offset-md2
+        >
+          <v-text-field
+            label="Account Name"
+            v-model="name"
+            prepend-icon=" fa-address-card"
+            v-validate="{ required: true, regex: /^[a-zA-Z0-9 ]+$/ }"
+            :error-messages="errors.collect('name')"
+            data-vv-name="name"
+          />
+        </v-flex>
+        <v-flex 
+          xs12 
+          md8 
+          offset-md2
+        >
+          <v-text-field
+            label="Current Password"
+            v-model="old_password"
+            prepend-icon="fa-hashtag"
+            :append-icon="icon"
+            :append-icon-cb="() => (password_visible = !password_visible)"
+            :type="!password_visible ? 'password' : 'text'"
+            v-validate="{ min: 6,regex: /^([a-zA-Z0-9@*#]{6,15})$/ }"
+            :error-messages="errors.collect('current password')"
+            data-vv-name="current password"
+          />
+        </v-flex>
+        <v-flex 
+          xs12 
+          md8 
+          offset-md2
+        >
+          <v-text-field
+            label="New Password"
+            v-model="password"
+            name="password"
+            prepend-icon="fiber_new"
+            :append-icon="icon"
+            :append-icon-cb="() => (password_visible = !password_visible)"
+            :type="!password_visible ? 'password' : 'text'"
+            v-validate="{ min: 6,regex: /^([a-zA-Z0-9@*#]{6,15})$/ }"
+            :error-messages="errors.collect('new password')"
+            data-vv-name="new password"
+          />
+        </v-flex>
+        <v-flex 
+          xs12 
+          md8 
+          offset-md2
+        >
+          <v-text-field
+            label="Confirm New Password"
+            prepend-icon="done_all"
+            :append-icon="icon"
+            :append-icon-cb="() => (password_visible = !password_visible)"
+            :type="!password_visible ? 'password' : 'text'"
+            v-model="password_confirmation"
+            v-validate="'confirmed:password'"
+            :error-messages="errors.collect('confirm new password')"
+            data-vv-name="confirm new password"
+          />
+        </v-flex>
+        <v-flex 
+          xs12 
+          md8 
+          offset-md2
+        >
+          <v-btn 
+            block 
+            color="primary" 
+            @click="updateAccount()"
+          >
+            Update Account <v-icon right>fa-send</v-icon>
+          </v-btn>
+        </v-flex>
+      </v-layout>
+    </v-container>
+  </v-tabs-content>
 </template>
 
 <script>

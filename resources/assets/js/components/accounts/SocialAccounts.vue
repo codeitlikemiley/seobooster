@@ -127,6 +127,7 @@ export default {
         tab: {
             handler: function (newValue, OldValue) {
                 this.items = newValue.accounts
+                console.log(OldValue)
             },
             deep: true
         }

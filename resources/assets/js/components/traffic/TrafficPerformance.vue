@@ -1,94 +1,144 @@
 <template>
-<v-data-table
-v-model="selected"
-:headers="headers"
-:items="items"
-item-key="id"
-select-all
-:pagination.sync="pagination"
-expand
-class="elevation-1"
->
-    <template slot="headers" slot-scope="props">
-        <tr>
-          <th>
-            <v-checkbox
+  <v-data-table
+    v-model="selected"
+    :headers="headers"
+    :items="items"
+    item-key="id"
+    select-all
+    :pagination.sync="pagination"
+    expand
+    class="elevation-1"
+  >
+    <template
+      slot="headers" 
+      slot-scope="props"
+    >
+      <tr>
+        <th>
+          <v-checkbox
             light
             primary
             hide-details
             @click.native="toggleAll"
             :input-value="props.all"
             :indeterminate="props.indeterminate"
-            ></v-checkbox>
-          </th>
-          <th v-for="header in props.headers" :key="header.text"
-            :class="['column sortable', pagination.descending ? 'desc' : 'asc', header.value === pagination.sortBy ? 'name' : '', {'text-xs-left': header.align === 'left', 'text-xs-right': header.align === 'right', 'text-xs-center': header.align === 'center'}]"
-            @click="changeSort(header.value)"
+          />
+        </th>
+        <th 
+          v-for="header in props.headers" 
+          :key="header.text"
+          :class="['column sortable', pagination.descending ? 'desc' : 'asc', header.value === pagination.sortBy ? 'name' : '', {'text-xs-left': header.align === 'left', 'text-xs-right': header.align === 'right', 'text-xs-center': header.align === 'center'}]"
+          @click="changeSort(header.value)"
+        >
+          <v-icon>arrow_upward</v-icon>
+          {{ header.text }}
+        </th>
+        <th text-xs-right>
+          <span v-if="selected.length < 1">Actions</span>
+          <v-btn
+            v-else 
+            flat 
+            icon 
+            color="error" 
+            @click.native="deleteSelected()"
           >
-            <v-icon>arrow_upward</v-icon>
-            {{ header.text }}
-          </th>
-          <th text-xs-right>
-            <span v-if="selected.length < 1">Actions</span>
-            <v-btn v-else flat icon color="error" @click.native="deleteSelected()">
-                    <v-icon>fa-trash</v-icon>
-            </v-btn>
-          </th>
-        </tr>
+            <v-icon>fa-trash</v-icon>
+          </v-btn>
+        </th>
+      </tr>
     </template>
-    <template slot="items" slot-scope="props">
-        <tr>
-            <td class="title text-xs-left primary--text">
-            <v-checkbox
-              :active="props.selected" @click="props.selected = !props.selected"
-              primary
-              hide-details
-              :input-value="props.selected"
-              light
-            ></v-checkbox>
-          </td>
-            <td class="title text-xs-left primary--text">
-                <v-icon color="blue" style="cursor:pointer;" @click="">folder</v-icon>
-                <span class="caption blue-grey--text">{{ props.item.name }}</span>
-            </td>
-            <td class="title text-xs-left blue-grey--text">
-                <span class="title">{{ props.item.no_of_campaigns }}</span>
-            </td>
-            <td class="title text-xs-left blue-grey--text">{{ props.item.daily_credits_spent }}</td>
-            <td class="title text-xs-left blue-grey--text">{{ props.item.total_credits_spent }}</td>
-            <td class="title text-xs-left blue-grey--text">{{ props.item.overall_keyword_movement }}</td>
-            <td class="title text-xs-center">
-               <v-btn light  flat icon :class="{'amber--text': props.expanded, 'amber': props.expanded, 'teal': !props.expanded, 'teal--text': !props.expanded }" @click="props.expanded = !props.expanded">
-                            <v-icon v-if="!props.expanded">fa-expand</v-icon>
-                            <v-icon v-if="props.expanded">fa-compress</v-icon>
-                </v-btn>
-                <v-btn flat icon color="error" @click.native="deleteItem(props.item)">
-                    <v-icon>fa-trash</v-icon>
-                </v-btn>
-            </td>
-        </tr>
+    <template
+      slot="items" 
+      slot-scope="props"
+    >
+      <tr>
+        <td class="title text-xs-left primary--text">
+          <v-checkbox
+            :active="props.selected"
+            @click="props.selected = !props.selected"
+            primary
+            hide-details
+            :input-value="props.selected"
+            light
+          />
+        </td>
+        <td class="title text-xs-left primary--text">
+          <v-icon
+            color="blue" 
+            style="cursor:pointer;"
+            @click=""
+          >
+            folder
+          </v-icon>
+          <span class="caption blue-grey--text">{{ props.item.name }}</span>
+        </td>
+        <td class="title text-xs-left blue-grey--text">
+          <span class="title">{{ props.item.no_of_campaigns }}</span>
+        </td>
+        <td class="title text-xs-left blue-grey--text">{{ props.item.daily_credits_spent }}</td>
+        <td class="title text-xs-left blue-grey--text">{{ props.item.total_credits_spent }}</td>
+        <td class="title text-xs-left blue-grey--text">{{ props.item.overall_keyword_movement }}</td>
+        <td class="title text-xs-center">
+          <v-btn
+            light 
+            flat 
+            icon 
+            :class="{'amber--text': props.expanded, 'amber': props.expanded, 'teal': !props.expanded, 'teal--text': !props.expanded }"
+            @click="props.expanded = !props.expanded"
+          >
+            <v-icon v-if="!props.expanded">fa-expand</v-icon>
+            <v-icon v-if="props.expanded">fa-compress</v-icon>
+          </v-btn>
+          <v-btn 
+            flat 
+            icon 
+            color="error" 
+            @click.native="deleteItem(props.item)"
+          >
+            <v-icon>fa-trash</v-icon>
+          </v-btn>
+        </td>
+      </tr>
     </template>
-    <template slot="expand" slot-scope="props">
-        <campaign-lists></campaign-lists>
+    <template 
+      slot="expand" 
+      slot-scope="props"
+    >
+      <campaign-lists/>
     </template>
-     <template slot="no-data">
-            <v-alert :value="true" color="info" icon="warning" pa-0 ma-0 fluid>
-            You Have No Campaign Yet
-            </v-alert>
-        </template>
-    <template slot="pageText" slot-scope="{ pageStart, pageStop }">
-        From {{ pageStart }} to {{ pageStop }}
+    <template slot="no-data">
+      <v-alert 
+        :value="true" 
+        color="info" 
+        icon="warning" 
+        pa-0
+        ma-0 
+        fluid
+      >
+        You Have No Campaign Yet
+      </v-alert>
+    </template>
+    <template
+      slot="pageText" 
+      slot-scope="{ pageStart, pageStop }"
+    >
+      From {{ pageStart }} to {{ pageStop }}
     </template>
 
-</v-data-table>
+  </v-data-table>
 </template>
 
 <script>
 import CampaignLists from '../../components/traffic/CampaignLists.vue'
 export default {
-    props: ['tab'],
     components: {
         CampaignLists
+    },
+    props:{
+        tab: {
+            type: Object,
+            required: true
+        }
     },
     data: () => ({
         api_key: 'XYZ',

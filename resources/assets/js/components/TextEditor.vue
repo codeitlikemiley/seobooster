@@ -1,5 +1,9 @@
 <template>
-  <trumbowyg :config="config.advanced" v-model="content" :id="id"></trumbowyg>
+  <trumbowyg 
+    :config="config.advanced" 
+    v-model="content" 
+    :id="id"
+  />
 </template>
 
 <script>
@@ -13,12 +17,29 @@ import 'trumbowyg/dist/plugins/noembed/trumbowyg.noembed.min.js'
 // import '../plugins/trumbowyg.upload.js'
 
 export default {
+    components: {
+        trumbowyg
+    },
     //* html = content
     //* disabled = disabled
     //* trumbowyg = current instance of trumbowyg
-    props: ['html', 'disabled', 'uploadLink', 'id'],
-    components: {
-        trumbowyg
+    props:{
+        html: {
+            type: String,
+            required: true
+        },
+        disabled: {
+            type: Boolean,
+            required: true
+        },
+        uploadLink: {
+            type: String,
+            required: true
+        },
+        id: {
+            type: String,
+            required: true
+        }
     },
     data: () => ({
         content: '',

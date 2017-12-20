@@ -70,7 +70,7 @@ window.axios.interceptors.response.use((response) => {
         vm.$router.push({ name: 'login' })
         break
     case 402:
-    vm.$router.push('subscribe')
+        vm.$router.push('subscribe')
         break
     }
     return Promise.reject(error)

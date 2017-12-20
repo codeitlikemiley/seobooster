@@ -53,7 +53,11 @@
         "App": true,
         "AppForm": true,
         "moment": true,
-        "_": true
+        "_": true,
+        "Bus": true,
+        "AppFormErrors": true,
+        "jQuery": true,
+        "$": true
     },
     "parserOptions": {
         "parser": "babel-eslint",
