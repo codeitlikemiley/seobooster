@@ -1,6 +1,5 @@
 {
     "extends": [
-        "standard",
         "plugin:vue/recommended"
     ],
     "settings": {
@@ -14,8 +13,23 @@
     ],
     "rules": {
         "no-undef": 1,
+        "eol-last": ["error", "always"],
+        "linebreak-style": ["error", "unix"],
+        "comma-dangle": ["error", {
+            "arrays": "never",
+            "objects": "never",
+            "imports": "never",
+            "exports": "never",
+            "functions": "ignore"
+        }],
         "no-unused-vars": [
-            "error"
+            "error",
+            {
+                "varsIgnorePattern": "app",
+                "args": "after-used",
+                "argsIgnorePattern": "^_",
+                "ignoreRestSiblings": true
+            }
         ],
         "no-use-before-define": [1, {"functions": true, "classes": true, "variables": true}],
         "indent": [
@@ -32,16 +46,24 @@
         
     },
     "globals": {
-        "app": true,
         "axios": true,
         "Vue": true,
         "vm": true,
-        "vueAuth": true,
+        "route": true,
+        "App": true,
+        "AppForm": true,
+        "moment": true
     },
-    "parser": "vue-eslint-parser",
     "parserOptions": {
         "parser": "babel-eslint",
         "ecmaVersion": 7,
-        "sourceType": "module"
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "globalReturn": false,
+            "impliedStrict": false,
+            "jsx": false,
+            "experimentalObjectRestSpread": false,
+            "allowImportExportEverywhere": false
+        }
     }
 }
