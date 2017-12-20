@@ -6,12 +6,12 @@
         :monthly="monthly" 
         :project-count="socialCount"
       />
-      <v-layout 
+      <v-layout
         row 
         wrap
       >
         <v-flex 
-          xs6 
+          xs6
           md4
         >
           <v-btn 
@@ -26,7 +26,7 @@
         <v-flex 
           xs6 
           md4 
-          offset-md4
+          offset-md4 
           text-xs-right
         >
           <v-btn 
@@ -40,10 +40,10 @@
       </v-layout>
       <v-tabs 
         fixed 
-        icons 
+        icons
         centered
       >
-        <v-toolbar 
+        <v-toolbar
           color="white" 
           light
         >
@@ -98,6 +98,7 @@ export default {
         ActionPanel,
         TrafficPerformance,
         CreateCampaign
+
     },
     mixins: [Theme, Acl],
     data: () => ({

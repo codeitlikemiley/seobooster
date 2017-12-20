@@ -5363,7 +5363,11 @@ p {
 .btn--floating:after {
   border-radius: 50%;
 }
-.btn--floating .icon:not(:only-of-type):last-of-type {
+.btn--floating .btn__content :not(:only-child) {
+  -webkit-transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+}
+.btn--floating .btn__content :not(:only-child):last-child {
   opacity: 0;
   position: absolute;
   -webkit-transform: rotate(-45deg);
@@ -5371,14 +5375,14 @@ p {
   left: calc(50% - 12px);
   top: calc(50% - 12px);
 }
-.btn--floating.btn--active .icon:not(:only-of-type):first-of-type {
+.btn--floating.btn--active .btn__content :not(:only-child):first-child {
   opacity: 0;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   left: calc(50% - 12);
   top: calc(50% - 12);
 }
-.btn--floating.btn--active .icon:not(:only-of-type):last-of-type {
+.btn--floating.btn--active .btn__content :not(:only-child):last-child {
   opacity: 1;
   -webkit-transform: none;
           transform: none;
@@ -6297,7 +6301,6 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow: hidden;
 }
 .dialog--scrollable > .card {
   display: -webkit-box;
@@ -6311,13 +6314,13 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.dialog--scrollable > .card .card__title,
-.dialog--scrollable > .card .card__actions {
+.dialog--scrollable > .card > .card__title,
+.dialog--scrollable > .card > .card__actions {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
 }
-.dialog--scrollable > .card .card__text {
+.dialog--scrollable > .card > .card__text {
   overflow-y: auto;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -10703,8 +10706,8 @@ p {
   background-color: #fff;
   color: rgba(0,0,0,0.87);
 }
-.theme--light .table thead,
-.application .theme--light.table thead {
+.theme--light .table thead tr:first-child,
+.application .theme--light.table thead tr:first-child {
   border-bottom: 1px solid rgba(0,0,0,0.12);
 }
 .theme--light .table thead th,
@@ -10732,8 +10735,8 @@ p {
   background-color: #424242;
   color: #fff;
 }
-.theme--dark .table thead,
-.application .theme--dark.table thead {
+.theme--dark .table thead tr:first-child,
+.application .theme--dark.table thead tr:first-child {
   border-bottom: 1px solid rgba(255,255,255,0.12);
 }
 .theme--dark .table thead th,
@@ -11061,6 +11064,12 @@ table.table tfoot tr {
 .application .theme--light.input-group--text-field textarea:-ms-input-placeholder {
   color: rgba(0,0,0,0.38);
 }
+.theme--light .input-group--text-field input::-ms-input-placeholder,
+.application .theme--light.input-group--text-field input::-ms-input-placeholder,
+.theme--light .input-group--text-field textarea::-ms-input-placeholder,
+.application .theme--light.input-group--text-field textarea::-ms-input-placeholder {
+  color: rgba(0,0,0,0.38);
+}
 .theme--light .input-group--text-field input::placeholder,
 .application .theme--light.input-group--text-field input::placeholder,
 .theme--light .input-group--text-field textarea::placeholder,
@@ -11085,6 +11094,12 @@ table.table tfoot tr {
 .application .theme--dark.input-group--text-field input:-ms-input-placeholder,
 .theme--dark .input-group--text-field textarea:-ms-input-placeholder,
 .application .theme--dark.input-group--text-field textarea:-ms-input-placeholder {
+  color: rgba(255,255,255,0.5);
+}
+.theme--dark .input-group--text-field input::-ms-input-placeholder,
+.application .theme--dark.input-group--text-field input::-ms-input-placeholder,
+.theme--dark .input-group--text-field textarea::-ms-input-placeholder,
+.application .theme--dark.input-group--text-field textarea::-ms-input-placeholder {
   color: rgba(255,255,255,0.5);
 }
 .theme--dark .input-group--text-field input::placeholder,
@@ -11114,6 +11129,12 @@ table.table tfoot tr {
 }
 .input-group--text-field input:-ms-input-placeholder,
 .input-group--text-field textarea:-ms-input-placeholder {
+  color: inherit;
+  -webkit-transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+}
+.input-group--text-field input::-ms-input-placeholder,
+.input-group--text-field textarea::-ms-input-placeholder {
   color: inherit;
   -webkit-transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
   transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
@@ -11187,6 +11208,10 @@ table.table tfoot tr {
 }
 .input-group--text-field.input-group--placeholder.input-group--dirty input:-ms-input-placeholder,
 .input-group--text-field.input-group--placeholder.input-group--dirty textarea:-ms-input-placeholder {
+  opacity: 0;
+}
+.input-group--text-field.input-group--placeholder.input-group--dirty input::-ms-input-placeholder,
+.input-group--text-field.input-group--placeholder.input-group--dirty textarea::-ms-input-placeholder {
   opacity: 0;
 }
 .input-group--text-field.input-group--placeholder.input-group--dirty input::placeholder,

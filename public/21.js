@@ -1,14 +1,14 @@
 webpackJsonp([21],{
 
-/***/ 639:
+/***/ 640:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(315)
+var normalizeComponent = __webpack_require__(317)
 /* script */
-var __vue_script__ = __webpack_require__(740)
+var __vue_script__ = __webpack_require__(741)
 /* template */
-var __vue_template__ = __webpack_require__(741)
+var __vue_template__ = __webpack_require__(742)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -26,7 +26,6 @@ var Component = normalizeComponent(
   __vue_module_identifier__
 )
 Component.options.__file = "resources\\assets\\js\\pages\\ResetPassword.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
 
 /* hot reload */
 if (false) {(function () {
@@ -38,7 +37,7 @@ if (false) {(function () {
     hotAPI.createRecord("data-v-62173d23", Component.options)
   } else {
     hotAPI.reload("data-v-62173d23", Component.options)
-' + '  }
+  }
   module.hot.dispose(function (data) {
     disposed = true
   })
@@ -49,7 +48,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 660:
+/***/ 661:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57,7 +56,7 @@ module.exports = Component.exports
 
 exports.__esModule = true;
 
-var _assign = __webpack_require__(662);
+var _assign = __webpack_require__(663);
 
 var _assign2 = _interopRequireDefault(_assign);
 
@@ -79,29 +78,18 @@ exports.default = _assign2.default || function (target) {
 
 /***/ }),
 
-/***/ 662:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(663), __esModule: true };
-
-/***/ }),
-
 /***/ 663:
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(664);
-module.exports = __webpack_require__(31).Object.assign;
-
+module.exports = { "default": __webpack_require__(664), __esModule: true };
 
 /***/ }),
 
 /***/ 664:
 /***/ (function(module, exports, __webpack_require__) {
 
-// 19.1.3.1 Object.assign(target, source)
-var $export = __webpack_require__(61);
-
-$export($export.S + $export.F, 'Object', { assign: __webpack_require__(665) });
+__webpack_require__(665);
+module.exports = __webpack_require__(31).Object.assign;
 
 
 /***/ }),
@@ -109,14 +97,25 @@ $export($export.S + $export.F, 'Object', { assign: __webpack_require__(665) });
 /***/ 665:
 /***/ (function(module, exports, __webpack_require__) {
 
+// 19.1.3.1 Object.assign(target, source)
+var $export = __webpack_require__(61);
+
+$export($export.S + $export.F, 'Object', { assign: __webpack_require__(666) });
+
+
+/***/ }),
+
+/***/ 666:
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 
 // 19.1.2.1 Object.assign(target, source, ...)
 var getKeys = __webpack_require__(89);
-var gOPS = __webpack_require__(129);
+var gOPS = __webpack_require__(130);
 var pIE = __webpack_require__(90);
-var toObject = __webpack_require__(316);
-var IObject = __webpack_require__(317);
+var toObject = __webpack_require__(318);
+var IObject = __webpack_require__(319);
 var $assign = Object.assign;
 
 // should work with symbols and should have deterministic property order (V8 bug)
@@ -148,15 +147,79 @@ module.exports = !$assign || __webpack_require__(67)(function () {
 
 /***/ }),
 
-/***/ 740:
+/***/ 741:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends__ = __webpack_require__(660);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends__ = __webpack_require__(661);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(88);
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -242,7 +305,12 @@ var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["createNam
     mapActions = _createNamespacedHelp.mapActions;
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['token'],
+    props: {
+        token: {
+            type: String,
+            required: true
+        }
+    },
     data: function data() {
         return {
             passwordResetForm: new AppForm(App.forms.passwordResetForm),
@@ -320,7 +388,7 @@ var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["createNam
 
 /***/ }),
 
-/***/ 741:
+/***/ 742:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -335,7 +403,7 @@ var render = function() {
         adaptive: true,
         width: "100%",
         height: "100%",
-        clickToClose: false
+        "click-to-close": false
       }
     },
     [
@@ -391,7 +459,7 @@ var render = function() {
                     },
                     [
                       _c("v-icon", { attrs: { right: "", dark: "" } }, [
-                        _vm._v("fa-home")
+                        _vm._v("\n            fa-home\n          ")
                       ])
                     ],
                     1
@@ -620,7 +688,11 @@ var render = function() {
                               block: ""
                             }
                           },
-                          [_vm._v("Reset Password")]
+                          [
+                            _vm._v(
+                              "\n              Reset Password\n            "
+                            )
+                          ]
                         )
                       ],
                       1

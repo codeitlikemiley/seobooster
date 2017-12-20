@@ -1,19 +1,19 @@
 <template>
-  <v-dialog 
+  <v-dialog
     v-model="dialog" 
     fullscreen 
     transition="dialog-bottom-transition" 
     :overlay="false"
   >
     <v-card>
-      <v-toolbar
+      <v-toolbar 
         dark 
         color="accent" 
         style="z-index:1000;"
       >
         <v-btn 
-          icon
-          @click.native="dialog = false"
+          icon 
+          @click.native="dialog = false" 
           dark
         >
           <v-icon color="red darken-4">close</v-icon>
@@ -25,9 +25,9 @@
         <v-spacer/>
         <v-toolbar-items>
           <v-btn 
-            dark
+            dark 
             flat
-            @click.native="dialog = false"
+            @click.native="dialog = false" 
             color="red darken-4"
           >
             Close
@@ -52,7 +52,7 @@
         </v-layout>
         <v-layout row>
           <v-flex 
-            xs12
+            xs12 
             md8 
             offset-md2
           >
@@ -64,7 +64,7 @@
               :items="group_list"
             >
               <template 
-                slot="selection"
+                slot="selection" 
                 slot-scope="data"
               >
                 <v-chip
@@ -82,7 +82,7 @@
           </v-flex>
         </v-layout>
         <v-flex 
-          xs12
+          xs12 
           md8 
           offset-md2
         >
@@ -109,7 +109,7 @@
             >
               <v-radio 
                 color="primary" 
-                label="Via Search Engine"
+                label="Via Search Engine" 
                 value="search_engine"
               />
               <v-radio 
@@ -135,7 +135,7 @@
               :items="keyword_list"
             >
               <template 
-                slot="selection" 
+                slot="selection"
                 slot-scope="data"
               >
                 <v-chip
@@ -161,7 +161,7 @@
             md8 
             offset-md2
           >
-            <v-radio-group 
+            <v-radio-group
               v-model="search_engine_type"
               :mandatory="true" 
               row
@@ -172,9 +172,9 @@
                 value="google" 
                 prepend-icon="fa-google"
               />
-              <v-radio
-                color="red darken-4"
-                label="Youtube Search Engine"
+              <v-radio 
+                color="red darken-4" 
+                label="Youtube Search Engine" 
                 value="youtube" 
                 prepend-icon="fa-youtube"
               />
@@ -182,13 +182,13 @@
           </v-flex>
         </v-layout>
         <v-layout 
-          row
+          row 
           v-if="traffic_type === 'search_engine'"
         >
-          <v-flex 
+          <v-flex
             xs12 
             md8 
-            offset-md2
+            offset-md2 
             v-if="search_engine_type === 'google'"
           >
             <v-select
@@ -217,13 +217,13 @@
           </v-flex>
         </v-layout>
         <v-layout 
-          row 
+          row
           v-if="traffic_type === 'search_engine'"
         >
           <v-flex 
             xs12 
             md8 
-            offset-md2 
+            offset-md2
             v-if="search_engine_type === 'youtube'"
           >
             <v-select
@@ -251,12 +251,12 @@
             </v-select>
           </v-flex>
         </v-layout>
-        <v-layout
+        <v-layout 
           row
           wrap
         >
-          <v-flex
-            xs12
+          <v-flex 
+            xs12 
             md8 
             offset-md2
           >
@@ -268,10 +268,10 @@
         </v-layout>
         <v-layout 
           row 
-          wrap
+          wrap 
           v-if="geo_tracking"
         >
-          <v-flex
+          <v-flex 
             xs12 
             md8 
             offset-md2 
@@ -282,7 +282,7 @@
               wrap
             >
               <v-flex 
-                xs4
+                xs4 
                 d-flex
               >
                 <v-select
@@ -320,7 +320,7 @@
                   prepend-icon="map"
                   :items="state_list"
                 >
-                  <template
+                  <template 
                     slot="selection"
                     slot-scope="data"
                   >
@@ -337,8 +337,8 @@
                   </template>
                 </v-select>
               </v-flex>
-              <v-flex
-                xs4
+              <v-flex 
+                xs4 
                 d-flex
               >
                 <v-select
@@ -348,8 +348,8 @@
                   prepend-icon="location_city"
                   :items="state_list"
                 >
-                  <template
-                    slot="selection"
+                  <template 
+                    slot="selection" 
                     slot-scope="data"
                   >
                     <v-chip
@@ -372,7 +372,7 @@
           row
           wrap
         >
-          <v-flex
+          <v-flex 
             xs12 
             md8 
             offset-md2
@@ -394,7 +394,7 @@
             offset-md2
           >
             <v-switch 
-              :label="`Random Browsing: ${random_browsing === true ? 'ON' : 'OFF'}`" 
+              :label="`Random Browsing: ${random_browsing === true ? 'ON' : 'OFF'}`"
               v-model="random_browsing"
             />
           </v-flex>
@@ -438,25 +438,25 @@
           </v-flex>
         </v-layout>
         <v-layout 
-          row
+          row 
           wrap
         >
-          <v-flex
-            xs12
+          <v-flex 
+            xs12 
             md8 
             offset-md2
           >
             <v-switch 
               :label="`Bounce Back: ${bounce_back === true ? 'ON' : 'OFF'}`" 
-              v-model="bounce_back
-            "/>
+              v-model="bounce_back"
+            />
           </v-flex>
         </v-layout>
         <v-layout 
           row
           wrap
         >
-          <v-flex
+          <v-flex 
             xs12 
             md8 
             offset-md2
@@ -467,8 +467,8 @@
             />
           </v-flex>
         </v-layout>
-        <v-layout
-          row 
+        <v-layout 
+          row
           wrap 
           v-if="play_video_embeds"
         >
@@ -484,17 +484,17 @@
             />
           </v-flex>
         </v-layout>
-        <v-layout
+        <v-layout 
           row 
           wrap
         >
-          <v-flex
+          <v-flex 
             xs12
-            md8
+            md8 
             offset-md2
           >
             <v-switch 
-              :label="`Social Sharing: ${social_sharing === true ? 'ON' : 'OFF'}`" 
+              :label="`Social Sharing: ${social_sharing === true ? 'ON' : 'OFF'}`"
               v-model="social_sharing"
             />
           </v-flex>
@@ -504,13 +504,13 @@
           wrap 
           v-if="social_sharing"
         >
-          <v-flex 
-            d-flex
+          <v-flex
+            d-flex 
             xs12 
             md8 
             offset-md2
           >
-            <v-layout
+            <v-layout 
               row 
               wrap
             >
@@ -527,7 +527,7 @@
               </v-flex>
               <v-flex 
                 xs6 
-                d-flex 
+                d-flex
                 pa-1
               >
                 <v-text-field
@@ -538,12 +538,12 @@
               </v-flex>
             </v-layout>
             <v-layout 
-              row 
+              row
               wrap
             >
-              <v-flex
+              <v-flex 
                 xs6 
-                d-flex
+                d-flex 
                 pa-1
               >
                 <v-text-field
@@ -552,9 +552,9 @@
                   type="number"
                 />
               </v-flex>
-              <v-flex
+              <v-flex 
                 xs6 
-                d-flex
+                d-flex 
                 pa-1
               >
                 <v-text-field
@@ -566,14 +566,14 @@
             </v-layout>
           </v-flex>
         </v-layout>
-        <v-layout 
-          row 
+        <v-layout
+          row
           wrap
         >
           <v-flex 
             d-flex
             xs12 
-            md8
+            md8 
             offset-md2
           >
             <v-layout 
@@ -595,7 +595,7 @@
                 />
               </v-flex>
               <v-flex
-                d-flex
+                d-flex 
                 xs1
               >
                 <v-text-field
@@ -608,20 +608,20 @@
           </v-flex>
         </v-layout>
         <v-layout 
-          row
+          row 
           wrap
         >
-          <v-flex
+          <v-flex 
             d-flex
             xs12
-            md8
+            md8 
             offset-md2
           >
             <v-layout 
-              row
+              row 
               wrap
             >
-              <v-flex 
+              <v-flex
                 d-flex
                 xs11
               >
@@ -636,7 +636,7 @@
                 />
               </v-flex>
               <v-flex
-                d-flex
+                d-flex 
                 xs1
               >
                 <v-text-field
@@ -652,10 +652,10 @@
           row
           wrap
         >
-          <v-flex
-            d-flex
-            xs12
-            md8
+          <v-flex 
+            d-flex 
+            xs12 
+            md8 
             offset-md2
           >
 
@@ -685,16 +685,16 @@
           </v-flex>
           <v-flex 
             d-flex 
-            xs12 
+            xs12
             md8 
             offset-md2
           >
-            <v-layout 
+            <v-layout
               row 
               wrap
             >
               <v-flex 
-                xs4
+                xs4 
                 d-flex
               >
                 <v-subheader class="green--text text--lighten-2">Approximate Montly Credit Cost</v-subheader>
@@ -716,10 +716,10 @@
           row 
           wrap
         >
-          <v-flex 
-            xs12 
-            md8
-            offset-md2
+          <v-flex
+            xs12
+            md8 
+            offset-md2 
             text-xs-center
           >
             <p class="red--text text--darken-2 caption">NOTE*: Daily credit consumption is only an approximation as our algorithm randomises daily searches and time on site to be natural.</p>
@@ -727,20 +727,20 @@
         </v-layout>
 
         <v-layout 
-          row 
+          row
           wrap
         >
-          <v-flex 
+          <v-flex
             xs12 
-            md8
+            md8 
             offset-md2
           >
             <v-btn 
               block 
-              color="accent"
+              color="accent" 
               class="white--text"
             >
-              Create New Post 
+              Create New Post
               <v-icon right>send</v-icon>
             </v-btn>
           </v-flex>

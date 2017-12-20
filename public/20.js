@@ -1,6 +1,6 @@
 webpackJsonp([20],{
 
-/***/ 634:
+/***/ 635:
 /***/ (function(module, exports) {
 
 /*
@@ -83,19 +83,19 @@ function toComment(sourceMap) {
 
 /***/ }),
 
-/***/ 657:
+/***/ 658:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(978)
+  __webpack_require__(979)
 }
-var normalizeComponent = __webpack_require__(315)
+var normalizeComponent = __webpack_require__(317)
 /* script */
-var __vue_script__ = __webpack_require__(980)
+var __vue_script__ = __webpack_require__(981)
 /* template */
-var __vue_template__ = __webpack_require__(981)
+var __vue_template__ = __webpack_require__(982)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -113,7 +113,6 @@ var Component = normalizeComponent(
   __vue_module_identifier__
 )
 Component.options.__file = "resources\\assets\\js\\pages\\NotFound.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
 
 /* hot reload */
 if (false) {(function () {
@@ -125,7 +124,7 @@ if (false) {(function () {
     hotAPI.createRecord("data-v-f76e8734", Component.options)
   } else {
     hotAPI.reload("data-v-f76e8734", Component.options)
-' + '  }
+  }
   module.hot.dispose(function (data) {
     disposed = true
   })
@@ -136,7 +135,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 658:
+/***/ 659:
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -155,7 +154,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(666)
+var listToStyles = __webpack_require__(667)
 
 /*
 type StyleObject = {
@@ -358,7 +357,7 @@ function applyToTag (styleElement, obj) {
 
 /***/ }),
 
-/***/ 666:
+/***/ 667:
 /***/ (function(module, exports) {
 
 /**
@@ -392,15 +391,15 @@ module.exports = function listToStyles (parentId, list) {
 
 /***/ }),
 
-/***/ 695:
+/***/ 696:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(315)
+var normalizeComponent = __webpack_require__(317)
 /* script */
 var __vue_script__ = null
 /* template */
-var __vue_template__ = __webpack_require__(696)
+var __vue_template__ = __webpack_require__(697)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -418,7 +417,6 @@ var Component = normalizeComponent(
   __vue_module_identifier__
 )
 Component.options.__file = "resources\\assets\\js\\layouts\\ModalLayout.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
 
 /* hot reload */
 if (false) {(function () {
@@ -430,7 +428,7 @@ if (false) {(function () {
     hotAPI.createRecord("data-v-5774f095", Component.options)
   } else {
     hotAPI.reload("data-v-5774f095", Component.options)
-' + '  }
+  }
   module.hot.dispose(function (data) {
     disposed = true
   })
@@ -441,7 +439,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 696:
+/***/ 697:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -491,17 +489,17 @@ if (false) {
 
 /***/ }),
 
-/***/ 978:
+/***/ 979:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(979);
+var content = __webpack_require__(980);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(658)("5d68fffa", content, false);
+var update = __webpack_require__(659)("5d68fffa", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -518,28 +516,421 @@ if(false) {
 
 /***/ }),
 
-/***/ 979:
+/***/ 980:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(634)(undefined);
+exports = module.exports = __webpack_require__(635)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, "\n.cls-1[data-v-f76e8734] {\r\n  fill: #ffc541;\n}\n.cls-2[data-v-f76e8734] {\r\n  fill: #4e4066;\n}\n.cls-3[data-v-f76e8734] {\r\n  fill: #6f5b92;\n}\n.cls-4[data-v-f76e8734] {\r\n  fill: #f78d5e;\n}\n.cls-5[data-v-f76e8734] {\r\n  fill: #fa976c;\n}\n.cls-6[data-v-f76e8734],\r\n.cls-7[data-v-f76e8734],\r\n.cls-8[data-v-f76e8734] {\r\n  fill: #b65c32;\n}\n.cls-10[data-v-f76e8734],\r\n.cls-6[data-v-f76e8734] {\r\n  opacity: 0.6;\n}\n.cls-7[data-v-f76e8734] {\r\n  opacity: 0.4;\n}\n.cls-9[data-v-f76e8734] {\r\n  fill: #f4b73b;\n}\n.cls-11[data-v-f76e8734] {\r\n  fill: #f9c358;\n}\n.cls-12[data-v-f76e8734] {\r\n  fill: #9b462c;\n}\n.cls-13[data-v-f76e8734] {\r\n  fill: #aa512e;\n}\n.cls-14[data-v-f76e8734] {\r\n  fill: #7d6aa5;\n}\r\n\r\n/* animations */\n.wheel[data-v-f76e8734] {\r\n  -webkit-animation: wheel-rotate-data-v-f76e8734 6s ease infinite;\r\n          animation: wheel-rotate-data-v-f76e8734 6s ease infinite;\r\n  -webkit-transform-origin: center;\r\n          transform-origin: center;\r\n  transform-box: fill-box;\n}\n@-webkit-keyframes wheel-rotate-data-v-f76e8734 {\n50% {\r\n    -webkit-transform: rotate(360deg);\r\n            transform: rotate(360deg);\r\n    -webkit-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);\r\n            animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);\n}\n100% {\r\n    -webkit-transform: rotate(960deg);\r\n            transform: rotate(960deg)\n}\n}\n@keyframes wheel-rotate-data-v-f76e8734 {\n50% {\r\n    -webkit-transform: rotate(360deg);\r\n            transform: rotate(360deg);\r\n    -webkit-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);\r\n            animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);\n}\n100% {\r\n    -webkit-transform: rotate(960deg);\r\n            transform: rotate(960deg)\n}\n}\n.clock-hand-1[data-v-f76e8734] {\r\n  -webkit-animation: clock-rotate-data-v-f76e8734 3s linear infinite;\r\n          animation: clock-rotate-data-v-f76e8734 3s linear infinite;\r\n  -webkit-transform-origin: bottom;\r\n          transform-origin: bottom;\r\n  transform-box: fill-box;\n}\n.clock-hand-2[data-v-f76e8734] {\r\n  -webkit-animation: clock-rotate-data-v-f76e8734 6s linear infinite;\r\n          animation: clock-rotate-data-v-f76e8734 6s linear infinite;\r\n  -webkit-transform-origin: bottom;\r\n          transform-origin: bottom;\r\n  transform-box: fill-box;\n}\n@-webkit-keyframes clock-rotate-data-v-f76e8734 {\n100% {\r\n    -webkit-transform: rotate(360deg);\r\n            transform: rotate(360deg)\n}\n}\n@keyframes clock-rotate-data-v-f76e8734 {\n100% {\r\n    -webkit-transform: rotate(360deg);\r\n            transform: rotate(360deg)\n}\n}\n#box-top[data-v-f76e8734] {\r\n  -webkit-animation: box-top-anim-data-v-f76e8734 2s linear infinite;\r\n          animation: box-top-anim-data-v-f76e8734 2s linear infinite;\r\n  -webkit-transform-origin: right top;\r\n          transform-origin: right top;\r\n  transform-box: fill-box;\n}\n@-webkit-keyframes box-top-anim-data-v-f76e8734 {\n50% {\r\n    -webkit-transform: rotate(-5deg);\r\n            transform: rotate(-5deg)\n}\n}\n@keyframes box-top-anim-data-v-f76e8734 {\n50% {\r\n    -webkit-transform: rotate(-5deg);\r\n            transform: rotate(-5deg)\n}\n}\n#umbrella[data-v-f76e8734] {\r\n  -webkit-animation: umbrella-anim-data-v-f76e8734 6s linear infinite;\r\n          animation: umbrella-anim-data-v-f76e8734 6s linear infinite;\r\n  -webkit-transform-origin: center;\r\n          transform-origin: center;\r\n  transform-box: fill-box;\n}\n@-webkit-keyframes umbrella-anim-data-v-f76e8734 {\n25% {\r\n    -webkit-transform: translateY(10px) rotate(5deg);\r\n            transform: translateY(10px) rotate(5deg);\n}\n75% {\r\n    -webkit-transform: rotate(-5deg);\r\n            transform: rotate(-5deg);\n}\n}\n@keyframes umbrella-anim-data-v-f76e8734 {\n25% {\r\n    -webkit-transform: translateY(10px) rotate(5deg);\r\n            transform: translateY(10px) rotate(5deg);\n}\n75% {\r\n    -webkit-transform: rotate(-5deg);\r\n            transform: rotate(-5deg);\n}\n}\n#cup[data-v-f76e8734] {\r\n  -webkit-animation: cup-rotate-data-v-f76e8734 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;\r\n          animation: cup-rotate-data-v-f76e8734 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;\r\n  -webkit-transform-origin: top left;\r\n          transform-origin: top left;\r\n  transform-box: fill-box;\n}\n@-webkit-keyframes cup-rotate-data-v-f76e8734 {\n50% {\r\n    -webkit-transform: rotate(-5deg);\r\n            transform: rotate(-5deg)\n}\n}\n@keyframes cup-rotate-data-v-f76e8734 {\n50% {\r\n    -webkit-transform: rotate(-5deg);\r\n            transform: rotate(-5deg)\n}\n}\n#pillow[data-v-f76e8734] {\r\n  -webkit-animation: pillow-anim-data-v-f76e8734 3s linear infinite;\r\n          animation: pillow-anim-data-v-f76e8734 3s linear infinite;\r\n  -webkit-transform-origin: center;\r\n          transform-origin: center;\r\n  transform-box: fill-box;\n}\n@-webkit-keyframes pillow-anim-data-v-f76e8734 {\n25% {\r\n    -webkit-transform: rotate(10deg) translateY(5px);\r\n            transform: rotate(10deg) translateY(5px)\n}\n75% {\r\n    -webkit-transform: rotate(-10deg);\r\n            transform: rotate(-10deg)\n}\n}\n@keyframes pillow-anim-data-v-f76e8734 {\n25% {\r\n    -webkit-transform: rotate(10deg) translateY(5px);\r\n            transform: rotate(10deg) translateY(5px)\n}\n75% {\r\n    -webkit-transform: rotate(-10deg);\r\n            transform: rotate(-10deg)\n}\n}\n#stripe[data-v-f76e8734] {\r\n  -webkit-animation: stripe-anim-data-v-f76e8734 3s linear infinite;\r\n          animation: stripe-anim-data-v-f76e8734 3s linear infinite;\r\n  -webkit-transform-origin: center;\r\n          transform-origin: center;\r\n  transform-box: fill-box;\n}\n@-webkit-keyframes stripe-anim-data-v-f76e8734 {\n25% {\r\n    -webkit-transform: translate(10px, 0) rotate(-10deg);\r\n            transform: translate(10px, 0) rotate(-10deg)\n}\n75% {\r\n    -webkit-transform: translateX(10px);\r\n            transform: translateX(10px)\n}\n}\n@keyframes stripe-anim-data-v-f76e8734 {\n25% {\r\n    -webkit-transform: translate(10px, 0) rotate(-10deg);\r\n            transform: translate(10px, 0) rotate(-10deg)\n}\n75% {\r\n    -webkit-transform: translateX(10px);\r\n            transform: translateX(10px)\n}\n}\n#bike[data-v-f76e8734] {\r\n  -webkit-animation: bike-anim-data-v-f76e8734 6s ease infinite;\r\n          animation: bike-anim-data-v-f76e8734 6s ease infinite;\n}\n@-webkit-keyframes bike-anim-data-v-f76e8734 {\n0% {\r\n    -webkit-transform: translateX(-1300px);\r\n            transform: translateX(-1300px)\n}\n50% {\r\n    -webkit-transform: translateX(0);\r\n            transform: translateX(0);\r\n    -webkit-animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);\r\n            animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);\n}\n100% {\r\n    -webkit-transform: translateX(1300px);\r\n            transform: translateX(1300px)\n}\n}\n@keyframes bike-anim-data-v-f76e8734 {\n0% {\r\n    -webkit-transform: translateX(-1300px);\r\n            transform: translateX(-1300px)\n}\n50% {\r\n    -webkit-transform: translateX(0);\r\n            transform: translateX(0);\r\n    -webkit-animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);\r\n            animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);\n}\n100% {\r\n    -webkit-transform: translateX(1300px);\r\n            transform: translateX(1300px)\n}\n}\n#rucksack[data-v-f76e8734] {\r\n  -webkit-animation: ruck-anim-data-v-f76e8734 3s linear infinite;\r\n          animation: ruck-anim-data-v-f76e8734 3s linear infinite;\r\n  -webkit-transform-origin: top;\r\n          transform-origin: top;\r\n  transform-box: fill-box;\n}\n@-webkit-keyframes ruck-anim-data-v-f76e8734 {\n50% {\r\n    -webkit-transform: rotate(5deg);\r\n            transform: rotate(5deg)\n}\n}\n@keyframes ruck-anim-data-v-f76e8734 {\n50% {\r\n    -webkit-transform: rotate(5deg);\r\n            transform: rotate(5deg)\n}\n}\n.circle[data-v-f76e8734] {\r\n  -webkit-animation: circle-anim-data-v-f76e8734 ease infinite;\r\n          animation: circle-anim-data-v-f76e8734 ease infinite;\r\n  -webkit-transform-origin: center;\r\n          transform-origin: center;\r\n  transform-box: fill-box;\r\n  -webkit-perspective: 0px;\r\n          perspective: 0px;\n}\n.circle.c1[data-v-f76e8734] {\r\n  -webkit-animation-duration: 2s;\r\n          animation-duration: 2s\n}\n.circle.c2[data-v-f76e8734] {\r\n  -webkit-animation-duration: 3s;\r\n          animation-duration: 3s\n}\n.circle.c3[data-v-f76e8734] {\r\n  -webkit-animation-duration: 1s;\r\n          animation-duration: 1s\n}\n.circle.c4[data-v-f76e8734] {\r\n  -webkit-animation-duration: 1s;\r\n          animation-duration: 1s\n}\n.circle.c5[data-v-f76e8734] {\r\n  -webkit-animation-duration: 2s;\r\n          animation-duration: 2s\n}\n.circle.c6[data-v-f76e8734] {\r\n  -webkit-animation-duration: 3s;\r\n          animation-duration: 3s\n}\n@-webkit-keyframes circle-anim-data-v-f76e8734 {\n50% {\r\n    -webkit-transform: scale(.2) rotateX(360deg) rotateY(360deg);\r\n            transform: scale(.2) rotateX(360deg) rotateY(360deg)\n}\n}\n@keyframes circle-anim-data-v-f76e8734 {\n50% {\r\n    -webkit-transform: scale(.2) rotateX(360deg) rotateY(360deg);\r\n            transform: scale(.2) rotateX(360deg) rotateY(360deg)\n}\n}\n.four[data-v-f76e8734],\r\n#ou[data-v-f76e8734] {\r\n  -webkit-animation: four-anim-data-v-f76e8734 cubic-bezier(0.39, 0.575, 0.565, 1) infinite;\r\n          animation: four-anim-data-v-f76e8734 cubic-bezier(0.39, 0.575, 0.565, 1) infinite;\n}\n.four.a[data-v-f76e8734] {\r\n  -webkit-transform-origin: bottom left;\r\n          transform-origin: bottom left;\r\n  -webkit-animation-duration: 3s;\r\n          animation-duration: 3s;\r\n  transform-box: fill-box;\n}\n.four.b[data-v-f76e8734] {\r\n  -webkit-transform-origin: bottom right;\r\n          transform-origin: bottom right;\r\n  -webkit-animation-duration: 3s;\r\n          animation-duration: 3s;\r\n  transform-box: fill-box;\n}\n#ou[data-v-f76e8734] {\r\n  -webkit-animation-duration: 6s;\r\n          animation-duration: 6s;\r\n  -webkit-transform-origin: center;\r\n          transform-origin: center;\r\n  transform-box: fill-box;\n}\n@-webkit-keyframes four-anim-data-v-f76e8734 {\n50% {\r\n    -webkit-transform: scale(.98);\r\n            transform: scale(.98)\n}\n}\n@keyframes four-anim-data-v-f76e8734 {\n50% {\r\n    -webkit-transform: scale(.98);\r\n            transform: scale(.98)\n}\n}\r\n", ""]);
+exports.push([module.i, "\n.cls-1[data-v-f76e8734] {\n  fill: #ffc541;\n}\n.cls-2[data-v-f76e8734] {\n  fill: #4e4066;\n}\n.cls-3[data-v-f76e8734] {\n  fill: #6f5b92;\n}\n.cls-4[data-v-f76e8734] {\n  fill: #f78d5e;\n}\n.cls-5[data-v-f76e8734] {\n  fill: #fa976c;\n}\n.cls-6[data-v-f76e8734],\n.cls-7[data-v-f76e8734],\n.cls-8[data-v-f76e8734] {\n  fill: #b65c32;\n}\n.cls-10[data-v-f76e8734],\n.cls-6[data-v-f76e8734] {\n  opacity: 0.6;\n}\n.cls-7[data-v-f76e8734] {\n  opacity: 0.4;\n}\n.cls-9[data-v-f76e8734] {\n  fill: #f4b73b;\n}\n.cls-11[data-v-f76e8734] {\n  fill: #f9c358;\n}\n.cls-12[data-v-f76e8734] {\n  fill: #9b462c;\n}\n.cls-13[data-v-f76e8734] {\n  fill: #aa512e;\n}\n.cls-14[data-v-f76e8734] {\n  fill: #7d6aa5;\n}\n\n/* animations */\n.wheel[data-v-f76e8734] {\n  -webkit-animation: wheel-rotate-data-v-f76e8734 6s ease infinite;\n          animation: wheel-rotate-data-v-f76e8734 6s ease infinite;\n  -webkit-transform-origin: center;\n          transform-origin: center;\n  transform-box: fill-box;\n}\n@-webkit-keyframes wheel-rotate-data-v-f76e8734 {\n50% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n    -webkit-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);\n            animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);\n}\n100% {\n    -webkit-transform: rotate(960deg);\n            transform: rotate(960deg)\n}\n}\n@keyframes wheel-rotate-data-v-f76e8734 {\n50% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n    -webkit-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);\n            animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);\n}\n100% {\n    -webkit-transform: rotate(960deg);\n            transform: rotate(960deg)\n}\n}\n.clock-hand-1[data-v-f76e8734] {\n  -webkit-animation: clock-rotate-data-v-f76e8734 3s linear infinite;\n          animation: clock-rotate-data-v-f76e8734 3s linear infinite;\n  -webkit-transform-origin: bottom;\n          transform-origin: bottom;\n  transform-box: fill-box;\n}\n.clock-hand-2[data-v-f76e8734] {\n  -webkit-animation: clock-rotate-data-v-f76e8734 6s linear infinite;\n          animation: clock-rotate-data-v-f76e8734 6s linear infinite;\n  -webkit-transform-origin: bottom;\n          transform-origin: bottom;\n  transform-box: fill-box;\n}\n@-webkit-keyframes clock-rotate-data-v-f76e8734 {\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg)\n}\n}\n@keyframes clock-rotate-data-v-f76e8734 {\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg)\n}\n}\n#box-top[data-v-f76e8734] {\n  -webkit-animation: box-top-anim-data-v-f76e8734 2s linear infinite;\n          animation: box-top-anim-data-v-f76e8734 2s linear infinite;\n  -webkit-transform-origin: right top;\n          transform-origin: right top;\n  transform-box: fill-box;\n}\n@-webkit-keyframes box-top-anim-data-v-f76e8734 {\n50% {\n    -webkit-transform: rotate(-5deg);\n            transform: rotate(-5deg)\n}\n}\n@keyframes box-top-anim-data-v-f76e8734 {\n50% {\n    -webkit-transform: rotate(-5deg);\n            transform: rotate(-5deg)\n}\n}\n#umbrella[data-v-f76e8734] {\n  -webkit-animation: umbrella-anim-data-v-f76e8734 6s linear infinite;\n          animation: umbrella-anim-data-v-f76e8734 6s linear infinite;\n  -webkit-transform-origin: center;\n          transform-origin: center;\n  transform-box: fill-box;\n}\n@-webkit-keyframes umbrella-anim-data-v-f76e8734 {\n25% {\n    -webkit-transform: translateY(10px) rotate(5deg);\n            transform: translateY(10px) rotate(5deg);\n}\n75% {\n    -webkit-transform: rotate(-5deg);\n            transform: rotate(-5deg);\n}\n}\n@keyframes umbrella-anim-data-v-f76e8734 {\n25% {\n    -webkit-transform: translateY(10px) rotate(5deg);\n            transform: translateY(10px) rotate(5deg);\n}\n75% {\n    -webkit-transform: rotate(-5deg);\n            transform: rotate(-5deg);\n}\n}\n#cup[data-v-f76e8734] {\n  -webkit-animation: cup-rotate-data-v-f76e8734 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;\n          animation: cup-rotate-data-v-f76e8734 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;\n  -webkit-transform-origin: top left;\n          transform-origin: top left;\n  transform-box: fill-box;\n}\n@-webkit-keyframes cup-rotate-data-v-f76e8734 {\n50% {\n    -webkit-transform: rotate(-5deg);\n            transform: rotate(-5deg)\n}\n}\n@keyframes cup-rotate-data-v-f76e8734 {\n50% {\n    -webkit-transform: rotate(-5deg);\n            transform: rotate(-5deg)\n}\n}\n#pillow[data-v-f76e8734] {\n  -webkit-animation: pillow-anim-data-v-f76e8734 3s linear infinite;\n          animation: pillow-anim-data-v-f76e8734 3s linear infinite;\n  -webkit-transform-origin: center;\n          transform-origin: center;\n  transform-box: fill-box;\n}\n@-webkit-keyframes pillow-anim-data-v-f76e8734 {\n25% {\n    -webkit-transform: rotate(10deg) translateY(5px);\n            transform: rotate(10deg) translateY(5px)\n}\n75% {\n    -webkit-transform: rotate(-10deg);\n            transform: rotate(-10deg)\n}\n}\n@keyframes pillow-anim-data-v-f76e8734 {\n25% {\n    -webkit-transform: rotate(10deg) translateY(5px);\n            transform: rotate(10deg) translateY(5px)\n}\n75% {\n    -webkit-transform: rotate(-10deg);\n            transform: rotate(-10deg)\n}\n}\n#stripe[data-v-f76e8734] {\n  -webkit-animation: stripe-anim-data-v-f76e8734 3s linear infinite;\n          animation: stripe-anim-data-v-f76e8734 3s linear infinite;\n  -webkit-transform-origin: center;\n          transform-origin: center;\n  transform-box: fill-box;\n}\n@-webkit-keyframes stripe-anim-data-v-f76e8734 {\n25% {\n    -webkit-transform: translate(10px, 0) rotate(-10deg);\n            transform: translate(10px, 0) rotate(-10deg)\n}\n75% {\n    -webkit-transform: translateX(10px);\n            transform: translateX(10px)\n}\n}\n@keyframes stripe-anim-data-v-f76e8734 {\n25% {\n    -webkit-transform: translate(10px, 0) rotate(-10deg);\n            transform: translate(10px, 0) rotate(-10deg)\n}\n75% {\n    -webkit-transform: translateX(10px);\n            transform: translateX(10px)\n}\n}\n#bike[data-v-f76e8734] {\n  -webkit-animation: bike-anim-data-v-f76e8734 6s ease infinite;\n          animation: bike-anim-data-v-f76e8734 6s ease infinite;\n}\n@-webkit-keyframes bike-anim-data-v-f76e8734 {\n0% {\n    -webkit-transform: translateX(-1300px);\n            transform: translateX(-1300px)\n}\n50% {\n    -webkit-transform: translateX(0);\n            transform: translateX(0);\n    -webkit-animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);\n            animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);\n}\n100% {\n    -webkit-transform: translateX(1300px);\n            transform: translateX(1300px)\n}\n}\n@keyframes bike-anim-data-v-f76e8734 {\n0% {\n    -webkit-transform: translateX(-1300px);\n            transform: translateX(-1300px)\n}\n50% {\n    -webkit-transform: translateX(0);\n            transform: translateX(0);\n    -webkit-animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);\n            animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);\n}\n100% {\n    -webkit-transform: translateX(1300px);\n            transform: translateX(1300px)\n}\n}\n#rucksack[data-v-f76e8734] {\n  -webkit-animation: ruck-anim-data-v-f76e8734 3s linear infinite;\n          animation: ruck-anim-data-v-f76e8734 3s linear infinite;\n  -webkit-transform-origin: top;\n          transform-origin: top;\n  transform-box: fill-box;\n}\n@-webkit-keyframes ruck-anim-data-v-f76e8734 {\n50% {\n    -webkit-transform: rotate(5deg);\n            transform: rotate(5deg)\n}\n}\n@keyframes ruck-anim-data-v-f76e8734 {\n50% {\n    -webkit-transform: rotate(5deg);\n            transform: rotate(5deg)\n}\n}\n.circle[data-v-f76e8734] {\n  -webkit-animation: circle-anim-data-v-f76e8734 ease infinite;\n          animation: circle-anim-data-v-f76e8734 ease infinite;\n  -webkit-transform-origin: center;\n          transform-origin: center;\n  transform-box: fill-box;\n  -webkit-perspective: 0px;\n          perspective: 0px;\n}\n.circle.c1[data-v-f76e8734] {\n  -webkit-animation-duration: 2s;\n          animation-duration: 2s\n}\n.circle.c2[data-v-f76e8734] {\n  -webkit-animation-duration: 3s;\n          animation-duration: 3s\n}\n.circle.c3[data-v-f76e8734] {\n  -webkit-animation-duration: 1s;\n          animation-duration: 1s\n}\n.circle.c4[data-v-f76e8734] {\n  -webkit-animation-duration: 1s;\n          animation-duration: 1s\n}\n.circle.c5[data-v-f76e8734] {\n  -webkit-animation-duration: 2s;\n          animation-duration: 2s\n}\n.circle.c6[data-v-f76e8734] {\n  -webkit-animation-duration: 3s;\n          animation-duration: 3s\n}\n@-webkit-keyframes circle-anim-data-v-f76e8734 {\n50% {\n    -webkit-transform: scale(.2) rotateX(360deg) rotateY(360deg);\n            transform: scale(.2) rotateX(360deg) rotateY(360deg)\n}\n}\n@keyframes circle-anim-data-v-f76e8734 {\n50% {\n    -webkit-transform: scale(.2) rotateX(360deg) rotateY(360deg);\n            transform: scale(.2) rotateX(360deg) rotateY(360deg)\n}\n}\n.four[data-v-f76e8734],\n#ou[data-v-f76e8734] {\n  -webkit-animation: four-anim-data-v-f76e8734 cubic-bezier(0.39, 0.575, 0.565, 1) infinite;\n          animation: four-anim-data-v-f76e8734 cubic-bezier(0.39, 0.575, 0.565, 1) infinite;\n}\n.four.a[data-v-f76e8734] {\n  -webkit-transform-origin: bottom left;\n          transform-origin: bottom left;\n  -webkit-animation-duration: 3s;\n          animation-duration: 3s;\n  transform-box: fill-box;\n}\n.four.b[data-v-f76e8734] {\n  -webkit-transform-origin: bottom right;\n          transform-origin: bottom right;\n  -webkit-animation-duration: 3s;\n          animation-duration: 3s;\n  transform-box: fill-box;\n}\n#ou[data-v-f76e8734] {\n  -webkit-animation-duration: 6s;\n          animation-duration: 6s;\n  -webkit-transform-origin: center;\n          transform-origin: center;\n  transform-box: fill-box;\n}\n@-webkit-keyframes four-anim-data-v-f76e8734 {\n50% {\n    -webkit-transform: scale(.98);\n            transform: scale(.98)\n}\n}\n@keyframes four-anim-data-v-f76e8734 {\n50% {\n    -webkit-transform: scale(.98);\n            transform: scale(.98)\n}\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 980:
+/***/ 981:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__layouts_ModalLayout__ = __webpack_require__(695);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__layouts_ModalLayout__ = __webpack_require__(696);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__layouts_ModalLayout___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__layouts_ModalLayout__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -720,7 +1111,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 981:
+/***/ 982:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -774,7 +1165,7 @@ var render = function() {
                 },
                 [
                   _c("v-icon", { attrs: { right: "", dark: "" } }, [
-                    _vm._v("home")
+                    _vm._v("\n          home\n        ")
                   ])
                 ],
                 1
@@ -1361,6 +1752,7 @@ var render = function() {
                                         "661.54 337.48 570.87 392.34 562.42 378.92 652.25 322.38 658.12 321.34 661.54 337.48"
                                     }
                                   }),
+                                  _vm._v(" "),
                                   _c("polygon", {
                                     staticClass: "cls-7",
                                     attrs: {
@@ -1368,6 +1760,7 @@ var render = function() {
                                         "661.54 337.48 570.87 392.34 562.42 378.92 652.25 322.38 658.12 321.34 661.54 337.48"
                                     }
                                   }),
+                                  _vm._v(" "),
                                   _c("polygon", {
                                     staticClass: "cls-5",
                                     attrs: {
