@@ -12,7 +12,6 @@
         <slot/>
       </v-container>
     </main>
-    <fab-button/>
     <cookie-law/>
     <app-footer/>
   </v-app>
@@ -21,13 +20,11 @@
 <script>
 import AppFooter from '../partials/AppFooter.vue'
 import HomeNavBar from '../partials/HomeNavBar'
-import FabButton from '../components/FabButton.vue'
 import CookieLaw from '../partials/CookieLaw.vue'
 
 export default {
     components: {
         AppFooter,
-        FabButton,
         CookieLaw,
         HomeNavBar
     }
