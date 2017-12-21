@@ -3,7 +3,7 @@
 return [
     'title' => env('APP_NAME', 'vuetified.app'),
     'titleStyle' => [
-        'color' => '#BA9A5A' , //gold
+        'color' => '#f5c300' , //gold
     ],
     'navbarStyle' => [
         'background-color' => '#103050' //dark-blue
