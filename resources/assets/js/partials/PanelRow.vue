@@ -16,7 +16,7 @@
         text-xs-left
       >
         <v-card 
-          color="blue-grey" 
+          style="background-color:#333333;"
           class="ma-1" 
           height="110px"
         >
@@ -37,7 +37,7 @@
         text-xs-left
       >
         <v-card 
-          color="red lighten-2" 
+          style="background-color:#333333;"
           class="ma-1" 
           height="110px"
         >
@@ -58,7 +58,7 @@
         text-xs-left
       >
         <v-card 
-          color="cyan" 
+          style="background-color:#333333;"
           class="ma-1"
           height="110px"
         >
