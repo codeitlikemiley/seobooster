@@ -13,7 +13,6 @@
     >
       <slot/>
     </v-content>
-    <fab-button/>
     <app-footer/>
   </v-app>
 </template>
@@ -22,14 +21,12 @@
 import AppFooter from '../partials/AppFooter.vue'
 import AppNavBar from '../partials/AppNavBar.vue'
 import LeftSideBar from '../partials/LeftSideBar.vue'
-import FabButton from '../components/FabButton.vue'
 
 export default {
     components: {
         AppFooter,
         AppNavBar,
-        LeftSideBar,
-        FabButton
+        LeftSideBar
     }
 }
 </script>
