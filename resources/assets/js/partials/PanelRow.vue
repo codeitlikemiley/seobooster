@@ -1,8 +1,12 @@
 <template>
-  <div>
+  <v-container 
+    fluid 
+    pa-0
+    ma-0
+  >
     <v-layout 
-      row 
-      wrap 
+      row
+      wrap
       align-center
     >
       <!-- make a card to display this -->
@@ -70,8 +74,7 @@
         </v-card>
       </v-flex>
     </v-layout>
-  </div>
-
+  </v-container>
 </template>
 
 <script>
