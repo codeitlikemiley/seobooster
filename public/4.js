@@ -89,9 +89,9 @@ function toComment(sourceMap) {
 var disposed = false
 var normalizeComponent = __webpack_require__(317)
 /* script */
-var __vue_script__ = __webpack_require__(829)
+var __vue_script__ = __webpack_require__(834)
 /* template */
-var __vue_template__ = __webpack_require__(849)
+var __vue_template__ = __webpack_require__(854)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -594,7 +594,7 @@ var normalizeComponent = __webpack_require__(317)
 /* script */
 var __vue_script__ = __webpack_require__(669)
 /* template */
-var __vue_template__ = __webpack_require__(694)
+var __vue_template__ = __webpack_require__(699)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -641,13 +641,13 @@ module.exports = Component.exports
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__partials_AppFooter_vue__ = __webpack_require__(670);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__partials_AppFooter_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__partials_AppFooter_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__partials_AppNavBar_vue__ = __webpack_require__(679);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__partials_AppNavBar_vue__ = __webpack_require__(684);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__partials_AppNavBar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__partials_AppNavBar_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__partials_LeftSideBar_vue__ = __webpack_require__(684);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__partials_LeftSideBar_vue__ = __webpack_require__(689);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__partials_LeftSideBar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__partials_LeftSideBar_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_FabButton_vue__ = __webpack_require__(687);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_FabButton_vue__ = __webpack_require__(692);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_FabButton_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_FabButton_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__partials_CookieLaw_vue__ = __webpack_require__(690);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__partials_CookieLaw_vue__ = __webpack_require__(695);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__partials_CookieLaw_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__partials_CookieLaw_vue__);
 //
 //
@@ -1115,19 +1115,19 @@ if (false) {
 
 /***/ }),
 
-/***/ 679:
+/***/ 684:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(680)
+  __webpack_require__(685)
 }
 var normalizeComponent = __webpack_require__(317)
 /* script */
-var __vue_script__ = __webpack_require__(682)
+var __vue_script__ = __webpack_require__(687)
 /* template */
-var __vue_template__ = __webpack_require__(683)
+var __vue_template__ = __webpack_require__(688)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -1167,13 +1167,13 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 680:
+/***/ 685:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(681);
+var content = __webpack_require__(686);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -1194,7 +1194,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 681:
+/***/ 686:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(635)(undefined);
@@ -1209,7 +1209,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 /***/ }),
 
-/***/ 682:
+/***/ 687:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1308,7 +1308,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 683:
+/***/ 688:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -1418,15 +1418,15 @@ if (false) {
 
 /***/ }),
 
-/***/ 684:
+/***/ 689:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(317)
 /* script */
-var __vue_script__ = __webpack_require__(685)
+var __vue_script__ = __webpack_require__(690)
 /* template */
-var __vue_template__ = __webpack_require__(686)
+var __vue_template__ = __webpack_require__(691)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -1466,7 +1466,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 685:
+/***/ 690:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1638,7 +1638,7 @@ var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_3_vuex__["createNam
 
 /***/ }),
 
-/***/ 686:
+/***/ 691:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -1867,15 +1867,15 @@ if (false) {
 
 /***/ }),
 
-/***/ 687:
+/***/ 692:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(317)
 /* script */
-var __vue_script__ = __webpack_require__(688)
+var __vue_script__ = __webpack_require__(693)
 /* template */
-var __vue_template__ = __webpack_require__(689)
+var __vue_template__ = __webpack_require__(694)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -1915,7 +1915,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 688:
+/***/ 693:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2054,7 +2054,7 @@ var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["createNam
 
 /***/ }),
 
-/***/ 689:
+/***/ 694:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -2143,15 +2143,15 @@ if (false) {
 
 /***/ }),
 
-/***/ 690:
+/***/ 695:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(317)
 /* script */
-var __vue_script__ = __webpack_require__(691)
+var __vue_script__ = __webpack_require__(696)
 /* template */
-var __vue_template__ = __webpack_require__(693)
+var __vue_template__ = __webpack_require__(698)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -2191,12 +2191,12 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 691:
+/***/ 696:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_cookie_law__ = __webpack_require__(692);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_cookie_law__ = __webpack_require__(697);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_cookie_law___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_cookie_law__);
 //
 //
@@ -2219,7 +2219,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 692:
+/***/ 697:
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
@@ -2943,7 +2943,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 693:
+/***/ 698:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -2992,7 +2992,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 694:
+/***/ 699:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -3048,7 +3048,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 695:
+/***/ 700:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3093,19 +3093,19 @@ if (false) {
 
 /***/ }),
 
-/***/ 734:
+/***/ 739:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(834)
+  __webpack_require__(839)
 }
 var normalizeComponent = __webpack_require__(317)
 /* script */
-var __vue_script__ = __webpack_require__(836)
+var __vue_script__ = __webpack_require__(841)
 /* template */
-var __vue_template__ = __webpack_require__(837)
+var __vue_template__ = __webpack_require__(842)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -3145,7 +3145,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 829:
+/***/ 834:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3153,12 +3153,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__layouts_Main_vue__ = __webpack_require__(668);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__layouts_Main_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__layouts_Main_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__mixins_theme__ = __webpack_require__(660);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mixins_acl__ = __webpack_require__(695);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_reports_BlogReports_vue__ = __webpack_require__(830);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mixins_acl__ = __webpack_require__(700);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_reports_BlogReports_vue__ = __webpack_require__(835);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_reports_BlogReports_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_reports_BlogReports_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_reports_SocialReports_vue__ = __webpack_require__(839);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_reports_SocialReports_vue__ = __webpack_require__(844);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_reports_SocialReports_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_reports_SocialReports_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_reports_VideoReports_vue__ = __webpack_require__(844);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_reports_VideoReports_vue__ = __webpack_require__(849);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_reports_VideoReports_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__components_reports_VideoReports_vue__);
 //
 //
@@ -3260,19 +3260,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 830:
+/***/ 835:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(831)
+  __webpack_require__(836)
 }
 var normalizeComponent = __webpack_require__(317)
 /* script */
-var __vue_script__ = __webpack_require__(833)
+var __vue_script__ = __webpack_require__(838)
 /* template */
-var __vue_template__ = __webpack_require__(838)
+var __vue_template__ = __webpack_require__(843)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -3312,13 +3312,13 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 831:
+/***/ 836:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(832);
+var content = __webpack_require__(837);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -3339,7 +3339,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 832:
+/***/ 837:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(635)(undefined);
@@ -3354,12 +3354,12 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 /***/ }),
 
-/***/ 833:
+/***/ 838:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ReportProps_vue__ = __webpack_require__(734);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ReportProps_vue__ = __webpack_require__(739);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ReportProps_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__ReportProps_vue__);
 //
 //
@@ -3703,13 +3703,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 834:
+/***/ 839:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(835);
+var content = __webpack_require__(840);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -3730,7 +3730,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 835:
+/***/ 840:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(635)(undefined);
@@ -3745,7 +3745,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 /***/ }),
 
-/***/ 836:
+/***/ 841:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3933,7 +3933,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 837:
+/***/ 842:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -4204,7 +4204,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 838:
+/***/ 843:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -4519,19 +4519,19 @@ if (false) {
 
 /***/ }),
 
-/***/ 839:
+/***/ 844:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(840)
+  __webpack_require__(845)
 }
 var normalizeComponent = __webpack_require__(317)
 /* script */
-var __vue_script__ = __webpack_require__(842)
+var __vue_script__ = __webpack_require__(847)
 /* template */
-var __vue_template__ = __webpack_require__(843)
+var __vue_template__ = __webpack_require__(848)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -4571,13 +4571,13 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 840:
+/***/ 845:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(841);
+var content = __webpack_require__(846);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -4598,7 +4598,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 841:
+/***/ 846:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(635)(undefined);
@@ -4613,12 +4613,12 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 /***/ }),
 
-/***/ 842:
+/***/ 847:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ReportProps_vue__ = __webpack_require__(734);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ReportProps_vue__ = __webpack_require__(739);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ReportProps_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__ReportProps_vue__);
 //
 //
@@ -4920,764 +4920,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     //! post id
                     id: 10,
                     posted: false, //!
-                    posted_at: '16 Nov 2017 @ 10:15:01',
-                    //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
-                    platform: 'Stumbleupon',
-                    username: 'test@stumbleupon.com',
-                    link: 'https://google.com',
-                    iconColor: 'red',
-                    icon: 'fa-stumbleupon '
-                }]
-            }]
-        };
-    },
-    methods: {
-        changeSort: function changeSort(column) {
-            if (this.pagination.sortBy === column) {
-                this.pagination.descending = !this.pagination.descending;
-            } else {
-                this.pagination.sortBy = column;
-                this.pagination.descending = false;
-            }
-        },
-        toggleAll: function toggleAll() {
-            if (this.selected.length) this.selected = [];else this.selected = this.items.slice();
-        },
-        deleteSelected: function deleteSelected() {
-            var self = this;
-            var newItems = _.difference(self.items, self.selected);
-            self.items = newItems;
-            self.selected = [];
-            //! Send Api Call To Delete The Social Account
-        },
-        deleteItem: function deleteItem(item) {
-            var self = this;
-            var itemIndex = _.findIndex(self.items, ['id', item.id]);
-            self.items.splice(itemIndex, 1);
-            var selectedIndex = _.findIndex(self.selected, ['id', item.id]);
-            self.selected.splice(selectedIndex, 1);
-        }
-    }
-});
-
-/***/ }),
-
-/***/ 843:
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "v-card",
-    [
-      _c(
-        "v-card-title",
-        [
-          _vm.items.length > 0
-            ? _c("v-text-field", {
-                attrs: {
-                  "append-icon": "search",
-                  label: "Search By Campaign",
-                  "single-line": "",
-                  "hide-details": ""
-                },
-                model: {
-                  value: _vm.search,
-                  callback: function($$v) {
-                    _vm.search = $$v
-                  },
-                  expression: "search"
-                }
-              })
-            : _vm._e()
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "v-data-table",
-        {
-          attrs: {
-            headers: _vm.headers,
-            items: _vm.items,
-            search: _vm.search,
-            "item-key": "id",
-            "select-all": "",
-            pagination: _vm.pagination,
-            expand: ""
-          },
-          on: {
-            "update:pagination": function($event) {
-              _vm.pagination = $event
-            }
-          },
-          scopedSlots: _vm._u([
-            {
-              key: "headers",
-              fn: function(props) {
-                return [
-                  _c(
-                    "tr",
-                    [
-                      _c(
-                        "th",
-                        [
-                          _vm.items.length > 0
-                            ? _c("v-checkbox", {
-                                attrs: {
-                                  primary: "",
-                                  "hide-details": "",
-                                  "input-value": props.all,
-                                  indeterminate: props.indeterminate
-                                },
-                                nativeOn: {
-                                  click: function($event) {
-                                    _vm.toggleAll($event)
-                                  }
-                                }
-                              })
-                            : _vm._e()
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _vm._l(props.headers, function(header) {
-                        return _c(
-                          "th",
-                          {
-                            key: header.text,
-                            class: [
-                              "column sortable",
-                              _vm.pagination.descending ? "desc" : "asc",
-                              header.value === _vm.pagination.sortBy
-                                ? "active"
-                                : ""
-                            ],
-                            on: {
-                              click: function($event) {
-                                _vm.changeSort(header.value)
-                              }
-                            }
-                          },
-                          [
-                            _c("v-icon", [_vm._v("arrow_upward")]),
-                            _vm._v(
-                              "\n          " +
-                                _vm._s(header.text) +
-                                "\n        "
-                            )
-                          ],
-                          1
-                        )
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "th",
-                        [
-                          _vm.selected < 1
-                            ? _c("span", [_vm._v("Actions")])
-                            : _c(
-                                "v-btn",
-                                {
-                                  attrs: { flat: "", icon: "", color: "error" },
-                                  nativeOn: {
-                                    click: function($event) {
-                                      _vm.deleteSelected($event)
-                                    }
-                                  }
-                                },
-                                [_c("v-icon", [_vm._v("fa-trash")])],
-                                1
-                              )
-                        ],
-                        1
-                      )
-                    ],
-                    2
-                  )
-                ]
-              }
-            },
-            {
-              key: "items",
-              fn: function(props) {
-                return [
-                  _c(
-                    "td",
-                    [
-                      _c("v-checkbox", {
-                        attrs: { primary: "", "hide-details": "" },
-                        model: {
-                          value: props.selected,
-                          callback: function($$v) {
-                            _vm.$set(props, "selected", $$v)
-                          },
-                          expression: "props.selected"
-                        }
-                      })
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-left primary--text" },
-                    [
-                      _vm._v(
-                        "\n        " + _vm._s(props.item.name) + "\n      "
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-left primary--text" },
-                    [
-                      _vm._v(
-                        "\n        " + _vm._s(props.item.title) + "\n      "
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-center primary--text" },
-                    [
-                      _c("span", { staticClass: "title blue-grey--text" }, [
-                        _vm._v(_vm._s(props.item.posts.length))
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-center primary--text" },
-                    [
-                      _c("span", { staticClass: "title blue-grey--text" }, [
-                        _vm._v(_vm._s(props.item.scheduled_at))
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-center" },
-                    [
-                      _c(
-                        "v-btn",
-                        {
-                          class: {
-                            "amber--text": props.expanded,
-                            amber: props.expanded,
-                            teal: !props.expanded,
-                            "teal--text": !props.expanded
-                          },
-                          attrs: { flat: "", icon: "" },
-                          on: {
-                            click: function($event) {
-                              props.expanded = !props.expanded
-                            }
-                          }
-                        },
-                        [
-                          !props.expanded
-                            ? _c("v-icon", [_vm._v("fa-expand")])
-                            : _vm._e(),
-                          _vm._v(" "),
-                          props.expanded
-                            ? _c("v-icon", [_vm._v("fa-compress")])
-                            : _vm._e()
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-btn",
-                        {
-                          attrs: { flat: "", icon: "", color: "error" },
-                          nativeOn: {
-                            click: function($event) {
-                              _vm.deleteItem(props.item)
-                            }
-                          }
-                        },
-                        [_c("v-icon", [_vm._v("fa-remove")])],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                ]
-              }
-            },
-            {
-              key: "expand",
-              fn: function(props) {
-                return [
-                  _c("report-props", { attrs: { posts: props.item.posts } })
-                ]
-              }
-            },
-            {
-              key: "pageText",
-              fn: function(ref) {
-                var pageStart = ref.pageStart
-                var pageStop = ref.pageStop
-                return [
-                  _vm._v(
-                    "\n      From " +
-                      _vm._s(pageStart) +
-                      " to " +
-                      _vm._s(pageStop) +
-                      "\n    "
-                  )
-                ]
-              }
-            }
-          ]),
-          model: {
-            value: _vm.selected,
-            callback: function($$v) {
-              _vm.selected = $$v
-            },
-            expression: "selected"
-          }
-        },
-        [
-          _c(
-            "template",
-            { slot: "no-data" },
-            [
-              _c(
-                "v-alert",
-                { attrs: { value: true, color: "info", icon: "warning" } },
-                [_vm._v("\n        You Havent Posted Anything Yet.\n      ")]
-              )
-            ],
-            1
-          )
-        ],
-        2
-      )
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-225ad8ce", module.exports)
-  }
-}
-
-/***/ }),
-
-/***/ 844:
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(845)
-}
-var normalizeComponent = __webpack_require__(317)
-/* script */
-var __vue_script__ = __webpack_require__(847)
-/* template */
-var __vue_template__ = __webpack_require__(848)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources\\assets\\js\\components\\reports\\VideoReports.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4b12c190", Component.options)
-  } else {
-    hotAPI.reload("data-v-4b12c190", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-
-/***/ 845:
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(846);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(659)("5f4b2e1f", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4b12c190\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./VideoReports.vue", function() {
-     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4b12c190\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./VideoReports.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ 846:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(635)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ 847:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ReportProps_vue__ = __webpack_require__(734);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ReportProps_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__ReportProps_vue__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-//! Fetch Blog Reports From Database
-/* harmony default export */ __webpack_exports__["default"] = ({
-    components: {
-        ReportProps: __WEBPACK_IMPORTED_MODULE_0__ReportProps_vue___default.a
-    },
-    props: {
-        tab: {
-            type: Object,
-            required: true
-        }
-    },
-    data: function data() {
-        return {
-            pagination: {
-                sortBy: 'name'
-            },
-            search: '',
-            selected: [],
-            /* table */
-            headers: [
-            /* remove sort and value since we cant access dot anotation in item */
-            { text: 'Campaign Name', value: 'name', align: 'left', sortable: true }, { text: 'Post Title', value: 'title', align: 'left', sortable: true }, { text: 'Post Count', value: 'posts.length', align: 'left', sortable: true }, { text: 'Scheduled At', value: 'scheduled_at', align: 'left', sortable: true }],
-            //! campaign list by category of blog-accounts
-            items: [{
-                //! campaign id
-                id: 1,
-                name: 'First Campaign',
-                title: 'Hello World',
-                scheduled_at: '17 Nov 2017 @ 11:00:00',
-                //! account choosen to publish this post
-                posts: [{
-                    //! post id
-                    id: 1,
-                    posted: true, //! 
-                    posted_at: '16 Nov 2017 @ 10:15:01',
-                    //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
-                    platform: 'Stumbleupon',
-                    username: 'test@stumbleupon.com',
-                    //! link posted @
-                    link: 'https://google.com',
-                    iconColor: 'red',
-                    icon: 'fa-stumbleupon '
-                }, {
-                    //! post id
-                    id: 2,
-                    posted: true, //! 
-                    posted_at: '16 Nov 2017 @ 10:15:01',
-                    //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
-                    platform: 'Stumbleupon',
-                    username: 'test@stumbleupon.com',
-                    link: 'https://google.com',
-                    iconColor: 'red',
-                    icon: 'fa-stumbleupon '
-                }, {
-                    //! post id
-                    id: 3,
-                    posted: true, //! 
-                    posted_at: '16 Nov 2017 @ 10:15:01',
-                    //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
-                    platform: 'Stumbleupon',
-                    username: 'test@stumbleupon.com',
-                    link: 'https://google.com',
-                    iconColor: 'red',
-                    icon: 'fa-stumbleupon '
-                }, {
-                    //! post id
-                    id: 4,
-                    posted: true, //! 
-                    posted_at: '16 Nov 2017 @ 10:15:01',
-                    //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
-                    platform: 'Stumbleupon',
-                    username: 'test@stumbleupon.com',
-                    link: 'https://google.com',
-                    iconColor: 'red',
-                    icon: 'fa-stumbleupon '
-                }, {
-                    //! post id
-                    id: 5,
-                    posted: true, //! 
-                    posted_at: '16 Nov 2017 @ 10:15:01',
-                    //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
-                    platform: 'Stumbleupon',
-                    username: 'test@stumbleupon.com',
-                    link: 'https://google.com',
-                    iconColor: 'red',
-                    icon: 'fa-stumbleupon '
-                }]
-            }, {
-                //! campaign id
-                id: 2,
-                name: 'Second Campaign',
-                title: 'Hello Universe',
-                scheduled_at: '17 Nov 2017 @ 11:00:00',
-                //! account choosen to publish this post
-                posts: [{
-                    //! post id
-                    id: 6,
-                    posted: true, //! 
-                    posted_at: '16 Nov 2017 @ 10:15:01',
-                    //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
-                    platform: 'Stumbleupon',
-                    username: 'test@stumbleupon.com',
-                    link: 'https://google.com',
-                    iconColor: 'red',
-                    icon: 'fa-stumbleupon '
-                }]
-            }, {
-                //! campaign id
-                id: 3,
-                name: 'Second Campaign',
-                title: 'Hello hI',
-                scheduled_at: '17 Nov 2017 @ 11:00:00',
-                //! account choosen to publish this post
-                posts: [{
-                    //! post id
-                    id: 7,
-                    posted: true, //! 
-                    posted_at: '16 Nov 2017 @ 10:15:01',
-                    //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
-                    platform: 'Stumbleupon',
-                    username: 'test@stumbleupon.com',
-                    link: 'https://google.com',
-                    iconColor: 'red',
-                    icon: 'fa-stumbleupon '
-                }]
-            }, {
-                //! campaign id
-                id: 4,
-                name: 'Second Campaign',
-                title: 'Hello Hello',
-                scheduled_at: '17 Nov 2017 @ 11:00:00',
-                //! account choosen to publish this post
-                posts: [{
-                    //! post id
-                    id: 8,
-                    posted: true, //! 
-                    posted_at: '16 Nov 2017 @ 10:15:01',
-                    //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
-                    platform: 'Stumbleupon',
-                    username: 'test@stumbleupon.com',
-                    link: 'https://google.com',
-                    iconColor: 'red',
-                    icon: 'fa-stumbleupon '
-                }]
-            }, {
-                //! campaign id
-                id: 5,
-                name: 'Second Campaign',
-                title: 'Hello Dolly',
-                scheduled_at: '17 Nov 2017 @ 11:00:00',
-                //! account choosen to publish this post
-                posts: [{
-                    //! post id
-                    id: 9,
-                    posted: true, //! 
-                    posted_at: '16 Nov 2017 @ 10:15:01',
-                    //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
-                    platform: 'Stumbleupon',
-                    username: 'test@stumbleupon.com',
-                    link: 'https://google.com',
-                    iconColor: 'red',
-                    icon: 'fa-stumbleupon '
-                }, {
-                    //! post id
-                    id: 10,
-                    posted: false, //! 
                     posted_at: '16 Nov 2017 @ 10:15:01',
                     //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
                     platform: 'Stumbleupon',
@@ -6029,13 +5271,771 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-4b12c190", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-225ad8ce", module.exports)
   }
 }
 
 /***/ }),
 
 /***/ 849:
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(850)
+}
+var normalizeComponent = __webpack_require__(317)
+/* script */
+var __vue_script__ = __webpack_require__(852)
+/* template */
+var __vue_template__ = __webpack_require__(853)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\reports\\VideoReports.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-4b12c190", Component.options)
+  } else {
+    hotAPI.reload("data-v-4b12c190", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 850:
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(851);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(659)("5f4b2e1f", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4b12c190\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./VideoReports.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4b12c190\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./VideoReports.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ 851:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(635)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ 852:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ReportProps_vue__ = __webpack_require__(739);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ReportProps_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__ReportProps_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+//! Fetch Blog Reports From Database
+/* harmony default export */ __webpack_exports__["default"] = ({
+    components: {
+        ReportProps: __WEBPACK_IMPORTED_MODULE_0__ReportProps_vue___default.a
+    },
+    props: {
+        tab: {
+            type: Object,
+            required: true
+        }
+    },
+    data: function data() {
+        return {
+            pagination: {
+                sortBy: 'name'
+            },
+            search: '',
+            selected: [],
+            /* table */
+            headers: [
+            /* remove sort and value since we cant access dot anotation in item */
+            { text: 'Campaign Name', value: 'name', align: 'left', sortable: true }, { text: 'Post Title', value: 'title', align: 'left', sortable: true }, { text: 'Post Count', value: 'posts.length', align: 'left', sortable: true }, { text: 'Scheduled At', value: 'scheduled_at', align: 'left', sortable: true }],
+            //! campaign list by category of blog-accounts
+            items: [{
+                //! campaign id
+                id: 1,
+                name: 'First Campaign',
+                title: 'Hello World',
+                scheduled_at: '17 Nov 2017 @ 11:00:00',
+                //! account choosen to publish this post
+                posts: [{
+                    //! post id
+                    id: 1,
+                    posted: true, //! 
+                    posted_at: '16 Nov 2017 @ 10:15:01',
+                    //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
+                    platform: 'Stumbleupon',
+                    username: 'test@stumbleupon.com',
+                    //! link posted @
+                    link: 'https://google.com',
+                    iconColor: 'red',
+                    icon: 'fa-stumbleupon '
+                }, {
+                    //! post id
+                    id: 2,
+                    posted: true, //! 
+                    posted_at: '16 Nov 2017 @ 10:15:01',
+                    //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
+                    platform: 'Stumbleupon',
+                    username: 'test@stumbleupon.com',
+                    link: 'https://google.com',
+                    iconColor: 'red',
+                    icon: 'fa-stumbleupon '
+                }, {
+                    //! post id
+                    id: 3,
+                    posted: true, //! 
+                    posted_at: '16 Nov 2017 @ 10:15:01',
+                    //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
+                    platform: 'Stumbleupon',
+                    username: 'test@stumbleupon.com',
+                    link: 'https://google.com',
+                    iconColor: 'red',
+                    icon: 'fa-stumbleupon '
+                }, {
+                    //! post id
+                    id: 4,
+                    posted: true, //! 
+                    posted_at: '16 Nov 2017 @ 10:15:01',
+                    //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
+                    platform: 'Stumbleupon',
+                    username: 'test@stumbleupon.com',
+                    link: 'https://google.com',
+                    iconColor: 'red',
+                    icon: 'fa-stumbleupon '
+                }, {
+                    //! post id
+                    id: 5,
+                    posted: true, //! 
+                    posted_at: '16 Nov 2017 @ 10:15:01',
+                    //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
+                    platform: 'Stumbleupon',
+                    username: 'test@stumbleupon.com',
+                    link: 'https://google.com',
+                    iconColor: 'red',
+                    icon: 'fa-stumbleupon '
+                }]
+            }, {
+                //! campaign id
+                id: 2,
+                name: 'Second Campaign',
+                title: 'Hello Universe',
+                scheduled_at: '17 Nov 2017 @ 11:00:00',
+                //! account choosen to publish this post
+                posts: [{
+                    //! post id
+                    id: 6,
+                    posted: true, //! 
+                    posted_at: '16 Nov 2017 @ 10:15:01',
+                    //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
+                    platform: 'Stumbleupon',
+                    username: 'test@stumbleupon.com',
+                    link: 'https://google.com',
+                    iconColor: 'red',
+                    icon: 'fa-stumbleupon '
+                }]
+            }, {
+                //! campaign id
+                id: 3,
+                name: 'Second Campaign',
+                title: 'Hello hI',
+                scheduled_at: '17 Nov 2017 @ 11:00:00',
+                //! account choosen to publish this post
+                posts: [{
+                    //! post id
+                    id: 7,
+                    posted: true, //! 
+                    posted_at: '16 Nov 2017 @ 10:15:01',
+                    //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
+                    platform: 'Stumbleupon',
+                    username: 'test@stumbleupon.com',
+                    link: 'https://google.com',
+                    iconColor: 'red',
+                    icon: 'fa-stumbleupon '
+                }]
+            }, {
+                //! campaign id
+                id: 4,
+                name: 'Second Campaign',
+                title: 'Hello Hello',
+                scheduled_at: '17 Nov 2017 @ 11:00:00',
+                //! account choosen to publish this post
+                posts: [{
+                    //! post id
+                    id: 8,
+                    posted: true, //! 
+                    posted_at: '16 Nov 2017 @ 10:15:01',
+                    //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
+                    platform: 'Stumbleupon',
+                    username: 'test@stumbleupon.com',
+                    link: 'https://google.com',
+                    iconColor: 'red',
+                    icon: 'fa-stumbleupon '
+                }]
+            }, {
+                //! campaign id
+                id: 5,
+                name: 'Second Campaign',
+                title: 'Hello Dolly',
+                scheduled_at: '17 Nov 2017 @ 11:00:00',
+                //! account choosen to publish this post
+                posts: [{
+                    //! post id
+                    id: 9,
+                    posted: true, //! 
+                    posted_at: '16 Nov 2017 @ 10:15:01',
+                    //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
+                    platform: 'Stumbleupon',
+                    username: 'test@stumbleupon.com',
+                    link: 'https://google.com',
+                    iconColor: 'red',
+                    icon: 'fa-stumbleupon '
+                }, {
+                    //! post id
+                    id: 10,
+                    posted: false, //! 
+                    posted_at: '16 Nov 2017 @ 10:15:01',
+                    //! LResource: Instead of Using the Relationship Object we use the Properties Directly for the FF
+                    platform: 'Stumbleupon',
+                    username: 'test@stumbleupon.com',
+                    link: 'https://google.com',
+                    iconColor: 'red',
+                    icon: 'fa-stumbleupon '
+                }]
+            }]
+        };
+    },
+    methods: {
+        changeSort: function changeSort(column) {
+            if (this.pagination.sortBy === column) {
+                this.pagination.descending = !this.pagination.descending;
+            } else {
+                this.pagination.sortBy = column;
+                this.pagination.descending = false;
+            }
+        },
+        toggleAll: function toggleAll() {
+            if (this.selected.length) this.selected = [];else this.selected = this.items.slice();
+        },
+        deleteSelected: function deleteSelected() {
+            var self = this;
+            var newItems = _.difference(self.items, self.selected);
+            self.items = newItems;
+            self.selected = [];
+            //! Send Api Call To Delete The Social Account
+        },
+        deleteItem: function deleteItem(item) {
+            var self = this;
+            var itemIndex = _.findIndex(self.items, ['id', item.id]);
+            self.items.splice(itemIndex, 1);
+            var selectedIndex = _.findIndex(self.selected, ['id', item.id]);
+            self.selected.splice(selectedIndex, 1);
+        }
+    }
+});
+
+/***/ }),
+
+/***/ 853:
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-card",
+    [
+      _c(
+        "v-card-title",
+        [
+          _vm.items.length > 0
+            ? _c("v-text-field", {
+                attrs: {
+                  "append-icon": "search",
+                  label: "Search By Campaign",
+                  "single-line": "",
+                  "hide-details": ""
+                },
+                model: {
+                  value: _vm.search,
+                  callback: function($$v) {
+                    _vm.search = $$v
+                  },
+                  expression: "search"
+                }
+              })
+            : _vm._e()
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "v-data-table",
+        {
+          attrs: {
+            headers: _vm.headers,
+            items: _vm.items,
+            search: _vm.search,
+            "item-key": "id",
+            "select-all": "",
+            pagination: _vm.pagination,
+            expand: ""
+          },
+          on: {
+            "update:pagination": function($event) {
+              _vm.pagination = $event
+            }
+          },
+          scopedSlots: _vm._u([
+            {
+              key: "headers",
+              fn: function(props) {
+                return [
+                  _c(
+                    "tr",
+                    [
+                      _c(
+                        "th",
+                        [
+                          _vm.items.length > 0
+                            ? _c("v-checkbox", {
+                                attrs: {
+                                  primary: "",
+                                  "hide-details": "",
+                                  "input-value": props.all,
+                                  indeterminate: props.indeterminate
+                                },
+                                nativeOn: {
+                                  click: function($event) {
+                                    _vm.toggleAll($event)
+                                  }
+                                }
+                              })
+                            : _vm._e()
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _vm._l(props.headers, function(header) {
+                        return _c(
+                          "th",
+                          {
+                            key: header.text,
+                            class: [
+                              "column sortable",
+                              _vm.pagination.descending ? "desc" : "asc",
+                              header.value === _vm.pagination.sortBy
+                                ? "active"
+                                : ""
+                            ],
+                            on: {
+                              click: function($event) {
+                                _vm.changeSort(header.value)
+                              }
+                            }
+                          },
+                          [
+                            _c("v-icon", [_vm._v("arrow_upward")]),
+                            _vm._v(
+                              "\n          " +
+                                _vm._s(header.text) +
+                                "\n        "
+                            )
+                          ],
+                          1
+                        )
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "th",
+                        [
+                          _vm.selected < 1
+                            ? _c("span", [_vm._v("Actions")])
+                            : _c(
+                                "v-btn",
+                                {
+                                  attrs: { flat: "", icon: "", color: "error" },
+                                  nativeOn: {
+                                    click: function($event) {
+                                      _vm.deleteSelected($event)
+                                    }
+                                  }
+                                },
+                                [_c("v-icon", [_vm._v("fa-trash")])],
+                                1
+                              )
+                        ],
+                        1
+                      )
+                    ],
+                    2
+                  )
+                ]
+              }
+            },
+            {
+              key: "items",
+              fn: function(props) {
+                return [
+                  _c(
+                    "td",
+                    [
+                      _c("v-checkbox", {
+                        attrs: { primary: "", "hide-details": "" },
+                        model: {
+                          value: props.selected,
+                          callback: function($$v) {
+                            _vm.$set(props, "selected", $$v)
+                          },
+                          expression: "props.selected"
+                        }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "td",
+                    { staticClass: "title text-xs-left primary--text" },
+                    [
+                      _vm._v(
+                        "\n        " + _vm._s(props.item.name) + "\n      "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "td",
+                    { staticClass: "title text-xs-left primary--text" },
+                    [
+                      _vm._v(
+                        "\n        " + _vm._s(props.item.title) + "\n      "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "td",
+                    { staticClass: "title text-xs-center primary--text" },
+                    [
+                      _c("span", { staticClass: "title blue-grey--text" }, [
+                        _vm._v(_vm._s(props.item.posts.length))
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "td",
+                    { staticClass: "title text-xs-center primary--text" },
+                    [
+                      _c("span", { staticClass: "title blue-grey--text" }, [
+                        _vm._v(_vm._s(props.item.scheduled_at))
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "td",
+                    { staticClass: "title text-xs-center" },
+                    [
+                      _c(
+                        "v-btn",
+                        {
+                          class: {
+                            "amber--text": props.expanded,
+                            amber: props.expanded,
+                            teal: !props.expanded,
+                            "teal--text": !props.expanded
+                          },
+                          attrs: { flat: "", icon: "" },
+                          on: {
+                            click: function($event) {
+                              props.expanded = !props.expanded
+                            }
+                          }
+                        },
+                        [
+                          !props.expanded
+                            ? _c("v-icon", [_vm._v("fa-expand")])
+                            : _vm._e(),
+                          _vm._v(" "),
+                          props.expanded
+                            ? _c("v-icon", [_vm._v("fa-compress")])
+                            : _vm._e()
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-btn",
+                        {
+                          attrs: { flat: "", icon: "", color: "error" },
+                          nativeOn: {
+                            click: function($event) {
+                              _vm.deleteItem(props.item)
+                            }
+                          }
+                        },
+                        [_c("v-icon", [_vm._v("fa-remove")])],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ]
+              }
+            },
+            {
+              key: "expand",
+              fn: function(props) {
+                return [
+                  _c("report-props", { attrs: { posts: props.item.posts } })
+                ]
+              }
+            },
+            {
+              key: "pageText",
+              fn: function(ref) {
+                var pageStart = ref.pageStart
+                var pageStop = ref.pageStop
+                return [
+                  _vm._v(
+                    "\n      From " +
+                      _vm._s(pageStart) +
+                      " to " +
+                      _vm._s(pageStop) +
+                      "\n    "
+                  )
+                ]
+              }
+            }
+          ]),
+          model: {
+            value: _vm.selected,
+            callback: function($$v) {
+              _vm.selected = $$v
+            },
+            expression: "selected"
+          }
+        },
+        [
+          _c(
+            "template",
+            { slot: "no-data" },
+            [
+              _c(
+                "v-alert",
+                { attrs: { value: true, color: "info", icon: "warning" } },
+                [_vm._v("\n        You Havent Posted Anything Yet.\n      ")]
+              )
+            ],
+            1
+          )
+        ],
+        2
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-4b12c190", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ 854:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {

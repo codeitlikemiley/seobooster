@@ -89,13 +89,13 @@ function toComment(sourceMap) {
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(979)
+  __webpack_require__(984)
 }
 var normalizeComponent = __webpack_require__(317)
 /* script */
-var __vue_script__ = __webpack_require__(981)
+var __vue_script__ = __webpack_require__(986)
 /* template */
-var __vue_template__ = __webpack_require__(982)
+var __vue_template__ = __webpack_require__(987)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -391,7 +391,7 @@ module.exports = function listToStyles (parentId, list) {
 
 /***/ }),
 
-/***/ 696:
+/***/ 701:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
@@ -399,7 +399,7 @@ var normalizeComponent = __webpack_require__(317)
 /* script */
 var __vue_script__ = null
 /* template */
-var __vue_template__ = __webpack_require__(697)
+var __vue_template__ = __webpack_require__(702)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -439,7 +439,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 697:
+/***/ 702:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -489,13 +489,13 @@ if (false) {
 
 /***/ }),
 
-/***/ 979:
+/***/ 984:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(980);
+var content = __webpack_require__(985);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -516,7 +516,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 980:
+/***/ 985:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(635)(undefined);
@@ -531,12 +531,12 @@ exports.push([module.i, "\n.cls-1[data-v-f76e8734] {\n  fill: #ffc541;\n}\n.cls-
 
 /***/ }),
 
-/***/ 981:
+/***/ 986:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__layouts_ModalLayout__ = __webpack_require__(696);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__layouts_ModalLayout__ = __webpack_require__(701);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__layouts_ModalLayout___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__layouts_ModalLayout__);
 //
 //
@@ -1111,7 +1111,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 982:
+/***/ 987:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -1164,7 +1164,7 @@ var render = function() {
                   }
                 },
                 [
-                  _c("v-icon", { attrs: { right: "", dark: "" } }, [
+                  _c("v-icon", { attrs: { right: "", color: "primary" } }, [
                     _vm._v("\n          home\n        ")
                   ])
                 ],
