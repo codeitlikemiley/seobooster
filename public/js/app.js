@@ -21527,9 +21527,9 @@ Object(__WEBPACK_IMPORTED_MODULE_5_vuex_router_sync__["sync"])(__WEBPACK_IMPORTE
 
 __WEBPACK_IMPORTED_MODULE_1_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_6_vuetify___default.a, {
     theme: {
-        primary: '#BA9A5A',
+        primary: '#e3b500',
         secondary: '#455A64',
-        accent: '#103050',
+        accent: ' #333333',
         error: '#C62828',
         info: '#7FCAC3',
         success: '#D4E157',
@@ -37831,19 +37831,19 @@ var routes = routeFiles.concat(__WEBPACK_IMPORTED_MODULE_0__routes_authRoutes__[
 
 "use strict";
 var Login = function Login() {
-    return __webpack_require__.e/* import() */(18).then(__webpack_require__.bind(null, 637));
+    return __webpack_require__.e/* import() */(17).then(__webpack_require__.bind(null, 637));
 };
 var Logout = function Logout() {
-    return __webpack_require__.e/* import() */(17).then(__webpack_require__.bind(null, 638));
+    return __webpack_require__.e/* import() */(16).then(__webpack_require__.bind(null, 638));
 };
 var Register = function Register() {
-    return __webpack_require__.e/* import() */(16).then(__webpack_require__.bind(null, 639));
+    return __webpack_require__.e/* import() */(15).then(__webpack_require__.bind(null, 639));
 };
 var ResetPassword = function ResetPassword() {
-    return __webpack_require__.e/* import() */(21).then(__webpack_require__.bind(null, 640));
+    return __webpack_require__.e/* import() */(20).then(__webpack_require__.bind(null, 640));
 };
 var ForgotPassword = function ForgotPassword() {
-    return __webpack_require__.e/* import() */(19).then(__webpack_require__.bind(null, 641));
+    return __webpack_require__.e/* import() */(18).then(__webpack_require__.bind(null, 641));
 };
 
 /* harmony default export */ __webpack_exports__["a"] = ([
@@ -38675,10 +38675,10 @@ var Home = function Home() {
     return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 642));
 };
 var About = function About() {
-    return __webpack_require__.e/* import() */(15).then(__webpack_require__.bind(null, 643));
+    return __webpack_require__.e/* import() */(14).then(__webpack_require__.bind(null, 643));
 };
 var Support = function Support() {
-    return __webpack_require__.e/* import() */(14).then(__webpack_require__.bind(null, 644));
+    return __webpack_require__.e/* import() */(21).then(__webpack_require__.bind(null, 644));
 };
 var ThankYou = function ThankYou() {
     return __webpack_require__.e/* import() */(13).then(__webpack_require__.bind(null, 645));
@@ -38912,7 +38912,7 @@ var ProviderCallback = function ProviderCallback() {
 
 "use strict";
 var NotFound = function NotFound() {
-    return __webpack_require__.e/* import() */(20).then(__webpack_require__.bind(null, 658));
+    return __webpack_require__.e/* import() */(19).then(__webpack_require__.bind(null, 658));
 };
 
 /* harmony default export */ __webpack_exports__["a"] = ([

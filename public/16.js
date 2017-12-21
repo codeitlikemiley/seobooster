@@ -1,14 +1,14 @@
 webpackJsonp([16],{
 
-/***/ 639:
+/***/ 638:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(317)
 /* script */
-var __vue_script__ = __webpack_require__(744)
+var __vue_script__ = __webpack_require__(730)
 /* template */
-var __vue_template__ = __webpack_require__(745)
+var __vue_template__ = __webpack_require__(731)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -25,7 +25,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\pages\\Register.vue"
+Component.options.__file = "resources\\assets\\js\\pages\\Logout.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -34,9 +34,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-0bc8e89a", Component.options)
+    hotAPI.createRecord("data-v-edd4a07e", Component.options)
   } else {
-    hotAPI.reload("data-v-0bc8e89a", Component.options)
+    hotAPI.reload("data-v-edd4a07e", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -48,7 +48,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 661:
+/***/ 662:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -147,7 +147,7 @@ module.exports = !$assign || __webpack_require__(67)(function () {
 
 /***/ }),
 
-/***/ 701:
+/***/ 689:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
@@ -155,7 +155,7 @@ var normalizeComponent = __webpack_require__(317)
 /* script */
 var __vue_script__ = null
 /* template */
-var __vue_template__ = __webpack_require__(702)
+var __vue_template__ = __webpack_require__(690)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -195,7 +195,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 702:
+/***/ 690:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -245,60 +245,17 @@ if (false) {
 
 /***/ }),
 
-/***/ 744:
+/***/ 730:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends__ = __webpack_require__(661);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends__ = __webpack_require__(662);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_ModalLayout__ = __webpack_require__(701);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_ModalLayout__ = __webpack_require__(689);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_ModalLayout___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__layouts_ModalLayout__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vuex__ = __webpack_require__(88);
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -427,65 +384,56 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_2_vuex__["createNamespacedHelpers"])('auth'),
     mapActions = _createNamespacedHelp.mapActions,
-    mapState = _createNamespacedHelp.mapState;
+    mapGetters = _createNamespacedHelp.mapGetters,
+    mapMutations = _createNamespacedHelp.mapMutations;
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            registerForm: new AppForm(App.forms.registerForm),
-            password_visible: false
-
+            tile: false,
+            avatarSize: '200px',
+            logoutForm: new AppForm(App.forms.logoutForm),
+            visible: false
         };
     },
-    computed: __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default()({}, mapState({
-        isAuthenticated: 'isAuthenticated'
-    }), {
-        icon: function icon() {
-            return this.password_visible ? 'visibility' : 'visibility_off';
-        }
-    }),
+    computed: __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default()({}, mapGetters({
+        isAuthenticated: 'isAuthenticated',
+        user: 'getMe'
+    })),
     mounted: function mounted() {
         var self = this;
-        /* Make Sure We Only Load Registration Page If Not Authenticated */
-        if (self.isAuthenticated) {
-            /* nextick make sure our modal would not be visible before redirect */
+        /* Make Sure We Only Show Logout Page If Authenticated */
+        if (!self.isAuthenticated) {
+            /* nextick make sure our modal wount be visible before redirect */
             return self.$nextTick(function () {
                 return self.$router.go(-1);
             });
         }
-        self.registerForm.role = 'customer';
-        self.registerForm.sponsor_id = self.$store.getters['referral/getSponsor']['user_id'];
+        self.visible = true;
     },
 
-    methods: __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default()({}, mapActions({
-        submit: 'register'
-    }), {
-        goHome: function goHome() {
-            var self = this;
-            self.$nextTick(function () {
-                return self.$router.push({ name: 'home' });
-            });
-        },
-        goToLogin: function goToLogin() {
-            var self = this;
-            self.$nextTick(function () {
-                return self.$router.push({ name: 'login' });
-            });
-        },
+    methods: __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default()({
         redirectBack: function redirectBack() {
             var self = this;
             return self.$nextTick(function () {
                 return self.$router.go(-1);
             });
         },
-        register: function register() {
+        logout: function logout() {
             var self = this;
-            self.$validator.validateAll();
-            if (!self.errors.any()) {
-                self.submit(self.registerForm);
-            }
+            self.logoutForm.busy = true;
+            return self.$nextTick(function () {
+                return self.submit(self.logoutForm);
+            });
         }
-    }),
+    }, mapActions({
+        submit: 'logout'
+    }), mapMutations({
+        setToken: 'setToken',
+        setRefreshToken: 'setRefreshToken',
+        setExpiration: 'setExpiration',
+        setMe: 'setMe'
+    })),
     components: {
         ModalLayout: __WEBPACK_IMPORTED_MODULE_1__layouts_ModalLayout___default.a
     }
@@ -493,376 +441,299 @@ var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_2_vuex__["createNam
 
 /***/ }),
 
-/***/ 745:
+/***/ 731:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "modal-layout",
-    [
-      _c(
-        "v-card",
-        { attrs: { flat: true } },
+  return _vm.visible
+    ? _c(
+        "modal-layout",
         [
           _c(
-            "v-toolbar",
-            { staticClass: "accent" },
+            "v-card",
+            { attrs: { flat: true } },
             [
               _c(
-                "v-btn",
-                {
-                  attrs: { flat: "", icon: "", color: "primary" },
-                  nativeOn: {
-                    click: function($event) {
-                      _vm.redirectBack()
-                    }
-                  }
-                },
-                [_c("v-icon", [_vm._v("arrow_back")])],
-                1
-              ),
-              _vm._v(" "),
-              _c("v-spacer"),
-              _vm._v(" "),
-              _c(
-                "v-toolbar-title",
-                { staticClass: "text-xs-center primary--text" },
-                [_vm._v("Registration Page")]
-              ),
-              _vm._v(" "),
-              _c("v-spacer"),
-              _vm._v(" "),
-              _c(
-                "v-toolbar-items",
+                "v-toolbar",
+                { staticClass: "accent" },
                 [
                   _c(
                     "v-btn",
                     {
-                      attrs: { flat: "", color: "primary" },
+                      attrs: { flat: "", icon: "", color: "primary" },
                       nativeOn: {
                         click: function($event) {
-                          _vm.goHome()
+                          _vm.redirectBack()
                         }
                       }
                     },
-                    [_c("v-icon", [_vm._v("fa-home")])],
+                    [_c("v-icon", [_vm._v("arrow_back")])],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-spacer"),
+                  _vm._v(" "),
+                  _c(
+                    "v-toolbar-title",
+                    { staticClass: "text-xs-center primary--text" },
+                    [_vm._v("Are You Sure You Want To Log Out?")]
+                  ),
+                  _vm._v(" "),
+                  _c("v-spacer"),
+                  _vm._v(" "),
+                  _c(
+                    "v-toolbar-items",
+                    [
+                      _c(
+                        "v-btn",
+                        {
+                          attrs: { flat: "", color: "error" },
+                          nativeOn: {
+                            click: function($event) {
+                              _vm.logout()
+                            }
+                          }
+                        },
+                        [
+                          _c("v-icon", { attrs: { right: "" } }, [
+                            _vm._v("fa-power-off")
+                          ])
+                        ],
+                        1
+                      )
+                    ],
                     1
                   )
                 ],
                 1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "v-card-text",
-            { staticStyle: { "padding-top": "100px" } },
-            [
-              _c("v-container", { attrs: { fluid: "" } }, [
-                _c(
-                  "form",
-                  {
-                    on: {
-                      submit: function($event) {
-                        $event.preventDefault()
-                        _vm.register()
-                      }
-                    }
-                  },
-                  [
+              ),
+              _vm._v(" "),
+              _c(
+                "v-card-text",
+                { staticStyle: { "padding-top": "100px" } },
+                [
+                  _c("v-container", { attrs: { fluid: "" } }, [
                     _c(
-                      "v-layout",
-                      { attrs: { row: "" } },
-                      [
-                        _c(
-                          "v-flex",
-                          {
-                            attrs: {
-                              xs12: "",
-                              sm12: "",
-                              md4: "",
-                              "offset-md4": "",
-                              lg4: "",
-                              "offset-lg4": "",
-                              xl4: "",
-                              "offset-xl4": ""
-                            }
-                          },
-                          [
-                            _c("v-text-field", {
-                              directives: [
-                                {
-                                  name: "validate",
-                                  rawName: "v-validate",
-                                  value: "required|max:255",
-                                  expression: "'required|max:255'"
-                                }
-                              ],
-                              staticClass: "primary--text",
-                              attrs: {
-                                name: "name",
-                                label: "Full Name",
-                                "data-vv-name": "name",
-                                "error-messages": _vm.errors.collect("name"),
-                                counter: "255",
-                                "prepend-icon": "fa-user"
-                              },
-                              model: {
-                                value: _vm.registerForm.name,
-                                callback: function($$v) {
-                                  _vm.$set(_vm.registerForm, "name", $$v)
-                                },
-                                expression: "registerForm.name"
-                              }
-                            })
-                          ],
-                          1
-                        )
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "v-layout",
-                      { attrs: { row: "" } },
-                      [
-                        _c(
-                          "v-flex",
-                          {
-                            attrs: {
-                              xs12: "",
-                              sm12: "",
-                              md4: "",
-                              "offset-md4": "",
-                              lg4: "",
-                              "offset-lg4": "",
-                              xl4: "",
-                              "offset-xl4": ""
-                            }
-                          },
-                          [
-                            _c("v-text-field", {
-                              directives: [
-                                {
-                                  name: "validate",
-                                  rawName: "v-validate",
-                                  value: "required|email",
-                                  expression: "'required|email'"
-                                }
-                              ],
-                              staticClass: "primary--text",
-                              attrs: {
-                                name: "email",
-                                label: "Email",
-                                "data-vv-name": "email",
-                                "error-messages": _vm.errors.collect("email"),
-                                "prepend-icon": "email",
-                                counter: "255"
-                              },
-                              model: {
-                                value: _vm.registerForm.username,
-                                callback: function($$v) {
-                                  _vm.$set(_vm.registerForm, "username", $$v)
-                                },
-                                expression: "registerForm.username"
-                              }
-                            })
-                          ],
-                          1
-                        )
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "v-layout",
-                      { attrs: { row: "" } },
-                      [
-                        _c(
-                          "v-flex",
-                          {
-                            attrs: {
-                              xs12: "",
-                              sm12: "",
-                              md4: "",
-                              "offset-md4": "",
-                              lg4: "",
-                              "offset-lg4": "",
-                              xl4: "",
-                              "offset-xl4": ""
-                            }
-                          },
-                          [
-                            _c("v-text-field", {
-                              directives: [
-                                {
-                                  name: "validate",
-                                  rawName: "v-validate",
-                                  value:
-                                    "required|min:6|confirmed:password_confirmation",
-                                  expression:
-                                    "'required|min:6|confirmed:password_confirmation'"
-                                }
-                              ],
-                              staticClass: "primary--text",
-                              attrs: {
-                                name: "password",
-                                label: "Password",
-                                "append-icon": _vm.icon,
-                                "append-icon-cb": function() {
-                                  return (_vm.password_visible = !_vm.password_visible)
-                                },
-                                type: !_vm.password_visible
-                                  ? "password"
-                                  : "text",
-                                "data-vv-name": "password",
-                                "error-messages": _vm.errors.collect(
-                                  "password"
-                                ),
-                                "prepend-icon": "fa-key",
-                                counter: "255"
-                              },
-                              model: {
-                                value: _vm.registerForm.password,
-                                callback: function($$v) {
-                                  _vm.$set(_vm.registerForm, "password", $$v)
-                                },
-                                expression: "registerForm.password"
-                              }
-                            })
-                          ],
-                          1
-                        )
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "v-layout",
-                      { attrs: { row: "" } },
-                      [
-                        _c(
-                          "v-flex",
-                          {
-                            attrs: {
-                              xs12: "",
-                              sm12: "",
-                              md4: "",
-                              "offset-md4": "",
-                              lg4: "",
-                              "offset-lg4": "",
-                              xl4: "",
-                              "offset-xl4": ""
-                            }
-                          },
-                          [
-                            _c("v-text-field", {
-                              staticClass: "primary--text",
-                              attrs: {
-                                name: "password_confirmation",
-                                label: "Confirm Password",
-                                "append-icon": _vm.icon,
-                                "append-icon-cb": function() {
-                                  return (_vm.password_visible = !_vm.password_visible)
-                                },
-                                type: !_vm.password_visible
-                                  ? "password"
-                                  : "text",
-                                "prepend-icon": "fa-copy",
-                                counter: "255"
-                              },
-                              model: {
-                                value: _vm.registerForm.password_confirmation,
-                                callback: function($$v) {
-                                  _vm.$set(
-                                    _vm.registerForm,
-                                    "password_confirmation",
-                                    $$v
-                                  )
-                                },
-                                expression: "registerForm.password_confirmation"
-                              }
-                            })
-                          ],
-                          1
-                        )
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "v-flex",
+                      "form",
                       {
-                        attrs: {
-                          xs12: "",
-                          sm12: "",
-                          md4: "",
-                          "offset-md4": "",
-                          lg4: "",
-                          "offset-lg4": "",
-                          xl4: "",
-                          "offset-xl4": ""
+                        on: {
+                          submit: function($event) {
+                            $event.preventDefault()
+                            _vm.logout()
+                          }
                         }
                       },
                       [
-                        _c(
-                          "v-btn",
-                          {
-                            class: {
-                              primary: !_vm.registerForm.busy,
-                              error: _vm.registerForm.busy
-                            },
-                            attrs: {
-                              loading: _vm.registerForm.busy,
-                              disabled: _vm.errors.any(),
-                              type: "submit",
-                              block: ""
-                            }
-                          },
-                          [_vm._v("\n              Register\n            ")]
-                        ),
+                        _vm.user
+                          ? _c(
+                              "v-layout",
+                              { attrs: { row: "" } },
+                              [
+                                _c(
+                                  "v-flex",
+                                  {
+                                    attrs: {
+                                      x12: "",
+                                      sm12: "",
+                                      md4: "",
+                                      "offset-md4": "",
+                                      lg4: "",
+                                      "offset-lg4": "",
+                                      xl4: "",
+                                      "offset-xl4": ""
+                                    }
+                                  },
+                                  [
+                                    _c(
+                                      "v-card",
+                                      { attrs: { flat: "" } },
+                                      [
+                                        _c(
+                                          "v-container",
+                                          {
+                                            attrs: {
+                                              "fill-height": "",
+                                              fluid: ""
+                                            }
+                                          },
+                                          [
+                                            _c(
+                                              "v-layout",
+                                              { attrs: { "fill-height": "" } },
+                                              [
+                                                _c(
+                                                  "v-flex",
+                                                  {
+                                                    attrs: {
+                                                      xs12: "",
+                                                      "text-xs-center": "",
+                                                      flexbox: ""
+                                                    }
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "v-avatar",
+                                                      {
+                                                        staticClass:
+                                                          "grey lighten-4",
+                                                        attrs: {
+                                                          tile: _vm.tile,
+                                                          size: _vm.avatarSize,
+                                                          "fill-height": "",
+                                                          fluid: ""
+                                                        }
+                                                      },
+                                                      [
+                                                        _c("img", {
+                                                          attrs: {
+                                                            src:
+                                                              _vm.user
+                                                                .photo_url,
+                                                            alt: _vm.user.name
+                                                          }
+                                                        })
+                                                      ]
+                                                    )
+                                                  ],
+                                                  1
+                                                )
+                                              ],
+                                              1
+                                            )
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "v-layout",
+                                          [
+                                            _c(
+                                              "v-flex",
+                                              {
+                                                attrs: {
+                                                  xs12: "",
+                                                  "text-xs-center": "",
+                                                  flexbox: ""
+                                                }
+                                              },
+                                              [
+                                                _c(
+                                                  "h5",
+                                                  {
+                                                    staticClass:
+                                                      "primary--text title"
+                                                  },
+                                                  [
+                                                    _vm._v(
+                                                      _vm._s(
+                                                        _vm._f("uppercase")(
+                                                          _vm.user.name
+                                                        )
+                                                      )
+                                                    )
+                                                  ]
+                                                )
+                                              ]
+                                            )
+                                          ],
+                                          1
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                )
+                              ],
+                              1
+                            )
+                          : _vm._e(),
                         _vm._v(" "),
                         _c(
-                          "v-btn",
-                          {
-                            staticClass: "white--text",
-                            attrs: {
-                              block: "",
-                              flat: "",
-                              color: "teal lighten-2"
-                            },
-                            nativeOn: {
-                              click: function($event) {
-                                _vm.goToLogin()
-                              }
-                            }
-                          },
+                          "v-layout",
+                          { attrs: { row: "" } },
                           [
-                            _vm._v(
-                              "\n              Already Have An Account? Go Login\n            "
+                            _c(
+                              "v-flex",
+                              {
+                                attrs: {
+                                  xs12: "",
+                                  sm12: "",
+                                  md4: "",
+                                  "offset-md4": "",
+                                  lg4: "",
+                                  "offset-lg4": "",
+                                  xl4: "",
+                                  "offset-xl4": ""
+                                }
+                              },
+                              [
+                                _c(
+                                  "v-card-actions",
+                                  [
+                                    _c(
+                                      "v-btn",
+                                      {
+                                        staticClass: "white--text",
+                                        attrs: {
+                                          block: "",
+                                          flat: "",
+                                          color: "info"
+                                        },
+                                        nativeOn: {
+                                          click: function($event) {
+                                            _vm.redirectBack()
+                                          }
+                                        }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                  No, I Want To Stay\n                "
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "v-btn",
+                                      {
+                                        staticClass: "white--text",
+                                        attrs: {
+                                          block: "",
+                                          flat: "",
+                                          color: "red lighten-2",
+                                          loading: _vm.logoutForm.busy,
+                                          disabled: _vm.logoutForm.busy,
+                                          type: "submit"
+                                        }
+                                      },
+                                      [_vm._v("Yes, Log Me Out")]
+                                    )
+                                  ],
+                                  1
+                                )
+                              ],
+                              1
                             )
-                          ]
+                          ],
+                          1
                         )
                       ],
                       1
                     )
-                  ],
-                  1
-                )
-              ])
+                  ])
+                ],
+                1
+              )
             ],
             1
           )
         ],
         1
       )
-    ],
-    1
-  )
+    : _vm._e()
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -870,7 +741,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-0bc8e89a", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-edd4a07e", module.exports)
   }
 }
 
