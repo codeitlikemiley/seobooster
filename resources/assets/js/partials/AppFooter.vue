@@ -1,5 +1,5 @@
 <template>
-  <v-footer :class="[footerClass]">
+  <v-footer :class="[footerClass]" app>
     <v-spacer/><span>© {{ year }} {{ domain }} ® | {{ trademark }}™</span><v-spacer/>
   </v-footer>
 </template>
