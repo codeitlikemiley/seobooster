@@ -645,8 +645,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__partials_AppNavBar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__partials_AppNavBar_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__partials_LeftSideBar_vue__ = __webpack_require__(689);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__partials_LeftSideBar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__partials_LeftSideBar_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_FabButton_vue__ = __webpack_require__(692);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_FabButton_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_FabButton_vue__);
 //
 //
 //
@@ -666,8 +664,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-
 
 
 
@@ -677,8 +673,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     components: {
         AppFooter: __WEBPACK_IMPORTED_MODULE_0__partials_AppFooter_vue___default.a,
         AppNavBar: __WEBPACK_IMPORTED_MODULE_1__partials_AppNavBar_vue___default.a,
-        LeftSideBar: __WEBPACK_IMPORTED_MODULE_2__partials_LeftSideBar_vue___default.a,
-        FabButton: __WEBPACK_IMPORTED_MODULE_3__components_FabButton_vue___default.a
+        LeftSideBar: __WEBPACK_IMPORTED_MODULE_2__partials_LeftSideBar_vue___default.a
     }
 });
 
@@ -1078,7 +1073,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-footer",
-    { class: [_vm.footerClass] },
+    { class: [_vm.footerClass], attrs: { app: "" } },
     [
       _c("v-spacer"),
       _c("span", [
@@ -1196,7 +1191,7 @@ exports = module.exports = __webpack_require__(635)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -1209,8 +1204,6 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__mixins_theme__ = __webpack_require__(660);
-//
-//
 //
 //
 //
@@ -1311,15 +1304,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-toolbar",
-    {
-      attrs: {
-        color: "accent",
-        dense: "",
-        fixed: "",
-        "clipped-left": "",
-        app: ""
-      }
-    },
+    { attrs: { color: "accent", fixed: "", app: "" } },
     [
       _c("v-toolbar-side-icon", {
         style: _vm.toggleBarStyle,
@@ -1594,13 +1579,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -1616,7 +1594,7 @@ var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_3_vuex__["createNam
     mixins: [__WEBPACK_IMPORTED_MODULE_2__mixins_theme__["a" /* default */]],
     data: function data() {
         return {
-            drawer: false
+            drawer: true
         };
     },
     computed: __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default()({}, mapState({
@@ -1643,11 +1621,7 @@ var render = function() {
     "v-navigation-drawer",
     {
       staticClass: "secondary",
-      attrs: {
-        fixed: "",
-        clipped: _vm.$vuetify.breakpoint.width > 1264,
-        app: ""
-      },
+      attrs: { fixed: "", app: "" },
       model: {
         value: _vm.drawer,
         callback: function($$v) {
@@ -1667,15 +1641,6 @@ var render = function() {
               title: "Home",
               href: "/",
               icon: "fa-home"
-            }
-          }),
-          _vm._v(" "),
-          _c("v-link", {
-            attrs: {
-              dark: _vm.darkClass,
-              title: "Company Profile",
-              href: "/about",
-              icon: "fa-building"
             }
           }),
           _vm._v(" "),
@@ -1861,282 +1826,6 @@ if (false) {
 
 /***/ }),
 
-/***/ 692:
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(317)
-/* script */
-var __vue_script__ = __webpack_require__(693)
-/* template */
-var __vue_template__ = __webpack_require__(694)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources\\assets\\js\\components\\FabButton.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-20a58332", Component.options)
-  } else {
-    hotAPI.reload("data-v-20a58332", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-
-/***/ 693:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends__ = __webpack_require__(661);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(88);
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["createNamespacedHelpers"])('auth'),
-    mapState = _createNamespacedHelp.mapState;
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            direction: 'top',
-            fixed: true,
-            fab: false,
-            hover: false,
-            top: false,
-            right: true,
-            bottom: true,
-            left: false,
-            absolute: false,
-            transition: 'slide-y-reverse-transition',
-            buttons: [{ name: 'home', href: '/', class: 'indigo lighten-2', icon: 'fa-home', requiresAuth: false }, { name: 'dashboard', href: '/dashboard', class: 'amber lighten-2', icon: 'fa-tachometer', requiresAuth: true }, { name: 'login', href: '/login', class: 'success', icon: 'fa-key', requiresAuth: false }, { name: 'register', href: '/register', class: 'info', icon: 'fa-user-plus', requiresAuth: false }, { name: 'logout', href: '/logout', class: 'red lighten-2', icon: 'fa-power-off', requiresAuth: true }, { name: 'scroll-up', href: null, class: 'blue-grey', icon: 'flight_takeoff', requiresAuth: false }],
-            activeFab: {
-                'class': 'primary', icon: 'fa-rocket'
-            }
-        };
-    },
-    computed: __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default()({}, mapState({
-        isAuthenticated: 'isAuthenticated'
-    })),
-    watch: {
-        top: function top(val) {
-            this.bottom = !val;
-        },
-        right: function right(val) {
-            this.left = !val;
-        },
-        bottom: function bottom(val) {
-            this.top = !val;
-        },
-        left: function left(val) {
-            this.right = !val;
-        }
-    },
-    methods: {
-        navigate: function navigate(button) {
-            var self = this;
-            self.activeFab = { class: button.class, icon: button.icon };
-
-            setTimeout(function () {
-                self.activeFab = {
-                    'class': 'primary', icon: 'fa-rocket'
-                };
-                if (button.href !== null) {
-                    self.$router.push({ path: '' + button.href });
-                } else {
-                    self.scrollToTop(300);
-                }
-            }, 500);
-        },
-        scrollToTop: function scrollToTop(scrollDuration) {
-            var cosParameter = window.scrollY / 2;
-            var scrollCount = 0;
-            var oldTimestamp = performance.now();
-
-            function step(newTimestamp) {
-                scrollCount += Math.PI / (scrollDuration / (newTimestamp - oldTimestamp));
-                if (scrollCount >= Math.PI) window.scrollTo(0, 0);
-                if (window.scrollY === 0) return;
-                window.scrollTo(0, Math.round(cosParameter + cosParameter * Math.cos(scrollCount)));
-                oldTimestamp = newTimestamp;
-                window.requestAnimationFrame(step);
-            }
-
-            window.requestAnimationFrame(step);
-        },
-        isVisible: function isVisible(button) {
-            var self = this;
-            if (button.requiresAuth === false && button.name === 'login') {
-                return !self.isAuthenticated;
-            } else if (button.requiresAuth === false && button.name === 'register') {
-                return !self.isAuthenticated;
-            } else if (button.requiresAuth === true) {
-                return self.isAuthenticated;
-            } else if (button.requiresAuth === false) {
-                return true;
-            }
-        }
-    }
-});
-
-/***/ }),
-
-/***/ 694:
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "v-speed-dial",
-    {
-      attrs: {
-        top: _vm.top,
-        bottom: _vm.bottom,
-        right: _vm.right,
-        left: _vm.left,
-        direction: _vm.direction,
-        hover: _vm.hover,
-        transition: _vm.transition,
-        absolute: _vm.absolute,
-        fixed: _vm.fixed
-      },
-      model: {
-        value: _vm.fab,
-        callback: function($$v) {
-          _vm.fab = $$v
-        },
-        expression: "fab"
-      }
-    },
-    [
-      _c(
-        "v-btn",
-        {
-          class: [_vm.activeFab.class],
-          attrs: { slot: "activator", dark: "", fab: "", hover: "" },
-          slot: "activator",
-          model: {
-            value: _vm.fab,
-            callback: function($$v) {
-              _vm.fab = $$v
-            },
-            expression: "fab"
-          }
-        },
-        [
-          _c("v-icon", { staticClass: "white--text" }, [
-            _vm._v(_vm._s(_vm.activeFab.icon))
-          ]),
-          _vm._v(" "),
-          _c("v-icon", { staticClass: "error--text" }, [_vm._v("close")])
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _vm._l(_vm.buttons, function(button) {
-        return _vm.isVisible(button)
-          ? _c(
-              "v-btn",
-              {
-                key: button.name,
-                class: [button.class],
-                attrs: { fab: "", dark: "", small: "" },
-                nativeOn: {
-                  click: function($event) {
-                    _vm.navigate(button)
-                  }
-                }
-              },
-              [_c("v-icon", [_vm._v(_vm._s(button.icon))])],
-              1
-            )
-          : _vm._e()
-      })
-    ],
-    2
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-20a58332", module.exports)
-  }
-}
-
-/***/ }),
-
 /***/ 699:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2146,33 +1835,25 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-app",
-    {},
+    { attrs: { id: "inspire" } },
     [
       _c("left-side-bar"),
       _vm._v(" "),
       _c("app-nav-bar"),
       _vm._v(" "),
       _c(
-        "main",
-        [
-          _c(
-            "v-container",
-            {
-              attrs: {
-                transition: "slide-x-transition",
-                fluid: "",
-                "pa-0": "",
-                "ma-0": ""
-              }
-            },
-            [_vm._t("default")],
-            2
-          )
-        ],
-        1
+        "v-content",
+        {
+          attrs: {
+            transition: "slide-x-transition",
+            fluid: "",
+            "pa-0": "",
+            "ma-0": ""
+          }
+        },
+        [_vm._t("default")],
+        2
       ),
-      _vm._v(" "),
-      _c("fab-button"),
       _vm._v(" "),
       _c("app-footer")
     ],
@@ -2251,6 +1932,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_dashboard_RecentActivities_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_dashboard_RecentActivities_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_dashboard_NetworkActivities_vue__ = __webpack_require__(804);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_dashboard_NetworkActivities_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__components_dashboard_NetworkActivities_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2450,6 +2150,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: {
@@ -2491,7 +2194,8 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "div",
+    "v-container",
+    { attrs: { fluid: "", "pa-0": "", "ma-0": "" } },
     [
       _c(
         "v-layout",
@@ -2505,7 +2209,8 @@ var render = function() {
                 "v-card",
                 {
                   staticClass: "ma-1",
-                  attrs: { color: "blue-grey", height: "110px" }
+                  staticStyle: { "background-color": "#333333" },
+                  attrs: { height: "110px" }
                 },
                 [
                   _c(
@@ -2539,7 +2244,8 @@ var render = function() {
                 "v-card",
                 {
                   staticClass: "ma-1",
-                  attrs: { color: "red lighten-2", height: "110px" }
+                  staticStyle: { "background-color": "#333333" },
+                  attrs: { height: "110px" }
                 },
                 [
                   _c(
@@ -2573,7 +2279,8 @@ var render = function() {
                 "v-card",
                 {
                   staticClass: "ma-1",
-                  attrs: { color: "cyan", height: "110px" }
+                  staticStyle: { "background-color": "#333333" },
+                  attrs: { height: "110px" }
                 },
                 [
                   _c(
@@ -2702,7 +2409,7 @@ exports = module.exports = __webpack_require__(635)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -2714,6 +2421,15 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3016,13 +2732,25 @@ var render = function() {
                 ),
                 _vm._v(" "),
                 _c("td", { staticClass: "title text-xs-left primary--text" }, [
-                  _c("span", { staticClass: "title blue-grey--text" }, [
-                    _vm._v(_vm._s(props.item.message))
-                  ])
+                  _c(
+                    "span",
+                    { staticClass: "title", staticStyle: { color: "#333333" } },
+                    [
+                      _vm._v(
+                        "\n          " +
+                          _vm._s(props.item.message) +
+                          "\n        "
+                      )
+                    ]
+                  )
                 ]),
                 _vm._v(" "),
                 _c("td", { staticClass: "title text-xs-left primary--text" }, [
-                  _vm._v(_vm._s(props.item.date))
+                  _c("span", { staticStyle: { color: "#f5c300" } }, [
+                    _vm._v(
+                      "\n          " + _vm._s(props.item.date) + "\n        "
+                    )
+                  ])
                 ]),
                 _vm._v(" "),
                 _c(
@@ -3042,7 +2770,8 @@ var render = function() {
                     _c(
                       "v-btn",
                       {
-                        attrs: { flat: "", icon: "", color: "error" },
+                        staticStyle: { color: "#333333" },
+                        attrs: { flat: "", icon: "" },
                         nativeOn: { click: function($event) {} }
                       },
                       [_c("v-icon", [_vm._v("fa-trash")])],
@@ -3181,7 +2910,7 @@ exports = module.exports = __webpack_require__(635)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -3193,6 +2922,15 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3500,13 +3238,25 @@ var render = function() {
                 ),
                 _vm._v(" "),
                 _c("td", { staticClass: "title text-xs-left primary--text" }, [
-                  _c("span", { staticClass: "title blue-grey--text" }, [
-                    _vm._v(_vm._s(props.item.message))
-                  ])
+                  _c(
+                    "span",
+                    { staticClass: "title", staticStyle: { color: "#333333" } },
+                    [
+                      _vm._v(
+                        "\n          " +
+                          _vm._s(props.item.message) +
+                          "\n        "
+                      )
+                    ]
+                  )
                 ]),
                 _vm._v(" "),
                 _c("td", { staticClass: "title text-xs-left primary--text" }, [
-                  _vm._v(_vm._s(props.item.date))
+                  _c("span", { staticStyle: { color: "#f5c300" } }, [
+                    _vm._v(
+                      "\n          " + _vm._s(props.item.date) + "\n        "
+                    )
+                  ])
                 ]),
                 _vm._v(" "),
                 _c(
@@ -3614,86 +3364,78 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "main-layout",
-    { style: { paddingTop: "100px", backgroundColor: "white" } },
     [
+      _c("panel-row", {
+        attrs: {
+          lifetime: _vm.lifetime,
+          monthly: _vm.monthly,
+          "social-count": _vm.socialCount
+        }
+      }),
+      _vm._v(" "),
       _c(
-        "v-container",
-        { attrs: { fluid: "" } },
+        "v-tabs",
+        { attrs: { fixed: "", light: "", centered: "" } },
         [
-          _c("panel-row", {
-            attrs: {
-              lifetime: _vm.lifetime,
-              monthly: _vm.monthly,
-              "social-count": _vm.socialCount
-            }
-          }),
-          _vm._v(" "),
           _c(
-            "v-tabs",
-            { attrs: { fixed: "", light: "", centered: "" } },
+            "v-toolbar",
+            { attrs: { color: "white", light: "" } },
             [
               _c(
-                "v-toolbar",
-                { attrs: { color: "white", light: "" } },
+                "v-tabs-bar",
+                {
+                  staticClass: "white",
+                  attrs: { slot: "extension" },
+                  slot: "extension"
+                },
                 [
-                  _c(
-                    "v-tabs-bar",
-                    {
-                      staticClass: "white",
-                      attrs: { slot: "extension" },
-                      slot: "extension"
-                    },
-                    [
-                      _c("v-tabs-slider", { attrs: { color: "primary" } }),
-                      _vm._v(" "),
-                      _vm._l(_vm.tabs, function(tab, key) {
-                        return _c(
-                          "v-tabs-item",
-                          {
-                            key: key,
-                            staticClass: "primary--text",
-                            attrs: { href: "#" + tab.name, ripple: "" }
-                          },
-                          [
-                            _c("v-icon", { attrs: { color: tab.iconColor } }, [
-                              _vm._v(_vm._s(tab.icon))
-                            ])
-                          ],
-                          1
-                        )
-                      })
-                    ],
-                    2
-                  )
+                  _c("v-tabs-slider", { attrs: { color: "primary" } }),
+                  _vm._v(" "),
+                  _vm._l(_vm.tabs, function(tab, key) {
+                    return _c(
+                      "v-tabs-item",
+                      {
+                        key: key,
+                        staticClass: "primary--text",
+                        attrs: { href: "#" + tab.name, ripple: "" }
+                      },
+                      [
+                        _c("v-icon", { attrs: { color: tab.iconColor } }, [
+                          _vm._v(_vm._s(tab.icon))
+                        ])
+                      ],
+                      1
+                    )
+                  })
                 ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "v-tabs-items",
-                _vm._l(_vm.tabs, function(tab, key) {
-                  return _c(
-                    "v-tabs-content",
-                    { key: key, attrs: { id: tab.name } },
-                    [
-                      _c(
-                        "v-card",
-                        { attrs: { flat: "", light: true } },
-                        [
-                          _c(tab.component, {
-                            tag: "component",
-                            attrs: { tab: tab }
-                          })
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                })
+                2
               )
             ],
             1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-tabs-items",
+            _vm._l(_vm.tabs, function(tab, key) {
+              return _c(
+                "v-tabs-content",
+                { key: key, attrs: { id: tab.name } },
+                [
+                  _c(
+                    "v-card",
+                    { attrs: { flat: "", light: true } },
+                    [
+                      _c(tab.component, {
+                        tag: "component",
+                        attrs: { tab: tab }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            })
           )
         ],
         1

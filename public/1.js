@@ -984,7 +984,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-footer",
-    { class: [_vm.footerClass] },
+    { class: [_vm.footerClass], attrs: { app: "" } },
     [
       _c("v-spacer"),
       _c("span", [
@@ -1102,7 +1102,7 @@ exports = module.exports = __webpack_require__(635)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -1119,6 +1119,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__mixins_theme__ = __webpack_require__(660);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vuex__ = __webpack_require__(88);
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -1382,12 +1396,14 @@ var render = function() {
       _vm.isAuthenticated
         ? _c(
             "v-btn",
-            { attrs: { outline: "", color: "accent", to: "/logout" } },
+            { attrs: { outline: "", color: "accent", to: "/dashboard" } },
             [
-              _c("span", { staticClass: "primary--text" }, [_vm._v("Logout")]),
+              _c("span", { staticClass: "primary--text" }, [
+                _vm._v("Dashboard")
+              ]),
               _vm._v(" "),
-              _c("v-icon", { attrs: { right: "", color: "red darken-4" } }, [
-                _vm._v("\n      fa-sign-out\n    ")
+              _c("v-icon", { attrs: { right: "", color: "blue-grey" } }, [
+                _vm._v("\n      fa-tachometer\n    ")
               ])
             ],
             1
@@ -1405,7 +1421,22 @@ var render = function() {
           ])
         ],
         1
-      )
+      ),
+      _vm._v(" "),
+      _vm.isAuthenticated
+        ? _c(
+            "v-btn",
+            { attrs: { outline: "", color: "accent", to: "/logout" } },
+            [
+              _c("span", { staticClass: "primary--text" }, [_vm._v("Logout")]),
+              _vm._v(" "),
+              _c("v-icon", { attrs: { right: "", color: "red darken-4" } }, [
+                _vm._v("\n      fa-sign-out\n    ")
+              ])
+            ],
+            1
+          )
+        : _vm._e()
     ],
     1
   )
@@ -1417,282 +1448,6 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
     require("vue-hot-reload-api")      .rerender("data-v-29dacbaa", module.exports)
-  }
-}
-
-/***/ }),
-
-/***/ 692:
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(317)
-/* script */
-var __vue_script__ = __webpack_require__(693)
-/* template */
-var __vue_template__ = __webpack_require__(694)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources\\assets\\js\\components\\FabButton.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-20a58332", Component.options)
-  } else {
-    hotAPI.reload("data-v-20a58332", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-
-/***/ 693:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends__ = __webpack_require__(661);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(88);
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["createNamespacedHelpers"])('auth'),
-    mapState = _createNamespacedHelp.mapState;
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            direction: 'top',
-            fixed: true,
-            fab: false,
-            hover: false,
-            top: false,
-            right: true,
-            bottom: true,
-            left: false,
-            absolute: false,
-            transition: 'slide-y-reverse-transition',
-            buttons: [{ name: 'home', href: '/', class: 'indigo lighten-2', icon: 'fa-home', requiresAuth: false }, { name: 'dashboard', href: '/dashboard', class: 'amber lighten-2', icon: 'fa-tachometer', requiresAuth: true }, { name: 'login', href: '/login', class: 'success', icon: 'fa-key', requiresAuth: false }, { name: 'register', href: '/register', class: 'info', icon: 'fa-user-plus', requiresAuth: false }, { name: 'logout', href: '/logout', class: 'red lighten-2', icon: 'fa-power-off', requiresAuth: true }, { name: 'scroll-up', href: null, class: 'blue-grey', icon: 'flight_takeoff', requiresAuth: false }],
-            activeFab: {
-                'class': 'primary', icon: 'fa-rocket'
-            }
-        };
-    },
-    computed: __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default()({}, mapState({
-        isAuthenticated: 'isAuthenticated'
-    })),
-    watch: {
-        top: function top(val) {
-            this.bottom = !val;
-        },
-        right: function right(val) {
-            this.left = !val;
-        },
-        bottom: function bottom(val) {
-            this.top = !val;
-        },
-        left: function left(val) {
-            this.right = !val;
-        }
-    },
-    methods: {
-        navigate: function navigate(button) {
-            var self = this;
-            self.activeFab = { class: button.class, icon: button.icon };
-
-            setTimeout(function () {
-                self.activeFab = {
-                    'class': 'primary', icon: 'fa-rocket'
-                };
-                if (button.href !== null) {
-                    self.$router.push({ path: '' + button.href });
-                } else {
-                    self.scrollToTop(300);
-                }
-            }, 500);
-        },
-        scrollToTop: function scrollToTop(scrollDuration) {
-            var cosParameter = window.scrollY / 2;
-            var scrollCount = 0;
-            var oldTimestamp = performance.now();
-
-            function step(newTimestamp) {
-                scrollCount += Math.PI / (scrollDuration / (newTimestamp - oldTimestamp));
-                if (scrollCount >= Math.PI) window.scrollTo(0, 0);
-                if (window.scrollY === 0) return;
-                window.scrollTo(0, Math.round(cosParameter + cosParameter * Math.cos(scrollCount)));
-                oldTimestamp = newTimestamp;
-                window.requestAnimationFrame(step);
-            }
-
-            window.requestAnimationFrame(step);
-        },
-        isVisible: function isVisible(button) {
-            var self = this;
-            if (button.requiresAuth === false && button.name === 'login') {
-                return !self.isAuthenticated;
-            } else if (button.requiresAuth === false && button.name === 'register') {
-                return !self.isAuthenticated;
-            } else if (button.requiresAuth === true) {
-                return self.isAuthenticated;
-            } else if (button.requiresAuth === false) {
-                return true;
-            }
-        }
-    }
-});
-
-/***/ }),
-
-/***/ 694:
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "v-speed-dial",
-    {
-      attrs: {
-        top: _vm.top,
-        bottom: _vm.bottom,
-        right: _vm.right,
-        left: _vm.left,
-        direction: _vm.direction,
-        hover: _vm.hover,
-        transition: _vm.transition,
-        absolute: _vm.absolute,
-        fixed: _vm.fixed
-      },
-      model: {
-        value: _vm.fab,
-        callback: function($$v) {
-          _vm.fab = $$v
-        },
-        expression: "fab"
-      }
-    },
-    [
-      _c(
-        "v-btn",
-        {
-          class: [_vm.activeFab.class],
-          attrs: { slot: "activator", dark: "", fab: "", hover: "" },
-          slot: "activator",
-          model: {
-            value: _vm.fab,
-            callback: function($$v) {
-              _vm.fab = $$v
-            },
-            expression: "fab"
-          }
-        },
-        [
-          _c("v-icon", { staticClass: "white--text" }, [
-            _vm._v(_vm._s(_vm.activeFab.icon))
-          ]),
-          _vm._v(" "),
-          _c("v-icon", { staticClass: "error--text" }, [_vm._v("close")])
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _vm._l(_vm.buttons, function(button) {
-        return _vm.isVisible(button)
-          ? _c(
-              "v-btn",
-              {
-                key: button.name,
-                class: [button.class],
-                attrs: { fab: "", dark: "", small: "" },
-                nativeOn: {
-                  click: function($event) {
-                    _vm.navigate(button)
-                  }
-                }
-              },
-              [_c("v-icon", [_vm._v(_vm._s(button.icon))])],
-              1
-            )
-          : _vm._e()
-      })
-    ],
-    2
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-20a58332", module.exports)
   }
 }
 
@@ -5251,10 +5006,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__partials_AppFooter_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__partials_AppFooter_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__partials_HomeNavBar__ = __webpack_require__(679);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__partials_HomeNavBar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__partials_HomeNavBar__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_FabButton_vue__ = __webpack_require__(692);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_FabButton_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_FabButton_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__partials_CookieLaw_vue__ = __webpack_require__(695);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__partials_CookieLaw_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__partials_CookieLaw_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__partials_CookieLaw_vue__ = __webpack_require__(695);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__partials_CookieLaw_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__partials_CookieLaw_vue__);
 //
 //
 //
@@ -5274,8 +5027,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-
 
 
 
@@ -5284,8 +5035,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
     components: {
         AppFooter: __WEBPACK_IMPORTED_MODULE_0__partials_AppFooter_vue___default.a,
-        FabButton: __WEBPACK_IMPORTED_MODULE_2__components_FabButton_vue___default.a,
-        CookieLaw: __WEBPACK_IMPORTED_MODULE_3__partials_CookieLaw_vue___default.a,
+        CookieLaw: __WEBPACK_IMPORTED_MODULE_2__partials_CookieLaw_vue___default.a,
         HomeNavBar: __WEBPACK_IMPORTED_MODULE_1__partials_HomeNavBar___default.a
     }
 });
@@ -5324,8 +5074,6 @@ var render = function() {
         ],
         1
       ),
-      _vm._v(" "),
-      _c("fab-button"),
       _vm._v(" "),
       _c("cookie-law"),
       _vm._v(" "),
