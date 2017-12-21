@@ -1290,13 +1290,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         linkColor: {
             type: String,
             default: function _default() {
-                return this.dark ? '#fafafa' : '#78909C'; // white or blue-grey lighten-1
+                return this.dark ? '#fafafa' : '#e3b500'; // white or blue-grey lighten-1
             }
         },
         activeColor: {
             type: String,
             default: function _default() {
-                return '#4db6ac'; // teal lighten 2
+                return '#e3b500'; // teal lighten 2
             }
         }
     },

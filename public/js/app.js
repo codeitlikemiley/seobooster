@@ -21544,8 +21544,8 @@ var app = window.vm = new __WEBPACK_IMPORTED_MODULE_1_vue___default.a({
     store: __WEBPACK_IMPORTED_MODULE_4__store__["a" /* default */],
     router: __WEBPACK_IMPORTED_MODULE_2__router__["a" /* default */],
     el: '#app',
-    template: '<App/>',
-    components: { App: __WEBPACK_IMPORTED_MODULE_3__App_vue___default.a }
+    components: { App: __WEBPACK_IMPORTED_MODULE_3__App_vue___default.a },
+    template: '<App/>'
 });
 
 /***/ }),

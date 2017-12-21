@@ -834,13 +834,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         linkColor: {
             type: String,
             default: function _default() {
-                return this.dark ? '#fafafa' : '#78909C'; // white or blue-grey lighten-1
+                return this.dark ? '#fafafa' : '#e3b500'; // white or blue-grey lighten-1
             }
         },
         activeColor: {
             type: String,
             default: function _default() {
-                return '#4db6ac'; // teal lighten 2
+                return '#e3b500'; // teal lighten 2
             }
         }
     },
@@ -2744,7 +2744,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            showcase: [{ show: true, title: 'Complete Social SEO', src: '/svg/complete-seo.svg', xs: 12, sm: 12, md: 4, lg: 4, xl: 4 }, { show: true, title: 'Control Traffic and CTR', src: '/svg/traffic-control.svg', xs: 12, sm: 12, md: 4, lg: 4, xl: 4 }, { show: true, title: 'Rank Videos Faster Than Ever', src: '/svg/video-ranking.svg', xs: 12, sm: 12, md: 4, lg: 4, xl: 4 }]
+            showcase: [{ show: true, title: 'Complete Social SEO', src: '/svg/complete-seo.svg', xs: 12, sm: 12, md: 4, lg: 4, xl: 4 }, { show: true, title: 'Control Traffic and CTR', src: '/svg/traffic-control.svg', xs: 12, sm: 12, md: 4, lg: 4, xl: 4 }, { show: true, title: 'Rank Videos Faster Than Ever', src: '/svg/rank-videos.svg', xs: 12, sm: 12, md: 4, lg: 4, xl: 4 }]
         };
     }
 });
