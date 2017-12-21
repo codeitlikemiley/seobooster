@@ -32,6 +32,6 @@ const app = window.vm = new Vue({
     store,
     router,
     el: '#app',
-    template: '<App/>',
-    components: { App }
+    components: { App },
+    template: '<App/>'
 })
