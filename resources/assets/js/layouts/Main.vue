@@ -5,15 +5,13 @@
   >
     <left-side-bar/>
     <app-nav-bar/>
-    <v-content>
-      <!-- added fluid and pa-0 ma-0 for full screen pages -->
-      <v-container 
-        transition="slide-x-transition" 
-        fluid 
-        fill-height
-      >
-        <slot/>
-      </v-container>
+    <v-content
+      transition="slide-x-transition" 
+      fluid
+      pa-0
+      ma-0
+    >
+      <slot/>
     </v-content>
     <fab-button/>
     <app-footer/>
