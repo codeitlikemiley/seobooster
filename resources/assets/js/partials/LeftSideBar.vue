@@ -1,7 +1,6 @@
 <template>
   <v-navigation-drawer
     fixed
-    :clipped="$vuetify.breakpoint.width > 1264"
     v-model="drawer"
     class="secondary"
     app
@@ -14,12 +13,6 @@
         title="Home" 
         :href="'/'" 
         icon="fa-home"
-      />
-      <v-link 
-        :dark="darkClass" 
-        title="Company Profile" 
-        :href="'/about'" 
-        icon="fa-building"
       />
       <v-link 
         :dark="darkClass" 
@@ -139,7 +132,7 @@ export default {
     },
     mixins: [Theme],
     data: () => ({
-        drawer: false
+        drawer: true
     }),
     computed: {
         ...mapState({
