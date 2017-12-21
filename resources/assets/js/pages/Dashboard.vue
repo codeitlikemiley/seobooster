@@ -27,7 +27,7 @@
             ripple
             class="primary--text"
           >
-            <v-icon :color="tab.iconColor">{{ tab.icon }}</v-icon>
+            <v-icon :style="{ color: tab.iconColor }">{{ tab.icon }}</v-icon>
           </v-tabs-item>
         </v-tabs-bar>
       </v-toolbar>
@@ -76,8 +76,8 @@ export default {
         socialCount: 0,
         /* tabs */
         tabs: [
-            {name: 'recent activities', component: 'recent-activities', icon: 'history', iconColor: 'cyan'},
-            {name: 'network activities', component: 'network-activities', icon: 'fa-tasks', iconColor: 'green darken-2'}
+            {name: 'recent activities', component: 'recent-activities', icon: 'history', iconColor: '#333333'},
+            {name: 'network activities', component: 'network-activities', icon: 'fa-tasks', iconColor: '#f5c300'}
         ],
         active: {
             name: 'recent activities'
