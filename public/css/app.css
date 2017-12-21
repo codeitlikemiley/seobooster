@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons);.black {
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:300,400,500,600);@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons);.black {
   background-color: #000 !important;
   border-color: #000 !important;
 }
@@ -11759,4 +11759,44 @@ table.table tfoot tr {
 }
 [v-cloak] {
   display: none;
+}
+h1 {
+  font-family: Playfair Display;
+}
+.diplay-4 {
+  font-family: Playfair Display;
+}
+h2 {
+  font-family: Playfair Display;
+}
+.display-3 {
+  font-family: Playfair Display;
+}
+h3 {
+  font-family: Playfair Display;
+}
+.display-2 {
+  font-family: Playfair Display;
+}
+h4 {
+  font-family: Playfair Display;
+}
+.display-1 {
+  font-family: Playfair Display;
+}
+h5 {
+  font-family: Playfair Display;
+}
+.headline {
+  font-family: PlayFair Display;
+}
+h6 {
+  font-family: Playfair Display;
+}
+.title {
+  font-family: Playfair Display;
+}
+em {
+  font-family: Playfair Display;
+  font-style: italic;
 }
