@@ -1,18 +1,20 @@
 <template>
-  <v-app v-cloak>
+  <v-app 
+    v-cloak 
+    id="inspire"
+  >
     <left-side-bar/>
     <app-nav-bar/>
-    <main>
+    <v-content>
       <!-- added fluid and pa-0 ma-0 for full screen pages -->
       <v-container 
         transition="slide-x-transition" 
         fluid 
-        pa-0 
-        ma-0
+        fill-height
       >
         <slot/>
       </v-container>
-    </main>
+    </v-content>
     <fab-button/>
     <app-footer/>
   </v-app>
