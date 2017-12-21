@@ -2075,7 +2075,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
 
             /* tabs */
-            tabs: [{ name: 'blog reports', component: 'blog-reports', icon: 'fa-newspaper-o', iconColor: 'blue-grey' }, { name: 'social reports', component: 'social-reports', icon: 'fa-share-alt ', iconColor: 'light-blue' }, { name: 'video reports', component: 'video-reports', icon: 'fa-youtube-play ', iconColor: 'red darken-4' }],
+            tabs: [{ name: 'blog reports', component: 'blog-reports', icon: 'fa-newspaper-o', iconColor: 'blue-grey' }, { name: 'social reports', component: 'social-reports', icon: 'fa-share-alt', iconColor: 'light-blue' }, { name: 'video reports', component: 'video-reports', icon: 'fa-youtube-play ', iconColor: 'red darken-4' }],
             active: {
                 name: 'blog reports'
             }
@@ -2172,7 +2172,7 @@ exports = module.exports = __webpack_require__(635)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -2186,6 +2186,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ReportProps_vue__ = __webpack_require__(727);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ReportProps_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__ReportProps_vue__);
+//
 //
 //
 //
@@ -2568,7 +2569,7 @@ exports = module.exports = __webpack_require__(635)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -2580,6 +2581,16 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2797,227 +2808,258 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _c("v-data-table", {
-        attrs: {
-          items: _vm.items,
-          headers: _vm.headers,
-          search: _vm.search,
-          "item-key": "id",
-          "select-all": "",
-          pagination: _vm.pagination
-        },
-        on: {
-          "update:pagination": function($event) {
-            _vm.pagination = $event
-          }
-        },
-        scopedSlots: _vm._u([
-          {
-            key: "headers",
-            fn: function(props) {
-              return [
-                _c(
-                  "tr",
-                  [
-                    _c(
-                      "th",
-                      [
-                        _vm.items.length > 0
-                          ? _c("v-checkbox", {
-                              attrs: {
-                                primary: "",
-                                "hide-details": "",
-                                "input-value": props.all,
-                                indeterminate: props.indeterminate
-                              },
-                              nativeOn: {
-                                click: function($event) {
-                                  _vm.toggleAll($event)
-                                }
-                              }
-                            })
-                          : _vm._e()
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _vm._l(props.headers, function(header) {
-                      return _c(
+      _c(
+        "v-data-table",
+        {
+          attrs: {
+            items: _vm.items,
+            headers: _vm.headers,
+            search: _vm.search,
+            "item-key": "id",
+            "select-all": "",
+            pagination: _vm.pagination
+          },
+          on: {
+            "update:pagination": function($event) {
+              _vm.pagination = $event
+            }
+          },
+          scopedSlots: _vm._u([
+            {
+              key: "headers",
+              fn: function(props) {
+                return [
+                  _c(
+                    "tr",
+                    [
+                      _c(
                         "th",
-                        {
-                          key: header.text,
-                          class: [
-                            "column sortable",
-                            _vm.pagination.descending ? "desc" : "asc",
-                            header.value === _vm.pagination.sortBy
-                              ? "active"
-                              : ""
-                          ],
-                          on: {
-                            click: function($event) {
-                              _vm.changeSort(header.value)
-                            }
-                          }
-                        },
                         [
-                          _c("v-icon", [_vm._v("arrow_upward")]),
-                          _vm._v(
-                            "\n          " + _vm._s(header.text) + "\n        "
-                          )
+                          _vm.items.length > 0
+                            ? _c("v-checkbox", {
+                                attrs: {
+                                  primary: "",
+                                  "hide-details": "",
+                                  "input-value": props.all,
+                                  indeterminate: props.indeterminate
+                                },
+                                nativeOn: {
+                                  click: function($event) {
+                                    _vm.toggleAll($event)
+                                  }
+                                }
+                              })
+                            : _vm._e()
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _vm._l(props.headers, function(header) {
+                        return _c(
+                          "th",
+                          {
+                            key: header.text,
+                            class: [
+                              "column sortable",
+                              _vm.pagination.descending ? "desc" : "asc",
+                              header.value === _vm.pagination.sortBy
+                                ? "active"
+                                : ""
+                            ],
+                            on: {
+                              click: function($event) {
+                                _vm.changeSort(header.value)
+                              }
+                            }
+                          },
+                          [
+                            _c("v-icon", [_vm._v("arrow_upward")]),
+                            _vm._v(
+                              "\n          " +
+                                _vm._s(header.text) +
+                                "\n        "
+                            )
+                          ],
+                          1
+                        )
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "th",
+                        [
+                          _vm.selected < 1
+                            ? _c("span", [_vm._v("Actions")])
+                            : _c(
+                                "v-btn",
+                                {
+                                  attrs: { flat: "", icon: "", color: "error" },
+                                  nativeOn: {
+                                    click: function($event) {
+                                      _vm.deleteSelected($event)
+                                    }
+                                  }
+                                },
+                                [_c("v-icon", [_vm._v("fa-trash")])],
+                                1
+                              )
                         ],
                         1
                       )
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "th",
-                      [
-                        _vm.selected < 1
-                          ? _c("span", [_vm._v("Actions")])
-                          : _c(
-                              "v-btn",
-                              {
-                                attrs: { flat: "", icon: "", color: "error" },
-                                nativeOn: {
-                                  click: function($event) {
-                                    _vm.deleteSelected($event)
-                                  }
-                                }
-                              },
-                              [_c("v-icon", [_vm._v("fa-trash")])],
-                              1
-                            )
-                      ],
-                      1
-                    )
-                  ],
-                  2
-                )
-              ]
-            }
-          },
-          {
-            key: "items",
-            fn: function(props) {
-              return [
-                _c(
-                  "td",
-                  [
-                    _c("v-checkbox", {
-                      attrs: { primary: "", "hide-details": "" },
-                      model: {
-                        value: props.selected,
-                        callback: function($$v) {
-                          _vm.$set(props, "selected", $$v)
-                        },
-                        expression: "props.selected"
-                      }
-                    })
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c("td", { staticClass: "text-xs-left" }, [
-                  _vm._v(
-                    "\n        " + _vm._s(props.item.platform) + "\n      "
+                    ],
+                    2
                   )
-                ]),
-                _vm._v(" "),
-                _c(
-                  "td",
-                  { staticClass: "text-xs-center" },
-                  [
-                    _c(
-                      "v-chip",
-                      {
-                        class: {
-                          green: _vm.isActive(props.item),
-                          red: !_vm.isActive(props.item)
-                        },
-                        attrs: { "text-color": "white" }
-                      },
-                      [
-                        _c("span", [
-                          _vm._v(
-                            _vm._s(
-                              "" + (props.item.posted ? "Posted" : "Failed")
-                            )
-                          )
-                        ])
-                      ]
-                    )
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "td",
-                  { staticClass: "text-xs-center" },
-                  [
-                    props.item.posted
-                      ? _c(
-                          "v-btn",
-                          {
-                            attrs: { flat: "", icon: "", color: "cyan" },
-                            nativeOn: { click: function($event) {} }
+                ]
+              }
+            },
+            {
+              key: "items",
+              fn: function(props) {
+                return [
+                  _c(
+                    "td",
+                    [
+                      _c("v-checkbox", {
+                        attrs: { primary: "", "hide-details": "" },
+                        model: {
+                          value: props.selected,
+                          callback: function($$v) {
+                            _vm.$set(props, "selected", $$v)
                           },
-                          [_c("v-icon", [_vm._v("fa-eye")])],
-                          1
-                        )
-                      : _c(
-                          "v-btn",
-                          {
-                            attrs: { flat: "", icon: "", color: "red" },
-                            nativeOn: { click: function($event) {} }
-                          },
-                          [_c("v-icon", [_vm._v("fa-exclamation-triangle")])],
-                          1
-                        ),
-                    _vm._v(" "),
-                    _c(
-                      "v-btn",
-                      {
-                        attrs: { flat: "", icon: "", color: "error" },
-                        nativeOn: {
-                          click: function($event) {
-                            _vm.deleteItem(props.item)
-                          }
+                          expression: "props.selected"
                         }
-                      },
-                      [_c("v-icon", [_vm._v("fa-remove")])],
-                      1
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "text-xs-left" }, [
+                    _vm._v(
+                      "\n        " + _vm._s(props.item.platform) + "\n      "
                     )
-                  ],
-                  1
-                )
-              ]
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "td",
+                    { staticClass: "text-xs-center" },
+                    [
+                      _c(
+                        "v-chip",
+                        {
+                          class: {
+                            green: _vm.isActive(props.item),
+                            red: !_vm.isActive(props.item)
+                          },
+                          attrs: { "text-color": "white" }
+                        },
+                        [
+                          _c("span", [
+                            _vm._v(
+                              _vm._s(
+                                "" + (props.item.posted ? "Posted" : "Failed")
+                              )
+                            )
+                          ])
+                        ]
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "td",
+                    { staticClass: "text-xs-center" },
+                    [
+                      props.item.posted
+                        ? _c(
+                            "v-btn",
+                            {
+                              attrs: { flat: "", icon: "", color: "cyan" },
+                              nativeOn: { click: function($event) {} }
+                            },
+                            [_c("v-icon", [_vm._v("fa-eye")])],
+                            1
+                          )
+                        : _c(
+                            "v-btn",
+                            {
+                              attrs: { flat: "", icon: "", color: "red" },
+                              nativeOn: { click: function($event) {} }
+                            },
+                            [_c("v-icon", [_vm._v("fa-exclamation-triangle")])],
+                            1
+                          ),
+                      _vm._v(" "),
+                      _c(
+                        "v-btn",
+                        {
+                          attrs: { flat: "", icon: "", color: "error" },
+                          nativeOn: {
+                            click: function($event) {
+                              _vm.deleteItem(props.item)
+                            }
+                          }
+                        },
+                        [_c("v-icon", [_vm._v("fa-remove")])],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ]
+              }
+            },
+            {
+              key: "pageText",
+              fn: function(ref) {
+                var pageStart = ref.pageStart
+                var pageStop = ref.pageStop
+                return [
+                  _vm._v(
+                    "\n      From " +
+                      _vm._s(pageStart) +
+                      " to " +
+                      _vm._s(pageStop) +
+                      "\n    "
+                  )
+                ]
+              }
             }
-          },
-          {
-            key: "pageText",
-            fn: function(ref) {
-              var pageStart = ref.pageStart
-              var pageStop = ref.pageStop
-              return [
-                _vm._v(
-                  "\n      From " +
-                    _vm._s(pageStart) +
-                    " to " +
-                    _vm._s(pageStop) +
-                    "\n    "
-                )
-              ]
-            }
+          ]),
+          model: {
+            value: _vm.selected,
+            callback: function($$v) {
+              _vm.selected = $$v
+            },
+            expression: "selected"
           }
-        ]),
-        model: {
-          value: _vm.selected,
-          callback: function($$v) {
-            _vm.selected = $$v
-          },
-          expression: "selected"
-        }
-      })
+        },
+        [
+          _c(
+            "template",
+            { slot: "no-data" },
+            [
+              _c(
+                "v-alert",
+                {
+                  attrs: {
+                    value: true,
+                    type: "error",
+                    outline: "",
+                    icon: "warning"
+                  }
+                },
+                [
+                  _vm._v(
+                    "\n        Oops! You Havent Posted Anything Yet.\n      "
+                  )
+                ]
+              )
+            ],
+            1
+          )
+        ],
+        2
+      )
     ],
     1
   )
@@ -3313,8 +3355,19 @@ var render = function() {
             [
               _c(
                 "v-alert",
-                { attrs: { value: true, color: "info", icon: "warning" } },
-                [_vm._v("\n        You Havent Posted Anything Yet.\n      ")]
+                {
+                  attrs: {
+                    value: true,
+                    type: "error",
+                    outline: "",
+                    icon: "warning"
+                  }
+                },
+                [
+                  _vm._v(
+                    "\n        Oops! You Havent Posted Any Blog Type Post Yet.\n      "
+                  )
+                ]
               )
             ],
             1
@@ -3425,7 +3478,7 @@ exports = module.exports = __webpack_require__(635)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -3439,6 +3492,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ReportProps_vue__ = __webpack_require__(727);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ReportProps_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__ReportProps_vue__);
+//
 //
 //
 //
@@ -4065,8 +4119,19 @@ var render = function() {
             [
               _c(
                 "v-alert",
-                { attrs: { value: true, color: "info", icon: "warning" } },
-                [_vm._v("\n        You Havent Posted Anything Yet.\n      ")]
+                {
+                  attrs: {
+                    value: true,
+                    type: "error",
+                    outline: "",
+                    icon: "warning"
+                  }
+                },
+                [
+                  _vm._v(
+                    "\n        Oops! You Havent Posted Any Social Type Post Yet.\n      "
+                  )
+                ]
               )
             ],
             1
@@ -4177,7 +4242,7 @@ exports = module.exports = __webpack_require__(635)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -4191,6 +4256,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ReportProps_vue__ = __webpack_require__(727);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ReportProps_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__ReportProps_vue__);
+//
 //
 //
 //
@@ -4817,8 +4883,19 @@ var render = function() {
             [
               _c(
                 "v-alert",
-                { attrs: { value: true, color: "info", icon: "warning" } },
-                [_vm._v("\n        You Havent Posted Anything Yet.\n      ")]
+                {
+                  attrs: {
+                    value: true,
+                    type: "error",
+                    outline: "",
+                    icon: "warning"
+                  }
+                },
+                [
+                  _vm._v(
+                    "\n        Oops! You Havent Posted Any Video Type Post Yet.\n      "
+                  )
+                ]
               )
             ],
             1

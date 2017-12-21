@@ -110,10 +110,11 @@
       <template slot="no-data">
         <v-alert 
           :value="true" 
-          color="info" 
+          type="error"
+          outline
           icon="warning"
         >
-          You Havent Posted Anything Yet.
+          Oops! You Havent Posted Any Blog Type Post Yet.
         </v-alert>
       </template>
 

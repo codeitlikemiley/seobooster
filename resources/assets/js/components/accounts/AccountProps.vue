@@ -1,9 +1,8 @@
 <template>
-  <v-card light>
+  <v-card>
     <v-card-title>
       <v-spacer/>
       <v-text-field
-        light
         append-icon="search"
         label="Search By Username"
         single-line
@@ -19,14 +18,12 @@
       :pagination.sync="pagination"
       item-key="id"
       select-all
-      light
     >
       <template
         slot="headers" 
         slot-scope="props">
         <th>
           <v-checkbox
-            light
             primary
             hide-details
             @click.native="toggleAll"
@@ -61,7 +58,6 @@
         slot-scope="props">
         <td>
           <v-checkbox
-            light
             primary
             hide-details
             v-model="props.selected"

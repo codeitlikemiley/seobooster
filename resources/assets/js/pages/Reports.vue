@@ -90,7 +90,7 @@ export default {
         /* tabs */
         tabs: [
             {name: 'blog reports', component: 'blog-reports', icon: 'fa-newspaper-o', iconColor: 'blue-grey'},
-            {name: 'social reports', component: 'social-reports', icon: 'fa-share-alt ', iconColor: 'light-blue'},
+            {name: 'social reports', component: 'social-reports', icon: 'fa-share-alt', iconColor: 'light-blue'},
             {name: 'video reports', component: 'video-reports', icon: 'fa-youtube-play ', iconColor: 'red darken-4'}
         ],
         active: {

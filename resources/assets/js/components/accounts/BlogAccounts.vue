@@ -1,8 +1,7 @@
 <template>
-  <v-card light>
+  <v-card>
     <v-card-title>
       <v-text-field
-        light
         append-icon="search"
         label="Search By Platform"
         single-line
@@ -16,7 +15,6 @@
       :search="search"
       item-key="id"
       :pagination.sync="pagination"
-      light
       expand
     >
       <template 
@@ -27,14 +25,18 @@
           <th 
             v-for="header in props.headers" 
             :key="header.text"
-            :class="['column sortable', pagination.descending ? 'desc' : 'asc', header.value === pagination.sortBy ? 'active' : '']"
+            :class="['column sortable', pagination.descending ? 'desc' : 'asc', header.value === pagination.sortBy ? 'active' : '', $vuetify.breakpoint.width >= 600 && 'title']"
             @click="changeSort(header.value)"
           >
             <v-icon>arrow_upward</v-icon>
             {{ header.text }}
           </th>
           <th>
-            Actions
+            <span 
+              :class="$vuetify.breakpoint.width >= 600 && 'title'"
+            >
+              Actions
+            </span>
           </th>
         </tr>
       </template>
@@ -42,16 +44,15 @@
         slot="items" 
         slot-scope="props"
       >
-        <td class="title text-xs-center primary--text">
+        <td class="text-xs-center primary--text">
           <v-icon :color="props.item.icon_color">{{ props.item.icon }}</v-icon>
-          <span class="caption accent--text">{{ props.item.name }}</span>
+          <span class="accent--text">{{ props.item.name }}</span>
         </td>
-        <td class="title text-xs-center primary--text">
-          <span class="title blue-grey--text">{{ props.item.accounts[0].accounts.length }}</span>
+        <td class="text-xs-center primary--text">
+          <span class="blue-grey--text">{{ props.item.accounts[0].accounts.length }}</span>
         </td>
-        <td class="title text-xs-center">
+        <td class="text-xs-center">
           <v-btn 
-            light 
             flat 
             icon 
             :class="{'amber--text': props.expanded, 'amber': props.expanded, 'teal': !props.expanded, 'teal--text': !props.expanded }" 
@@ -73,10 +74,11 @@
       <template slot="no-data">
         <v-alert 
           :value="true" 
-          color="error" 
+          type="error"
+          outline
           icon="warning"
         >
-          Sorry, nothing to display here :(
+          Oops! No Platform For Blog Accounts Added Yet
         </v-alert>
       </template>
       <template 

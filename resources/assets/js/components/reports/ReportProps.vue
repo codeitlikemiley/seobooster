@@ -111,6 +111,16 @@
           </v-btn>
         </td>
       </template>
+      <template slot="no-data">
+        <v-alert 
+          :value="true" 
+          type="error"
+          outline
+          icon="warning"
+        >
+          Oops! You Havent Posted Anything Yet.
+        </v-alert>
+      </template>
       <template 
         slot="pageText" 
         slot-scope="{ pageStart, pageStop }"

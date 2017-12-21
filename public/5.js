@@ -2011,7 +2011,7 @@ exports = module.exports = __webpack_require__(635)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -2025,6 +2025,8 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AccountProps__ = __webpack_require__(693);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AccountProps___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__AccountProps__);
+//
+//
 //
 //
 //
@@ -2211,7 +2213,7 @@ exports = module.exports = __webpack_require__(635)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -2223,10 +2225,6 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
 //
 //
 //
@@ -2463,7 +2461,6 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-card",
-    { attrs: { light: "" } },
     [
       _c(
         "v-card-title",
@@ -2472,7 +2469,6 @@ var render = function() {
           _vm._v(" "),
           _c("v-text-field", {
             attrs: {
-              light: "",
               "append-icon": "search",
               label: "Search By Username",
               "single-line": "",
@@ -2497,8 +2493,7 @@ var render = function() {
           headers: _vm.headers,
           pagination: _vm.pagination,
           "item-key": "id",
-          "select-all": "",
-          light: ""
+          "select-all": ""
         },
         on: {
           "update:pagination": function($event) {
@@ -2515,7 +2510,6 @@ var render = function() {
                   [
                     _c("v-checkbox", {
                       attrs: {
-                        light: "",
                         primary: "",
                         "hide-details": "",
                         "input-value": props.all,
@@ -2592,7 +2586,7 @@ var render = function() {
                   "td",
                   [
                     _c("v-checkbox", {
-                      attrs: { light: "", primary: "", "hide-details": "" },
+                      attrs: { primary: "", "hide-details": "" },
                       model: {
                         value: props.selected,
                         callback: function($$v) {
@@ -2819,14 +2813,12 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-card",
-    { attrs: { light: "" } },
     [
       _c(
         "v-card-title",
         [
           _c("v-text-field", {
             attrs: {
-              light: "",
               "append-icon": "search",
               label: "Search By Platform",
               "single-line": "",
@@ -2853,7 +2845,6 @@ var render = function() {
             search: _vm.search,
             "item-key": "id",
             pagination: _vm.pagination,
-            light: "",
             expand: ""
           },
           on: {
@@ -2879,7 +2870,8 @@ var render = function() {
                               _vm.pagination.descending ? "desc" : "asc",
                               header.value === _vm.pagination.sortBy
                                 ? "active"
-                                : ""
+                                : "",
+                              _vm.$vuetify.breakpoint.width >= 600 && "title"
                             ],
                             on: {
                               click: function($event) {
@@ -2899,7 +2891,16 @@ var render = function() {
                         )
                       }),
                       _vm._v(" "),
-                      _c("th", [_vm._v("\n          Actions\n        ")])
+                      _c("th", [
+                        _c(
+                          "span",
+                          {
+                            class:
+                              _vm.$vuetify.breakpoint.width >= 600 && "title"
+                          },
+                          [_vm._v("\n            Actions\n          ")]
+                        )
+                      ])
                     ],
                     2
                   )
@@ -2912,7 +2913,7 @@ var render = function() {
                 return [
                   _c(
                     "td",
-                    { staticClass: "title text-xs-center primary--text" },
+                    { staticClass: "text-xs-center primary--text" },
                     [
                       _c(
                         "v-icon",
@@ -2920,26 +2921,22 @@ var render = function() {
                         [_vm._v(_vm._s(props.item.icon))]
                       ),
                       _vm._v(" "),
-                      _c("span", { staticClass: "caption accent--text" }, [
+                      _c("span", { staticClass: "accent--text" }, [
                         _vm._v(_vm._s(props.item.name))
                       ])
                     ],
                     1
                   ),
                   _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-center primary--text" },
-                    [
-                      _c("span", { staticClass: "title blue-grey--text" }, [
-                        _vm._v(_vm._s(props.item.accounts[0].accounts.length))
-                      ])
-                    ]
-                  ),
+                  _c("td", { staticClass: "text-xs-center primary--text" }, [
+                    _c("span", { staticClass: "blue-grey--text" }, [
+                      _vm._v(_vm._s(props.item.accounts[0].accounts.length))
+                    ])
+                  ]),
                   _vm._v(" "),
                   _c(
                     "td",
-                    { staticClass: "title text-xs-center" },
+                    { staticClass: "text-xs-center" },
                     [
                       _c(
                         "v-btn",
@@ -2950,7 +2947,7 @@ var render = function() {
                             teal: !props.expanded,
                             "teal--text": !props.expanded
                           },
-                          attrs: { light: "", flat: "", icon: "" },
+                          attrs: { flat: "", icon: "" },
                           on: {
                             click: function($event) {
                               _vm.setPropsExpanded(props)
@@ -3019,8 +3016,19 @@ var render = function() {
             [
               _c(
                 "v-alert",
-                { attrs: { value: true, color: "error", icon: "warning" } },
-                [_vm._v("\n        Sorry, nothing to display here :(\n      ")]
+                {
+                  attrs: {
+                    value: true,
+                    type: "error",
+                    outline: "",
+                    icon: "warning"
+                  }
+                },
+                [
+                  _vm._v(
+                    "\n        Oops! No Platform For Blog Accounts Added Yet\n      "
+                  )
+                ]
               )
             ],
             1
@@ -3131,7 +3139,7 @@ exports = module.exports = __webpack_require__(635)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -3145,6 +3153,8 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AccountProps__ = __webpack_require__(693);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AccountProps___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__AccountProps__);
+//
+//
 //
 //
 //
@@ -3304,14 +3314,12 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-card",
-    { attrs: { light: "" } },
     [
       _c(
         "v-card-title",
         [
           _c("v-text-field", {
             attrs: {
-              light: "",
               "append-icon": "search",
               label: "Search By Platform",
               "single-line": "",
@@ -3338,7 +3346,6 @@ var render = function() {
             search: _vm.search,
             "item-key": "id",
             pagination: _vm.pagination,
-            light: "",
             expand: ""
           },
           on: {
@@ -3364,7 +3371,8 @@ var render = function() {
                               _vm.pagination.descending ? "desc" : "asc",
                               header.value === _vm.pagination.sortBy
                                 ? "active"
-                                : ""
+                                : "",
+                              _vm.$vuetify.breakpoint.width >= 600 && "title"
                             ],
                             on: {
                               click: function($event) {
@@ -3384,7 +3392,16 @@ var render = function() {
                         )
                       }),
                       _vm._v(" "),
-                      _c("th", [_vm._v("\n          Actions\n        ")])
+                      _c("th", [
+                        _c(
+                          "span",
+                          {
+                            class:
+                              _vm.$vuetify.breakpoint.width >= 600 && "title"
+                          },
+                          [_vm._v("\n            Actions\n          ")]
+                        )
+                      ])
                     ],
                     2
                   )
@@ -3397,7 +3414,7 @@ var render = function() {
                 return [
                   _c(
                     "td",
-                    { staticClass: "title text-xs-center primary--text" },
+                    { staticClass: "text-xs-center primary--text" },
                     [
                       _c(
                         "v-icon",
@@ -3405,26 +3422,22 @@ var render = function() {
                         [_vm._v(_vm._s(props.item.icon))]
                       ),
                       _vm._v(" "),
-                      _c("span", { staticClass: "caption accent--text" }, [
+                      _c("span", { staticClass: "accent--text" }, [
                         _vm._v(_vm._s(props.item.name))
                       ])
                     ],
                     1
                   ),
                   _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-center primary--text" },
-                    [
-                      _c("span", { staticClass: "title blue-grey--text" }, [
-                        _vm._v(_vm._s(props.item.accounts[0].accounts.length))
-                      ])
-                    ]
-                  ),
+                  _c("td", { staticClass: "text-xs-center primary--text" }, [
+                    _c("span", { staticClass: "blue-grey--text" }, [
+                      _vm._v(_vm._s(props.item.accounts[0].accounts.length))
+                    ])
+                  ]),
                   _vm._v(" "),
                   _c(
                     "td",
-                    { staticClass: "title text-xs-center" },
+                    { staticClass: "text-xs-center" },
                     [
                       _c(
                         "v-btn",
@@ -3435,7 +3448,7 @@ var render = function() {
                             teal: !props.expanded,
                             "teal--text": !props.expanded
                           },
-                          attrs: { light: "", flat: "", icon: "" },
+                          attrs: { flat: "", icon: "" },
                           on: {
                             click: function($event) {
                               _vm.setPropsExpanded(props)
@@ -3504,8 +3517,19 @@ var render = function() {
             [
               _c(
                 "v-alert",
-                { attrs: { value: true, color: "error", icon: "warning" } },
-                [_vm._v("\n        Sorry, nothing to display here :(\n      ")]
+                {
+                  attrs: {
+                    value: true,
+                    type: "error",
+                    outline: "",
+                    icon: "warning"
+                  }
+                },
+                [
+                  _vm._v(
+                    "\n        Oops! No Platform For Social Accounts Added Yet\n      "
+                  )
+                ]
               )
             ],
             1
@@ -3616,7 +3640,7 @@ exports = module.exports = __webpack_require__(635)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -3630,6 +3654,9 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AccountProps__ = __webpack_require__(693);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AccountProps___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__AccountProps__);
+//
+//
+//
 //
 //
 //
@@ -3790,14 +3817,12 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-card",
-    { attrs: { light: "" } },
     [
       _c(
         "v-card-title",
         [
           _c("v-text-field", {
             attrs: {
-              light: "",
               "append-icon": "search",
               label: "Search By Platform",
               "single-line": "",
@@ -3824,7 +3849,6 @@ var render = function() {
             search: _vm.search,
             "item-key": "id",
             pagination: _vm.pagination,
-            light: "",
             expand: ""
           },
           on: {
@@ -3850,7 +3874,8 @@ var render = function() {
                               _vm.pagination.descending ? "desc" : "asc",
                               header.value === _vm.pagination.sortBy
                                 ? "active"
-                                : ""
+                                : "",
+                              _vm.$vuetify.breakpoint.width >= 600 && "title"
                             ],
                             on: {
                               click: function($event) {
@@ -3870,7 +3895,16 @@ var render = function() {
                         )
                       }),
                       _vm._v(" "),
-                      _c("th", [_vm._v("\n          Actions\n        ")])
+                      _c("th", [
+                        _c(
+                          "span",
+                          {
+                            class:
+                              _vm.$vuetify.breakpoint.width >= 600 && "title"
+                          },
+                          [_vm._v("\n            Actions\n          ")]
+                        )
+                      ])
                     ],
                     2
                   )
@@ -3883,7 +3917,7 @@ var render = function() {
                 return [
                   _c(
                     "td",
-                    { staticClass: "title text-xs-center primary--text" },
+                    { staticClass: "text-xs-center accent--text" },
                     [
                       _c(
                         "v-icon",
@@ -3891,26 +3925,22 @@ var render = function() {
                         [_vm._v(_vm._s(props.item.icon))]
                       ),
                       _vm._v(" "),
-                      _c("span", { staticClass: "caption accent--text" }, [
+                      _c("span", { staticClass: "accent--text" }, [
                         _vm._v(_vm._s(props.item.name))
                       ])
                     ],
                     1
                   ),
                   _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-center primary--text" },
-                    [
-                      _c("span", { staticClass: "title blue-grey--text" }, [
-                        _vm._v(_vm._s(props.item.accounts[0].accounts.length))
-                      ])
-                    ]
-                  ),
+                  _c("td", { staticClass: "text-xs-center accent--text" }, [
+                    _c("span", { staticClass: "accent--text" }, [
+                      _vm._v(_vm._s(props.item.accounts[0].accounts.length))
+                    ])
+                  ]),
                   _vm._v(" "),
                   _c(
                     "td",
-                    { staticClass: "title text-xs-center" },
+                    { staticClass: "text-xs-center" },
                     [
                       _c(
                         "v-btn",
@@ -3921,7 +3951,7 @@ var render = function() {
                             teal: !props.expanded,
                             "teal--text": !props.expanded
                           },
-                          attrs: { light: "", flat: "", icon: "" },
+                          attrs: { flat: "", icon: "" },
                           on: {
                             click: function($event) {
                               _vm.setPropsExpanded(props)
@@ -3990,8 +4020,19 @@ var render = function() {
             [
               _c(
                 "v-alert",
-                { attrs: { value: true, color: "error", icon: "warning" } },
-                [_vm._v("\n        Sorry, nothing to display here :(\n      ")]
+                {
+                  attrs: {
+                    value: true,
+                    type: "error",
+                    outline: "",
+                    icon: "warning"
+                  }
+                },
+                [
+                  _vm._v(
+                    "\n        Oops! No Platform For Video Accounts Added Yet\n      "
+                  )
+                ]
               )
             ],
             1

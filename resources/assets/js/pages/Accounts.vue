@@ -1,5 +1,5 @@
 <template>
-  <main-layout :style="{ paddingTop: `100px`, backgroundColor: `white` }">
+  <main-layout>
     <v-container fluid>
       <v-layout 
         row 
@@ -22,19 +22,16 @@
           <v-breadcrumbs-item
             :disabled="true"
           >
-            <span class="blue-grey--text">Accounts</span>
+            <span class="accent--text">Accounts</span>
           </v-breadcrumbs-item>
         </v-breadcrumbs>
       </v-layout>
-      <v-layout 
-        row 
-        wrap
+      <v-tabs 
+        fixed 
+        icons 
+        centered
       >
-        <v-tabs 
-          fixed 
-          icons 
-          centered
-        >
+        <v-toolbar>
           <v-tabs-bar>
             <v-tabs-slider color="primary"/>
             <v-tabs-item
@@ -42,31 +39,35 @@
               :key="key"
               :href="`#${tab.name}`"
               ripple
-              class="primary--text"
+              class="accent--text"
             >
               <v-icon :color="tab.iconColor">{{ tab.icon }}</v-icon>
-              {{ tab.name }}
+              <span 
+                :class="$vuetify.breakpoint.width >= 600 && 'headline'"
+              >
+                {{ tab.name }}
+              </span>
             </v-tabs-item>
           </v-tabs-bar>
-          <v-tabs-items>
-            <v-tabs-content
-              v-for="(tab, key) in tabs"
-              :key="key"
-              :id="tab.name"
+        </v-toolbar>
+        <v-tabs-items>
+          <v-tabs-content
+            v-for="(tab, key) in tabs"
+            :key="key"
+            :id="tab.name"
+          >
+            <v-card 
+              flat 
+              :light="true"
             >
-              <v-card 
-                flat 
-                :light="true"
-              >
-                <component 
-                  :is="tab.component" 
-                  :tab="tab"
-                />
-              </v-card>
-            </v-tabs-content>
-          </v-tabs-items>
-        </v-tabs>
-      </v-layout>
+              <component 
+                :is="tab.component" 
+                :tab="tab"
+              />
+            </v-card>
+          </v-tabs-content>
+        </v-tabs-items>
+      </v-tabs>
     </v-container>
   </main-layout>
 </template>
@@ -94,8 +95,8 @@ export default {
         },
         /* tabs */
         tabs: [
-            {name: 'blog accounts', component: 'blog-accounts', icon: 'fa-newspaper-o', iconColor: 'amber lighten-2', accounts:[]},
-            {name: 'social accounts', component: 'social-accounts', icon: 'fa-address-book', iconColor: 'cyan',accounts:[]},
+            {name: 'blog accounts', component: 'blog-accounts', icon: 'fa-newspaper-o', iconColor: 'blue-grey', accounts:[]},
+            {name: 'social accounts', component: 'social-accounts', icon: 'fa-share-alt', iconColor: 'light-blue',accounts:[]},
             {name: 'video accounts', component: 'video-accounts', icon: 'fa-youtube-play ', iconColor: 'red darken-4',accounts:[]}
         ],
         active: {
