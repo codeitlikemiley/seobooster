@@ -68,7 +68,7 @@ export default {
         activeColor: {
             type: String,
             default () {
-                return '#e3b500' // teal lighten 2
+                return '#f5c300' // teal lighten 2
             }
         }
     },

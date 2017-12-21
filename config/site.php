@@ -9,15 +9,15 @@ return [
         'background-color' => '#103050' //dark-blue
     ],
     'footerStyle' => [
-        'background-color' => '#103050',
-        'color'            => '#BA9A5A'
+        'background-color' => '#333333',
+        'color'            => '#f5c300'
     ],
     'sidebarStyle' => [
         'background-color' => '#103050',
         'color'            => '#BA9A5A'
     ],
     'toggleBarStyle' => [
-        'color' => '#BA9A5A' , //gold
+        'color' => '#f5c300' , //gold
     ],
     'icon' => [
         'name' => 'fa-compass', // font-awesome or material icon

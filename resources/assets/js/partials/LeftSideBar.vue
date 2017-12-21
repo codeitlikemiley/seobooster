@@ -2,7 +2,9 @@
   <v-navigation-drawer
     fixed
     v-model="drawer"
-    class="secondary"
+    class="accent"
+    :clipped="$vuetify.breakpoint.width <= 1264 && true"
+    hide-overlay
     app
   >
     <v-list dense>
@@ -132,15 +134,25 @@ export default {
     },
     mixins: [Theme],
     data: () => ({
-        drawer: true
+        drawer: false
     }),
     computed: {
         ...mapState({
             isAuthenticated: 'isAuthenticated'
         })
     },
+    created () {
+        let self = this
+        switch (self.$vuetify.breakpoint.name) {
+        case 'xs': return self.drawer = false
+        case 'sm': return self.drawer = false
+        case 'md': return self.drawer = true
+        case 'lg': return self.drawer = true
+        case 'xl': return self.drawer = true
+        }
+    },
     mounted () {
-        var self = this
+        let self = this
         Bus.$on('toggleDrawer', function () {
             self.drawer = !self.drawer
         })

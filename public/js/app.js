@@ -21529,7 +21529,7 @@ __WEBPACK_IMPORTED_MODULE_1_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_6_vuet
     theme: {
         primary: '#e3b500',
         secondary: '#455A64',
-        accent: ' #333333',
+        accent: '#333333',
         error: '#C62828',
         info: '#7FCAC3',
         success: '#D4E157',

@@ -1292,7 +1292,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         activeColor: {
             type: String,
             default: function _default() {
-                return '#e3b500'; // teal lighten 2
+                return '#f5c300'; // teal lighten 2
             }
         }
     },
@@ -2035,6 +2035,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 
@@ -2050,12 +2052,27 @@ var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_3_vuex__["createNam
     mixins: [__WEBPACK_IMPORTED_MODULE_2__mixins_theme__["a" /* default */]],
     data: function data() {
         return {
-            drawer: true
+            drawer: false
         };
     },
     computed: __WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_extends___default()({}, mapState({
         isAuthenticated: 'isAuthenticated'
     })),
+    created: function created() {
+        var self = this;
+        switch (self.$vuetify.breakpoint.name) {
+            case 'xs':
+                return self.drawer = false;
+            case 'sm':
+                return self.drawer = false;
+            case 'md':
+                return self.drawer = true;
+            case 'lg':
+                return self.drawer = true;
+            case 'xl':
+                return self.drawer = true;
+        }
+    },
     mounted: function mounted() {
         var self = this;
         Bus.$on('toggleDrawer', function () {
@@ -2076,8 +2093,13 @@ var render = function() {
   return _c(
     "v-navigation-drawer",
     {
-      staticClass: "secondary",
-      attrs: { fixed: "", app: "" },
+      staticClass: "accent",
+      attrs: {
+        fixed: "",
+        clipped: _vm.$vuetify.breakpoint.width <= 1264 && true,
+        "hide-overlay": "",
+        app: ""
+      },
       model: {
         value: _vm.drawer,
         callback: function($$v) {

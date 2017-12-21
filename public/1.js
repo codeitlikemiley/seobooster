@@ -840,7 +840,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         activeColor: {
             type: String,
             default: function _default() {
-                return '#e3b500'; // teal lighten 2
+                return '#f5c300'; // teal lighten 2
             }
         }
     },
