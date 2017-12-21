@@ -1,5 +1,5 @@
 <template>
-  <main-layout :class="[contentClass]">
+  <home-layout :class="[contentClass]">
     <carousel/>
     <show-case/>
     <feature-case/>
@@ -7,11 +7,11 @@
     <video-case/>
     <testimonial/>
     <call-to-action/>
-  </main-layout>
+  </home-layout>
 </template>
 
 <script>
-import MainLayout from '../layouts/Main.vue'
+import HomeLayout from '../layouts/Home.vue'
 import ShowCase from '../components/home/Showcase.vue'
 import Pioneer from '../components/home/Pioneer.vue'
 import FeatureCase from '../components/home/FeatureCase.vue'
@@ -23,7 +23,7 @@ import Theme from '../mixins/theme'
 
 export default {
     components: {
-        MainLayout,
+        HomeLayout,
         ShowCase,
         FeatureCase,
         VideoCase,

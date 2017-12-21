@@ -1,35 +1,35 @@
 <template>
   <v-app v-cloak>
-    <left-side-bar/>
-    <app-nav-bar/>
+    <!-- No Side Bar For Home Page -->
+    <home-nav-bar/>
     <main>
-      <!-- added fluid and pa-0 ma-0 for full screen pages -->
       <v-container 
         transition="slide-x-transition" 
-        fluid 
-        pa-0 
+        fluid
+        pa-0
         ma-0
       >
         <slot/>
       </v-container>
     </main>
     <fab-button/>
+    <cookie-law/>
     <app-footer/>
   </v-app>
 </template>
 
 <script>
 import AppFooter from '../partials/AppFooter.vue'
-import AppNavBar from '../partials/AppNavBar.vue'
-import LeftSideBar from '../partials/LeftSideBar.vue'
+import HomeNavBar from '../partials/HomeNavBar'
 import FabButton from '../components/FabButton.vue'
+import CookieLaw from '../partials/CookieLaw.vue'
 
 export default {
     components: {
         AppFooter,
-        AppNavBar,
-        LeftSideBar,
-        FabButton
+        FabButton,
+        CookieLaw,
+        HomeNavBar
     }
 }
 </script>

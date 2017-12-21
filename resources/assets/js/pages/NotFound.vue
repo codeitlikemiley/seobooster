@@ -23,7 +23,7 @@
         >
           <v-icon 
             right 
-            dark
+            color="primary"
           >
             home
           </v-icon>
