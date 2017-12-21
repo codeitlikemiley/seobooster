@@ -671,8 +671,7 @@ var render = function() {
                                       _c(
                                         "v-card-text",
                                         {
-                                          staticClass:
-                                            "headline blue-grey--text"
+                                          staticClass: "headline accent--text"
                                         },
                                         [
                                           _c(
@@ -690,8 +689,7 @@ var render = function() {
                                       _c(
                                         "v-card-text",
                                         {
-                                          staticClass:
-                                            "headline blue-grey--text"
+                                          staticClass: "headline accent--text"
                                         },
                                         [
                                           _c(
@@ -709,8 +707,7 @@ var render = function() {
                                       _c(
                                         "v-card-text",
                                         {
-                                          staticClass:
-                                            "headline blue-grey--text"
+                                          staticClass: "headline accent--text"
                                         },
                                         [
                                           _c(
@@ -728,13 +725,12 @@ var render = function() {
                                       _c(
                                         "v-card-text",
                                         {
-                                          staticClass:
-                                            "headline blue-grey--text"
+                                          staticClass: "headline accent--text"
                                         },
                                         [
                                           _c(
                                             "v-icon",
-                                            { attrs: { color: "accent" } },
+                                            { attrs: { color: "light-blue" } },
                                             [_vm._v("fa-fa")]
                                           ),
                                           _vm._v(
@@ -747,8 +743,7 @@ var render = function() {
                                       _c(
                                         "v-card-text",
                                         {
-                                          staticClass:
-                                            "headline blue-grey--text"
+                                          staticClass: "headline accent--text"
                                         },
                                         [
                                           _c(
@@ -766,8 +761,7 @@ var render = function() {
                                       _c(
                                         "v-card-text",
                                         {
-                                          staticClass:
-                                            "headline blue-grey--text"
+                                          staticClass: "headline accent--text"
                                         },
                                         [
                                           _c(

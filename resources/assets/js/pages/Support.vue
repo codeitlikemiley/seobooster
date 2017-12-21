@@ -118,22 +118,22 @@
                     light 
                   >
                     <v-card-title class="headline accent--text">Contact Details</v-card-title>
-                    <v-card-text class="headline blue-grey--text">
+                    <v-card-text class="headline accent--text">
                       <v-icon color="red">place</v-icon> 1120 5TH Street
                     </v-card-text>
-                    <v-card-text class="headline blue-grey--text">
+                    <v-card-text class="headline accent--text">
                       <v-icon color="indigo">location_city</v-icon> Alexandria
                     </v-card-text>
-                    <v-card-text class="headline blue-grey--text">
+                    <v-card-text class="headline accent--text">
                       <v-icon color="info">map</v-icon> Louisiana 71301
                     </v-card-text>
-                    <v-card-text class="headline blue-grey--text">
-                      <v-icon color="accent">fa-fa</v-icon> United States
+                    <v-card-text class="headline accent--text">
+                      <v-icon color="light-blue">fa-fa</v-icon> United States
                     </v-card-text>
-                    <v-card-text class="headline blue-grey--text">
+                    <v-card-text class="headline accent--text">
                       <v-icon color="brown">phone</v-icon>+1 (318) 290-3674
                     </v-card-text>
-                    <v-card-text class="headline blue-grey--text">
+                    <v-card-text class="headline accent--text">
                       <v-icon color="yellow darken-2">mail</v-icon><span v-text="App.site.email"/>
                     </v-card-text>
                   </v-card>
