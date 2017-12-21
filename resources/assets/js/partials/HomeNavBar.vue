@@ -86,14 +86,14 @@
       v-if="isAuthenticated"
       outline 
       color="accent"
-      to="/logout"
+      to="/dashboard"
     >
-      <span class="primary--text">Logout</span>
+      <span class="primary--text">Dashboard</span>
       <v-icon 
         right 
-        color="red darken-4"
+        color="blue-grey"
       >
-        fa-sign-out
+        fa-tachometer
       </v-icon>
     </v-btn>
     <v-btn 
@@ -107,6 +107,20 @@
         color="amber lighten-2"
       >
         fa-life-ring
+      </v-icon>
+    </v-btn>
+    <v-btn 
+      v-if="isAuthenticated"
+      outline 
+      color="accent"
+      to="/logout"
+    >
+      <span class="primary--text">Logout</span>
+      <v-icon 
+        right 
+        color="red darken-4"
+      >
+        fa-sign-out
       </v-icon>
     </v-btn>
   </v-toolbar>
