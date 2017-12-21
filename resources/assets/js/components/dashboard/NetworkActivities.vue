@@ -68,9 +68,18 @@
           <span class="caption accent--text">{{ props.item.username }}</span>
         </td>
         <td class="title text-xs-left primary--text">
-          <span class="title blue-grey--text">{{ props.item.message }}</span>
+          <span 
+            class="title" 
+            style="color: #333333;"
+          >
+            {{ props.item.message }}
+          </span>
         </td>
-        <td class="title text-xs-left primary--text">{{ props.item.date }}</td>
+        <td class="title text-xs-left primary--text">
+          <span style="color: #f5c300;">
+            {{ props.item.date }}
+          </span>
+        </td>
         <td class="title text-xs-center">
           <v-chip 
             :class="{ 'green': isActive(props.item),'amber': !isActive(props.item) }" 
