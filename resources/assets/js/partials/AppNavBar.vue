@@ -1,9 +1,7 @@
 <template>
   <v-toolbar 
     color="accent" 
-    dense 
     fixed 
-    clipped-left 
     app
   >
     <v-toolbar-side-icon 
