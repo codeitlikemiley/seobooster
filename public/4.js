@@ -2054,6 +2054,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -2074,7 +2075,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
 
             /* tabs */
-            tabs: [{ name: 'blog reports', component: 'blog-reports', icon: 'fa-newspaper-o', iconColor: 'amber' }, { name: 'social reports', component: 'social-reports', icon: 'fa-address-book', iconColor: 'cyan' }, { name: 'video reports', component: 'video-reports', icon: 'fa-youtube-play ', iconColor: 'red darken-4' }],
+            tabs: [{ name: 'blog reports', component: 'blog-reports', icon: 'fa-newspaper-o', iconColor: 'blue-grey' }, { name: 'social reports', component: 'social-reports', icon: 'fa-share-alt ', iconColor: 'light-blue' }, { name: 'video reports', component: 'video-reports', icon: 'fa-youtube-play ', iconColor: 'red darken-4' }],
             active: {
                 name: 'blog reports'
             }
@@ -2171,7 +2172,7 @@ exports = module.exports = __webpack_require__(635)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -2185,6 +2186,11 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ReportProps_vue__ = __webpack_require__(727);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ReportProps_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__ReportProps_vue__);
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3119,7 +3125,8 @@ var render = function() {
                               _vm.pagination.descending ? "desc" : "asc",
                               header.value === _vm.pagination.sortBy
                                 ? "active"
-                                : ""
+                                : "",
+                              _vm.$vuetify.breakpoint.width >= 600 && "title"
                             ],
                             on: {
                               click: function($event) {
@@ -3143,7 +3150,15 @@ var render = function() {
                         "th",
                         [
                           _vm.selected < 1
-                            ? _c("span", [_vm._v("Actions")])
+                            ? _c(
+                                "span",
+                                {
+                                  class:
+                                    _vm.$vuetify.breakpoint.width >= 600 &&
+                                    "title"
+                                },
+                                [_vm._v("\n            Actions\n          ")]
+                              )
                             : _c(
                                 "v-btn",
                                 {
@@ -3187,49 +3202,29 @@ var render = function() {
                     1
                   ),
                   _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-left primary--text" },
-                    [
-                      _vm._v(
-                        "\n        " + _vm._s(props.item.name) + "\n      "
-                      )
-                    ]
-                  ),
+                  _c("td", { staticClass: "text-xs-left accent--text" }, [
+                    _vm._v("\n        " + _vm._s(props.item.name) + "\n      ")
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "text-xs-left accent--text" }, [
+                    _vm._v("\n        " + _vm._s(props.item.title) + "\n      ")
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "text-xs-center accent--text" }, [
+                    _c("span", { staticClass: "accent--text" }, [
+                      _vm._v(_vm._s(props.item.posts.length))
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "text-xs-center accent--text" }, [
+                    _c("span", { staticClass: "accent--text" }, [
+                      _vm._v(_vm._s(props.item.scheduled_at))
+                    ])
+                  ]),
                   _vm._v(" "),
                   _c(
                     "td",
-                    { staticClass: "title text-xs-left primary--text" },
-                    [
-                      _vm._v(
-                        "\n        " + _vm._s(props.item.title) + "\n      "
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-center primary--text" },
-                    [
-                      _c("span", { staticClass: "title blue-grey--text" }, [
-                        _vm._v(_vm._s(props.item.posts.length))
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-center primary--text" },
-                    [
-                      _c("span", { staticClass: "title blue-grey--text" }, [
-                        _vm._v(_vm._s(props.item.scheduled_at))
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-center" },
+                    { staticClass: "text-xs-center" },
                     [
                       _c(
                         "v-btn",
@@ -3430,7 +3425,7 @@ exports = module.exports = __webpack_require__(635)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -3444,6 +3439,11 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ReportProps_vue__ = __webpack_require__(727);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ReportProps_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__ReportProps_vue__);
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3877,7 +3877,8 @@ var render = function() {
                               _vm.pagination.descending ? "desc" : "asc",
                               header.value === _vm.pagination.sortBy
                                 ? "active"
-                                : ""
+                                : "",
+                              _vm.$vuetify.breakpoint.width >= 600 && "title"
                             ],
                             on: {
                               click: function($event) {
@@ -3901,7 +3902,15 @@ var render = function() {
                         "th",
                         [
                           _vm.selected < 1
-                            ? _c("span", [_vm._v("Actions")])
+                            ? _c(
+                                "span",
+                                {
+                                  class:
+                                    _vm.$vuetify.breakpoint.width >= 600 &&
+                                    "title"
+                                },
+                                [_vm._v("\n            Actions\n          ")]
+                              )
                             : _c(
                                 "v-btn",
                                 {
@@ -3945,49 +3954,29 @@ var render = function() {
                     1
                   ),
                   _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-left primary--text" },
-                    [
-                      _vm._v(
-                        "\n        " + _vm._s(props.item.name) + "\n      "
-                      )
-                    ]
-                  ),
+                  _c("td", { staticClass: "text-xs-left accent--text" }, [
+                    _vm._v("\n        " + _vm._s(props.item.name) + "\n      ")
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "text-xs-left accent--text" }, [
+                    _vm._v("\n        " + _vm._s(props.item.title) + "\n      ")
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "text-xs-center accent--text" }, [
+                    _c("span", { staticClass: "accent--text" }, [
+                      _vm._v(_vm._s(props.item.posts.length))
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "text-xs-center accent--text" }, [
+                    _c("span", { staticClass: "accent--text" }, [
+                      _vm._v(_vm._s(props.item.scheduled_at))
+                    ])
+                  ]),
                   _vm._v(" "),
                   _c(
                     "td",
-                    { staticClass: "title text-xs-left primary--text" },
-                    [
-                      _vm._v(
-                        "\n        " + _vm._s(props.item.title) + "\n      "
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-center primary--text" },
-                    [
-                      _c("span", { staticClass: "title blue-grey--text" }, [
-                        _vm._v(_vm._s(props.item.posts.length))
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-center primary--text" },
-                    [
-                      _c("span", { staticClass: "title blue-grey--text" }, [
-                        _vm._v(_vm._s(props.item.scheduled_at))
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-center" },
+                    { staticClass: "text-xs-center" },
                     [
                       _c(
                         "v-btn",
@@ -4188,7 +4177,7 @@ exports = module.exports = __webpack_require__(635)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -4202,6 +4191,11 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ReportProps_vue__ = __webpack_require__(727);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ReportProps_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__ReportProps_vue__);
+//
+//
+//
+//
+//
 //
 //
 //
@@ -4635,7 +4629,8 @@ var render = function() {
                               _vm.pagination.descending ? "desc" : "asc",
                               header.value === _vm.pagination.sortBy
                                 ? "active"
-                                : ""
+                                : "",
+                              _vm.$vuetify.breakpoint.width >= 600 && "title"
                             ],
                             on: {
                               click: function($event) {
@@ -4659,7 +4654,15 @@ var render = function() {
                         "th",
                         [
                           _vm.selected < 1
-                            ? _c("span", [_vm._v("Actions")])
+                            ? _c(
+                                "span",
+                                {
+                                  class:
+                                    _vm.$vuetify.breakpoint.width >= 600 &&
+                                    "title"
+                                },
+                                [_vm._v("\n            Actions\n          ")]
+                              )
                             : _c(
                                 "v-btn",
                                 {
@@ -4703,49 +4706,29 @@ var render = function() {
                     1
                   ),
                   _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-left primary--text" },
-                    [
-                      _vm._v(
-                        "\n        " + _vm._s(props.item.name) + "\n      "
-                      )
-                    ]
-                  ),
+                  _c("td", { staticClass: "text-xs-left accent--text" }, [
+                    _vm._v("\n        " + _vm._s(props.item.name) + "\n      ")
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "text-xs-left accent--text" }, [
+                    _vm._v("\n        " + _vm._s(props.item.title) + "\n      ")
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "text-xs-center accent--text" }, [
+                    _c("span", { staticClass: "accent--text" }, [
+                      _vm._v(_vm._s(props.item.posts.length))
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "text-xs-center accent--text" }, [
+                    _c("span", { staticClass: "accent--text" }, [
+                      _vm._v(_vm._s(props.item.scheduled_at))
+                    ])
+                  ]),
                   _vm._v(" "),
                   _c(
                     "td",
-                    { staticClass: "title text-xs-left primary--text" },
-                    [
-                      _vm._v(
-                        "\n        " + _vm._s(props.item.title) + "\n      "
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-center primary--text" },
-                    [
-                      _c("span", { staticClass: "title blue-grey--text" }, [
-                        _vm._v(_vm._s(props.item.posts.length))
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-center primary--text" },
-                    [
-                      _c("span", { staticClass: "title blue-grey--text" }, [
-                        _vm._v(_vm._s(props.item.scheduled_at))
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-center" },
+                    { staticClass: "text-xs-center" },
                     [
                       _c(
                         "v-btn",
@@ -4868,10 +4851,6 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "main-layout",
-    {
-      style: { paddingTop: "100px", backgroundColor: "white" },
-      attrs: { dark: false }
-    },
     [
       _c(
         "v-container",
@@ -4906,7 +4885,7 @@ var render = function() {
                   ),
                   _vm._v(" "),
                   _c("v-breadcrumbs-item", { attrs: { disabled: true } }, [
-                    _c("span", { staticClass: "blue-grey--text" }, [
+                    _c("span", { staticClass: "accent--text" }, [
                       _vm._v("Reports")
                     ])
                   ])
@@ -4923,11 +4902,9 @@ var render = function() {
             [
               _c(
                 "v-toolbar",
-                { attrs: { color: "white" } },
                 [
                   _c(
                     "v-tabs-bar",
-                    { staticClass: "white" },
                     [
                       _c("v-tabs-slider", { attrs: { color: "primary" } }),
                       _vm._v(" "),
@@ -4936,17 +4913,28 @@ var render = function() {
                           "v-tabs-item",
                           {
                             key: key,
-                            staticClass: "primary--text",
+                            staticClass: "accent--text",
                             attrs: { href: "#" + tab.name, ripple: "" }
                           },
                           [
                             _c("v-icon", { attrs: { color: tab.iconColor } }, [
                               _vm._v(_vm._s(tab.icon))
                             ]),
-                            _vm._v(
-                              "\n            " +
-                                _vm._s(tab.name) +
-                                "\n          "
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              {
+                                class:
+                                  _vm.$vuetify.breakpoint.width >= 600 &&
+                                  "headline"
+                              },
+                              [
+                                _vm._v(
+                                  "\n              " +
+                                    _vm._s(tab.name) +
+                                    "\n            "
+                                )
+                              ]
                             )
                           ],
                           1

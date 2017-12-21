@@ -38,14 +38,19 @@
           <th 
             v-for="header in props.headers" 
             :key="header.text"
-            :class="['column sortable', pagination.descending ? 'desc' : 'asc', header.value === pagination.sortBy ? 'active' : '']"
+            :class="['column sortable', pagination.descending ? 'desc' : 'asc', header.value === pagination.sortBy ? 'active' : '', $vuetify.breakpoint.width >= 600 && 'title']"
             @click="changeSort(header.value)"
           >
             <v-icon>arrow_upward</v-icon>
             {{ header.text }}
           </th>
           <th>
-            <span v-if="selected < 1">Actions</span>
+            <span 
+              v-if="selected < 1"
+              :class="$vuetify.breakpoint.width >= 600 && 'title'"
+            >
+              Actions
+            </span>
             <v-btn 
               v-else 
               flat 
@@ -69,19 +74,19 @@
             v-model="props.selected"
           />
         </td>
-        <td class="title text-xs-left primary--text">
+        <td class="text-xs-left accent--text">
           {{ props.item.name }}
         </td>
-        <td class="title text-xs-left primary--text">
+        <td class="text-xs-left accent--text">
           {{ props.item.title }}
         </td>
-        <td class="title text-xs-center primary--text">
-          <span class="title blue-grey--text">{{ props.item.posts.length }}</span>
+        <td class="text-xs-center accent--text">
+          <span class="accent--text">{{ props.item.posts.length }}</span>
         </td>
-        <td class="title text-xs-center primary--text">
-          <span class="title blue-grey--text">{{ props.item.scheduled_at }}</span>
+        <td class="text-xs-center accent--text">
+          <span class="accent--text">{{ props.item.scheduled_at }}</span>
         </td>
-        <td class="title text-xs-center">
+        <td class="text-xs-center">
           <v-btn 
             flat
             icon 

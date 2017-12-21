@@ -1,8 +1,5 @@
 <template>
-  <main-layout 
-    :dark="false" 
-    :style="{ paddingTop: `100px`, backgroundColor: `white` }"
-  >
+  <main-layout>
     <v-container fluid>
       <v-layout 
         row 
@@ -25,7 +22,7 @@
           <v-breadcrumbs-item
             :disabled="true"
           >
-            <span class="blue-grey--text">Reports</span>
+            <span class="accent--text">Reports</span>
           </v-breadcrumbs-item>
         </v-breadcrumbs>
       </v-layout>
@@ -34,18 +31,22 @@
         icons 
         centered
       >
-        <v-toolbar color="white">
-          <v-tabs-bar class="white">
+        <v-toolbar>
+          <v-tabs-bar>
             <v-tabs-slider color="primary"/>
             <v-tabs-item
               v-for="(tab,key) in tabs"
               :key="key"
               :href="`#${tab.name}`"
               ripple
-              class="primary--text"
+              class="accent--text"
             >
               <v-icon :color="tab.iconColor">{{ tab.icon }}</v-icon>
-              {{ tab.name }}
+              <span 
+                :class="$vuetify.breakpoint.width >= 600 && 'headline'"
+              >
+                {{ tab.name }}
+              </span>
             </v-tabs-item>
           </v-tabs-bar>
         </v-toolbar>
@@ -88,8 +89,8 @@ export default {
 
         /* tabs */
         tabs: [
-            {name: 'blog reports', component: 'blog-reports', icon: 'fa-newspaper-o', iconColor: 'amber'},
-            {name: 'social reports', component: 'social-reports', icon: 'fa-address-book', iconColor: 'cyan'},
+            {name: 'blog reports', component: 'blog-reports', icon: 'fa-newspaper-o', iconColor: 'blue-grey'},
+            {name: 'social reports', component: 'social-reports', icon: 'fa-share-alt ', iconColor: 'light-blue'},
             {name: 'video reports', component: 'video-reports', icon: 'fa-youtube-play ', iconColor: 'red darken-4'}
         ],
         active: {
