@@ -40,9 +40,9 @@
 export default {
     data: () => ({
         showcase: [
-            { show: true, title: 'Complete Social SEO', src: 'http://sourcemachine.io/img/characteristics-complete.svg', xs: 12, sm: 12, md: 4, lg: 4, xl: 4 },
-            { show: true, title: 'Control Traffic and CTR', src: 'http://sourcemachine.io/img/characteristics-control.svg', xs: 12, sm: 12, md: 4, lg: 4, xl: 4 },
-            { show: true, title: 'Rank Videos Faster Than Ever', src: 'http://sourcemachine.io/img/characteristics-rank.svg', xs: 12, sm: 12, md: 4, lg: 4, xl: 4 }
+            { show: true, title: 'Complete Social SEO', src: '/svg/complete-seo.svg', xs: 12, sm: 12, md: 4, lg: 4, xl: 4 },
+            { show: true, title: 'Control Traffic and CTR', src: '/svg/traffic-control.svg', xs: 12, sm: 12, md: 4, lg: 4, xl: 4 },
+            { show: true, title: 'Rank Videos Faster Than Ever', src: '/svg/video-ranking.svg', xs: 12, sm: 12, md: 4, lg: 4, xl: 4 }
         ]
     })
 }

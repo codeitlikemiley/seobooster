@@ -184,11 +184,11 @@ export default {
         'current_image': '/img/SEOSolutions.jpg',
         lorem: 'Lorem Ipsum Text',
         features: [
-            { show: true, title: 'Cloud Based', tagline: 'No extra tools are required. Simply login and get to managing your social SEO.', src: '/img/features-cloud-based.svg', xs: 12, sm: 12, md: 12, lg: 12, xl: 12 },
-            { show: true, title: 'Full Client Reporting', tagline: 'Easily report on links built to your clients on Source Market or wherever you may sell backlinks', src: '/img/features-full-client-reporting.svg', xs: 12, sm: 12, md: 12, lg: 12, xl: 12 },
-            { show: true, title: 'Web 2.0 and Wordpress Management', tagline: 'Machine allows you to post on embed on hundreds to thousands of high authority web 2.0s at once.', src: '/img/features-wordpress.svg', xs: 12, sm: 12, md: 12, lg: 12, xl: 12 },
+            { show: true, title: 'Cloud Based', tagline: 'No extra tools are required. Simply login and get to managing your social SEO.', src: '/svg/cloud-based.svg', xs: 12, sm: 12, md: 12, lg: 12, xl: 12 },
+            { show: true, title: 'Full Client Reporting', tagline: 'Easily report on links built to your clients on Source Market or wherever you may sell backlinks', src: '/svg/full-client-reporting.svg', xs: 12, sm: 12, md: 12, lg: 12, xl: 12 },
+            { show: true, title: 'Web 2.0 and Wordpress Management', tagline: 'Machine allows you to post on embed on hundreds to thousands of high authority web 2.0s at once.', src: '/svg/wordpress.svg', xs: 12, sm: 12, md: 12, lg: 12, xl: 12 },
             { show: true, title: 'Full Social Posting Suite', tagline: 'Facebook, Twitter, Pinteret, heck any major platform that allows links you can post to.', src: '/img/octopost.png', xs: 12, sm: 12, md: 12, lg: 12, xl: 12 },
-            { show: true, title: 'Video Rankings On Steroids', tagline: 'Machine social SEO and video embedding technology is the key to ranking videos quickly in Google and Youtube.', src: '/img/features-video-rankings.svg', xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }
+            { show: true, title: 'Video Rankings On Steroids', tagline: 'Machine social SEO and video embedding technology is the key to ranking videos quickly in Google and Youtube.', src: '/svg/video-ranking.svg', xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }
         ],
         photos: [
         ]
