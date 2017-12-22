@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Exceptions\ProviderNotFound;
-use App\Exceptions\UserNotFound;
 use App\User;
+use Carbon\Carbon;
+use Illuminate\Http\Request;
+use App\Exceptions\UserNotFound;
+use App\Exceptions\ProviderNotFound;
 
 class AccountProviderController extends Controller
 {
@@ -118,7 +119,7 @@ class AccountProviderController extends Controller
         }
         //! verify if we have the correct expires name
         if($response->accessTokenResponseBody['expires_in']){
-            $user->expires_at = $response->accessTokenResponseBody['expires_in'];
+            $user->expires_at = Carbon::now()->addSeconds($response->accessTokenResponseBody['expires_in']);
         }
         if(is_null($response->id) || is_null($response->accessTokenResponseBody['access_token']) || is_null($response->accessTokenResponseBody['expires_in'])){
             throw new \Exception('Error On Updating Facebook Account: id = '.$response->id.', access_token = '.$response->access_token.', expires_at = '.$response->expires_at);
@@ -137,9 +138,10 @@ class AccountProviderController extends Controller
         if($response->accessTokenResponseBody['oauth_token_secret']){
             $user->access_token_secret = $response->accessTokenResponseBody['oauth_token_secret'];
         }
-        if($response->accessTokenResponseBody['x_auth_expires']){
-            $user->expires_at = $response->accessTokenResponseBody['x_auth_expires'];
-        }
+        /* Twitter Token Never Expires */
+        // if($response->accessTokenResponseBody['x_auth_expires']){
+        //     $user->expires_at = $response->accessTokenResponseBody['x_auth_expires'];
+        // }
         if($response->id){
             $user->provider_id = $response->id;
         }
