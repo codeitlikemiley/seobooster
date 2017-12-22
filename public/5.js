@@ -2342,7 +2342,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             /* table */
             headers: [
             /* remove sort and value since we cant access dot anotation in item */
-            { text: 'Username', value: 'username', align: 'left', sortable: true }, { text: 'Status', value: 'active', align: 'left', sortable: true }, { text: 'Token Expires In', value: 'expired_at', align: 'left', sortable: true }, { text: 'Total Post', value: 'post_count', center: 'left', sortable: true }],
+            { text: 'Username', value: 'username', align: 'left', sortable: true }, { text: 'Status', value: 'active', align: 'left', sortable: true }, { text: 'Token Expires In', value: 'expires_at', align: 'left', sortable: true }, { text: 'Total Post', value: 'post_count', center: 'left', sortable: true }],
             items: [],
             max25chars: function max25chars(v) {
                 return v.length <= 25 || 'Input too long!';
@@ -2620,7 +2620,7 @@ var render = function() {
                 ),
                 _vm._v(" "),
                 _c("td", { staticClass: "text-xs-left" }, [
-                  _vm._v(_vm._s(props.item.expired_at))
+                  _vm._v(_vm._s(props.item.expires_at))
                 ]),
                 _vm._v(" "),
                 _c("th", { staticClass: "text-xs-center" }, [
