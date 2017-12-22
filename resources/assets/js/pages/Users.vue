@@ -1,5 +1,5 @@
 <template>
-  <main-layout :style="{ paddingTop: `100px`, backgroundColor: `white` }">
+  <main-layout>
     <v-container fluid>
       <!-- User Main Detail -->
       <v-card 
@@ -18,25 +18,78 @@
         </v-card-title>
       </v-card>
       <v-data-table
+        v-model="selected"
         :headers="headers"
         :items="items"
         :search="search"
+        select-all
         light
-        item-key="name"
+        item-key="id"
+        :pagination.sync="pagination"
         expand
       >
+        <template
+          slot="headers" 
+          slot-scope="props"
+        >
+          <tr>
+            <th>
+              <v-checkbox
+                light
+                primary
+                hide-details
+                @click.native="toggleAll"
+                :input-value="props.all"
+                :indeterminate="props.indeterminate"
+              />
+            </th>
+            <th 
+              v-for="header in props.headers" 
+              :key="header.text"
+              :class="['column sortable', pagination.descending ? 'desc' : 'asc', header.value === pagination.sortBy ? 'name' : '', {'text-xs-left': header.align === 'left', 'text-xs-right': header.align === 'right', 'text-xs-center': header.align === 'center'},$vuetify.breakpoint.width >= 600 && 'title']"
+              @click="changeSort(header.value)"
+            >
+              <v-icon>arrow_upward</v-icon>
+              {{ header.text }}
+            </th>
+            <th text-xs-right>
+              <span 
+                v-if="selected.length < 1"
+                :class="$vuetify.breakpoint.width >= 600 && 'title'"
+              >
+                Actions
+              </span>
+              <v-btn
+                v-else 
+                flat 
+                icon 
+                color="error" 
+                @click.native="deleteSelected()"
+              >
+                <v-icon>fa-trash</v-icon>
+              </v-btn>
+            </th>
+          </tr>
+        </template>
         <template 
           slot="items" 
           slot-scope="props"
         >
           <tr>
-            <td class="title text-xs-left primary--text">
+            <td class="title text-xs-left">
+              <v-checkbox
+                :active="props.selected"
+                @click="props.selected = !props.selected"
+                :input-value="props.selected"
+              />
+            </td>
+            <td class="title text-xs-left accent--text">
               {{ props.item.id }}
             </td>
-            <td class="title text-xs-left primary--text">
+            <td class="title text-xs-left accent--text">
               {{ props.item.name }}
             </td>
-            <td class="title text-xs-left primary--text">
+            <td class="title text-xs-left accent--text">
               <v-avatar v-if="props.item.sponsor">
                 <img 
                   :src="props.item.sponsor.photo_url" 
@@ -46,20 +99,20 @@
               <span v-if="props.item.sponsor">{{ props.item.sponsor.name }}</span>
             </td>
 
-            <td class="title text-xs-left primary--text">
+            <td class="title text-xs-left accent--text">
               <v-btn 
                 flat 
-                color="accent"
+                color="cyan"
                 v-if="activeLink(props.item.referral_link.active)"
                 :href="`http://${ props.item.referral_link.link }.${ App.site.domain }`"
                 target="_blank"
               >
                 <v-icon left>fa-link</v-icon>
-                <span>{{ window.location.protocol }}//{{ props.item.referral_link.link }}.{{ App.site.domain }}</span>
+                <span>{{ props.item.referral_link.link }}</span>
               </v-btn>
 
             </td>
-            <td class="title text-xs-left primary--text">
+            <td class="title text-xs-left accent--text">
               <v-chip
                 dark
                 v-for="(role,key) in props.item.roles" 
@@ -67,14 +120,14 @@
               >
                 <v-avatar
                   :class="{
-                    primary: (role === 'admin'),
+                    'error': (role === 'admin'),
                     'white--text': true,
                     accent: (role === 'customer'),
-                    info: (role === 'merchant'),
-                    success: (role === 'reseller')
+                    brown: (role === 'merchant'),
+                    'blue-grey': (role === 'reseller')
                   }"
                 >
-                  {{ role.charAt(0).toUpperCase() }}
+                  <span class="headline">{{ role.charAt(0).toUpperCase() }}</span>
                 </v-avatar>
                 {{ role }}
               </v-chip>
@@ -167,7 +220,7 @@
               </v-card-actions>
               <v-card-title>
                 <v-container fluid>
-                  <p class="title info--text">Account Details</p>
+                  <p class="title accent--text">Account Details</p>
                   <v-layout 
                     row 
                     wrap
@@ -192,7 +245,7 @@
                     </v-flex>
                   </v-layout>
                   <p 
-                    class="title info--text" 
+                    class="title accent--text" 
                     v-if="props.item.roles"
                   >
                     Assigned Roles
@@ -226,9 +279,9 @@
                             :selected="data.selected"
                           >
                             <v-avatar
-                              class="blue-grey"
+                              class="blue-grey white--text"
                             >
-                              {{ data.item.charAt(0).toUpperCase() }}
+                              <span class="headline">{{ data.item.charAt(0).toUpperCase() }}</span>
                             </v-avatar>
                             {{ data.item }}
                           </v-chip>
@@ -237,7 +290,7 @@
                     </v-flex>
                   </v-layout>
                   <p 
-                    class="title info--text" 
+                    class="title accent--text" 
                     v-if="props.item.permissions"
                   >
                     Role Inherited Permissions
@@ -277,9 +330,9 @@
                             :selected="data.selected"
                           >
                             <v-avatar
-                              class="brown"
+                              class="primary white--text"
                             >
-                              {{ data.item.charAt(0).toUpperCase() }}
+                              <span class="headline">{{ data.item.charAt(0).toUpperCase() }}</span>
                             </v-avatar>
                             {{ data.item }}
                           </v-chip>
@@ -288,7 +341,7 @@
                     </v-flex>
                   </v-layout>
                   <p 
-                    class="title info--text" 
+                    class="title accent--text" 
                     v-if="props.item.profile"
                   >
                     Profile Details
@@ -342,10 +395,13 @@ export default {
             { text: 'Name', value: 'name', align: 'left', sortable: true },
             { text: 'Sponsor', value: 'sponsor.name', align: 'left', sortable: true },
             { text: 'Referrak Link', value: 'referral_link.link', align: 'left', sortable: true },
-            { text: 'Roles', value: 'roles', align: 'left', sortable: false },
-            { text: 'Actions', value: 'actions', align: 'center', sortable: false }
+            { text: 'Roles', value: 'roles', align: 'left', sortable: false }
         ],
         items: [],
+        selected: [],
+        pagination: {
+            sortBy: 'name'
+        },
         current_user: {},
         usersForm: new AppForm(App.forms.usersForm),
         toggleForm: new AppForm(App.forms.toggleForm),
@@ -501,6 +557,21 @@ export default {
         removePermission (permission, permissions) {
             permissions.splice(permissions.indexOf(permission), 1)
             permissions = [...permissions]
+        },
+        deleteAll () {
+            this.items = []
+            this.selected = []
+        },
+        deleteSelected () {
+            let self = this
+            let newItems = _.difference(self.items, self.selected)
+            self.items = newItems
+            self.selected = []
+            //! Send Api Call To Delete The Social Account
+        },
+        toggleAll () {
+            if (this.selected.length) this.selected = []
+            else this.selected = this.items.slice()
         }
 
     }

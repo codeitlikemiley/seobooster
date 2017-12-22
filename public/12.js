@@ -2282,6 +2282,59 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -2297,8 +2350,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             contentClass: { 'grey': true, 'lighten-4': true, 'accent--text': true },
             dialog: false,
             /* table */
-            headers: [{ text: 'ID', value: 'id', align: 'left', sortable: true }, { text: 'Name', value: 'name', align: 'left', sortable: true }, { text: 'Sponsor', value: 'sponsor.name', align: 'left', sortable: true }, { text: 'Referrak Link', value: 'referral_link.link', align: 'left', sortable: true }, { text: 'Roles', value: 'roles', align: 'left', sortable: false }, { text: 'Actions', value: 'actions', align: 'center', sortable: false }],
+            headers: [{ text: 'ID', value: 'id', align: 'left', sortable: true }, { text: 'Name', value: 'name', align: 'left', sortable: true }, { text: 'Sponsor', value: 'sponsor.name', align: 'left', sortable: true }, { text: 'Referrak Link', value: 'referral_link.link', align: 'left', sortable: true }, { text: 'Roles', value: 'roles', align: 'left', sortable: false }],
             items: [],
+            selected: [],
+            pagination: {
+                sortBy: 'name'
+            },
             current_user: {},
             usersForm: new AppForm(App.forms.usersForm),
             toggleForm: new AppForm(App.forms.toggleForm),
@@ -2677,6 +2734,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         removePermission: function removePermission(permission, permissions) {
             permissions.splice(permissions.indexOf(permission), 1);
             permissions = [].concat(__WEBPACK_IMPORTED_MODULE_0_C_Users_uriah_sites_www_seobooster_node_modules_babel_runtime_helpers_toConsumableArray___default()(permissions));
+        },
+        deleteAll: function deleteAll() {
+            this.items = [];
+            this.selected = [];
+        },
+        deleteSelected: function deleteSelected() {
+            var self = this;
+            var newItems = _.difference(self.items, self.selected);
+            self.items = newItems;
+            self.selected = [];
+            //! Send Api Call To Delete The Social Account
+        },
+        toggleAll: function toggleAll() {
+            if (this.selected.length) this.selected = [];else this.selected = this.items.slice();
         }
     }
 });
@@ -2798,7 +2869,6 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "main-layout",
-    { style: { paddingTop: "100px", backgroundColor: "white" } },
     [
       _c(
         "v-container",
@@ -2839,11 +2909,126 @@ var render = function() {
               headers: _vm.headers,
               items: _vm.items,
               search: _vm.search,
+              "select-all": "",
               light: "",
-              "item-key": "name",
+              "item-key": "id",
+              pagination: _vm.pagination,
               expand: ""
             },
+            on: {
+              "update:pagination": function($event) {
+                _vm.pagination = $event
+              }
+            },
             scopedSlots: _vm._u([
+              {
+                key: "headers",
+                fn: function(props) {
+                  return [
+                    _c(
+                      "tr",
+                      [
+                        _c(
+                          "th",
+                          [
+                            _c("v-checkbox", {
+                              attrs: {
+                                light: "",
+                                primary: "",
+                                "hide-details": "",
+                                "input-value": props.all,
+                                indeterminate: props.indeterminate
+                              },
+                              nativeOn: {
+                                click: function($event) {
+                                  _vm.toggleAll($event)
+                                }
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _vm._l(props.headers, function(header) {
+                          return _c(
+                            "th",
+                            {
+                              key: header.text,
+                              class: [
+                                "column sortable",
+                                _vm.pagination.descending ? "desc" : "asc",
+                                header.value === _vm.pagination.sortBy
+                                  ? "name"
+                                  : "",
+                                {
+                                  "text-xs-left": header.align === "left",
+                                  "text-xs-right": header.align === "right",
+                                  "text-xs-center": header.align === "center"
+                                },
+                                _vm.$vuetify.breakpoint.width >= 600 && "title"
+                              ],
+                              on: {
+                                click: function($event) {
+                                  _vm.changeSort(header.value)
+                                }
+                              }
+                            },
+                            [
+                              _c("v-icon", [_vm._v("arrow_upward")]),
+                              _vm._v(
+                                "\n            " +
+                                  _vm._s(header.text) +
+                                  "\n          "
+                              )
+                            ],
+                            1
+                          )
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "th",
+                          { attrs: { "text-xs-right": "" } },
+                          [
+                            _vm.selected.length < 1
+                              ? _c(
+                                  "span",
+                                  {
+                                    class:
+                                      _vm.$vuetify.breakpoint.width >= 600 &&
+                                      "title"
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n              Actions\n            "
+                                    )
+                                  ]
+                                )
+                              : _c(
+                                  "v-btn",
+                                  {
+                                    attrs: {
+                                      flat: "",
+                                      icon: "",
+                                      color: "error"
+                                    },
+                                    nativeOn: {
+                                      click: function($event) {
+                                        _vm.deleteSelected()
+                                      }
+                                    }
+                                  },
+                                  [_c("v-icon", [_vm._v("fa-trash")])],
+                                  1
+                                )
+                          ],
+                          1
+                        )
+                      ],
+                      2
+                    )
+                  ]
+                }
+              },
               {
                 key: "items",
                 fn: function(props) {
@@ -2851,7 +3036,26 @@ var render = function() {
                     _c("tr", [
                       _c(
                         "td",
-                        { staticClass: "title text-xs-left primary--text" },
+                        { staticClass: "title text-xs-left" },
+                        [
+                          _c("v-checkbox", {
+                            attrs: {
+                              active: props.selected,
+                              "input-value": props.selected
+                            },
+                            on: {
+                              click: function($event) {
+                                props.selected = !props.selected
+                              }
+                            }
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "td",
+                        { staticClass: "title text-xs-left accent--text" },
                         [
                           _vm._v(
                             "\n            " +
@@ -2863,7 +3067,7 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "td",
-                        { staticClass: "title text-xs-left primary--text" },
+                        { staticClass: "title text-xs-left accent--text" },
                         [
                           _vm._v(
                             "\n            " +
@@ -2875,7 +3079,7 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "td",
-                        { staticClass: "title text-xs-left primary--text" },
+                        { staticClass: "title text-xs-left accent--text" },
                         [
                           props.item.sponsor
                             ? _c("v-avatar", [
@@ -2899,7 +3103,7 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "td",
-                        { staticClass: "title text-xs-left primary--text" },
+                        { staticClass: "title text-xs-left accent--text" },
                         [
                           _vm.activeLink(props.item.referral_link.active)
                             ? _c(
@@ -2907,7 +3111,7 @@ var render = function() {
                                 {
                                   attrs: {
                                     flat: "",
-                                    color: "accent",
+                                    color: "cyan",
                                     href:
                                       "http://" +
                                       props.item.referral_link.link +
@@ -2923,11 +3127,7 @@ var render = function() {
                                   _vm._v(" "),
                                   _c("span", [
                                     _vm._v(
-                                      _vm._s(_vm.window.location.protocol) +
-                                        "//" +
-                                        _vm._s(props.item.referral_link.link) +
-                                        "." +
-                                        _vm._s(_vm.App.site.domain)
+                                      _vm._s(props.item.referral_link.link)
                                     )
                                   ])
                                 ],
@@ -2940,7 +3140,7 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "td",
-                        { staticClass: "title text-xs-left primary--text" },
+                        { staticClass: "title text-xs-left accent--text" },
                         _vm._l(props.item.roles, function(role, key) {
                           return _c(
                             "v-chip",
@@ -2950,19 +3150,17 @@ var render = function() {
                                 "v-avatar",
                                 {
                                   class: {
-                                    primary: role === "admin",
+                                    error: role === "admin",
                                     "white--text": true,
                                     accent: role === "customer",
-                                    info: role === "merchant",
-                                    success: role === "reseller"
+                                    brown: role === "merchant",
+                                    "blue-grey": role === "reseller"
                                   }
                                 },
                                 [
-                                  _vm._v(
-                                    "\n                " +
-                                      _vm._s(role.charAt(0).toUpperCase()) +
-                                      "\n              "
-                                  )
+                                  _c("span", { staticClass: "headline" }, [
+                                    _vm._v(_vm._s(role.charAt(0).toUpperCase()))
+                                  ])
                                 ]
                               ),
                               _vm._v(
@@ -3180,7 +3378,7 @@ var render = function() {
                                   [
                                     _c(
                                       "p",
-                                      { staticClass: "title info--text" },
+                                      { staticClass: "title accent--text" },
                                       [_vm._v("Account Details")]
                                     ),
                                     _vm._v(" "),
@@ -3249,7 +3447,7 @@ var render = function() {
                                     props.item.roles
                                       ? _c(
                                           "p",
-                                          { staticClass: "title info--text" },
+                                          { staticClass: "title accent--text" },
                                           [
                                             _vm._v(
                                               "\n                  Assigned Roles\n                "
@@ -3313,17 +3511,26 @@ var render = function() {
                                                             "v-avatar",
                                                             {
                                                               staticClass:
-                                                                "blue-grey"
+                                                                "blue-grey white--text"
                                                             },
                                                             [
-                                                              _vm._v(
-                                                                "\n                            " +
-                                                                  _vm._s(
-                                                                    data.item
-                                                                      .charAt(0)
-                                                                      .toUpperCase()
-                                                                  ) +
-                                                                  "\n                          "
+                                                              _c(
+                                                                "span",
+                                                                {
+                                                                  staticClass:
+                                                                    "headline"
+                                                                },
+                                                                [
+                                                                  _vm._v(
+                                                                    _vm._s(
+                                                                      data.item
+                                                                        .charAt(
+                                                                          0
+                                                                        )
+                                                                        .toUpperCase()
+                                                                    )
+                                                                  )
+                                                                ]
                                                               )
                                                             ]
                                                           ),
@@ -3363,7 +3570,7 @@ var render = function() {
                                     props.item.permissions
                                       ? _c(
                                           "p",
-                                          { staticClass: "title info--text" },
+                                          { staticClass: "title accent--text" },
                                           [
                                             _vm._v(
                                               "\n                  Role Inherited Permissions\n                "
@@ -3408,17 +3615,26 @@ var render = function() {
                                                             "v-avatar",
                                                             {
                                                               staticClass:
-                                                                "brown"
+                                                                "primary white--text"
                                                             },
                                                             [
-                                                              _vm._v(
-                                                                "\n                            " +
-                                                                  _vm._s(
-                                                                    data.item
-                                                                      .charAt(0)
-                                                                      .toUpperCase()
-                                                                  ) +
-                                                                  "\n                          "
+                                                              _c(
+                                                                "span",
+                                                                {
+                                                                  staticClass:
+                                                                    "headline"
+                                                                },
+                                                                [
+                                                                  _vm._v(
+                                                                    _vm._s(
+                                                                      data.item
+                                                                        .charAt(
+                                                                          0
+                                                                        )
+                                                                        .toUpperCase()
+                                                                    )
+                                                                  )
+                                                                ]
                                                               )
                                                             ]
                                                           ),
@@ -3459,7 +3675,7 @@ var render = function() {
                                     props.item.profile
                                       ? _c(
                                           "p",
-                                          { staticClass: "title info--text" },
+                                          { staticClass: "title accent--text" },
                                           [
                                             _vm._v(
                                               "\n                  Profile Details\n                "
@@ -3507,7 +3723,14 @@ var render = function() {
                   ]
                 }
               }
-            ])
+            ]),
+            model: {
+              value: _vm.selected,
+              callback: function($$v) {
+                _vm.selected = $$v
+              },
+              expression: "selected"
+            }
           })
         ],
         1
