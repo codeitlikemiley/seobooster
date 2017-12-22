@@ -2152,7 +2152,7 @@ exports = module.exports = __webpack_require__(635)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -2355,6 +2355,28 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
 
     methods: {
+        timeDiff: function timeDiff(expires_in, active) {
+            var now = moment();
+            var expiration = null;
+            if (expires_in === null && active === false) {
+                return 'N/A';
+            }
+            if (expires_in === null && active === true) {
+                return 'Never Expires';
+            }
+            if (expires_in !== null) {
+                expiration = moment(expires_in);
+            }
+
+            var difference = expiration.diff(now, 'days');
+            var day = '';
+            if (difference <= 1) {
+                day = 'day';
+            } else {
+                day = 'days';
+            }
+            return difference + ' ' + day;
+        },
         toggleAll: function toggleAll() {
             if (this.selected.length) this.selected = [];else this.selected = this.items.slice();
         },
@@ -2619,8 +2641,15 @@ var render = function() {
                   1
                 ),
                 _vm._v(" "),
-                _c("td", { staticClass: "text-xs-left" }, [
-                  _vm._v(_vm._s(props.item.expires_at))
+                _c("td", { staticClass: "text-xs-center" }, [
+                  _vm._v(
+                    _vm._s(
+                      _vm.timeDiff(
+                        props.item.expires_at,
+                        _vm.isActive(props.item)
+                      )
+                    )
+                  )
                 ]),
                 _vm._v(" "),
                 _c("th", { staticClass: "text-xs-center" }, [
@@ -4200,6 +4229,10 @@ var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_8_vuex__["createNam
             App.post(route('api.provider.callback', provider), self.usersForm).then(function (response) {
                 console.log(response);
                 //! Activate the New User
+                //! first find by account_id 
+                // self.accounts.social
+
+                //! find by provider_id
             });
         }
     }
@@ -4216,7 +4249,6 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "main-layout",
-    { style: { paddingTop: "100px", backgroundColor: "white" } },
     [
       _c(
         "v-container",

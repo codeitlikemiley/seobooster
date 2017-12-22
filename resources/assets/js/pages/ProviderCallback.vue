@@ -1,5 +1,5 @@
 <template>
-  <main-layout :style="{ paddingTop: `100px`, backgroundColor: `white` }">
+  <main-layout>
     <v-container fluid>
       <v-layout 
         row 
@@ -165,7 +165,11 @@ export default {
             App.post(route('api.provider.callback',provider),self.usersForm)
                 .then((response) => {
                     console.log(response)
-                //! Activate the New User
+                    //! Activate the New User
+                    //! first find by account_id 
+                    // self.accounts.social
+
+                //! find by provider_id
                 })
         }
     }

@@ -96,7 +96,7 @@
             <span>{{ `${props.item.active ? 'Active' : 'Inactive'}` }}</span>
           </v-chip>
         </td>
-        <td class="text-xs-left">{{ props.item.expires_at }}</td>
+        <td class="text-xs-center">{{ timeDiff(props.item.expires_at,isActive(props.item)) }}</td>
         <th class="text-xs-center">{{ props.item.post_count }}</th>
         <td class="text-xs-center">
           <!-- //! View The User Profile Page -->
@@ -189,6 +189,28 @@ export default {
         this.items = this.accounts[0].accounts
     },
     methods: {
+        timeDiff(expires_in,active){
+            let now = moment()
+            let expiration = null
+            if(expires_in === null && active === false){
+                return 'N/A'
+            }
+            if(expires_in === null && active === true){
+                return 'Never Expires'
+            }
+            if(expires_in !== null){
+                expiration = moment(expires_in)
+            }
+            
+            let difference = expiration.diff(now,'days')
+            let day = ''
+            if(difference <= 1){
+                day = 'day'
+            }else{
+                day = 'days'
+            }
+            return `${difference} ${day}`
+        },
         toggleAll () {
             if (this.selected.length) this.selected = []
             else this.selected = this.items.slice()
