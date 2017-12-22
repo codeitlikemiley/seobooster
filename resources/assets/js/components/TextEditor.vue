@@ -34,7 +34,9 @@ export default {
         },
         uploadLink: {
             type: String,
-            required: true
+            default() {
+                return ''
+            }
         },
         id: {
             type: String,
@@ -112,17 +114,6 @@ export default {
         } // End of Configs
 
     }),
-    mounted () {
-        let self = this
-        //* Initialized Text Editor Component Data From Props
-        self.config.advanced.disabled = self.disabled ? self.disabled : false
-        //* Listen For Upload File Event
-        // ? Desctructure payload --> $modal && values
-        Bus.$on('upload-file', ({data, trumbowyg} = payload) => {
-            self.trumbowyg = trumbowyg
-            self.uploadImage(data)
-        })
-    },
     watch: {
         //* Whenever Parent Change Active Props Update Config
         // ? Useful For Disabling Text Editor
@@ -142,6 +133,17 @@ export default {
             let self = this
             self.content = newValue
         }
+    },
+    mounted () {
+        let self = this
+        //* Initialized Text Editor Component Data From Props
+        self.config.advanced.disabled = self.disabled ? self.disabled : false
+        //* Listen For Upload File Event
+        // ? Desctructure payload --> $modal && values
+        Bus.$on('upload-file', ({data, trumbowyg} = payload) => {
+            self.trumbowyg = trumbowyg
+            self.uploadImage(data)
+        })
     },
     methods: {
         uploadImage (form) {
