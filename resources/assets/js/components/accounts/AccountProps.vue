@@ -96,7 +96,7 @@
             <span>{{ `${props.item.active ? 'Active' : 'Inactive'}` }}</span>
           </v-chip>
         </td>
-        <td class="text-xs-left">{{ props.item.expired_at }}</td>
+        <td class="text-xs-left">{{ props.item.expires_at }}</td>
         <th class="text-xs-center">{{ props.item.post_count }}</th>
         <td class="text-xs-center">
           <!-- //! View The User Profile Page -->
@@ -177,7 +177,7 @@ export default {
             /* remove sort and value since we cant access dot anotation in item */
             { text: 'Username', value: 'username', align: 'left', sortable: true },
             { text: 'Status', value: 'active', align: 'left', sortable: true },
-            { text: 'Token Expires In', value: 'expired_at', align: 'left', sortable: true },
+            { text: 'Token Expires In', value: 'expires_at', align: 'left', sortable: true },
             { text: 'Total Post', value: 'post_count', center: 'left', sortable: true }
 
         ],
