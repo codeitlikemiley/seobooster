@@ -44,11 +44,11 @@
         slot="items" 
         slot-scope="props"
       >
-        <td class="text-xs-center primary--text">
+        <td class="text-xs-center">
           <v-icon :color="props.item.icon_color">{{ props.item.icon }}</v-icon>
           <span class="accent--text">{{ props.item.name }}</span>
         </td>
-        <td class="text-xs-center primary--text">
+        <td class="text-xs-center">
           <span class="blue-grey--text">{{ props.item.accounts[0].accounts.length }}</span>
         </td>
         <td class="text-xs-center">
