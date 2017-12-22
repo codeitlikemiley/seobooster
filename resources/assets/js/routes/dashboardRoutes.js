@@ -23,7 +23,7 @@ export default [
         path: '/providers/:provider/callback',
         component: ProviderCallback,
         name: 'accounts.callback',
-        props: true,
+        props: (route) => ({ provider: route.params.provider,query: route.query }),
         meta: {
             requiresAuth: true,
             permission: 'guest',

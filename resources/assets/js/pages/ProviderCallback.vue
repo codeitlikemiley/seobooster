@@ -90,7 +90,11 @@ export default {
     },
     mixins: [Theme],
     props:{
-        route: {
+        provider: {
+            type: String,
+            required: true
+        },
+        query: {
             type: Object,
             required: true
         }
@@ -150,13 +154,15 @@ export default {
         providerCallback(){
             let self = this
             self.usersForm.id = self.getMe.id
-            let data = self.$route.query
+            /* dynamically generate query passed in Form Object */
+            let data = self.query
             for (let k in data) {
                 if (data.hasOwnProperty(k)) {
                     self.usersForm[k] = data[k];
                 }
             }
-            window.axios.post(`/providers/${self.$route.params.provider}/callback`,self.usersForm)
+            let provider = {provider: self.provider}
+            App.post(route('api.provider.callback',provider),self.usersForm)
                 .then((response) => {
                     console.log(response)
                 //! Activate the New User

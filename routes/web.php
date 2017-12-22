@@ -10,7 +10,7 @@ Horizon::auth(function ($request) {
 
 //! Provider Link Redirect
 Route::get('/auth/{provider}/user/{id}/login', 'AccountProviderController@redirectToProvider')->where('provider', '[\/\w\.-]*')->name('account_provider_redirect');
-Route::post('/providers/{provider}/callback', 'AccountProviderController@handleProviderCallback')->where('provider', '[\/\w\.-]*')->name('account_provider_callback');
+Route::post('/providers/{provider}/callback', 'AccountProviderController@handleProviderCallback')->where('provider', '[\/\w\.-]*')->name('api.provider.callback');
 
 //! example que of laravel horizon
 Route::get('/post', function () {
