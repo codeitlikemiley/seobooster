@@ -56,10 +56,7 @@
             :key="key"
             :id="tab.name"
           >
-            <v-card 
-              flat 
-              :light="true"
-            >
+            <v-card flat>
               <component 
                 :is="tab.component" 
                 :tab="tab"
