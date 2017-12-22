@@ -2935,7 +2935,7 @@ var render = function() {
                 return [
                   _c(
                     "td",
-                    { staticClass: "text-xs-center primary--text" },
+                    { staticClass: "text-xs-center" },
                     [
                       _c(
                         "v-icon",
@@ -2950,7 +2950,7 @@ var render = function() {
                     1
                   ),
                   _vm._v(" "),
-                  _c("td", { staticClass: "text-xs-center primary--text" }, [
+                  _c("td", { staticClass: "text-xs-center" }, [
                     _c("span", { staticClass: "blue-grey--text" }, [
                       _vm._v(_vm._s(props.item.accounts[0].accounts.length))
                     ])

@@ -2024,6 +2024,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -2044,7 +2045,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
 
             /* tabs */
-            tabs: [{ name: 'blog posted', component: 'blog-posted', icon: 'fa-newspaper-o', iconColor: 'amber' }, { name: 'social posted', component: 'social-posted', icon: 'fa-address-book', iconColor: 'cyan' }, { name: 'video posted', component: 'video-posted', icon: 'fa-youtube-play ', iconColor: 'red darken-4' }],
+            tabs: [{ name: 'blog posted', component: 'blog-posted', icon: 'fa-newspaper-o', iconColor: 'blue-grey' }, { name: 'social posted', component: 'social-posted', icon: 'fa-share-alt', iconColor: 'light-blue' }, { name: 'video posted', component: 'video-posted', icon: 'fa-youtube-play ', iconColor: 'red darken-4' }],
             active: {
                 name: 'blog posted'
             }
@@ -2141,7 +2142,7 @@ exports = module.exports = __webpack_require__(635)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -2153,6 +2154,12 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2449,7 +2456,8 @@ var render = function() {
                               _vm.pagination.descending ? "desc" : "asc",
                               header.value === _vm.pagination.sortBy
                                 ? "active"
-                                : ""
+                                : "",
+                              _vm.$vuetify.breakpoint.width >= 600 && "title"
                             ],
                             on: {
                               click: function($event) {
@@ -2473,7 +2481,15 @@ var render = function() {
                         "th",
                         [
                           _vm.selected < 1
-                            ? _c("span", [_vm._v("Actions")])
+                            ? _c(
+                                "span",
+                                {
+                                  class:
+                                    _vm.$vuetify.breakpoint.width >= 600 &&
+                                    "title"
+                                },
+                                [_vm._v("\n            Actions\n          ")]
+                              )
                             : _c(
                                 "v-btn",
                                 {
@@ -2517,54 +2533,38 @@ var render = function() {
                     1
                   ),
                   _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-center primary--text" },
-                    [
-                      _vm._v(
-                        "\n        " + _vm._s(props.item.name) + "\n      "
-                      )
-                    ]
-                  ),
+                  _c("td", { staticClass: "text-xs-center" }, [
+                    _vm._v("\n        " + _vm._s(props.item.name) + "\n      ")
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "text-xs-center" }, [
+                    _vm._v("\n        " + _vm._s(props.item.title) + "\n      ")
+                  ]),
                   _vm._v(" "),
                   _c(
                     "td",
-                    { staticClass: "title text-xs-center primary--text" },
-                    [
-                      _vm._v(
-                        "\n        " + _vm._s(props.item.title) + "\n      "
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-center primary--text" },
+                    { staticClass: "text-xs-center" },
                     [
                       _c("v-icon", { attrs: { color: props.item.iconColor } }, [
                         _vm._v(_vm._s(props.item.icon))
                       ]),
                       _vm._v(" "),
-                      _c("span", { staticClass: "title blue-grey--text" }, [
+                      _c("span", { staticClass: "accent--text" }, [
                         _vm._v(_vm._s(props.item.platform))
                       ])
                     ],
                     1
                   ),
                   _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-center primary--text" },
-                    [
-                      _c("span", { staticClass: "title blue-grey--text" }, [
-                        _vm._v(_vm._s(props.item.published_at))
-                      ])
-                    ]
-                  ),
+                  _c("td", { staticClass: "text-xs-center" }, [
+                    _c("span", { staticClass: "accent--text" }, [
+                      _vm._v(_vm._s(props.item.published_at))
+                    ])
+                  ]),
                   _vm._v(" "),
                   _c(
                     "td",
-                    { staticClass: "title text-xs-center" },
+                    { staticClass: "text-xs-center" },
                     [
                       _c(
                         "v-btn",
@@ -2646,8 +2646,19 @@ var render = function() {
             [
               _c(
                 "v-alert",
-                { attrs: { value: true, color: "info", icon: "warning" } },
-                [_vm._v("\n        You Havent Published Any Post Yet.\n      ")]
+                {
+                  attrs: {
+                    value: true,
+                    type: "error",
+                    outline: "",
+                    icon: "warning"
+                  }
+                },
+                [
+                  _vm._v(
+                    "\n        Oops! You Havent Published Any Post Yet Of Blog Type Post.\n      "
+                  )
+                ]
               )
             ],
             1
@@ -2758,7 +2769,7 @@ exports = module.exports = __webpack_require__(635)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -2770,6 +2781,12 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3066,7 +3083,8 @@ var render = function() {
                               _vm.pagination.descending ? "desc" : "asc",
                               header.value === _vm.pagination.sortBy
                                 ? "active"
-                                : ""
+                                : "",
+                              _vm.$vuetify.breakpoint.width >= 600 && "title"
                             ],
                             on: {
                               click: function($event) {
@@ -3090,7 +3108,15 @@ var render = function() {
                         "th",
                         [
                           _vm.selected < 1
-                            ? _c("span", [_vm._v("Actions")])
+                            ? _c(
+                                "span",
+                                {
+                                  class:
+                                    _vm.$vuetify.breakpoint.width >= 600 &&
+                                    "title"
+                                },
+                                [_vm._v("\n            Actions\n          ")]
+                              )
                             : _c(
                                 "v-btn",
                                 {
@@ -3134,54 +3160,38 @@ var render = function() {
                     1
                   ),
                   _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-center primary--text" },
-                    [
-                      _vm._v(
-                        "\n        " + _vm._s(props.item.name) + "\n      "
-                      )
-                    ]
-                  ),
+                  _c("td", { staticClass: "text-xs-center" }, [
+                    _vm._v("\n        " + _vm._s(props.item.name) + "\n      ")
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "text-xs-center" }, [
+                    _vm._v("\n        " + _vm._s(props.item.title) + "\n      ")
+                  ]),
                   _vm._v(" "),
                   _c(
                     "td",
-                    { staticClass: "title text-xs-center primary--text" },
-                    [
-                      _vm._v(
-                        "\n        " + _vm._s(props.item.title) + "\n      "
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-center primary--text" },
+                    { staticClass: "text-xs-center" },
                     [
                       _c("v-icon", { attrs: { color: props.item.iconColor } }, [
                         _vm._v(_vm._s(props.item.icon))
                       ]),
                       _vm._v(" "),
-                      _c("span", { staticClass: "title blue-grey--text" }, [
+                      _c("span", { staticClass: "accent--text" }, [
                         _vm._v(_vm._s(props.item.platform))
                       ])
                     ],
                     1
                   ),
                   _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-center primary--text" },
-                    [
-                      _c("span", { staticClass: "title blue-grey--text" }, [
-                        _vm._v(_vm._s(props.item.published_at))
-                      ])
-                    ]
-                  ),
+                  _c("td", { staticClass: "text-xs-center" }, [
+                    _c("span", { staticClass: "accent--text" }, [
+                      _vm._v(_vm._s(props.item.published_at))
+                    ])
+                  ]),
                   _vm._v(" "),
                   _c(
                     "td",
-                    { staticClass: "title text-xs-center" },
+                    { staticClass: "text-xs-center" },
                     [
                       _c(
                         "v-btn",
@@ -3263,8 +3273,19 @@ var render = function() {
             [
               _c(
                 "v-alert",
-                { attrs: { value: true, color: "info", icon: "warning" } },
-                [_vm._v("\n        You Havent Published Any Post Yet.\n      ")]
+                {
+                  attrs: {
+                    value: true,
+                    type: "error",
+                    outline: "",
+                    icon: "warning"
+                  }
+                },
+                [
+                  _vm._v(
+                    "\n        Oops! You Havent Published Any Post Yet Of Social Type Post.\n      "
+                  )
+                ]
               )
             ],
             1
@@ -3375,7 +3396,7 @@ exports = module.exports = __webpack_require__(635)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -3387,6 +3408,12 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3682,7 +3709,8 @@ var render = function() {
                               _vm.pagination.descending ? "desc" : "asc",
                               header.value === _vm.pagination.sortBy
                                 ? "active"
-                                : ""
+                                : "",
+                              _vm.$vuetify.breakpoint.width >= 600 && "title"
                             ],
                             on: {
                               click: function($event) {
@@ -3706,7 +3734,15 @@ var render = function() {
                         "th",
                         [
                           _vm.selected < 1
-                            ? _c("span", [_vm._v("Actions")])
+                            ? _c(
+                                "span",
+                                {
+                                  class:
+                                    _vm.$vuetify.breakpoint.width >= 600 &&
+                                    "title"
+                                },
+                                [_vm._v("\n            Actions\n          ")]
+                              )
                             : _c(
                                 "v-btn",
                                 {
@@ -3750,54 +3786,38 @@ var render = function() {
                     1
                   ),
                   _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-center primary--text" },
-                    [
-                      _vm._v(
-                        "\n        " + _vm._s(props.item.name) + "\n      "
-                      )
-                    ]
-                  ),
+                  _c("td", { staticClass: "text-xs-center" }, [
+                    _vm._v("\n        " + _vm._s(props.item.name) + "\n      ")
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "text-xs-center" }, [
+                    _vm._v("\n        " + _vm._s(props.item.title) + "\n      ")
+                  ]),
                   _vm._v(" "),
                   _c(
                     "td",
-                    { staticClass: "title text-xs-center primary--text" },
-                    [
-                      _vm._v(
-                        "\n        " + _vm._s(props.item.title) + "\n      "
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-center primary--text" },
+                    { staticClass: "text-xs-center" },
                     [
                       _c("v-icon", { attrs: { color: props.item.iconColor } }, [
                         _vm._v(_vm._s(props.item.icon))
                       ]),
                       _vm._v(" "),
-                      _c("span", { staticClass: "title blue-grey--text" }, [
+                      _c("span", { staticClass: "accent--text" }, [
                         _vm._v(_vm._s(props.item.platform))
                       ])
                     ],
                     1
                   ),
                   _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-center primary--text" },
-                    [
-                      _c("span", { staticClass: "title blue-grey--text" }, [
-                        _vm._v(_vm._s(props.item.published_at))
-                      ])
-                    ]
-                  ),
+                  _c("td", { staticClass: "text-xs-center" }, [
+                    _c("span", { staticClass: "accent--text" }, [
+                      _vm._v(_vm._s(props.item.published_at))
+                    ])
+                  ]),
                   _vm._v(" "),
                   _c(
                     "td",
-                    { staticClass: "title text-xs-center" },
+                    { staticClass: "text-xs-center" },
                     [
                       _c(
                         "v-btn",
@@ -3879,8 +3899,19 @@ var render = function() {
             [
               _c(
                 "v-alert",
-                { attrs: { value: true, color: "info", icon: "warning" } },
-                [_vm._v("\n        You Havent Published Any Post Yet.\n      ")]
+                {
+                  attrs: {
+                    value: true,
+                    type: "error",
+                    outline: "",
+                    icon: "warning"
+                  }
+                },
+                [
+                  _vm._v(
+                    "\n        Oops! You Havent Published Any Post Yet Of Video Type Post.\n      "
+                  )
+                ]
               )
             ],
             1
@@ -3913,10 +3944,6 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "main-layout",
-    {
-      style: { paddingTop: "100px", backgroundColor: "white" },
-      attrs: { dark: false }
-    },
     [
       _c(
         "v-container",
@@ -3951,7 +3978,7 @@ var render = function() {
                   ),
                   _vm._v(" "),
                   _c("v-breadcrumbs-item", { attrs: { disabled: true } }, [
-                    _c("span", { staticClass: "blue-grey--text" }, [
+                    _c("span", { staticClass: "accent--text" }, [
                       _vm._v("Published Post")
                     ])
                   ])
@@ -3968,11 +3995,9 @@ var render = function() {
             [
               _c(
                 "v-toolbar",
-                { attrs: { color: "white" } },
                 [
                   _c(
                     "v-tabs-bar",
-                    { staticClass: "white" },
                     [
                       _c("v-tabs-slider", { attrs: { color: "primary" } }),
                       _vm._v(" "),
@@ -3981,17 +4006,28 @@ var render = function() {
                           "v-tabs-item",
                           {
                             key: key,
-                            staticClass: "primary--text",
+                            staticClass: "accent--text",
                             attrs: { href: "#" + tab.name, ripple: "" }
                           },
                           [
                             _c("v-icon", { attrs: { color: tab.iconColor } }, [
                               _vm._v(_vm._s(tab.icon))
                             ]),
-                            _vm._v(
-                              "\n            " +
-                                _vm._s(tab.name) +
-                                "\n          "
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              {
+                                class:
+                                  _vm.$vuetify.breakpoint.width >= 600 &&
+                                  "headline"
+                              },
+                              [
+                                _vm._v(
+                                  "\n              " +
+                                    _vm._s(tab.name) +
+                                    "\n            "
+                                )
+                              ]
                             )
                           ],
                           1
