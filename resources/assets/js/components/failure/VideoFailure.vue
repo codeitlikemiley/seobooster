@@ -39,14 +39,19 @@
           <th 
             v-for="header in props.headers" 
             :key="header.text"
-            :class="['column sortable', pagination.descending ? 'desc' : 'asc', header.value === pagination.sortBy ? 'active' : '']"
+            :class="['column sortable', pagination.descending ? 'desc' : 'asc', header.value === pagination.sortBy ? 'active' : '',$vuetify.breakpoint.width >= 600 && 'title']"
             @click="changeSort(header.value)"
           >
             <v-icon>arrow_upward</v-icon>
             {{ header.text }}
           </th>
           <th>
-            <span v-if="selected < 1">Actions</span>
+            <span 
+              v-if="selected < 1"
+              :class="$vuetify.breakpoint.width >= 600 && 'title'"
+            >
+              Actions
+            </span>
             <v-btn 
               v-else 
               flat 
@@ -65,26 +70,25 @@
       >
         <td>
           <v-checkbox
-
             primary
             hide-details
             v-model="props.selected"
           />
         </td>
-        <td class="title text-xs-center primary--text">
-          <span class="title blue-grey--text">{{ props.item.title }}</span>
+        <td class="text-xs-center">
+          <span class="accent--text">{{ props.item.title }}</span>
         </td>
-        <td class="title text-xs-center primary--text">
-          <span class="title blue-grey--text">{{ props.item.status }}</span>
+        <td class="text-xs-center">
+          <span class="accent--text">{{ props.item.status }}</span>
         </td>
-        <td class="title text-xs-center primary--text">
+        <td class="text-xs-center">
           <v-icon :color="props.item.iconColor">{{ props.item.icon }}</v-icon>
-          <span class="title blue-grey--text">{{ props.item.platform }}</span>
+          <span class="accent--text">{{ props.item.platform }}</span>
         </td>
-        <td class="title text-xs-center primary--text">
-          <span class="title blue-grey--text">{{ props.item.published_at }}</span>
+        <td class="text-xs-center">
+          <span class="accent--text">{{ props.item.published_at }}</span>
         </td>
-        <td class="title text-xs-center">
+        <td class="text-xs-center">
           <v-btn 
             flat 
             icon 
@@ -98,13 +102,11 @@
       <template slot="no-data">
         <v-alert 
           :value="true" 
-          color="info" 
-          icon="warning" 
-          pa-0 
-          ma-0 
-          fluid
+          type="error"
+          outline
+          icon="warning"
         >
-          You Have No Failured Post Yet :)
+          You Have No Failured Scheduled Post Yet On Video Type Post...
         </v-alert>
       </template>
 
