@@ -123,7 +123,7 @@
             offset-md2
           >
             <v-text-field
-              v-model="videoName"
+              v-model="name"
               name="filename"
               label="Video"
               prepend-icon="video"
