@@ -16,11 +16,11 @@
           @click.native="dialog = false" 
           dark
         >
-          <v-icon color="red darken-4">close</v-icon>
+          <v-icon color="primary">close</v-icon>
         </v-btn>
         <v-spacer/>
         <v-toolbar-title>
-          Edit Traffic Campaign
+          <span class="primary--text headline">Edit Traffic Campaign</span>
         </v-toolbar-title>
         <v-spacer/>
         <v-toolbar-items>
@@ -28,7 +28,7 @@
             dark
             flat 
             @click.native="dialog = false"
-            color="red darken-4"
+            color="primary"
           >
             Close
           </v-btn>
@@ -49,10 +49,14 @@
               :key="key"
               :href="`#${tab.name}`"
               ripple
-              class="primary--text"
+              class="accent--text"
             >
               <v-icon :color="tab.iconColor">{{ tab.icon }}</v-icon>
-              {{ tab.name }}
+              <span 
+                :class="$vuetify.breakpoint.width >= 600 && 'title'"
+              >
+                {{ tab.name }}
+              </span>
             </v-tabs-item>
           </v-tabs-bar>
         </v-toolbar>
@@ -90,8 +94,8 @@ export default {
     data: () => ({
         /* tabs */
         tabs: [
-            {name: 'edit campaign', component: 'campaign-details', icon: 'fa-edit', iconColor: 'blue'},
-            {name: 'campaign stats', component: 'campaign-performance', icon: 'timeline', iconColor: 'amber'}
+            {name: 'edit campaign', component: 'campaign-details', icon: 'fa-edit', iconColor: 'accent'},
+            {name: 'campaign stats', component: 'campaign-performance', icon: 'timeline', iconColor: 'primary'}
         ],
         active: {
             name: 'edit campaign'

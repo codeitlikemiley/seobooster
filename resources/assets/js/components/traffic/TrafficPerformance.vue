@@ -27,14 +27,19 @@
         <th 
           v-for="header in props.headers" 
           :key="header.text"
-          :class="['column sortable', pagination.descending ? 'desc' : 'asc', header.value === pagination.sortBy ? 'name' : '', {'text-xs-left': header.align === 'left', 'text-xs-right': header.align === 'right', 'text-xs-center': header.align === 'center'}]"
+          :class="['column sortable', pagination.descending ? 'desc' : 'asc', header.value === pagination.sortBy ? 'name' : '', {'text-xs-left': header.align === 'left', 'text-xs-right': header.align === 'right', 'text-xs-center': header.align === 'center'},$vuetify.breakpoint.width >= 600 && 'title']"
           @click="changeSort(header.value)"
         >
           <v-icon>arrow_upward</v-icon>
           {{ header.text }}
         </th>
         <th text-xs-right>
-          <span v-if="selected.length < 1">Actions</span>
+          <span 
+            v-if="selected.length < 1"
+            :class="$vuetify.breakpoint.width >= 600 && 'title'"
+          >
+            Actions
+          </span>
           <v-btn
             v-else 
             flat 
@@ -52,7 +57,7 @@
       slot-scope="props"
     >
       <tr>
-        <td class="title text-xs-left primary--text">
+        <td class="title text-xs-left">
           <v-checkbox
             :active="props.selected"
             @click="props.selected = !props.selected"
@@ -62,23 +67,21 @@
             light
           />
         </td>
-        <td class="title text-xs-left primary--text">
+        <td class="text-xs-center">
           <v-icon
-            color="blue" 
-            style="cursor:pointer;"
-            @click=""
+            color="accent" 
           >
             folder
           </v-icon>
-          <span class="caption blue-grey--text">{{ props.item.name }}</span>
+          <span class="accent--text">{{ props.item.name }}</span>
         </td>
-        <td class="title text-xs-left blue-grey--text">
-          <span class="title">{{ props.item.no_of_campaigns }}</span>
+        <td class="text-xs-center">
+          <span class="accent--text">{{ props.item.no_of_campaigns }}</span>
         </td>
-        <td class="title text-xs-left blue-grey--text">{{ props.item.daily_credits_spent }}</td>
-        <td class="title text-xs-left blue-grey--text">{{ props.item.total_credits_spent }}</td>
-        <td class="title text-xs-left blue-grey--text">{{ props.item.overall_keyword_movement }}</td>
-        <td class="title text-xs-center">
+        <td class="text-xs-center accent--text">{{ props.item.daily_credits_spent }}</td>
+        <td class="text-xs-center accent--text">{{ props.item.total_credits_spent }}</td>
+        <td class="text-xs-center accent--text">{{ props.item.overall_keyword_movement }}</td>
+        <td class="text-xs-center">
           <v-btn
             light 
             flat 
@@ -109,13 +112,11 @@
     <template slot="no-data">
       <v-alert 
         :value="true" 
-        color="info" 
-        icon="warning" 
-        pa-0
-        ma-0 
-        fluid
+        type="error"
+        outline
+        icon="warning"
       >
-        You Have No Campaign Yet
+        Oops! You Have No Group Campaign Yet!
       </v-alert>
     </template>
     <template

@@ -1,86 +1,102 @@
 <template>
-  <main-layout :style="{ paddingTop: `100px`, backgroundColor: `white` }">
-    <v-container fluid>
-      <action-panel 
-        :lifetime="lifetime" 
-        :monthly="monthly" 
-        :project-count="socialCount"
-      />
-      <v-layout
-        row 
-        wrap
+  <main-layout>
+    <action-panel 
+      :lifetime="lifetime" 
+      :monthly="monthly" 
+      :project-count="socialCount"
+    />
+    <v-layout
+      row 
+      wrap
+      style="background-color:white;"
+    >
+      <v-flex 
+        xs6
+        md4
       >
-        <v-flex 
-          xs6
-          md4
+        <v-btn 
+          color="accent" 
+          dark 
+          @click.native="AddCampaign()"
         >
-          <v-btn 
-            color="accent" 
-            dark 
-            @click.native="AddCampaign()"
+          Add New Campaigns
+          <v-icon 
+            right
+            class="primary--text"
           >
-            Add New Campaigns
-            <v-icon right>fa-plus</v-icon>
-          </v-btn>
-        </v-flex>
-        <v-flex 
-          xs6 
-          md4 
-          offset-md4 
-          text-xs-right
-        >
-          <v-btn 
-            color="lime lighten-2" 
-            dark
-          >
-            Total Credits
-            <v-icon right>fa-money</v-icon>
-          </v-btn>
-        </v-flex>
-      </v-layout>
-      <v-tabs 
-        fixed 
-        icons
-        centered
+            fa-plus
+          </v-icon>
+        </v-btn>
+      </v-flex>
+      <v-flex 
+        xs6 
+        md4 
+        offset-md4 
+        text-xs-right
       >
-        <v-toolbar
-          color="white" 
-          light
+        <v-btn 
+          color="accent" 
+          dark
         >
-          <v-tabs-bar class="white">
-            <v-tabs-slider color="primary"/>
-            <v-tabs-item
-              v-for="(tab,key) in tabs"
-              :key="key"
-              :href="`#${tab.name}`"
-              ripple
-              class="primary--text"
-            >
-              <v-icon :color="tab.iconColor">{{ tab.icon }}</v-icon>
-              {{ tab.name }}
-            </v-tabs-item>
-          </v-tabs-bar>
-        </v-toolbar>
-        <v-tabs-items>
-          <v-tabs-content
-            v-for="(tab, key) in tabs"
+          Total Credits
+          <v-icon 
+            right 
+            class="primary--text"
+          >
+            fa-money
+          </v-icon>
+        </v-btn>
+      </v-flex>
+    </v-layout>
+    <v-tabs 
+      fixed 
+      icons
+      centered
+    >
+      <v-toolbar
+        color="white" 
+        light
+      >
+        <v-tabs-bar
+          class="white" 
+          slot="extension"
+        >
+          <v-tabs-slider color="primary"/>
+          <v-tabs-item
+            v-for="(tab,key) in tabs"
             :key="key"
-            :id="tab.name"
+            :href="`#${tab.name}`"
+            ripple
+            class="accent--text"
           >
-            <v-card 
-              flat 
-              :light="true"
+            <v-icon :color="tab.iconColor">{{ tab.icon }}</v-icon>
+            <span 
+              :class="$vuetify.breakpoint.width >= 600 && 'headline'"
             >
-              <component 
-                :is="tab.component" 
-                :tab="tab"
-              />
-            </v-card>
-          </v-tabs-content>
-        </v-tabs-items>
-      </v-tabs>
-      <create-campaign/>
-    </v-container>
+              {{ tab.name }}
+            </span>
+          </v-tabs-item>
+        </v-tabs-bar>
+      </v-toolbar>
+      <v-tabs-items>
+        <v-tabs-content
+          v-for="(tab, key) in tabs"
+          :key="key"
+          :id="tab.name"
+        >
+          <v-card 
+            flat 
+            :light="true"
+          >
+            <component 
+              :is="tab.component" 
+              :tab="tab"
+            />
+          </v-card>
+        </v-tabs-content>
+      </v-tabs-items>
+    </v-tabs>
+    <create-campaign/>
   </main-layout>
 </template>
 
@@ -108,7 +124,7 @@ export default {
         socialCount: 0,
         /* tabs */
         tabs: [
-            {name: 'traffic performance', component: 'traffic-performance', icon: 'trending_up', iconColor: 'cyan'}
+            {name: 'traffic performance', component: 'traffic-performance', icon: 'trending_up', iconColor: 'primary'}
         ],
         active: {
             name: 'traffic performance'

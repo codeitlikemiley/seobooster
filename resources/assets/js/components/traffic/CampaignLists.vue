@@ -73,41 +73,44 @@
             v-model="props.selected"
           />
         </td>
-        <td class="title text-xs-center primary--text">
-          <span class="title blue-grey--text">{{ props.item.name }}</span>
+        <td class="text-xs-center primary--text">
+          <span class="accent--text">{{ props.item.name }}</span>
         </td>
-        <td class="title text-xs-center primary--text">
-          <span class="title blue-grey--text">{{ props.item.rank }}</span>
+        <td class="text-xs-center primary--text">
+          <span class="accent--text">{{ props.item.rank }}</span>
         </td>
-        <td class="title text-xs-center primary--text">
-          <span class="title blue-grey--text">{{ props.item.daily_credit_spent }}</span>
+        <td class="text-xs-center primary--text">
+          <span class="accent--text">{{ props.item.daily_credit_spent }}</span>
         </td>
-        <td class="title text-xs-center primary--text">
+        <td class="text-xs-center primary--text">
           <v-btn 
             icon 
-            :class="{'green lighten-2': props.item.smart_rank === 'on', 'red lighten-2': props.item.smart_rank === 'off'}" 
+            :class="{'primary': props.item.smart_rank === 'on', 'accent': props.item.smart_rank === 'off'}" 
             dark
           >
             {{ props.item.smart_rank }}
           </v-btn>
         </td>
-        <td class="title text-xs-center primary--text">
+        <td class="text-xs-center primary--text">
           <v-btn 
             icon 
-            :class="{'green lighten-2': props.item.smart_rank === 'on', 'red lighten-2': props.item.smart_rank === 'off'}" 
+            :class="{'primary': props.item.smart_rank === 'on', 'accent': props.item.smart_rank === 'off'}" 
             dark
           >
             {{ props.item.status }}
           </v-btn>
         </td>
-        <td class="title text-xs-center primary--text">
+        <td class="text-xs-center primary--text">
           <v-btn 
-            color="accent" 
-            outline 
-            dark
+            flat
+            icon
             @click="viewActivities(props.item)"
           >
-            Activities
+            <v-icon 
+              color="primary"
+            >
+              fa-list-ul 
+            </v-icon>
           </v-btn>
         </td>
         <td class="title text-xs-center">
@@ -132,13 +135,11 @@
       <template slot="no-data">
         <v-alert 
           :value="true" 
-          color="info" 
-          icon="warning" 
-          pa-0
-          ma-0 
-          fluid
+          type="error"
+          outline
+          icon="warning"
         >
-          You Have No Failured Post Yet :)
+          Oops! You Have No Campaign For This Group.
         </v-alert>
       </template>
 
@@ -162,12 +163,6 @@ export default {
     components: {
         ActivityLists,
         EditCampaign
-    },
-    props:{
-        tab: {
-            type: Object,
-            required: true
-        }
     },
     data: () => ({
         pagination: {

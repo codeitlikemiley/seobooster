@@ -2174,7 +2174,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: {
@@ -2231,19 +2230,16 @@ var render = function() {
                 "v-card",
                 {
                   staticClass: "ma-1",
-                  staticStyle: { "background-color": "#333333" },
-                  attrs: { height: "110px" }
+                  attrs: { color: "accent", height: "110px" }
                 },
                 [
                   _c(
                     "v-card-text",
                     { staticClass: "title pa-5" },
                     [
-                      _c(
-                        "v-icon",
-                        { attrs: { large: "", color: "amber lighten-2" } },
-                        [_vm._v("\n            date_range\n          ")]
-                      ),
+                      _c("v-icon", { attrs: { large: "", color: "primary" } }, [
+                        _vm._v("\n            date_range\n          ")
+                      ]),
                       _vm._v(" "),
                       _c("span", { staticClass: "white--text" }, [
                         _vm._v("Post Lifetime: " + _vm._s(_vm.lifetimeTotal))
@@ -2266,19 +2262,16 @@ var render = function() {
                 "v-card",
                 {
                   staticClass: "ma-1",
-                  staticStyle: { "background-color": "#333333" },
-                  attrs: { height: "110px" }
+                  attrs: { color: "accent", height: "110px" }
                 },
                 [
                   _c(
                     "v-card-text",
                     { staticClass: "title pa-5" },
                     [
-                      _c(
-                        "v-icon",
-                        { attrs: { large: "", color: "red darken-4" } },
-                        [_vm._v("\n            schedule\n          ")]
-                      ),
+                      _c("v-icon", { attrs: { large: "", color: "primary" } }, [
+                        _vm._v("\n            schedule\n          ")
+                      ]),
                       _vm._v(" "),
                       _c("span", { staticClass: "white--text" }, [
                         _vm._v("Post This Month: " + _vm._s(_vm.monthTotal))
@@ -2301,15 +2294,14 @@ var render = function() {
                 "v-card",
                 {
                   staticClass: "ma-1",
-                  staticStyle: { "background-color": "#333333" },
-                  attrs: { height: "110px" }
+                  attrs: { color: "accent", height: "110px" }
                 },
                 [
                   _c(
                     "v-card-text",
                     { staticClass: "title pa-5" },
                     [
-                      _c("v-icon", { attrs: { large: "", color: "amber" } }, [
+                      _c("v-icon", { attrs: { large: "", color: "primary" } }, [
                         _vm._v("\n            supervisor_account\n          ")
                       ]),
                       _vm._v(" "),

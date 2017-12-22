@@ -1,25 +1,28 @@
 <template>
-  <div>
+  <v-container 
+    fluid 
+    pa-0
+    ma-0
+  >
     <v-layout 
       row 
       wrap 
       align-center
     >
-      <!-- make a card to display this -->
       <v-flex 
         xs12 
         md4 
         text-xs-left
       >
         <v-card 
-          color="blue-grey" 
+          color="accent" 
           class="ma-1" 
           height="110px"
         >
           <v-card-text class="title pa-5">
             <v-icon 
               large 
-              color="amber lighten-2"
+              color="primary"
             >
               date_range
             </v-icon> 
@@ -33,14 +36,14 @@
         text-xs-left
       >
         <v-card
-          color="red lighten-2" 
+          color="accent" 
           class="ma-1" 
           height="110px"
         >
           <v-card-text class="title pa-5">
             <v-icon 
               large 
-              color="red darken-4"
+              color="primary"
             >
               schedule
             </v-icon> 
@@ -54,22 +57,23 @@
         text-xs-left
       >
         <v-card 
-          color="cyan" 
+          color="accent" 
           class="ma-1" 
           height="110px"
         >
           <v-card-text class="title pa-5">
             <v-icon 
               large 
-              color="amber"
-            >work
+              color="primary"
+            >
+              fa-fa
             </v-icon> 
             <span class="white--text">Total Project: {{ totalproject }}</span>
           </v-card-text>
         </v-card>
       </v-flex>
     </v-layout>
-  </div>
+  </v-container>
 
 </template>
 

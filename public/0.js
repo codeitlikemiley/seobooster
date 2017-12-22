@@ -5185,6 +5185,22 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -5209,7 +5225,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             monthly: 0,
             socialCount: 0,
             /* tabs */
-            tabs: [{ name: 'traffic performance', component: 'traffic-performance', icon: 'trending_up', iconColor: 'cyan' }],
+            tabs: [{ name: 'traffic performance', component: 'traffic-performance', icon: 'trending_up', iconColor: 'primary' }],
             active: {
                 name: 'traffic performance'
             }
@@ -5353,6 +5369,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: {
@@ -5394,7 +5414,8 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "div",
+    "v-container",
+    { attrs: { fluid: "", "pa-0": "", "ma-0": "" } },
     [
       _c(
         "v-layout",
@@ -5408,18 +5429,16 @@ var render = function() {
                 "v-card",
                 {
                   staticClass: "ma-1",
-                  attrs: { color: "blue-grey", height: "110px" }
+                  attrs: { color: "accent", height: "110px" }
                 },
                 [
                   _c(
                     "v-card-text",
                     { staticClass: "title pa-5" },
                     [
-                      _c(
-                        "v-icon",
-                        { attrs: { large: "", color: "amber lighten-2" } },
-                        [_vm._v("\n            date_range\n          ")]
-                      ),
+                      _c("v-icon", { attrs: { large: "", color: "primary" } }, [
+                        _vm._v("\n            date_range\n          ")
+                      ]),
                       _vm._v(" "),
                       _c("span", { staticClass: "white--text" }, [
                         _vm._v("Action This Month: " + _vm._s(_vm.monthTotal))
@@ -5442,18 +5461,16 @@ var render = function() {
                 "v-card",
                 {
                   staticClass: "ma-1",
-                  attrs: { color: "red lighten-2", height: "110px" }
+                  attrs: { color: "accent", height: "110px" }
                 },
                 [
                   _c(
                     "v-card-text",
                     { staticClass: "title pa-5" },
                     [
-                      _c(
-                        "v-icon",
-                        { attrs: { large: "", color: "red darken-4" } },
-                        [_vm._v("\n            schedule\n          ")]
-                      ),
+                      _c("v-icon", { attrs: { large: "", color: "primary" } }, [
+                        _vm._v("\n            schedule\n          ")
+                      ]),
                       _vm._v(" "),
                       _c("span", { staticClass: "white--text" }, [
                         _vm._v("Action Live Time: " + _vm._s(_vm.lifetime))
@@ -5476,15 +5493,15 @@ var render = function() {
                 "v-card",
                 {
                   staticClass: "ma-1",
-                  attrs: { color: "cyan", height: "110px" }
+                  attrs: { color: "accent", height: "110px" }
                 },
                 [
                   _c(
                     "v-card-text",
                     { staticClass: "title pa-5" },
                     [
-                      _c("v-icon", { attrs: { large: "", color: "amber" } }, [
-                        _vm._v("work\n          ")
+                      _c("v-icon", { attrs: { large: "", color: "primary" } }, [
+                        _vm._v("\n            fa-fa\n          ")
                       ]),
                       _vm._v(" "),
                       _c("span", { staticClass: "white--text" }, [
@@ -5605,7 +5622,7 @@ exports = module.exports = __webpack_require__(635)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -5619,6 +5636,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_traffic_CampaignLists_vue__ = __webpack_require__(950);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_traffic_CampaignLists_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_traffic_CampaignLists_vue__);
+//
 //
 //
 //
@@ -5902,7 +5920,7 @@ exports = module.exports = __webpack_require__(635)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -6075,6 +6093,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -6082,12 +6101,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     components: {
         ActivityLists: __WEBPACK_IMPORTED_MODULE_0__ActivityLists___default.a,
         EditCampaign: __WEBPACK_IMPORTED_MODULE_1__EditCampaign___default.a
-    },
-    props: {
-        tab: {
-            type: Object,
-            required: true
-        }
     },
     data: function data() {
         return {
@@ -6442,7 +6455,7 @@ var render = function() {
                   }
                 },
                 [
-                  _c("v-icon", { attrs: { color: "red darken-4" } }, [
+                  _c("v-icon", { attrs: { color: "primary" } }, [
                     _vm._v("close")
                   ])
                 ],
@@ -6451,10 +6464,10 @@ var render = function() {
               _vm._v(" "),
               _c("v-spacer"),
               _vm._v(" "),
-              _c("v-toolbar-name", [
-                _vm._v(
-                  "\n        Campaign Activity #" + _vm._s(_vm.id) + "\n      "
-                )
+              _c("v-toolbar-title", [
+                _c("span", { staticClass: "primary--text headline" }, [
+                  _vm._v("Campaign Activities")
+                ])
               ]),
               _vm._v(" "),
               _c("v-spacer"),
@@ -6465,7 +6478,7 @@ var render = function() {
                   _c(
                     "v-btn",
                     {
-                      attrs: { dark: "", flat: "", color: "red darken-4" },
+                      attrs: { dark: "", flat: "", color: "primary" },
                       nativeOn: {
                         click: function($event) {
                           _vm.dialog = false
@@ -6494,10 +6507,10 @@ var render = function() {
                     [
                       _c(
                         "v-list",
-                        _vm._l(_vm.items, function(item) {
+                        _vm._l(_vm.items, function(item, itemIndex) {
                           return _c(
                             "v-list-group",
-                            { key: item.name },
+                            { key: itemIndex },
                             [
                               _c(
                                 "v-list-tile",
@@ -6516,7 +6529,7 @@ var render = function() {
                                   _c(
                                     "v-list-tile-content",
                                     [
-                                      _c("v-list-tile-name", [
+                                      _c("v-list-tile-title", [
                                         _vm._v(
                                           "\n                    " +
                                             _vm._s(item.name) +
@@ -6542,18 +6555,21 @@ var render = function() {
                                 1
                               ),
                               _vm._v(" "),
-                              _vm._l(item.activities, function(subItem) {
+                              _vm._l(item.activities, function(
+                                subItem,
+                                subItemKey
+                              ) {
                                 return _c(
                                   "v-list-tile",
                                   {
-                                    key: subItem.name,
+                                    key: subItemKey,
                                     on: { click: function($event) {} }
                                   },
                                   [
                                     _c(
                                       "v-list-tile-content",
                                       [
-                                        _c("v-list-tile-name", [
+                                        _c("v-list-tile-title", [
                                           _vm._v(_vm._s(subItem.name))
                                         ])
                                       ],
@@ -6691,7 +6707,7 @@ exports = module.exports = __webpack_require__(635)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -6788,6 +6804,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -6799,7 +6819,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     data: function data() {
         return {
             /* tabs */
-            tabs: [{ name: 'edit campaign', component: 'campaign-details', icon: 'fa-edit', iconColor: 'blue' }, { name: 'campaign stats', component: 'campaign-performance', icon: 'timeline', iconColor: 'amber' }],
+            tabs: [{ name: 'edit campaign', component: 'campaign-details', icon: 'fa-edit', iconColor: 'accent' }, { name: 'campaign stats', component: 'campaign-performance', icon: 'timeline', iconColor: 'primary' }],
             active: {
                 name: 'edit campaign'
             },
@@ -8767,11 +8787,11 @@ var render = function() {
                     [
                       _c("v-slider", {
                         attrs: {
-                          color: "teal",
+                          color: "primary",
                           min: 50,
                           max: 1000,
                           step: "1",
-                          "track-color": "amber darken-4",
+                          "track-color": "accent",
                           label: "Search Boosts Per Month"
                         },
                         model: {
@@ -8831,11 +8851,11 @@ var render = function() {
                     [
                       _c("v-slider", {
                         attrs: {
-                          color: "teal",
+                          color: "primary",
                           min: 1,
                           max: 5,
                           step: "1",
-                          "track-color": "amber darken-4",
+                          "track-color": "accent",
                           label: "Minutes Spent on Visit"
                         },
                         model: {
@@ -8893,11 +8913,9 @@ var render = function() {
                     "v-flex",
                     { attrs: { xs4: "", "d-flex": "" } },
                     [
-                      _c(
-                        "v-subheader",
-                        { staticClass: "green--text text--lighten-2" },
-                        [_vm._v("Approximate Daily Credit Cost")]
-                      )
+                      _c("v-subheader", { staticClass: "accent--text" }, [
+                        _vm._v("Approximate Daily Credit Cost")
+                      ])
                     ],
                     1
                   ),
@@ -8938,11 +8956,9 @@ var render = function() {
                     "v-flex",
                     { attrs: { xs4: "", "d-flex": "" } },
                     [
-                      _c(
-                        "v-subheader",
-                        { staticClass: "green--text text--lighten-2" },
-                        [_vm._v("Approximate Montly Credit Cost")]
-                      )
+                      _c("v-subheader", { staticClass: "accent--text" }, [
+                        _vm._v("Approximate Montly Credit Cost")
+                      ])
                     ],
                     1
                   ),
@@ -9129,7 +9145,7 @@ exports = module.exports = __webpack_require__(635)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -9141,8 +9157,6 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
 //
 //
 //
@@ -9704,7 +9718,8 @@ var render = function() {
                                 _vm.pagination.descending ? "desc" : "asc",
                                 header.value === _vm.pagination.sortBy
                                   ? "active"
-                                  : ""
+                                  : "",
+                                _vm.$vuetify.breakpoint.width >= 600 && "title"
                               ],
                               on: {
                                 click: function($event) {
@@ -9733,7 +9748,7 @@ var render = function() {
                     return [
                       _c(
                         "td",
-                        { staticClass: "title text-xs-center primary--text" },
+                        { staticClass: "text-xs-center" },
                         [
                           _c(
                             "v-icon",
@@ -9741,62 +9756,42 @@ var render = function() {
                             [_vm._v(_vm._s(props.item.icon))]
                           ),
                           _vm._v(" "),
-                          _c("span", { staticClass: "title blue-grey--text" }, [
+                          _c("span", { staticClass: "accent--text" }, [
                             _vm._v(_vm._s(props.item.name))
                           ])
                         ],
                         1
                       ),
                       _vm._v(" "),
-                      _c(
-                        "td",
-                        { staticClass: "title text-xs-center primary--text" },
-                        [
-                          _c("span", { staticClass: "title blue-grey--text" }, [
-                            _vm._v(_vm._s(props.item.start_date))
-                          ])
-                        ]
-                      ),
+                      _c("td", { staticClass: "text-xs-center" }, [
+                        _c("span", { staticClass: "accent--text" }, [
+                          _vm._v(_vm._s(props.item.start_date))
+                        ])
+                      ]),
                       _vm._v(" "),
-                      _c(
-                        "td",
-                        { staticClass: "title text-xs-center primary--text" },
-                        [
-                          _c("span", { staticClass: "title blue-grey--text" }, [
-                            _vm._v(_vm._s(props.item.current))
-                          ])
-                        ]
-                      ),
+                      _c("td", { staticClass: "text-xs-center" }, [
+                        _c("span", { staticClass: "accent--text" }, [
+                          _vm._v(_vm._s(props.item.current))
+                        ])
+                      ]),
                       _vm._v(" "),
-                      _c(
-                        "td",
-                        { staticClass: "title text-xs-center primary--text" },
-                        [
-                          _c("span", { staticClass: "title blue-grey--text" }, [
-                            _vm._v(_vm._s(props.item.volume))
-                          ])
-                        ]
-                      ),
+                      _c("td", { staticClass: "text-xs-center" }, [
+                        _c("span", { staticClass: "accent--text" }, [
+                          _vm._v(_vm._s(props.item.volume))
+                        ])
+                      ]),
                       _vm._v(" "),
-                      _c(
-                        "td",
-                        { staticClass: "title text-xs-center primary--text" },
-                        [
-                          _c("span", { staticClass: "title blue-grey--text" }, [
-                            _vm._v(_vm._s(props.item.weekly))
-                          ])
-                        ]
-                      ),
+                      _c("td", { staticClass: "text-xs-center" }, [
+                        _c("span", { staticClass: "accent--text" }, [
+                          _vm._v(_vm._s(props.item.weekly))
+                        ])
+                      ]),
                       _vm._v(" "),
-                      _c(
-                        "td",
-                        { staticClass: "title text-xs-center primary--text" },
-                        [
-                          _c("span", { staticClass: "title blue-grey--text" }, [
-                            _vm._v(_vm._s(props.item.monthly))
-                          ])
-                        ]
-                      )
+                      _c("td", { staticClass: "text-xs-center" }, [
+                        _c("span", { staticClass: "accent--text" }, [
+                          _vm._v(_vm._s(props.item.monthly))
+                        ])
+                      ])
                     ]
                   }
                 },
@@ -9828,16 +9823,14 @@ var render = function() {
                     {
                       attrs: {
                         value: true,
-                        color: "info",
-                        icon: "warning",
-                        "pa-0": "",
-                        "ma-0": "",
-                        fluid: ""
+                        type: "error",
+                        outline: "",
+                        icon: "warning"
                       }
                     },
                     [
                       _vm._v(
-                        "\n          You Have No Campaign Performance Data Yet :)\n        "
+                        "\n          Oops! You Have No Campaign Performance Data Yet.\n        "
                       )
                     ]
                   )
@@ -9911,7 +9904,7 @@ var render = function() {
                   }
                 },
                 [
-                  _c("v-icon", { attrs: { color: "red darken-4" } }, [
+                  _c("v-icon", { attrs: { color: "primary" } }, [
                     _vm._v("close")
                   ])
                 ],
@@ -9921,7 +9914,9 @@ var render = function() {
               _c("v-spacer"),
               _vm._v(" "),
               _c("v-toolbar-title", [
-                _vm._v("\n        Edit Traffic Campaign\n      ")
+                _c("span", { staticClass: "primary--text headline" }, [
+                  _vm._v("Edit Traffic Campaign")
+                ])
               ]),
               _vm._v(" "),
               _c("v-spacer"),
@@ -9932,7 +9927,7 @@ var render = function() {
                   _c(
                     "v-btn",
                     {
-                      attrs: { dark: "", flat: "", color: "red darken-4" },
+                      attrs: { dark: "", flat: "", color: "primary" },
                       nativeOn: {
                         click: function($event) {
                           _vm.dialog = false
@@ -9967,17 +9962,28 @@ var render = function() {
                           "v-tabs-item",
                           {
                             key: key,
-                            staticClass: "primary--text",
+                            staticClass: "accent--text",
                             attrs: { href: "#" + tab.name, ripple: "" }
                           },
                           [
                             _c("v-icon", { attrs: { color: tab.iconColor } }, [
                               _vm._v(_vm._s(tab.icon))
                             ]),
-                            _vm._v(
-                              "\n            " +
-                                _vm._s(tab.name) +
-                                "\n          "
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              {
+                                class:
+                                  _vm.$vuetify.breakpoint.width >= 600 &&
+                                  "title"
+                              },
+                              [
+                                _vm._v(
+                                  "\n              " +
+                                    _vm._s(tab.name) +
+                                    "\n            "
+                                )
+                              ]
                             )
                           ],
                           1
@@ -10202,46 +10208,34 @@ var render = function() {
                     1
                   ),
                   _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-center primary--text" },
-                    [
-                      _c("span", { staticClass: "title blue-grey--text" }, [
-                        _vm._v(_vm._s(props.item.name))
-                      ])
-                    ]
-                  ),
+                  _c("td", { staticClass: "text-xs-center primary--text" }, [
+                    _c("span", { staticClass: "accent--text" }, [
+                      _vm._v(_vm._s(props.item.name))
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "text-xs-center primary--text" }, [
+                    _c("span", { staticClass: "accent--text" }, [
+                      _vm._v(_vm._s(props.item.rank))
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "text-xs-center primary--text" }, [
+                    _c("span", { staticClass: "accent--text" }, [
+                      _vm._v(_vm._s(props.item.daily_credit_spent))
+                    ])
+                  ]),
                   _vm._v(" "),
                   _c(
                     "td",
-                    { staticClass: "title text-xs-center primary--text" },
-                    [
-                      _c("span", { staticClass: "title blue-grey--text" }, [
-                        _vm._v(_vm._s(props.item.rank))
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-center primary--text" },
-                    [
-                      _c("span", { staticClass: "title blue-grey--text" }, [
-                        _vm._v(_vm._s(props.item.daily_credit_spent))
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    { staticClass: "title text-xs-center primary--text" },
+                    { staticClass: "text-xs-center primary--text" },
                     [
                       _c(
                         "v-btn",
                         {
                           class: {
-                            "green lighten-2": props.item.smart_rank === "on",
-                            "red lighten-2": props.item.smart_rank === "off"
+                            primary: props.item.smart_rank === "on",
+                            accent: props.item.smart_rank === "off"
                           },
                           attrs: { icon: "", dark: "" }
                         },
@@ -10259,14 +10253,14 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "td",
-                    { staticClass: "title text-xs-center primary--text" },
+                    { staticClass: "text-xs-center primary--text" },
                     [
                       _c(
                         "v-btn",
                         {
                           class: {
-                            "green lighten-2": props.item.smart_rank === "on",
-                            "red lighten-2": props.item.smart_rank === "off"
+                            primary: props.item.smart_rank === "on",
+                            accent: props.item.smart_rank === "off"
                           },
                           attrs: { icon: "", dark: "" }
                         },
@@ -10284,19 +10278,24 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "td",
-                    { staticClass: "title text-xs-center primary--text" },
+                    { staticClass: "text-xs-center primary--text" },
                     [
                       _c(
                         "v-btn",
                         {
-                          attrs: { color: "accent", outline: "", dark: "" },
+                          attrs: { flat: "", icon: "" },
                           on: {
                             click: function($event) {
                               _vm.viewActivities(props.item)
                             }
                           }
                         },
-                        [_vm._v("\n          Activities\n        ")]
+                        [
+                          _c("v-icon", { attrs: { color: "primary" } }, [
+                            _vm._v("\n            fa-list-ul \n          ")
+                          ])
+                        ],
+                        1
                       )
                     ],
                     1
@@ -10374,14 +10373,16 @@ var render = function() {
                 {
                   attrs: {
                     value: true,
-                    color: "info",
-                    icon: "warning",
-                    "pa-0": "",
-                    "ma-0": "",
-                    fluid: ""
+                    type: "error",
+                    outline: "",
+                    icon: "warning"
                   }
                 },
-                [_vm._v("\n        You Have No Failured Post Yet :)\n      ")]
+                [
+                  _vm._v(
+                    "\n        Oops! You Have No Campaign For This Group.\n      "
+                  )
+                ]
               )
             ],
             1
@@ -10475,7 +10476,8 @@ var render = function() {
                             "text-xs-left": header.align === "left",
                             "text-xs-right": header.align === "right",
                             "text-xs-center": header.align === "center"
-                          }
+                          },
+                          _vm.$vuetify.breakpoint.width >= 600 && "title"
                         ],
                         on: {
                           click: function($event) {
@@ -10496,7 +10498,14 @@ var render = function() {
                     { attrs: { "text-xs-right": "" } },
                     [
                       _vm.selected.length < 1
-                        ? _c("span", [_vm._v("Actions")])
+                        ? _c(
+                            "span",
+                            {
+                              class:
+                                _vm.$vuetify.breakpoint.width >= 600 && "title"
+                            },
+                            [_vm._v("\n          Actions\n        ")]
+                          )
                         : _c(
                             "v-btn",
                             {
@@ -10526,7 +10535,7 @@ var render = function() {
               _c("tr", [
                 _c(
                   "td",
-                  { staticClass: "title text-xs-left primary--text" },
+                  { staticClass: "title text-xs-left" },
                   [
                     _c("v-checkbox", {
                       attrs: {
@@ -10548,56 +10557,40 @@ var render = function() {
                 _vm._v(" "),
                 _c(
                   "td",
-                  { staticClass: "title text-xs-left primary--text" },
+                  { staticClass: "text-xs-center" },
                   [
-                    _c(
-                      "v-icon",
-                      {
-                        staticStyle: { cursor: "pointer" },
-                        attrs: { color: "blue" },
-                        on: { click: function($event) {} }
-                      },
-                      [_vm._v("\n          folder\n        ")]
-                    ),
+                    _c("v-icon", { attrs: { color: "accent" } }, [
+                      _vm._v("\n          folder\n        ")
+                    ]),
                     _vm._v(" "),
-                    _c("span", { staticClass: "caption blue-grey--text" }, [
+                    _c("span", { staticClass: "accent--text" }, [
                       _vm._v(_vm._s(props.item.name))
                     ])
                   ],
                   1
                 ),
                 _vm._v(" "),
-                _c(
-                  "td",
-                  { staticClass: "title text-xs-left blue-grey--text" },
-                  [
-                    _c("span", { staticClass: "title" }, [
-                      _vm._v(_vm._s(props.item.no_of_campaigns))
-                    ])
-                  ]
-                ),
+                _c("td", { staticClass: "text-xs-center" }, [
+                  _c("span", { staticClass: "accent--text" }, [
+                    _vm._v(_vm._s(props.item.no_of_campaigns))
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", { staticClass: "text-xs-center accent--text" }, [
+                  _vm._v(_vm._s(props.item.daily_credits_spent))
+                ]),
+                _vm._v(" "),
+                _c("td", { staticClass: "text-xs-center accent--text" }, [
+                  _vm._v(_vm._s(props.item.total_credits_spent))
+                ]),
+                _vm._v(" "),
+                _c("td", { staticClass: "text-xs-center accent--text" }, [
+                  _vm._v(_vm._s(props.item.overall_keyword_movement))
+                ]),
                 _vm._v(" "),
                 _c(
                   "td",
-                  { staticClass: "title text-xs-left blue-grey--text" },
-                  [_vm._v(_vm._s(props.item.daily_credits_spent))]
-                ),
-                _vm._v(" "),
-                _c(
-                  "td",
-                  { staticClass: "title text-xs-left blue-grey--text" },
-                  [_vm._v(_vm._s(props.item.total_credits_spent))]
-                ),
-                _vm._v(" "),
-                _c(
-                  "td",
-                  { staticClass: "title text-xs-left blue-grey--text" },
-                  [_vm._v(_vm._s(props.item.overall_keyword_movement))]
-                ),
-                _vm._v(" "),
-                _c(
-                  "td",
-                  { staticClass: "title text-xs-center" },
+                  { staticClass: "text-xs-center" },
                   [
                     _c(
                       "v-btn",
@@ -10688,14 +10681,12 @@ var render = function() {
             {
               attrs: {
                 value: true,
-                color: "info",
-                icon: "warning",
-                "pa-0": "",
-                "ma-0": "",
-                fluid: ""
+                type: "error",
+                outline: "",
+                icon: "warning"
               }
             },
-            [_vm._v("\n      You Have No Campaign Yet\n    ")]
+            [_vm._v("\n      Oops! You Have No Group Campaign Yet!\n    ")]
           )
         ],
         1
@@ -11680,7 +11671,7 @@ var render = function() {
                   }
                 },
                 [
-                  _c("v-icon", { attrs: { color: "red darken-4" } }, [
+                  _c("v-icon", { attrs: { color: "primary" } }, [
                     _vm._v("close")
                   ])
                 ],
@@ -11690,7 +11681,9 @@ var render = function() {
               _c("v-spacer"),
               _vm._v(" "),
               _c("v-toolbar-title", [
-                _vm._v("\n        Create Traffic Campaign\n      ")
+                _c("span", { staticClass: "primary--text" }, [
+                  _vm._v("Create Traffic Campaign")
+                ])
               ]),
               _vm._v(" "),
               _c("v-spacer"),
@@ -11701,7 +11694,7 @@ var render = function() {
                   _c(
                     "v-btn",
                     {
-                      attrs: { dark: "", flat: "", color: "red darken-4" },
+                      attrs: { dark: "", flat: "", color: "primary" },
                       nativeOn: {
                         click: function($event) {
                           _vm.dialog = false
@@ -12873,11 +12866,11 @@ var render = function() {
                             [
                               _c("v-slider", {
                                 attrs: {
-                                  color: "teal",
+                                  color: "primary",
                                   min: 50,
                                   max: 1000,
                                   step: "1",
-                                  "track-color": "amber darken-4",
+                                  "track-color": "accent",
                                   label: "Search Boosts Per Month"
                                 },
                                 model: {
@@ -12944,11 +12937,11 @@ var render = function() {
                             [
                               _c("v-slider", {
                                 attrs: {
-                                  color: "teal",
+                                  color: "primary",
                                   min: 1,
                                   max: 5,
                                   step: "1",
-                                  "track-color": "amber darken-4",
+                                  "track-color": "accent",
                                   label: "Minutes Spent on Visit"
                                 },
                                 model: {
@@ -13015,7 +13008,7 @@ var render = function() {
                             [
                               _c(
                                 "v-subheader",
-                                { staticClass: "green--text text--lighten-2" },
+                                { staticClass: "accent--text" },
                                 [_vm._v("Approximate Daily Credit Cost")]
                               )
                             ],
@@ -13067,7 +13060,7 @@ var render = function() {
                             [
                               _c(
                                 "v-subheader",
-                                { staticClass: "green--text text--lighten-2" },
+                                { staticClass: "accent--text" },
                                 [_vm._v("Approximate Montly Credit Cost")]
                               )
                             ],
@@ -13190,71 +13183,42 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "main-layout",
-    { style: { paddingTop: "100px", backgroundColor: "white" } },
     [
+      _c("action-panel", {
+        attrs: {
+          lifetime: _vm.lifetime,
+          monthly: _vm.monthly,
+          "project-count": _vm.socialCount
+        }
+      }),
+      _vm._v(" "),
       _c(
-        "v-container",
-        { attrs: { fluid: "" } },
+        "v-layout",
+        {
+          staticStyle: { "background-color": "white" },
+          attrs: { row: "", wrap: "" }
+        },
         [
-          _c("action-panel", {
-            attrs: {
-              lifetime: _vm.lifetime,
-              monthly: _vm.monthly,
-              "project-count": _vm.socialCount
-            }
-          }),
-          _vm._v(" "),
           _c(
-            "v-layout",
-            { attrs: { row: "", wrap: "" } },
+            "v-flex",
+            { attrs: { xs6: "", md4: "" } },
             [
               _c(
-                "v-flex",
-                { attrs: { xs6: "", md4: "" } },
-                [
-                  _c(
-                    "v-btn",
-                    {
-                      attrs: { color: "accent", dark: "" },
-                      nativeOn: {
-                        click: function($event) {
-                          _vm.AddCampaign()
-                        }
-                      }
-                    },
-                    [
-                      _vm._v("\n          Add New Campaigns\n          "),
-                      _c("v-icon", { attrs: { right: "" } }, [
-                        _vm._v("fa-plus")
-                      ])
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "v-flex",
+                "v-btn",
                 {
-                  attrs: {
-                    xs6: "",
-                    md4: "",
-                    "offset-md4": "",
-                    "text-xs-right": ""
+                  attrs: { color: "accent", dark: "" },
+                  nativeOn: {
+                    click: function($event) {
+                      _vm.AddCampaign()
+                    }
                   }
                 },
                 [
+                  _vm._v("\n        Add New Campaigns\n        "),
                   _c(
-                    "v-btn",
-                    { attrs: { color: "lime lighten-2", dark: "" } },
-                    [
-                      _vm._v("\n          Total Credits\n          "),
-                      _c("v-icon", { attrs: { right: "" } }, [
-                        _vm._v("fa-money")
-                      ])
-                    ],
-                    1
+                    "v-icon",
+                    { staticClass: "primary--text", attrs: { right: "" } },
+                    [_vm._v("\n          fa-plus\n        ")]
                   )
                 ],
                 1
@@ -13264,78 +13228,115 @@ var render = function() {
           ),
           _vm._v(" "),
           _c(
-            "v-tabs",
-            { attrs: { fixed: "", icons: "", centered: "" } },
+            "v-flex",
+            {
+              attrs: { xs6: "", md4: "", "offset-md4": "", "text-xs-right": "" }
+            },
             [
               _c(
-                "v-toolbar",
-                { attrs: { color: "white", light: "" } },
+                "v-btn",
+                { attrs: { color: "accent", dark: "" } },
                 [
+                  _vm._v("\n        Total Credits\n        "),
                   _c(
-                    "v-tabs-bar",
-                    { staticClass: "white" },
-                    [
-                      _c("v-tabs-slider", { attrs: { color: "primary" } }),
-                      _vm._v(" "),
-                      _vm._l(_vm.tabs, function(tab, key) {
-                        return _c(
-                          "v-tabs-item",
+                    "v-icon",
+                    { staticClass: "primary--text", attrs: { right: "" } },
+                    [_vm._v("\n          fa-money\n        ")]
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "v-tabs",
+        { attrs: { fixed: "", icons: "", centered: "" } },
+        [
+          _c(
+            "v-toolbar",
+            { attrs: { color: "white", light: "" } },
+            [
+              _c(
+                "v-tabs-bar",
+                {
+                  staticClass: "white",
+                  attrs: { slot: "extension" },
+                  slot: "extension"
+                },
+                [
+                  _c("v-tabs-slider", { attrs: { color: "primary" } }),
+                  _vm._v(" "),
+                  _vm._l(_vm.tabs, function(tab, key) {
+                    return _c(
+                      "v-tabs-item",
+                      {
+                        key: key,
+                        staticClass: "accent--text",
+                        attrs: { href: "#" + tab.name, ripple: "" }
+                      },
+                      [
+                        _c("v-icon", { attrs: { color: tab.iconColor } }, [
+                          _vm._v(_vm._s(tab.icon))
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "span",
                           {
-                            key: key,
-                            staticClass: "primary--text",
-                            attrs: { href: "#" + tab.name, ripple: "" }
+                            class:
+                              _vm.$vuetify.breakpoint.width >= 600 && "headline"
                           },
                           [
-                            _c("v-icon", { attrs: { color: tab.iconColor } }, [
-                              _vm._v(_vm._s(tab.icon))
-                            ]),
                             _vm._v(
                               "\n            " +
                                 _vm._s(tab.name) +
                                 "\n          "
                             )
-                          ],
-                          1
+                          ]
                         )
-                      })
-                    ],
-                    2
-                  )
+                      ],
+                      1
+                    )
+                  })
                 ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "v-tabs-items",
-                _vm._l(_vm.tabs, function(tab, key) {
-                  return _c(
-                    "v-tabs-content",
-                    { key: key, attrs: { id: tab.name } },
-                    [
-                      _c(
-                        "v-card",
-                        { attrs: { flat: "", light: true } },
-                        [
-                          _c(tab.component, {
-                            tag: "component",
-                            attrs: { tab: tab }
-                          })
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                })
+                2
               )
             ],
             1
           ),
           _vm._v(" "),
-          _c("create-campaign")
+          _c(
+            "v-tabs-items",
+            _vm._l(_vm.tabs, function(tab, key) {
+              return _c(
+                "v-tabs-content",
+                { key: key, attrs: { id: tab.name } },
+                [
+                  _c(
+                    "v-card",
+                    { attrs: { flat: "", light: true } },
+                    [
+                      _c(tab.component, {
+                        tag: "component",
+                        attrs: { tab: tab }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            })
+          )
         ],
         1
-      )
+      ),
+      _vm._v(" "),
+      _c("create-campaign")
     ],
     1
   )

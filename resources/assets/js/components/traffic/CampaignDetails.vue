@@ -552,12 +552,12 @@
             xs11
           >
             <v-slider
-              color="teal"
+              color="primary"
               :min="50"
               :max="1000"
               v-model.number="search_boost_per_month"
               step="1"
-              track-color="amber darken-4"
+              track-color="accent"
               label="Search Boosts Per Month"
             />
           </v-flex>
@@ -593,12 +593,12 @@
             xs11
           >
             <v-slider
-              color="teal"
+              color="primary"
               :min="1"
               :max="5"
               v-model.number="minutes_spent_on_visit"
               step="1"
-              track-color="amber darken-4"
+              track-color="accent"
               label="Minutes Spent on Visit"
             />
           </v-flex>
@@ -634,7 +634,7 @@
             xs4
             d-flex
           >
-            <v-subheader class="green--text text--lighten-2">Approximate Daily Credit Cost</v-subheader>
+            <v-subheader class="accent--text">Approximate Daily Credit Cost</v-subheader>
           </v-flex>
           <v-flex
             xs8 
@@ -664,7 +664,7 @@
             xs4
             d-flex
           >
-            <v-subheader class="green--text text--lighten-2">Approximate Montly Credit Cost</v-subheader>
+            <v-subheader class="accent--text">Approximate Montly Credit Cost</v-subheader>
           </v-flex>
           <v-flex 
             xs8 

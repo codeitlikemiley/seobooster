@@ -16,19 +16,19 @@
           @click.native="dialog = false" 
           dark
         >
-          <v-icon color="red darken-4">close</v-icon>
+          <v-icon color="primary">close</v-icon>
         </v-btn>
         <v-spacer/>
-        <v-toolbar-name>
-          Campaign Activity #{{ id }}
-        </v-toolbar-name>
+        <v-toolbar-title>
+          <span class="primary--text headline">Campaign Activities</span>
+        </v-toolbar-title>
         <v-spacer/>
         <v-toolbar-items>
           <v-btn 
             dark 
             flat 
             @click.native="dialog = false" 
-            color="red darken-4"
+            color="primary"
           >
             Close
           </v-btn>
@@ -46,29 +46,29 @@
           >
             <v-list>
               <v-list-group 
-                v-for="item in items" 
-                :key="item.name"
+                v-for="(item,itemIndex) in items" 
+                :key="itemIndex"
               >
                 <v-list-tile slot="item" @click="">
                   <v-list-tile-action>
                     <v-icon>fa-plus</v-icon>
                   </v-list-tile-action>
                   <v-list-tile-content>
-                    <v-list-tile-name>
+                    <v-list-tile-title>
                       {{ item.name }} - Total Duration: {{ item.total_duration }}
-                    </v-list-tile-name>
+                    </v-list-tile-title>
                   </v-list-tile-content>
                   <v-list-tile-action>
                     <v-icon>keyboard_arrow_down</v-icon>
                   </v-list-tile-action>
                 </v-list-tile>
                 <v-list-tile 
-                  v-for="subItem in item.activities" 
-                  :key="subItem.name" 
+                  v-for="(subItem,subItemKey) in item.activities" 
+                  :key="subItemKey" 
                   @click=""
                 >
                   <v-list-tile-content>
-                    <v-list-tile-name>{{ subItem.name }}</v-list-tile-name>
+                    <v-list-tile-title>{{ subItem.name }}</v-list-tile-title>
                   </v-list-tile-content>
                   <v-list-tile-action>
                     {{ subItem.duration }}

@@ -151,7 +151,7 @@
             <th 
               v-for="header in props.headers" 
               :key="header.text"
-              :class="['column sortable', pagination.descending ? 'desc' : 'asc', header.value === pagination.sortBy ? 'active' : '']"
+              :class="['column sortable', pagination.descending ? 'desc' : 'asc', header.value === pagination.sortBy ? 'active' : '',$vuetify.breakpoint.width >= 600 && 'title']"
               @click="changeSort(header.value)"
             >
               <v-icon>arrow_upward</v-icon>
@@ -164,36 +164,34 @@
           slot-scope="props"
         >
 
-          <td class="title text-xs-center primary--text">
+          <td class="text-xs-center">
             <v-icon :color="props.item.iconColor">{{ props.item.icon }}</v-icon>
-            <span class="title blue-grey--text">{{ props.item.name }}</span>
+            <span class="accent--text">{{ props.item.name }}</span>
           </td>
-          <td class="title text-xs-center primary--text">
-            <span class="title blue-grey--text">{{ props.item.start_date }}</span>
+          <td class="text-xs-center">
+            <span class="accent--text">{{ props.item.start_date }}</span>
           </td>
-          <td class="title text-xs-center primary--text">
-            <span class="title blue-grey--text">{{ props.item.current }}</span>
+          <td class="text-xs-center">
+            <span class="accent--text">{{ props.item.current }}</span>
           </td>
-          <td class="title text-xs-center primary--text">
-            <span class="title blue-grey--text">{{ props.item.volume }}</span>
+          <td class="text-xs-center">
+            <span class="accent--text">{{ props.item.volume }}</span>
           </td>
-          <td class="title text-xs-center primary--text">
-            <span class="title blue-grey--text">{{ props.item.weekly }}</span>
+          <td class="text-xs-center">
+            <span class="accent--text">{{ props.item.weekly }}</span>
           </td>
-          <td class="title text-xs-center primary--text">
-            <span class="title blue-grey--text">{{ props.item.monthly }}</span>
+          <td class="text-xs-center">
+            <span class="accent--text">{{ props.item.monthly }}</span>
           </td>
         </template>
         <template slot="no-data">
           <v-alert 
             :value="true" 
-            color="info" 
-            icon="warning" 
-            pa-0 
-            ma-0 
-            fluid
+            type="error"
+            outline
+            icon="warning"
           >
-            You Have No Campaign Performance Data Yet :)
+            Oops! You Have No Campaign Performance Data Yet.
           </v-alert>
         </template>
 

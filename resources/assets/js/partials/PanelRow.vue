@@ -9,21 +9,20 @@
       wrap
       align-center
     >
-      <!-- make a card to display this -->
       <v-flex 
         xs12 
         md4 
         text-xs-left
       >
         <v-card 
-          style="background-color:#333333;"
+          color="accent" 
           class="ma-1" 
           height="110px"
         >
           <v-card-text class="title pa-5">
             <v-icon 
               large 
-              color="amber lighten-2"
+              color="primary"
             >
               date_range
             </v-icon> 
@@ -37,14 +36,14 @@
         text-xs-left
       >
         <v-card 
-          style="background-color:#333333;"
+          color="accent" 
           class="ma-1" 
           height="110px"
         >
           <v-card-text class="title pa-5">
             <v-icon 
               large 
-              color="red darken-4"
+              color="primary"
             >
               schedule
             </v-icon>
@@ -58,14 +57,14 @@
         text-xs-left
       >
         <v-card 
-          style="background-color:#333333;"
+          color="accent" 
           class="ma-1"
           height="110px"
         >
           <v-card-text class="title pa-5">
             <v-icon 
               large 
-              color="amber"
+              color="primary"
             >
               supervisor_account
             </v-icon>
