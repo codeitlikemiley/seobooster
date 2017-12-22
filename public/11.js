@@ -1952,6 +1952,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -2039,6 +2053,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+//
 //
 //
 //
@@ -2289,7 +2304,8 @@ var render = function() {
     { attrs: { id: "account" } },
     [
       _c(
-        "v-container",
+        "v-card",
+        { attrs: { flat: "" } },
         [
           _c(
             "v-layout",
@@ -2513,7 +2529,7 @@ var render = function() {
                   _c(
                     "v-btn",
                     {
-                      attrs: { block: "", color: "primary" },
+                      attrs: { block: "", color: "accent", dark: "" },
                       on: {
                         click: function($event) {
                           _vm.updateAccount()
@@ -2640,7 +2656,7 @@ exports = module.exports = __webpack_require__(635)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -2662,6 +2678,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+//
+//
+//
 //
 //
 //
@@ -2856,7 +2875,8 @@ var render = function() {
     { attrs: { id: "profile" } },
     [
       _c(
-        "v-container",
+        "v-card",
+        { attrs: { flat: "" } },
         [
           _c(
             "v-layout",
@@ -2864,23 +2884,29 @@ var render = function() {
             [
               _c(
                 "v-flex",
-                { attrs: { xs12: "", md8: "", "offset-md2": "" } },
+                {
+                  attrs: {
+                    xs12: "",
+                    md8: "",
+                    "offset-md2": "",
+                    "text-xs-center": ""
+                  }
+                },
                 [
                   _c(
                     "v-alert",
                     {
                       attrs: {
-                        color: "primary",
-                        icon: "warning",
-                        value: "true"
+                        value: true,
+                        type: "info",
+                        outline: "",
+                        icon: "fa-info-circle"
                       }
                     },
                     [
-                      _c("span", { staticClass: "white--text" }, [
-                        _vm._v(
-                          "** This Will be Used as Default for Billing Details **"
-                        )
-                      ])
+                      _vm._v(
+                        "\n          Note: This Will be Used as Default for Billing Details\n        "
+                      )
                     ]
                   )
                 ],
@@ -2929,7 +2955,7 @@ var render = function() {
                   _c(
                     "v-btn",
                     {
-                      attrs: { block: "", color: "primary" },
+                      attrs: { block: "", color: "accent", dark: "" },
                       on: {
                         click: function($event) {
                           _vm.updateProfile()
@@ -3056,7 +3082,7 @@ exports = module.exports = __webpack_require__(635)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -3080,6 +3106,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+//
 //
 //
 //
@@ -3257,106 +3284,117 @@ var render = function() {
     { attrs: { id: "referral-link" } },
     [
       _c(
-        "v-container",
+        "v-card",
+        { attrs: { flat: "" } },
         [
           _c(
-            "v-layout",
-            { attrs: { row: "", wrap: "" } },
+            "v-container",
+            { staticStyle: { height: "75vh" } },
             [
               _c(
-                "v-flex",
-                { attrs: { xs12: "", md8: "", "offset-md2": "" } },
+                "v-layout",
+                { attrs: { row: "", wrap: "" } },
                 [
                   _c(
-                    "v-alert",
+                    "v-flex",
                     {
                       attrs: {
-                        color: "primary",
-                        icon: "fa-link",
-                        value: "true"
+                        xs12: "",
+                        md8: "",
+                        "offset-md2": "",
+                        "text-xs-center": ""
                       }
                     },
                     [
                       _c(
-                        "v-list",
+                        "v-alert",
                         {
-                          staticClass: "primary",
-                          attrs: { dense: "", light: "" }
+                          attrs: {
+                            value: true,
+                            type: "info",
+                            outline: "",
+                            icon: "fa-info-circle"
+                          }
                         },
                         [
-                          _c("v-link", {
-                            attrs: {
-                              "link-color": "white",
-                              dark: false,
-                              title: "Your Online Shop Link : " + _vm.href,
-                              href: _vm.href
-                            }
-                          })
+                          _c(
+                            "v-btn",
+                            {
+                              attrs: { flat: "", color: "info", href: _vm.href }
+                            },
+                            [
+                              _vm._v(
+                                "\n              Referral Link: " +
+                                  _vm._s(_vm.href) +
+                                  "\n            "
+                              )
+                            ]
+                          )
                         ],
                         1
                       )
                     ],
                     1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "v-flex",
-                { attrs: { xs12: "", md8: "", "offset-md2": "" } },
-                [
-                  _c("v-text-field", {
-                    directives: [
-                      {
-                        name: "validate",
-                        rawName: "v-validate",
-                        value: {
-                          required: true,
-                          regex: /^[a-zA-Z0-9][a-zA-Z0-9.-]+[a-zA-Z0-9]$/
-                        },
-                        expression:
-                          "{ required: true, regex: /^[a-zA-Z0-9][a-zA-Z0-9.-]+[a-zA-Z0-9]$/ }"
-                      }
-                    ],
-                    attrs: {
-                      label: "Referral Link",
-                      "prepend-icon": "fa-link",
-                      light: "",
-                      "error-messages": _vm.errors.collect("referral link"),
-                      "data-vv-name": "referral link"
-                    },
-                    model: {
-                      value: _vm.link,
-                      callback: function($$v) {
-                        _vm.link = $$v
-                      },
-                      expression: "link"
-                    }
-                  })
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "v-flex",
-                { attrs: { xs12: "", md8: "", "offset-md2": "" } },
-                [
+                  ),
+                  _vm._v(" "),
                   _c(
-                    "v-btn",
-                    {
-                      attrs: { block: "", color: "primary" },
-                      on: {
-                        click: function($event) {
-                          _vm.updateLink()
-                        }
-                      }
-                    },
+                    "v-flex",
+                    { attrs: { xs12: "", md8: "", "offset-md2": "" } },
                     [
-                      _vm._v("\n          Update Referral Link "),
-                      _c("v-icon", { attrs: { right: "" } }, [
-                        _vm._v("fa-send")
-                      ])
+                      _c("v-text-field", {
+                        directives: [
+                          {
+                            name: "validate",
+                            rawName: "v-validate",
+                            value: {
+                              required: true,
+                              regex: /^[a-zA-Z0-9][a-zA-Z0-9.-]+[a-zA-Z0-9]$/
+                            },
+                            expression:
+                              "{ required: true, regex: /^[a-zA-Z0-9][a-zA-Z0-9.-]+[a-zA-Z0-9]$/ }"
+                          }
+                        ],
+                        attrs: {
+                          label: "Referral Link",
+                          "prepend-icon": "fa-link",
+                          light: "",
+                          "error-messages": _vm.errors.collect("referral link"),
+                          "data-vv-name": "referral link"
+                        },
+                        model: {
+                          value: _vm.link,
+                          callback: function($$v) {
+                            _vm.link = $$v
+                          },
+                          expression: "link"
+                        }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-flex",
+                    { attrs: { xs12: "", md8: "", "offset-md2": "" } },
+                    [
+                      _c(
+                        "v-btn",
+                        {
+                          attrs: { block: "", color: "accent", dark: "" },
+                          on: {
+                            click: function($event) {
+                              _vm.updateLink()
+                            }
+                          }
+                        },
+                        [
+                          _vm._v("\n            Update Referral Link "),
+                          _c("v-icon", { attrs: { right: "" } }, [
+                            _vm._v("fa-send")
+                          ])
+                        ],
+                        1
+                      )
                     ],
                     1
                   )
@@ -3394,50 +3432,85 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "main-layout",
-    { style: { paddingTop: "100px", backgroundColor: "white" } },
     [
       _c(
         "v-tabs",
         { attrs: { fixed: "", icons: "", centered: "" } },
         [
           _c(
-            "v-tabs-bar",
+            "v-toolbar",
+            { attrs: { color: "white" } },
             [
-              _c("v-tabs-slider", { attrs: { color: "primary" } }),
-              _vm._v(" "),
               _c(
-                "v-tabs-item",
-                { staticClass: "primary--text", attrs: { href: "#account" } },
+                "v-tabs-bar",
                 [
-                  _c("v-icon", { attrs: { color: "indigo" } }, [
-                    _vm._v("fa-user")
-                  ]),
-                  _vm._v("\n        Account\n      ")
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "v-tabs-item",
-                { staticClass: "primary--text", attrs: { href: "#profile" } },
-                [
-                  _c("v-icon", { attrs: { color: "teal" } }, [
-                    _vm._v("fa-address-card")
-                  ]),
-                  _vm._v("\n        Profile\n      ")
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "v-tabs-item",
-                {
-                  staticClass: "primary--text",
-                  attrs: { href: "#referral-link" }
-                },
-                [
-                  _c("v-icon", { attrs: { color: "cyan" } }, [_vm._v("link")]),
-                  _vm._v("\n        Referral Link\n      ")
+                  _c("v-tabs-slider", { attrs: { color: "primary" } }),
+                  _vm._v(" "),
+                  _c(
+                    "v-tabs-item",
+                    {
+                      staticClass: "accent--text",
+                      attrs: { href: "#account" }
+                    },
+                    [
+                      _c("v-icon", { attrs: { color: "indigo", large: "" } }, [
+                        _vm._v("fa-user")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          class: _vm.$vuetify.breakpoint.width >= 600 && "title"
+                        },
+                        [_vm._v("\n            Account\n          ")]
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-tabs-item",
+                    {
+                      staticClass: "accent--text",
+                      attrs: { href: "#profile" }
+                    },
+                    [
+                      _c("v-icon", { attrs: { color: "teal", large: "" } }, [
+                        _vm._v("fa-address-card")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          class: _vm.$vuetify.breakpoint.width >= 600 && "title"
+                        },
+                        [_vm._v("\n            Profile\n          ")]
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-tabs-item",
+                    {
+                      staticClass: "accent--text",
+                      attrs: { href: "#referral-link" }
+                    },
+                    [
+                      _c("v-icon", { attrs: { color: "cyan", large: "" } }, [
+                        _vm._v("link")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          class: _vm.$vuetify.breakpoint.width >= 600 && "title"
+                        },
+                        [_vm._v("\n            Referral Link\n          ")]
+                      )
+                    ],
+                    1
+                  )
                 ],
                 1
               )

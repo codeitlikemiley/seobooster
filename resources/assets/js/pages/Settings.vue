@@ -1,36 +1,50 @@
 <template>
-  <main-layout :style="{ paddingTop: `100px`, backgroundColor: `white` }">
+  <main-layout>
     <v-tabs 
       fixed 
       icons 
       centered
     >
-      <v-tabs-bar>
-        <v-tabs-slider color="primary"/>
-        <!-- tabs -->
-        <v-tabs-item 
-          href="#account" 
-          class="primary--text"
-        >
-          <v-icon color="indigo">fa-user</v-icon>
-          Account
-        </v-tabs-item>
-        <v-tabs-item 
-          href="#profile" 
-          class="primary--text"
-        >
-          <v-icon color="teal">fa-address-card</v-icon>
-          Profile
-        </v-tabs-item>
-        <v-tabs-item 
-          href="#referral-link" 
-          class="primary--text"
-        >
-          <v-icon color="cyan">link</v-icon>
-          Referral Link
-        </v-tabs-item>
-        <!-- tabs -->
-      </v-tabs-bar>
+      <v-toolbar color="white">
+        <v-tabs-bar>
+          <v-tabs-slider color="primary"/>
+          <!-- tabs -->
+          <v-tabs-item 
+            href="#account" 
+            class="accent--text"
+          >
+            <v-icon color="indigo" large>fa-user</v-icon>
+            <span 
+              :class="$vuetify.breakpoint.width >= 600 && 'title'"
+            >
+              Account
+            </span>
+          </v-tabs-item>
+          <v-tabs-item 
+            href="#profile" 
+            class="accent--text"
+          >
+            <v-icon color="teal" large>fa-address-card</v-icon>
+            <span 
+              :class="$vuetify.breakpoint.width >= 600 && 'title'"
+            >
+              Profile
+            </span>
+          </v-tabs-item>
+          <v-tabs-item 
+            href="#referral-link" 
+            class="accent--text"
+          >
+            <v-icon color="cyan" large>link</v-icon>
+            <span 
+              :class="$vuetify.breakpoint.width >= 600 && 'title'"
+            >
+              Referral Link
+            </span>
+          </v-tabs-item>
+          <!-- tabs -->
+        </v-tabs-bar>
+      </v-toolbar>
       <v-tabs-items>
         <!-- tab contents -->
         <account/>

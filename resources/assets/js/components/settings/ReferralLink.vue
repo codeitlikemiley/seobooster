@@ -2,65 +2,66 @@
   <v-tabs-content
     id="referral-link"
   >
-    <v-container>
-      <v-layout 
-        row 
-        wrap
-      >
-        <v-flex 
-          xs12
-          md8 
-          offset-md2
+    <v-card flat>
+      <v-container style="height:75vh;">
+        <v-layout 
+          row 
+          wrap
         >
-          <v-alert 
-            color="primary"
-            icon="fa-link" 
-            value="true"
+          <v-flex 
+            xs12
+            md8 
+            offset-md2
+            text-xs-center
           >
-            <v-list 
-              dense 
-              light 
-              class="primary"
+            <v-alert 
+              :value="true" 
+              type="info"
+              outline
+              icon="fa-info-circle"
             >
-              <v-link 
-                link-color="white" 
-                :dark="false" 
-                :title="`Your Online Shop Link : ${href}`" 
+              <v-btn 
+                flat 
+                color="info" 
                 :href="href"
-              />
-            </v-list>
-          </v-alert>
-        </v-flex>
-        <v-flex 
-          xs12 
-          md8 
-          offset-md2
-        >
-          <v-text-field
-            label="Referral Link"
-            v-model="link"
-            prepend-icon="fa-link"
-            light
-            v-validate="{ required: true, regex: /^[a-zA-Z0-9][a-zA-Z0-9.-]+[a-zA-Z0-9]$/ }"
-            :error-messages="errors.collect('referral link')"
-            data-vv-name="referral link"
-          />
-        </v-flex>
-        <v-flex 
-          xs12
-          md8 
-          offset-md2
-        >
-          <v-btn 
-            block
-            color="primary" 
-            @click="updateLink()"
+              >
+                Referral Link: {{ href }}
+              </v-btn>
+            </v-alert>
+          </v-flex>
+          <v-flex 
+            xs12 
+            md8 
+            offset-md2
           >
-            Update Referral Link <v-icon right>fa-send</v-icon>
-          </v-btn>
-        </v-flex>
-      </v-layout>
-    </v-container>
+            <v-text-field
+              label="Referral Link"
+              v-model="link"
+              prepend-icon="fa-link"
+              light
+              v-validate="{ required: true, regex: /^[a-zA-Z0-9][a-zA-Z0-9.-]+[a-zA-Z0-9]$/ }"
+              :error-messages="errors.collect('referral link')"
+              data-vv-name="referral link"
+            />
+          </v-flex>
+          <v-flex 
+            xs12
+            md8 
+            offset-md2
+          >
+            <v-btn 
+              block
+              color="accent" 
+              dark
+              @click="updateLink()"
+            >
+              Update Referral Link <v-icon right>fa-send</v-icon>
+            </v-btn>
+          </v-flex>
+        </v-layout>
+      </v-container>
+      
+    </v-card>
   </v-tabs-content>
 </template>
 

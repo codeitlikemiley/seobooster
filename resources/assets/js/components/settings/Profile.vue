@@ -2,7 +2,7 @@
   <v-tabs-content
     id="profile"
   >
-    <v-container>
+    <v-card flat>
       <v-layout
         row
         wrap
@@ -11,13 +11,15 @@
           xs12 
           md8 
           offset-md2
+          text-xs-center
         >
           <v-alert 
-            color="primary" 
-            icon="warning" 
-            value="true"
+            :value="true" 
+            type="info"
+            outline
+            icon="fa-info-circle"
           >
-            <span class="white--text">** This Will be Used as Default for Billing Details **</span>
+            Note: This Will be Used as Default for Billing Details
           </v-alert>
         </v-flex>
         <v-flex 
@@ -42,14 +44,15 @@
         >
           <v-btn 
             block 
-            color="primary" 
+            color="accent" 
+            dark
             @click="updateProfile()"
           >
             Update Profile <v-icon right>fa-send</v-icon>
           </v-btn>
         </v-flex>
       </v-layout>
-    </v-container>
+    </v-card>
   </v-tabs-content>
 </template>
 

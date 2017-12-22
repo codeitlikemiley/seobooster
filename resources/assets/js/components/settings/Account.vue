@@ -2,7 +2,7 @@
   <v-tabs-content
     id="account"
   >
-    <v-container>
+    <v-card flat>
       <v-layout 
         row 
         wrap
@@ -109,14 +109,15 @@
         >
           <v-btn 
             block 
-            color="primary" 
+            color="accent" 
+            dark
             @click="updateAccount()"
           >
             Update Account <v-icon right>fa-send</v-icon>
           </v-btn>
         </v-flex>
       </v-layout>
-    </v-container>
+    </v-card>
   </v-tabs-content>
 </template>
 
